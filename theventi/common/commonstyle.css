@@ -1,8 +1,4 @@
 @import url("../font.css");
-@font-face {
-  font-family: noto500;
-  src: url("./noto-sans-kr-v13-latin_korean-500.ttf");
-}
 @media (max-width: 1024px) {
   .nav-items {
     opacity: 0;
@@ -38,13 +34,11 @@
   border-bottom: 1px solid #ddd;
   position: absolute;
   top: 0;
-  left: 0;
   position: fixed;
   background: #fff;
   width: 100%;
 }
 * header #fixed-header #header-container {
-  border: 1px solid #f00;
   font-family: geometos;
   width: 1360px;
   height: inherit;
@@ -54,7 +48,6 @@
   margin: 0 14.583%;
 }
 * header #fixed-header #header-container #logogif {
-  border: 1px solid #f00;
   width: 189px;
   height: 90px;
   margin-left: 10px;
@@ -124,66 +117,74 @@
   align-items: center;
 }
 * header #dropdown {
-  border: 1px solid #f00;
-  transition: all 1s linear;
-  width: 1920px;
-  display: none;
+  width: 100%;
+  height: 462.73px;
+  display: block;
   color: #666;
   font-family: suitM;
   position: fixed;
-  left: 0;
   top: 91px;
   background: #fff;
-  justify-content: center;
-  align-items: center;
 }
 * header #dropdown #dropdown-container {
-  border: 1px solid #f00;
   display: flex;
-  height: 462.73px;
-  align-items: center;
-  justify-content: space-around;
+  height: 100%;
   width: 1360px;
   margin: 0 auto;
-  flex: 1;
 }
 * header #dropdown #dropdown-container #dropdown-img img {
   width: 282px;
   height: 300px;
-  margin-right: 42px;
-  border: 1px solid #f00;
+  margin-right: 19px;
 }
 * header #dropdown #dropdown-container #dropdown-list {
+  width: 58.3985%;
   display: flex;
-  text-align: center;
   font-size: 0.9375rem;
+}
+* header #dropdown #dropdown-container #dropdown-list div {
+  text-align: center;
+  flex: 1;
+  margin-top: 17px;
+  padding: 0 10px 10px 0px;
+}
+* header #dropdown #dropdown-container #dropdown-list a {
+  padding: 10px 0 0 10px;
+  margin-bottom: 4px;
 }
 * header #dropdown #dropdown-container #dropdown-list a:hover {
   color: #780997;
 }
 * header #dropdown #dropdown-container #dropdown-list #brand-list {
+  flex: 0.5;
+  display: flex;
+  flex-direction: column;
+}
+* header #dropdown #dropdown-container #dropdown-list #brand-list a {
+  margin-left: 20px;
+  width: 100%;
+}
+* header #dropdown #dropdown-container #dropdown-list #menu-list {
+  flex: 0.5;
+  display: flex;
+  flex-direction: column;
+  margin-left: 6px;
+  flex: 0.9;
+}
+* header #dropdown #dropdown-container #dropdown-list #store-list {
+  flex: 0.5;
+  display: flex;
+  flex-direction: column;
+  margin-left: -20px;
+}
+* header #dropdown #dropdown-container #dropdown-list #membership-list {
   flex: 1;
   display: flex;
   flex-direction: column;
 }
-* header #dropdown #dropdown-container #dropdown-list #menu-list {
-  display: flex;
-  flex-direction: column;
-}
-* header #dropdown #dropdown-container #dropdown-list #store-list {
-  margin-right: 20px;
-  padding: 10px;
-  width: 9.7%;
-}
-* header #dropdown #dropdown-container #dropdown-list #membership-list {
-  margin-right: 20px;
-  padding: 10px 50px 10px 63px;
-  width: 28.55%;
-}
 * header #dropdown #dropdown-container #dropdown-list #community-list {
   display: flex;
   flex-direction: column;
-  width: 21.2%;
 }
 * section {
   width: 1920px;

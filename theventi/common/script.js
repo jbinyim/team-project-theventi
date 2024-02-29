@@ -13,10 +13,10 @@ const opendrop = () => {
   dropDown.style.display = "block";
   body.style.transition = "all 0.5s";
 };
-const closedrop = () => {
-  dropDown.style.display = "none";
-  body.style.transition = "all 0.5s";
-};
+// const closedrop = () => {
+//   dropDown.style.display = "none";
+//   body.style.transition = "all 0.5s";
+// };
 headerList.onmouseover = opendrop;
 dropDown.onmouseover = opendrop;
 dropDown.onmouseout = closedrop;
