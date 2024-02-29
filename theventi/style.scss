@@ -1,0 +1,210 @@
+@import "reset";
+@import "font";
+@import "variables";
+
+html {
+  font-size: 16px;
+  .wrap {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    .intro-brand {
+      background: url("./img/00intro/brandbg.jpg") center/cover no-repeat;
+      width: 50%;
+      height: 100%;
+      cursor: pointer;
+      position: relative;
+      .intro-text {
+        color: #fff;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        transition: all 0.4s;
+        .intro-text-bx {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          h1 {
+            font: 4.5rem/1 "geometos";
+            position: relative;
+            margin-bottom: 70px;
+            &::after {
+              content: "";
+              position: absolute;
+              bottom: -35px;
+              left: 50%;
+              transform: translateX(-50%);
+              width: 80px;
+              height: 1px;
+              background: #fff;
+            }
+          }
+          p {
+            font: 1.5rem/1 "noto";
+            color: map-get($main-color, org);
+            margin-bottom: 20px;
+            transition: all 0.3s;
+          }
+          h3 {
+            font: 100 1.875rem/1 "noto";
+          }
+        }
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.85);
+        transition: all 0.4s;
+      }
+      &:hover::before {
+        display: none;
+      }
+      &:hover {
+        .intro-text {
+          transform: translate(-50%, -100%);
+          p {
+            color: #fff;
+          }
+        }
+        p {
+          color: #fff;
+        }
+      }
+    }
+    .intro-franchise {
+      width: 50%;
+      height: 100%;
+      background: url("./img/00intro/franchbg.jpg") center/cover no-repeat;
+      cursor: pointer;
+      position: relative;
+      .intro-text {
+        color: #fff;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        transition: all 0.4s;
+        .intro-text-bx {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          h1 {
+            font: 4.5rem/1 "geometos";
+            position: relative;
+            margin-bottom: 70px;
+            &::after {
+              content: "";
+              position: absolute;
+              bottom: -35px;
+              left: 50%;
+              transform: translateX(-50%);
+              width: 80px;
+              height: 1px;
+              background: #fff;
+            }
+          }
+          p {
+            font: 1.5rem/1 "noto";
+            color: map-get($main-color, puple);
+            margin-bottom: 20px;
+            transition: all 0.3s;
+          }
+          h3 {
+            font: 100 1.875rem/1 "noto";
+          }
+        }
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.85);
+        transition: all 0.4s;
+      }
+      &:hover::before {
+        display: none;
+      }
+      &:hover {
+        .intro-text {
+          transform: translate(-50%, -100%);
+          p {
+            color: #fff;
+          }
+        }
+        p {
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  .intro-center-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    .intro-circle {
+      width: 239px;
+      height: 239px;
+      border-radius: 100%;
+      background-color: map-get($main-color, puple);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.3s;
+      &.active {
+        background-color: #fff;
+        &.active .whitelogo {
+          display: none;
+        }
+        &.active .puplelogo {
+          display: block;
+        }
+      }
+      .puplelogo {
+        display: none;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1024px) {
+  html {
+    font-size: 13px;
+    .wrap {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      .intro-brand {
+        width: 100%;
+        height: 50%;
+      }
+      .intro-franchise {
+        width: 100%;
+        height: 50%;
+      }
+    }
+    .intro-center-logo {
+      .intro-circle {
+        width: 135px;
+        height: 135px;
+        img {
+          width: 115px;
+        }
+      }
+    }
+  }
+}
