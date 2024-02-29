@@ -1,0 +1,182 @@
+@import "../../reset.css";
+@import "../../font.css";
+@import "../../variables.scss";
+
+html {
+  font-size: 16px;
+  line-height: 1.6rem;
+  font-weight: 400;
+  .wrap {
+    width: 100%;
+    height: 100%;
+    .volun-figuer {
+      margin-top: 91px;
+      width: 100%;
+      height: 510px;
+      background: url("../../img/04community/bg/community-bg.png") center/cover
+        no-repeat;
+      .volun-title {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 18px;
+        height: 100%;
+        color: #fff;
+        h1 {
+          font: 2.8125rem "geometos";
+        }
+        p {
+          font: 1.125rem "suitL";
+        }
+      }
+    }
+    .volun-nav {
+      width: 100%;
+      height: 68px;
+      border-bottom: 1px solid #ddd;
+      .volun-bar {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 1px solid #ddd;
+        ul {
+          display: flex;
+          li {
+            a {
+              display: block;
+              padding: 18px 28px 24px;
+              font: 1.125rem "suitM";
+              border-bottom: 2.5px solid transparent;
+              &:hover {
+                transform: translateY(-1px);
+                color: map-get($text-color, navp);
+                border-bottom: 2.5px solid map-get($text-color, navp);
+              }
+            }
+          }
+          .active {
+            transform: translateY(-1px);
+            color: map-get($text-color, navp);
+            border-bottom: 2.5px solid map-get($text-color, navp);
+          }
+        }
+      }
+    }
+    .container {
+      width: 100%;
+      height: 100%;
+      padding-top: 100px;
+      .volun-article {
+        margin: 0 auto;
+        width: 1200px;
+        height: 100%;
+        .volun-article-title {
+          margin-bottom: 20px;
+          h1 {
+            span {
+              font: bold 3rem "noto";
+              color: map-get($text-color, textp);
+            }
+            font: 2.8125rem "noto";
+          }
+        }
+        .volun-img {
+          margin-bottom: 34px;
+          width: 100%;
+          height: 302px;
+          overflow: hidden;
+          span {
+            display: inline-block;
+            width: 32.7%;
+            height: 100%;
+            overflow: hidden;
+            img {
+              width: 100%;
+              height: 100%;
+              transition: all 0.3s;
+              &:hover {
+                transform: scale(1.1);
+              }
+            }
+          }
+        }
+        .volun-text {
+          margin-bottom: 60px;
+          h3 {
+            font: bold 1.5rem "noto";
+            margin-bottom: 25px;
+          }
+          p {
+            font: 1.125rem "noto";
+            span {
+              font-weight: bold;
+              color: map-get($text-color, textp);
+              text-decoration: underline;
+            }
+          }
+        }
+        .volun-symbol {
+          margin-bottom: 60px;
+          h1 {
+            font: bold 3rem "noto";
+            color: map-get($text-color, textp);
+            margin-bottom: 20px;
+          }
+          p {
+            margin-top: 19px;
+            font: light 1.125rem "noto";
+          }
+        }
+        .volun-list {
+          ul {
+            display: flex;
+            gap: 10px;
+            li {
+              width: 24.7%;
+              a {
+                display: inline-block;
+                width: 100%;
+                span {
+                  display: inline-block;
+                  overflow: hidden;
+                  width: 100%;
+                  height: 295px;
+                  img {
+                    width: 100%;
+                    height: 100%;
+                    transition: all 0.3s;
+                    object-fit: cover;
+                    &:hover {
+                      transform: scale(1.1);
+                    }
+                  }
+                }
+                h5 {
+                  width: 100%;
+                  height: 25px;
+                  font: 500 1rem "noto";
+                  overflow: hidden;
+                  white-space: nowrap;
+                  text-overflow: ellipsis;
+                  margin: 20px 0 5px;
+                }
+                p {
+                  font: 0.9rem "noto";
+                  color: #999;
+                }
+                &:hover {
+                  h5 {
+                    color: map-get($text-color, textp);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
