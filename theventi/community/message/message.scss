@@ -1,0 +1,46 @@
+@import "../../reset.css";
+@import "../../font.css";
+@import "../../variables.scss";
+@import "../../mixin.scss";
+
+.wrap {
+  width: 100%;
+  height: 100%;
+  .message-figuer {
+    margin-top: 91px;
+    width: 100%;
+    height: 510px;
+    background: #dcd5e3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    .message-move {
+      animation: truck 2.5s infinite;
+    }
+  }
+  .volun-nav {
+    @include community-nav;
+  }
+}
+
+@keyframes truck {
+  0% {
+    transform: translate(0, 0);
+  }
+  20% {
+    transform: translate(8px, 0);
+  }
+  50% {
+    transform: translate(-2px, 1px);
+  }
+  70% {
+    transform: translate(5px, 0);
+  }
+  80% {
+    transform: translate(5px, -1px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}

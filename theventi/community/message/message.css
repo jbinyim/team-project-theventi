@@ -1,0 +1,74 @@
+@import "../../reset.css";
+@import "../../font.css";
+@import "./reset.css";
+@import "./font.css";
+.wrap {
+  width: 100%;
+  height: 100%;
+}
+.wrap .message-figuer {
+  margin-top: 91px;
+  width: 100%;
+  height: 510px;
+  background: #dcd5e3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+.wrap .message-figuer .message-move {
+  animation: truck 2.5s infinite;
+}
+.wrap .volun-nav {
+  width: 100%;
+  height: 68px;
+  border-bottom: 1px solid #ddd;
+}
+.wrap .volun-nav .volun-bar {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+}
+.wrap .volun-nav .volun-bar ul {
+  display: flex;
+}
+.wrap .volun-nav .volun-bar ul li a {
+  display: block;
+  padding: 18px 28px 24px;
+  font: 1.125rem "suitM";
+  border-bottom: 2.5px solid transparent;
+}
+.wrap .volun-nav .volun-bar ul li a:hover {
+  transform: translateY(-1px);
+  color: #780997;
+  border-bottom: 2.5px solid #780997;
+}
+.wrap .volun-nav .volun-bar ul .active {
+  transform: translateY(-1px);
+  color: #780997;
+  border-bottom: 2.5px solid #780997;
+}
+
+@keyframes truck {
+  0% {
+    transform: translate(0, 0);
+  }
+  20% {
+    transform: translate(8px, 0);
+  }
+  50% {
+    transform: translate(-2px, 1px);
+  }
+  70% {
+    transform: translate(5px, 0);
+  }
+  80% {
+    transform: translate(5px, -1px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}/*# sourceMappingURL=message.css.map */
