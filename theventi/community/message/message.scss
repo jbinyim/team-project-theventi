@@ -6,6 +6,7 @@
 .wrap {
   width: 100%;
   height: 100%;
+  overflow-x: hidden;
   .message-figuer {
     margin-top: 91px;
     width: 100%;
@@ -16,11 +17,64 @@
     align-items: center;
     gap: 50px;
     .message-move {
+      animation: start 1.5s ease-out;
       animation: truck 2.5s infinite;
     }
   }
   .volun-nav {
     @include community-nav;
+  }
+  .message-container {
+    width: 100%;
+    height: 100%;
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .message-article-title {
+      width: 1200px;
+      height: 283px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .article-title-text {
+        height: 100%;
+        h1 {
+          font: 3rem/1.6 "suitSB";
+          margin-bottom: 20px;
+        }
+        p {
+          font: 500 1.375rem/1.6 "suitM";
+          letter-spacing: -1px;
+          span {
+            font-family: "suitSB";
+            color: map-get($text-color, textp);
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes start {
+  0% {
+    opacity: 0;
+    transform: translate(9999px, 0);
+  }
+  20% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  80% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
   }
 }
 
