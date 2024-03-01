@@ -19,69 +19,66 @@ a {
   padding: 0;
   width: 8px;
 }
-
 *::-webkit-scrollbar-button {
   height: 0;
   -webkit-transition: 300ms all;
   transition: 300ms all;
 }
-
 *::-webkit-scrollbar-corner {
   background-color: #222;
 }
-
 *::-webkit-scrollbar-thumb {
   /* background: rgba(123, 0, 160, 0.7); */
   background: rgba(255, 91, 40, 0.7);
   border-radius: 8px;
   border: 1px solid #000;
 }
-
-*::-webkit-scrollbar-thumb:hover, *::-webkit-scrollbar-thumb:active {
+*::-webkit-scrollbar-thumb:hover,
+*::-webkit-scrollbar-thumb:active {
   /* background: rgba(123, 0, 160, 0.9); */
   background: rgba(255, 91, 40, 0.9);
 }
-
 *::-webkit-scrollbar-track {
   background-color: #222;
   border-radius: 0;
   border: 0;
 }
-
-*::-webkit-scrollbar-track:hover, *::-webkit-scrollbar-track:active {
+*::-webkit-scrollbar-track:hover,
+*::-webkit-scrollbar-track:active {
   background: #222;
-} 
+}
+
 @font-face {
-  font-family: "geometos";
-  src: url("./font/Geometos-Rounded.ttf");
+  font-family: 'geometos';
+  src: url('./font/Geometos-Rounded.ttf');
 }
 @font-face {
-  font-family: "nanum";
-  src: url("./font/NanumSquareB.ttf");
+  font-family: 'nanum';
+  src: url('./font/NanumSquareB.ttf');
 }
 @font-face {
-  font-family: "suitB";
-  src: url("./font/SUIT-Bold.ttf");
+  font-family: 'suitB';
+  src: url('./font/SUIT-Bold.ttf');
 }
 @font-face {
-  font-family: "suitL";
-  src: url("./font/SUIT-Light.ttf");
+  font-family: 'suitL';
+  src: url('./font/SUIT-Light.ttf');
 }
 @font-face {
-  font-family: "suitM";
-  src: url("./font/SUIT-Medium.ttf");
+  font-family: 'suitM';
+  src: url('./font/SUIT-Medium.ttf');
 }
 @font-face {
-  font-family: "suitSB";
-  src: url("./font/SUIT-SemiBold.ttf");
+  font-family: 'suitSB';
+  src: url('./font/SUIT-SemiBold.ttf');
 }
 @font-face {
-  font-family: "xeicon";
-  src: url("./font/xeicon.ttf");
+  font-family: 'xeicon';
+  src: url('./font/xeicon.ttf');
 }
 @font-face {
-  font-family: "noto";
-  src: url("./font/NotoSansKR-VariableFont_wght.ttf");
+  font-family: 'noto';
+  src: url('./font/NotoSansKR-VariableFont_wght.ttf');
 }
 header {
   width: 100%;
@@ -91,7 +88,7 @@ header {
 
 .menu-main {
   height: 510px;
-  background: url("./img/02menuImg/menuBg.png") center/cover;
+  background: url('./img/02menuImg/menuBg.png') center/cover;
 }
 .menu-main .heading {
   width: 100%;
@@ -101,12 +98,12 @@ header {
   padding-top: 204.6px;
 }
 .menu-main .heading .title {
-  font: 600 2.8125rem/1.2 "geometos";
+  font: 600 2.8125rem/1.2 'geometos';
   letter-spacing: -0.07rem;
   margin-bottom: 18px;
 }
 .menu-main .heading p {
-  font: 300 1.125rem/1.6 "suitL";
+  font: 300 1.125rem/1.6 'suitL';
 }
 
 .menu-nav {
@@ -125,7 +122,7 @@ header {
   padding: 0 28.03px;
 }
 .menu-nav ul li a {
-  font: 1.125rem/3.6666 "suitM";
+  font: 1.125rem/3.6666 'suitM';
   color: #333;
 }
 .menu-nav ul li:hover {
@@ -156,7 +153,7 @@ header {
   float: left;
   text-align: center;
   background: #e6deda;
-  font: 500 1rem/3 "noto";
+  font: 500 1rem/3 'noto';
   color: #222;
   letter-spacing: -0.03125rem;
 }
@@ -182,8 +179,6 @@ header {
   width: calc((100% - 30px) / 4);
   height: 362.19px;
   border: 1px solid #fff;
-  float: left;
-  /*modal 사이즈 수정예정*/
 }
 .menu-wrap .menu-list .list-inner .list-item .menu-item {
   overflow: hidden;
@@ -195,9 +190,9 @@ header {
   position: relative;
 }
 .menu-wrap .menu-list .list-inner .list-item .menu-item::before {
-  content: "";
-  width: calc(100% - 6px);
-  height: calc(100% - 6px);
+  content: '';
+  width: calc(100% - 8px);
+  height: calc(100% - 8px);
   position: absolute;
   top: 0;
   left: 0;
@@ -241,23 +236,23 @@ header {
   left: 50%;
   transform: translate(-50%, -50%);
   content: attr(data-alt);
-  font: 0.875rem/1.1 "noto";
+  font: 0.875rem/1.1 'noto';
 }
-.menu-wrap .menu-list .list-inner .list-item .menu-item span {
-  font: 1rem/1.6 "noto";
+.menu-wrap .menu-list .list-inner .list-item .menu-item span p {
+  font: 1rem/1.6 'noto';
   color: rgba(102, 102, 102, 0.4);
 }
-.menu-wrap .menu-list .list-inner .list-item .menu-item span p:nth-of-type(1) i {
+.menu-wrap .menu-list .list-inner .list-item .menu-item span p i {
   display: inline-block;
   width: 7px;
   height: 7px;
   border-radius: 100%;
   margin: 0 3px;
 }
-.menu-wrap .menu-list .list-inner .list-item .menu-item span p:nth-of-type(1) i.ice {
+.menu-wrap .menu-list .list-inner .list-item .menu-item span p i.ice {
   background: #006db0;
 }
-.menu-wrap .menu-list .list-inner .list-item .menu-item span p:nth-of-type(1) i.Hot {
+.menu-wrap .menu-list .list-inner .list-item .menu-item span p i.Hot {
   background: #ed2939;
 }
 .menu-wrap .menu-list .list-inner .list-item .menu-modal {
@@ -273,7 +268,7 @@ header {
 .menu-wrap .menu-list .list-inner .list-item .menu-modal-inner {
   width: 1200px;
   width: 62.5%;
-  height: 349.29px;
+  height: auto;
   background: #fff;
   position: absolute;
   top: 50%;
@@ -286,33 +281,68 @@ header {
   padding: 25px;
   overflow: hidden;
 }
-.menu-wrap .menu-list .list-inner .list-item .menu-modal-inner .modal-item .modal-pic {
+.menu-wrap
+  .menu-list
+  .list-inner
+  .list-item
+  .menu-modal-inner
+  .modal-item
+  .modal-pic {
   width: 460px;
   width: 40%;
-  height: 299.29px;
+  height: 100%;
   float: left;
   display: flex;
   justify-content: center;
   align-items: center;
+  /* 이미지 가운데 정렬 필요*/
 }
-.menu-wrap .menu-list .list-inner .list-item .menu-modal-inner .modal-item .modal-pic img {
+.menu-wrap
+  .menu-list
+  .list-inner
+  .list-item
+  .menu-modal-inner
+  .modal-item
+  .modal-pic
+  img {
   display: block;
   width: 119px;
   height: 219px;
   margin: 0 auto;
 }
-.menu-wrap .menu-list .list-inner .list-item .menu-modal-inner .modal-item .modal-text {
+.menu-wrap
+  .menu-list
+  .list-inner
+  .list-item
+  .menu-modal-inner
+  .modal-item
+  .modal-text {
   float: left;
   width: 690px;
   width: 60%;
 }
-.menu-wrap .menu-list .list-inner .list-item .menu-modal-inner .modal-item .modal-text .title {
+.menu-wrap
+  .menu-list
+  .list-inner
+  .list-item
+  .menu-modal-inner
+  .modal-item
+  .modal-text
+  .title {
   display: block;
   width: 100%;
   padding: 6.9px 0 10px;
   border-bottom: 3px solid #ff5b28;
 }
-.menu-wrap .menu-list .list-inner .list-item .menu-modal-inner .modal-item .modal-text .title i {
+.menu-wrap
+  .menu-list
+  .list-inner
+  .list-item
+  .menu-modal-inner
+  .modal-item
+  .modal-text
+  .title
+  i {
   display: inline-block;
   width: 52px;
   height: 52px;
@@ -323,47 +353,113 @@ header {
   margin: 0 5px;
   text-align: center;
 }
-.menu-wrap .menu-list .list-inner .list-item .menu-modal-inner .modal-item .modal-text .title i::before {
+.menu-wrap
+  .menu-list
+  .list-inner
+  .list-item
+  .menu-modal-inner
+  .modal-item
+  .modal-text
+  .title
+  i::before {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   content: attr(data-tit);
-  font: 0.875rem/1.1 "noto";
+  font: 0.875rem/1.1 'noto';
 }
-.menu-wrap .menu-list .list-inner .list-item .menu-modal-inner .modal-item .modal-text .title p {
+.menu-wrap
+  .menu-list
+  .list-inner
+  .list-item
+  .menu-modal-inner
+  .modal-item
+  .modal-text
+  .title
+  p {
   display: inline-block;
   vertical-align: bottom;
-  font: 2.3529rem/1.44768 "noto";
+  font: 2.3529rem/1.44768 'noto';
 }
-.menu-wrap .menu-list .list-inner .list-item .menu-modal-inner .modal-item .modal-text .info {
+.menu-wrap
+  .menu-list
+  .list-inner
+  .list-item
+  .menu-modal-inner
+  .modal-item
+  .modal-text
+  .info {
   width: 100%;
+  height: auto;
 }
-.menu-wrap .menu-list .list-inner .list-item .menu-modal-inner .modal-item .modal-text .info p {
-  font: 14px/1.599285 "noto";
+.menu-wrap
+  .menu-list
+  .list-inner
+  .list-item
+  .menu-modal-inner
+  .modal-item
+  .modal-text
+  .info
+  p {
+  font: 0.875rem/1.6714 'noto';
   height: auto;
   width: auto;
   padding: 30px 0;
+  color: #666;
 }
-.menu-wrap .menu-list .list-inner .list-item .menu-modal-inner .modal-item .modal-text .detail {
+.menu-wrap
+  .menu-list
+  .list-inner
+  .list-item
+  .menu-modal-inner
+  .modal-item
+  .modal-text
+  .detail {
   width: 100%;
-  font-size: 0.875rem/1.1 "noto";
+  font-size: 0.875rem/1.1 'noto';
   text-align: center;
 }
-.menu-wrap .menu-list .list-inner .list-item .menu-modal-inner .modal-item .modal-text .detail table {
+.menu-wrap
+  .menu-list
+  .list-inner
+  .list-item
+  .menu-modal-inner
+  .modal-item
+  .modal-text
+  .detail
+  table {
   width: 100%;
   border: none;
   border-bottom: 1px solid #ddd;
   border-collapse: collapse;
 }
-.menu-wrap .menu-list .list-inner .list-item .menu-modal-inner .modal-item .modal-text .detail table th {
-  font: 0.875rem/1.1 "noto";
+.menu-wrap
+  .menu-list
+  .list-inner
+  .list-item
+  .menu-modal-inner
+  .modal-item
+  .modal-text
+  .detail
+  table
+  th {
+  font: 0.875rem/1.1 'noto';
   background: #7b009b;
   color: #fff;
   padding: 10px 2px;
 }
-.menu-wrap .menu-list .list-inner .list-item .menu-modal-inner .modal-item .modal-text .detail table td {
-  font: 0.875rem/1.1 "noto";
+.menu-wrap
+  .menu-list
+  .list-inner
+  .list-item
+  .menu-modal-inner
+  .modal-item
+  .modal-text
+  .detail
+  table
+  td {
+  font: 0.875rem/1.1 'noto';
   color: #222;
   padding: 13px 0;
 }
@@ -376,7 +472,13 @@ header {
   border: none;
   background: none;
 }
-.menu-wrap .menu-list .list-inner .list-item .menu-modal-inner button:hover span {
+.menu-wrap
+  .menu-list
+  .list-inner
+  .list-item
+  .menu-modal-inner
+  button:hover
+  span {
   background: #333;
 }
 .menu-wrap .menu-list .list-inner .list-item .menu-modal-inner button span {
@@ -386,11 +488,23 @@ header {
   position: absolute;
   left: 0;
 }
-.menu-wrap .menu-list .list-inner .list-item .menu-modal-inner button span:nth-child(1) {
+.menu-wrap
+  .menu-list
+  .list-inner
+  .list-item
+  .menu-modal-inner
+  button
+  span:nth-child(1) {
   top: 50%;
   transform: rotate(45deg);
 }
-.menu-wrap .menu-list .list-inner .list-item .menu-modal-inner button span:nth-child(2) {
+.menu-wrap
+  .menu-list
+  .list-inner
+  .list-item
+  .menu-modal-inner
+  button
+  span:nth-child(2) {
   top: 50%;
   transform: rotate(-45deg);
-}/*# sourceMappingURL=menu.css.map */
+} /*# sourceMappingURL=style.css.map */

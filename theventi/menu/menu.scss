@@ -1,5 +1,5 @@
-@import "menureset";
-@import "font";
+@import 'reset';
+@import 'font';
 
 header {
   width: 100%;
@@ -8,7 +8,7 @@ header {
 }
 .menu-main {
   height: 510px;
-  background: url("./img/02menuImg/menuBg.png") center/cover;
+  background: url('../img/02menuImg/menuBg.png') center/cover no-repeat;
   .heading {
     width: 100%;
     height: 100%;
@@ -16,12 +16,12 @@ header {
     text-align: center;
     padding-top: 204.6px;
     .title {
-      font: 600 2.8125rem/1.2 "geometos";
+      font: 600 2.8125rem/1.2 'geometos';
       letter-spacing: -0.07rem;
       margin-bottom: 18px;
     }
     p {
-      font: 300 1.125rem/1.6 "suitL";
+      font: 300 1.125rem/1.6 'suitL';
     }
   }
 }
@@ -38,7 +38,7 @@ header {
       display: inline-block;
       padding: 0 28.03px;
       a {
-        font: 1.125rem/3.6666 "suitM";
+        font: 1.125rem/3.6666 'suitM';
         color: #333;
       }
       &:hover {
@@ -72,7 +72,7 @@ header {
         float: left;
         text-align: center;
         background: #e6deda;
-        font: 500 1rem/3 "noto";
+        font: 500 1rem/3 'noto';
         color: #222;
         letter-spacing: -0.03125rem;
       }
@@ -94,7 +94,7 @@ header {
         width: calc((100% - 30px) / 4);
         height: 362.19px;
         border: 1px solid #fff;
-        float: left;
+        // float: left;
         .menu-item {
           overflow: hidden;
           display: block;
@@ -104,9 +104,9 @@ header {
           text-align: center;
           position: relative;
           &::before {
-            content: "";
-            width: calc(100% - 6px);
-            height: calc(100% - 6px);
+            content: '';
+            width: calc(100% - 8px);
+            height: calc(100% - 8px);
             position: absolute;
             top: 0;
             left: 0;
@@ -150,33 +150,30 @@ header {
                 left: 50%;
                 transform: translate(-50%, -50%);
                 content: attr(data-alt);
-                font: 0.875rem/1.1 "noto";
+                font: 0.875rem/1.1 'noto';
               }
             }
           }
           span {
-            font: 1rem/1.6 "noto";
-            color: #6666;
             p {
-              &:nth-of-type(1) {
-                i {
-                  display: inline-block;
-                  width: 7px;
-                  height: 7px;
-                  border-radius: 100%;
-                  margin: 0 3px;
-                  &.ice {
-                    background: #006db0;
-                  }
-                  &.Hot {
-                    background: #ed2939;
-                  }
+              font: 1rem/1.6 'noto';
+              color: #6666;
+              i {
+                display: inline-block;
+                width: 7px;
+                height: 7px;
+                border-radius: 100%;
+                margin: 0 3px;
+                &.ice {
+                  background: #006db0;
+                }
+                &.Hot {
+                  background: #ed2939;
                 }
               }
             }
           }
         }
-        /*modal 사이즈 수정예정*/
         .menu-modal {
           display: none;
           position: fixed;
@@ -189,7 +186,7 @@ header {
           &-inner {
             width: 1200px;
             width: 62.5%;
-            height: 349.29px;
+            height: auto;
             background: #fff;
             position: absolute;
             top: 50%;
@@ -203,11 +200,12 @@ header {
               .modal-pic {
                 width: 460px;
                 width: 40%;
-                height: 299.29px;
+                height: 100%;
                 float: left;
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                /* 이미지 가운데 정렬 필요*/
                 img {
                   display: block;
                   width: 119px;
@@ -240,27 +238,29 @@ header {
                       left: 50%;
                       transform: translate(-50%, -50%);
                       content: attr(data-tit);
-                      font: 0.875rem/1.1 "noto";
+                      font: 0.875rem/1.1 'noto';
                     }
                   }
                   p {
                     display: inline-block;
                     vertical-align: bottom;
-                    font: 2.3529rem/1.44768 "noto";
+                    font: 2.3529rem/1.44768 'noto';
                   }
                 }
                 .info {
                   width: 100%;
+                  height: auto;
                   p {
-                    font: 14px/1.599285 "noto";
+                    font: 0.875rem/1.6714 'noto';
                     height: auto;
                     width: auto;
                     padding: 30px 0;
+                    color: #666;
                   }
                 }
                 .detail {
                   width: 100%;
-                  font-size: 0.875rem/1.1 "noto";
+                  font-size: 0.875rem/1.1 'noto';
                   text-align: center;
                   table {
                     width: 100%;
@@ -268,13 +268,13 @@ header {
                     border-bottom: 1px solid #ddd;
                     border-collapse: collapse;
                     th {
-                      font: 0.875rem/1.1 "noto";
+                      font: 0.875rem/1.1 'noto';
                       background: #7b009b;
                       color: #fff;
                       padding: 10px 2px;
                     }
                     td {
-                      font: 0.875rem/1.1 "noto";
+                      font: 0.875rem/1.1 'noto';
                       color: #222;
                       padding: 13px 0;
                     }
