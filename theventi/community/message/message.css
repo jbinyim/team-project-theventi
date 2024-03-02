@@ -38,8 +38,10 @@
   display: flex;
 }
 .wrap .volun-nav .volun-bar ul li a {
-  display: block;
-  padding: 18px 28px 24px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 1.5625em;
+  height: 4.25rem;
   font: 1.125rem "suitM";
   border-bottom: 2.5px solid transparent;
 }
@@ -49,7 +51,7 @@
   border-bottom: 2.5px solid #780997;
 }
 .wrap .volun-nav .volun-bar ul .active {
-  transform: translateY(-1px);
+  display: inline-flex;
   color: #780997;
   border-bottom: 2.5px solid #780997;
 }
@@ -68,6 +70,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 80px;
 }
 .wrap .message-container .message-article-title .article-title-text {
   height: 100%;
@@ -84,6 +87,70 @@
   font-family: "suitSB";
   color: #7b00a0;
   text-decoration: underline;
+}
+.wrap .message-container .message-article-how {
+  width: 1200px;
+}
+.wrap .message-container .message-article-how h1 {
+  font: 3rem "suitSB";
+}
+.wrap .message-container .message-article-how .message-how-info {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 240px;
+  margin: 50px 0;
+}
+.wrap .message-container .message-article-how .message-how-info .msg {
+  display: flex;
+  gap: 34px;
+}
+.wrap .message-container .message-article-how .message-how-info .msg .msg-volun-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 18px;
+}
+.wrap .message-container .message-article-how .message-how-info .msg .msg-volun-text h4 {
+  font: 600 1.5rem "suitL";
+  color: #7b00a0;
+}
+.wrap .message-container .message-article-how .message-how-info .msg .msg-volun-text p {
+  font: 1.125rem "suitL";
+  letter-spacing: -1px;
+  color: #999;
+}
+.wrap .message-container .message-article-how p {
+  font: 1rem "suitM";
+  letter-spacing: -1px;
+  color: #666;
+}
+.wrap .message-container .message-article-how p span {
+  font: 1rem "suitSB";
+  color: #333;
+}
+.wrap .message-container .message-baner {
+  width: 1310px;
+  margin-top: 100px;
+}
+.wrap .message-container .message-baner .message-banner-title h1 {
+  display: inline-block;
+  font: 4.5rem "geometos";
+  margin-right: 2%;
+}
+.wrap .message-container .message-baner .message-banner-title img {
+  vertical-align: top;
+}
+.wrap .message-container .message-baner .msg-banner-direction {
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
+}
+.wrap .message-container .message-baner .message-banner-img {
+  width: 600px;
+  height: 300px;
 }
 
 @keyframes start {
