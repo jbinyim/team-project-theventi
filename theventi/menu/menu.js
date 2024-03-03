@@ -50,11 +50,11 @@ newMenuPics.forEach((newMenuPic, index) => {
   const newModalPics = document.querySelectorAll('.modal-pic.np');
   const modalImg = document.createElement('img');
 
-  menuImg.src = `../img/02menuImg/wholemenu/${newMenus[index]}`;
+  menuImg.src = `./img/02menuImg/wholemenu/${newMenus[index]}`;
   newMenuPic.appendChild(menuImg);
 
   newMenuPic.addEventListener('click', () => {
-    modalImg.src = `../img/02menuImg/wholemenu/${newMenus[index]}`;
+    modalImg.src = `./img/02menuImg/wholemenu/${newMenus[index]}`;
     newModalPics[index].appendChild(modalImg);
   });
 
@@ -104,11 +104,11 @@ coffeeMenuPics.forEach((coffeeMenuPic, index) => {
   const coffeeModalPics = document.querySelectorAll('.modal-pic.cp');
   const modalImg = document.createElement('img');
 
-  menuImg.src = `../img/02menuImg/wholemenu/${coffeeMenus[index]}`;
+  menuImg.src = `./img/02menuImg/wholemenu/${coffeeMenus[index]}`;
   coffeeMenuPic.appendChild(menuImg);
 
   coffeeMenuPic.addEventListener('click', () => {
-    modalImg.src = `../img/02menuImg/wholemenu/${coffeeMenus[index]}`;
+    modalImg.src = `./img/02menuImg/wholemenu/${coffeeMenus[index]}`;
     coffeeModalPics[index].appendChild(modalImg);
   });
 
@@ -156,11 +156,11 @@ decaffeinatedMenuPics.forEach((decaffeinatedMenuPic, index) => {
   const decaffeinatedModalPics = document.querySelectorAll('.modal-pic.dp');
   const modalImg = document.createElement('img');
 
-  menuImg.src = `../img/02menuImg/wholemenu/${decaffeinatedMenus[index]}`;
+  menuImg.src = `./img/02menuImg/wholemenu/${decaffeinatedMenus[index]}`;
   decaffeinatedMenuPic.appendChild(menuImg);
 
   decaffeinatedMenuPic.addEventListener('click', () => {
-    modalImg.src = `../img/02menuImg/wholemenu/${decaffeinatedMenus[index]}`;
+    modalImg.src = `./img/02menuImg/wholemenu/${decaffeinatedMenus[index]}`;
     decaffeinatedModalPics[index].appendChild(modalImg);
   });
 
@@ -203,11 +203,11 @@ iceblendedMenuPics.forEach((iceblendedMenuPic, index) => {
   const iceblendedModalPics = document.querySelectorAll('.modal-pic.ip');
   const modalImg = document.createElement('img');
 
-  menuImg.src = `../img/02menuImg/wholemenu/${iceblendedMenus[index]}`;
+  menuImg.src = `./img/02menuImg/wholemenu/${iceblendedMenus[index]}`;
   iceblendedMenuPic.appendChild(menuImg);
 
   iceblendedMenuPic.addEventListener('click', () => {
-    modalImg.src = `../img/02menuImg/wholemenu/${iceblendedMenus[index]}`;
+    modalImg.src = `./img/02menuImg/wholemenu/${iceblendedMenus[index]}`;
     iceblendedModalPics[index].appendChild(modalImg);
   });
 
@@ -250,11 +250,11 @@ juiceMenuPics.forEach((juiceMenuPic, index) => {
   const juiceModalPics = document.querySelectorAll('.modal-pic.jp');
   const modalImg = document.createElement('img');
 
-  menuImg.src = `../img/02menuImg/wholemenu/${juiceMenus[index]}`;
+  menuImg.src = `./img/02menuImg/wholemenu/${juiceMenus[index]}`;
   juiceMenuPic.appendChild(menuImg);
 
   juiceMenuPic.addEventListener('click', () => {
-    modalImg.src = `../img/02menuImg/wholemenu/${juiceMenus[index]}`;
+    modalImg.src = `./img/02menuImg/wholemenu/${juiceMenus[index]}`;
     juiceModalPics[index].appendChild(modalImg);
   });
 
@@ -298,11 +298,11 @@ teaMenuPics.forEach((teaMenuPic, index) => {
   const teaModalPics = document.querySelectorAll('.modal-pic.tp');
   const modalImg = document.createElement('img');
 
-  menuImg.src = `../img/02menuImg/wholemenu/${teaMenus[index]}`;
+  menuImg.src = `./img/02menuImg/wholemenu/${teaMenus[index]}`;
   teaMenuPic.appendChild(menuImg);
 
   teaMenuPic.addEventListener('click', () => {
-    modalImg.src = `../img/02menuImg/wholemenu/${teaMenus[index]}`;
+    modalImg.src = `./img/02menuImg/wholemenu/${teaMenus[index]}`;
     teaModalPics[index].appendChild(modalImg);
   });
 
@@ -339,11 +339,11 @@ beveridgeMenuPics.forEach((beveridgeMenuPic, index) => {
   const beveridgeModalPics = document.querySelectorAll('.modal-pic.bp');
   const modalImg = document.createElement('img');
 
-  menuImg.src = `../img/02menuImg/wholemenu/${beveridgeMenus[index]}`;
+  menuImg.src = `./img/02menuImg/wholemenu/${beveridgeMenus[index]}`;
   beveridgeMenuPic.appendChild(menuImg);
 
   beveridgeMenuPic.addEventListener('click', () => {
-    modalImg.src = `../img/02menuImg/wholemenu/${beveridgeMenus[index]}`;
+    modalImg.src = `./img/02menuImg/wholemenu/${beveridgeMenus[index]}`;
     beveridgeModalPics[index].appendChild(modalImg);
   });
 
@@ -408,11 +408,11 @@ sideMenuPics.forEach((sideMenuPic, index) => {
   const sideModalPics = document.querySelectorAll('.modal-pic.sp');
   const modalImg = document.createElement('img');
 
-  menuImg.src = `../img/02menuImg/wholemenu/${sideMenus[index]}`;
+  menuImg.src = `./img/02menuImg/wholemenu/${sideMenus[index]}`;
   sideMenuPic.appendChild(menuImg);
 
   sideMenuPic.addEventListener('click', () => {
-    modalImg.src = `../img/02menuImg/wholemenu/${sideMenus[index]}`;
+    modalImg.src = `./img/02menuImg/wholemenu/${sideMenus[index]}`;
     sideModalPics[index].appendChild(modalImg);
   });
 
@@ -451,11 +451,11 @@ petMenuPics.forEach((petMenuPic, index) => {
   const petModalPics = document.querySelectorAll('.modal-pic.pp');
   const modalImg = document.createElement('img');
 
-  menuImg.src = `../img/02menuImg/wholemenu/${petMenus[index]}`;
+  menuImg.src = `./img/02menuImg/wholemenu/${petMenus[index]}`;
   petMenuPic.appendChild(menuImg);
 
   petMenuPic.addEventListener('click', () => {
-    modalImg.src = `../img/02menuImg/wholemenu/${petMenus[index]}`;
+    modalImg.src = `./img/02menuImg/wholemenu/${petMenus[index]}`;
     petModalPics[index].appendChild(modalImg);
   });
 

@@ -80,6 +80,13 @@ a {
   font-family: 'noto';
   src: url('./font/NotoSansKR-VariableFont_wght.ttf');
 }
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
 header {
   width: 100%;
   height: 90px;
@@ -87,20 +94,23 @@ header {
 }
 
 .menu-main {
+  width: 100%;
   height: 510px;
-  background: url('./img/02menuImg/menuBg.png') center/cover;
+  background: url('./img/02menuImg/menuBg.png') center/cover no-repeat;
 }
 .menu-main .heading {
   width: 100%;
   height: 100%;
   color: #fff;
-  text-align: center;
-  padding-top: 204.6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
 }
 .menu-main .heading .title {
   font: 600 2.8125rem/1.2 'geometos';
-  letter-spacing: -0.07rem;
-  margin-bottom: 18px;
+  letter-spacing: -0.0706rem;
 }
 .menu-main .heading p {
   font: 300 1.125rem/1.6 'suitL';
@@ -109,24 +119,23 @@ header {
 .menu-nav {
   width: 100%;
   height: 68px;
+  margin: 0 auto;
   border-bottom: 1px solid #dddddd;
 }
 .menu-nav ul {
-  width: 1200px;
-  width: 62.5%;
   margin: 0 auto;
   text-align: center;
 }
 .menu-nav ul li {
   display: inline-block;
-  padding: 0 28.03px;
+  padding: 0 28.125px;
 }
 .menu-nav ul li a {
-  font: 1.125rem/3.6666 'suitM';
+  font: 1.125rem/3.6389 'suitM';
   color: #333;
 }
 .menu-nav ul li:hover {
-  border-bottom: 2px solid #780997;
+  border-bottom: 2.5px solid #780997;
 }
 .menu-nav ul li:hover a {
   color: #780997;
@@ -134,7 +143,6 @@ header {
 
 .menu-wrap {
   width: 1200px;
-  width: 62.5%;
   padding: 100px 0 150px;
   margin: 0 auto;
 }
@@ -240,7 +248,7 @@ header {
 }
 .menu-wrap .menu-list .list-inner .list-item .menu-item span p {
   font: 1rem/1.6 'noto';
-  color: rgba(102, 102, 102, 0.4);
+  color: #222;
 }
 .menu-wrap .menu-list .list-inner .list-item .menu-item span p i {
   display: inline-block;
@@ -267,7 +275,6 @@ header {
 }
 .menu-wrap .menu-list .list-inner .list-item .menu-modal-inner {
   width: 1200px;
-  width: 62.5%;
   height: auto;
   background: #fff;
   position: absolute;
@@ -295,7 +302,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* 이미지 가운데 정렬 필요*/
+  /*이미지 가운데 정렬 필요*/
 }
 .menu-wrap
   .menu-list
@@ -317,9 +324,10 @@ header {
   .menu-modal-inner
   .modal-item
   .modal-text {
-  float: left;
+  float: right;
   width: 690px;
   width: 60%;
+  height: 100%;
 }
 .menu-wrap
   .menu-list
@@ -330,9 +338,10 @@ header {
   .modal-text
   .title {
   display: block;
-  width: 100%;
-  padding: 6.9px 0 10px;
+  width: auto;
+  padding: 8px 0 10px;
   border-bottom: 3px solid #ff5b28;
+  overflow: hidden;
 }
 .menu-wrap
   .menu-list
@@ -343,7 +352,7 @@ header {
   .modal-text
   .title
   i {
-  display: inline-block;
+  float: left;
   width: 52px;
   height: 52px;
   border-radius: 100%;
@@ -378,9 +387,10 @@ header {
   .modal-text
   .title
   p {
-  display: inline-block;
-  vertical-align: bottom;
+  float: left;
+  vertical-align: middle;
   font: 2.3529rem/1.44768 'noto';
+  color: #222;
 }
 .menu-wrap
   .menu-list
@@ -407,6 +417,58 @@ header {
   width: auto;
   padding: 30px 0;
   color: #666;
+}
+.menu-wrap
+  .menu-list
+  .list-inner
+  .list-item
+  .menu-modal-inner
+  .modal-item
+  .modal-text
+  .info
+  p.diary {
+  max-height: 240px;
+  padding: 0 0;
+  margin: 30px 0;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+.menu-wrap
+  .menu-list
+  .list-inner
+  .list-item
+  .menu-modal-inner
+  .modal-item
+  .modal-text
+  .info
+  p.diary::-webkit-scrollbar {
+  width: 2px;
+  height: 237px;
+}
+.menu-wrap
+  .menu-list
+  .list-inner
+  .list-item
+  .menu-modal-inner
+  .modal-item
+  .modal-text
+  .info
+  p.diary::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.7490196078);
+  border-radius: 10px;
+  height: 167px;
+  border: none;
+}
+.menu-wrap
+  .menu-list
+  .list-inner
+  .list-item
+  .menu-modal-inner
+  .modal-item
+  .modal-text
+  .info
+  p.diary::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.4);
 }
 .menu-wrap
   .menu-list
@@ -465,12 +527,14 @@ header {
 }
 .menu-wrap .menu-list .list-inner .list-item .menu-modal-inner button {
   position: absolute;
-  top: 10px;
-  right: 10px;
-  width: 28px;
-  height: 28px;
+  top: 0;
+  right: 0;
+  width: 48px;
+  height: 64px;
+  padding: 10px;
   border: none;
   background: none;
+  text-align: center;
 }
 .menu-wrap
   .menu-list
@@ -486,7 +550,7 @@ header {
   height: 2px; /*임의지정*/
   background: #666;
   position: absolute;
-  left: 0;
+  right: 10px;
 }
 .menu-wrap
   .menu-list
@@ -507,4 +571,267 @@ header {
   span:nth-child(2) {
   top: 50%;
   transform: rotate(-45deg);
+}
+
+@media screen and (max-width: 1200px) {
+  .menu-main {
+    width: 100%;
+    height: 510px;
+  }
+  .menu-main .heading {
+    width: 100%;
+    height: 100%;
+    gap: 18px;
+  }
+  .menu-main .heading .title {
+    font: 600 2.8125rem/1.2 'geometos';
+    letter-spacing: -0.0706rem;
+  }
+  .menu-main .heading p {
+    font: 300 1.125rem/1.6 'suitL';
+  }
+  .menu-nav {
+    width: 100%;
+  }
+  .menu-nav ul li:hover {
+    border-bottom: none;
+  }
+  .menu-wrap {
+    width: 100%;
+  }
+  .menu-wrap .tab {
+    width: 100%;
+  }
+  .menu-wrap .tab-inner {
+    width: 100%;
+  }
+  .menu-wrap .menu-list {
+    width: 100%;
+  }
+  .menu-wrap .menu-list .list-inner {
+    width: 100%;
+  }
+  .menu-wrap .menu-list .list-inner .list-item .menu-modal-inner {
+    width: 1184px;
+    width: 98.66666%;
+  }
+  .menu-wrap .menu-list .list-inner .list-item .menu-modal-inner .modal-item {
+    width: 100%;
+    height: 100%;
+  }
+  .menu-wrap
+    .menu-list
+    .list-inner
+    .list-item
+    .menu-modal-inner
+    .modal-item
+    .modal-pic {
+    width: 460px;
+    width: 40.5644%;
+    height: 100%;
+  }
+  .menu-wrap
+    .menu-list
+    .list-inner
+    .list-item
+    .menu-modal-inner
+    .modal-item
+    .modal-text {
+    width: 59.4356%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  header {
+    height: 60px;
+  }
+  .menu-main {
+    width: 100%;
+    height: 510px;
+  }
+  .menu-main .heading {
+    width: 100%;
+    height: 100%;
+    gap: 15px;
+  }
+  .menu-main .heading .title {
+    font: 600 1.6306rem/1.2074 'geometos';
+    letter-spacing: -0.0413rem;
+  }
+  .menu-main .heading p {
+    font: 300 0.9375rem/1.6 'suitL';
+  }
+  .menu-nav {
+    width: 100%;
+    height: 46.88px;
+  }
+  .menu-nav ul li {
+    padding: 0 26.3672px;
+  }
+  .menu-nav ul li a {
+    font: 1.0481rem/2.7955 'suitM';
+  }
+  .menu-nav ul li:hover {
+    border-bottom: none;
+  }
+  .menu-wrap {
+    width: 100%;
+    padding: 40px 15px 70px;
+    margin: 0 auto;
+  }
+  .menu-wrap .tab {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  .menu-wrap .tab-inner li {
+    width: 497px;
+    width: 50%;
+    height: 38px;
+    font: 500 0.8125rem/2.9231 'noto';
+  }
+  .menu-wrap .menu-list {
+    width: 100%;
+  }
+  .menu-wrap .menu-list .list-inner {
+    width: 100%;
+  }
+  .menu-wrap .menu-list .list-inner .list-item {
+    width: calc((100% - 10px) / 2);
+    height: 318.59px;
+  }
+  .menu-wrap .menu-list .list-inner .list-item .menu-item .menu-pic {
+    width: 100%;
+    height: 245px;
+    padding: 13px;
+  }
+  .menu-wrap .menu-list .list-inner .list-item .menu-item .menu-pic i {
+    top: 8.5px;
+    right: 8.5px;
+    width: 40px;
+    height: 40px;
+  }
+  .menu-wrap .menu-list .list-inner .list-item .menu-item .menu-pic i::before {
+    font: 0.75rem/1.1 'noto';
+  }
+  .menu-wrap .menu-list .list-inner .list-item .menu-item span p {
+    font: 0.8125rem/1.6 'noto';
+  }
+  .menu-wrap .menu-list .list-inner .list-item .menu-modal-inner {
+    width: 1008px;
+    width: 98.4375%;
+  }
+  .menu-wrap .menu-list .list-inner .list-item .menu-modal-inner .modal-item {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+  }
+  .menu-wrap
+    .menu-list
+    .list-inner
+    .list-item
+    .menu-modal-inner
+    .modal-item
+    .modal-pic {
+    width: 185px;
+    width: 18.7246%;
+    margin-right: 1.5174%;
+  }
+  .menu-wrap
+    .menu-list
+    .list-inner
+    .list-item
+    .menu-modal-inner
+    .modal-item
+    .modal-text {
+    width: 788px;
+    width: 79.758%;
+  }
+  .menu-wrap
+    .menu-list
+    .list-inner
+    .list-item
+    .menu-modal-inner
+    .modal-item
+    .modal-text
+    .title {
+    border-bottom: 1px solid #ff5b28;
+  }
+  .menu-wrap
+    .menu-list
+    .list-inner
+    .list-item
+    .menu-modal-inner
+    .modal-item
+    .modal-text
+    .title
+    i {
+    width: 40px;
+    height: 40px;
+  }
+  .menu-wrap
+    .menu-list
+    .list-inner
+    .list-item
+    .menu-modal-inner
+    .modal-item
+    .modal-text
+    .title
+    i::before {
+    font: 0.75rem/1.1 'noto';
+  }
+  .menu-wrap
+    .menu-list
+    .list-inner
+    .list-item
+    .menu-modal-inner
+    .modal-item
+    .modal-text
+    .title
+    p {
+    font: 1.9118rem/1.4548 'noto';
+  }
+  .menu-wrap
+    .menu-list
+    .list-inner
+    .list-item
+    .menu-modal-inner
+    .modal-item
+    .modal-text
+    .info {
+    width: 100%;
+    height: auto;
+  }
+  .menu-wrap
+    .menu-list
+    .list-inner
+    .list-item
+    .menu-modal-inner
+    .modal-item
+    .modal-text
+    .info
+    p {
+    font: 0.75rem/1.6833 'noto';
+    padding: 15px 0;
+  }
+  .menu-wrap
+    .menu-list
+    .list-inner
+    .list-item
+    .menu-modal-inner
+    .modal-item
+    .modal-text
+    .info
+    p.diary {
+    margin: 15px 0;
+  }
+  .menu-wrap
+    .menu-list
+    .list-inner
+    .list-item
+    .menu-modal-inner
+    .modal-item
+    .modal-text
+    .info
+    p.diary::-webkit-scrollbar-thumb {
+    height: 220px; /*임의지정*/
+  }
 } /*# sourceMappingURL=style.css.map */
