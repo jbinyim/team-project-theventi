@@ -16,9 +16,11 @@
     justify-content: center;
     align-items: center;
     gap: 50px;
-    .message-move {
+    .ani {
       animation: start 1.5s ease-out;
-      animation: truck 2.5s infinite;
+      .message-move {
+        animation: truck 2.5s infinite;
+      }
     }
   }
   .volun-nav {
@@ -41,6 +43,7 @@
       margin-bottom: 80px;
       .article-title-text {
         height: 100%;
+        animation: moveLeft 1s;
         h1 {
           font: 3rem/1.6 "suitSB";
           margin-bottom: 20px;
@@ -55,12 +58,16 @@
           }
         }
       }
+      .article-title-img {
+        animation: moveRight 1s;
+      }
     }
     .message-article-how {
       width: 1200px;
       height: auto;
       h1 {
         font: 3rem "suitSB";
+        animation: moveLeft 1s;
       }
       .message-how-info {
         width: 100%;
@@ -126,7 +133,7 @@
       .message-banner-img {
         border: 1px solid #f00;
         width: 100%;
-        height: auto;
+        height: 368px;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -159,26 +166,59 @@
         }
       }
     }
+    .message-article-form {
+      width: 1200px;
+      margin-bottom: 30px;
+      color: #333;
+      .message-form-text {
+        margin-bottom: 5px;
+        h5 {
+          font: 1.1875rem "suitM";
+          margin-bottom: 10px;
+        }
+        p {
+          font: 1rem "noto";
+        }
+      }
+      .message-form-box {
+        width: 100%;
+        height: 150px;
+        padding: 20px;
+        margin-bottom: 11px;
+        overflow-y: auto;
+        border: 1px solid #dedede;
+        p {
+          font: 0.8125rem "noto";
+        }
+      }
+      #message-agree {
+        width: 19px;
+        height: 19px;
+      }
+      label {
+        font: 1.0625rem/20px "noto";
+      }
+    }
+    .show {
+      animation-play-state: paused !important;
+    }
   }
 }
 
 @keyframes start {
   0% {
     opacity: 0;
-    transform: translate(9999px, 0);
+    transform: translate(2000px, 0);
   }
-  20% {
-    opacity: 0.3;
-  }
-  50% {
-    opacity: 0.5;
+  60% {
+    opacity: 1;
+    transform: translateX(-30px);
   }
   80% {
-    opacity: 0.8;
+    transform: translateX(10px);
   }
   100% {
-    opacity: 1;
-    transform: translate(0, 0);
+    transform: translate(0);
   }
 }
 @keyframes truck {
@@ -215,5 +255,25 @@
   }
   100% {
     transform: scale(1);
+  }
+}
+@keyframes moveLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes moveRight {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
   }
 }

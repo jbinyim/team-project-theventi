@@ -1,5 +1,18 @@
-const arrow = document.querySelectorAll(".fa-solid");
-const banner = document.querySelector(".message-banner-img");
-const pics = ["sum-1.jpg", "sum-2.jpg", "sum-3.jpg", "sum-4.jpg"];
+const triggerShow = 1000;
+const sa = document.querySelectorAll(".sa");
 
-// banner.style.backgroundImage = `url(../../img/04community/05message/${[0]})`;
+const saFunc = function () {
+  for (const element of sa) {
+    if (!element.classList.contains("show")) {
+      if (
+        window.innerHeight >
+        element.getBoundingClientRect().top + triggerShow
+      ) {
+        element.classList.add("show");
+      }
+    }
+  }
+};
+
+window.addEventListener("load", saFunc);
+window.addEventListener("scroll", saFunc);
