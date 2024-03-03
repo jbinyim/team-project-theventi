@@ -11,7 +11,7 @@ console.log(dropDown); // headerList.onclick = function () {
 
 var opendrop = function opendrop() {
   dropDown.style.display = "block";
-  body.style.transition = "all 0.5s";
+  body.style.transition = "all 0.5s linear";
 };
 
 var closedrop = function closedrop() {
@@ -22,4 +22,9 @@ var closedrop = function closedrop() {
 headerList.onmouseover = opendrop;
 dropDown.onmouseover = opendrop;
 dropDown.onmouseout = closedrop;
-console.log(opendrop);
+console.log(opendrop); // wrap.addEventListener("mouseover", () => {
+//   logo.classList.add("active");
+// });
+// wrap.addEventListener("mouseout", () => {
+//   logo.classList.remove("active");
+// });
