@@ -58,6 +58,7 @@
     }
     .message-article-how {
       width: 1200px;
+      height: auto;
       h1 {
         font: 3rem "suitSB";
       }
@@ -72,6 +73,7 @@
         .msg {
           display: flex;
           gap: 34px;
+          animation: sizeb 1.5s;
           .msg-volun-text {
             display: flex;
             flex-direction: column;
@@ -88,6 +90,9 @@
             }
           }
         }
+        .msg:last-child {
+          animation-delay: 0.2s;
+        }
       }
       p {
         font: 1rem "suitM";
@@ -101,7 +106,7 @@
     }
     .message-baner {
       width: 1310px;
-      margin-top: 100px;
+      margin: 100px 0 120px;
       .message-banner-title {
         h1 {
           display: inline-block;
@@ -113,13 +118,45 @@
         }
       }
       .msg-banner-direction {
+        margin: 5px 0 60px;
         display: flex;
         justify-content: flex-end;
         cursor: pointer;
       }
       .message-banner-img {
-        width: 600px;
-        height: 300px;
+        border: 1px solid #f00;
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .sum {
+          position: relative;
+          &:hover img {
+            outline: 4px solid map-get($main-color, puple);
+          }
+          .sum-img {
+            width: 19.6875rem;
+            height: 19.6875rem;
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              border-radius: 100% 0 100% 100%;
+              transition: all 0.2s;
+            }
+          }
+          .sum-insta {
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 54px;
+            height: 53px;
+            background: url("../../img/04community/05message/insta-icon.png")
+              center/cover no-repeat;
+          }
+        }
       }
     }
   }
@@ -144,7 +181,6 @@
     transform: translate(0, 0);
   }
 }
-
 @keyframes truck {
   0% {
     transform: translate(0, 0);
@@ -163,5 +199,21 @@
   }
   100% {
     transform: translate(0, 0);
+  }
+}
+@keyframes sizeb {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
   }
 }

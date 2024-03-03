@@ -49,8 +49,10 @@ html .wrap .volun-nav .volun-bar ul {
   display: flex;
 }
 html .wrap .volun-nav .volun-bar ul li a {
-  display: block;
-  padding: 18px 28px 24px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 1.5625em;
+  height: 4.25rem;
   font: 1.125rem "suitM";
   border-bottom: 2.5px solid transparent;
 }
@@ -60,7 +62,7 @@ html .wrap .volun-nav .volun-bar ul li a:hover {
   border-bottom: 2.5px solid #780997;
 }
 html .wrap .volun-nav .volun-bar ul .active {
-  transform: translateY(-1px);
+  display: inline-flex;
   color: #780997;
   border-bottom: 2.5px solid #780997;
 }
