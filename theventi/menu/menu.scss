@@ -202,10 +202,11 @@ header {
               height: 100%;
               padding: 25px;
               overflow: hidden;
+              display: flex;
               .modal-pic {
                 width: 460px;
                 width: 40%;
-                height: 100%;
+                height: auto;
                 float: left;
                 display: flex;
                 justify-content: center;
@@ -215,11 +216,10 @@ header {
                   display: block;
                   width: 119px;
                   height: 219px;
-                  margin: 0 auto;
                 }
               }
               .modal-text {
-                float: right;
+                float: left;
                 width: 690px;
                 width: 60%;
                 height: 100%;
