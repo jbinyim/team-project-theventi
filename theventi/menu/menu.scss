@@ -212,7 +212,6 @@ header {
                 justify-content: center;
                 align-items: center;
                 vertical-align: middle;
-                /*이미지 가운데 정렬 필요*/
                 img {
                   display: block;
                   width: 119px;
@@ -352,18 +351,6 @@ header {
   .menu-main {
     width: 100%;
     height: 510px;
-    .heading {
-      width: 100%;
-      height: 100%;
-      gap: 18px;
-      .title {
-        font: 600 2.8125rem/1.2 'geometos';
-        letter-spacing: -0.0706rem;
-      }
-      p {
-        font: 300 1.125rem/1.6 'suitL';
-      }
-    }
   }
   .menu-nav {
     width: 100%;
@@ -391,17 +378,18 @@ header {
           .menu-modal {
             &-inner {
               width: 1184px;
-              width: 98.66666%;
+              width: 98.6667%;
               .modal-item {
                 width: 100%;
                 height: 100%;
                 .modal-pic {
                   width: 460px;
                   width: 40.5644%;
-                  height: 100%;
                 }
                 .modal-text {
+                  float: left;
                   width: 59.4356%;
+                  height: 100%;
                 }
               }
             }

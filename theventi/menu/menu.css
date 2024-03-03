@@ -264,7 +264,6 @@ header {
   justify-content: center;
   align-items: center;
   vertical-align: middle;
-  /*이미지 가운데 정렬 필요*/
 }
 .menu-wrap .menu-list .list-inner .list-item .menu-modal-inner .modal-item .modal-pic img {
   display: block;
@@ -397,18 +396,6 @@ header {
     width: 100%;
     height: 510px;
   }
-  .menu-main .heading {
-    width: 100%;
-    height: 100%;
-    gap: 18px;
-  }
-  .menu-main .heading .title {
-    font: 600 2.8125rem/1.2 "geometos";
-    letter-spacing: -0.0706rem;
-  }
-  .menu-main .heading p {
-    font: 300 1.125rem/1.6 "suitL";
-  }
   .menu-nav {
     width: 100%;
   }
@@ -432,7 +419,7 @@ header {
   }
   .menu-wrap .menu-list .list-inner .list-item .menu-modal-inner {
     width: 1184px;
-    width: 98.66666%;
+    width: 98.6667%;
   }
   .menu-wrap .menu-list .list-inner .list-item .menu-modal-inner .modal-item {
     width: 100%;
@@ -441,10 +428,11 @@ header {
   .menu-wrap .menu-list .list-inner .list-item .menu-modal-inner .modal-item .modal-pic {
     width: 460px;
     width: 40.5644%;
-    height: 100%;
   }
   .menu-wrap .menu-list .list-inner .list-item .menu-modal-inner .modal-item .modal-text {
+    float: left;
     width: 59.4356%;
+    height: 100%;
   }
 }
 @media screen and (max-width: 1024px) {
