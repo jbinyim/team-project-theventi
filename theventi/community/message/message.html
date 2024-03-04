@@ -250,10 +250,64 @@
         </div>
         <div class="message-article-input">
           <form action="https://localhost:3000/" method="post">
-            <div class="input-name">
+            <div class="input">
               <span>이름<i>*</i></span>
+              <input type="text" class="name" />
+            </div>
+            <div class="input">
+              <span>연락처<i>*</i></span>
+              <input type="text" class="phone" /> -
+              <input type="text" class="phone" /> -
+              <input type="text" class="phone" />
+            </div>
+            <div class="input address">
+              <span>출동 희망주소<i>*</i></span>
+              <div class="detail-addres">
+                <div class="detail">
+                  <input type="text" placeholder="우편 번호" />
+                  <input type="button" value="주소검색" />
+                </div>
+                <input type="text" placeholder="주소" />
+                <input type="text" placeholder="상세주소" />
+                <p>
+                  <i>*</i> 벤티력 출동은 사연 선정자께서 사전 협의된 공간을
+                  제공해 주셔야 합니다
+                </p>
+              </div>
+            </div>
+            <div class="input">
+              <span>참여 예상 인원<i>*</i></span>
+              <input type="text" /> 명
+            </div>
+            <div class="input datas">
+              <span>출동 희망 일정<i>*</i></span>
+              <div class="detail-data">
+                <div class="detail">
+                  <div class="data">
+                    <input type="date" />
+                  </div>
+                  ~
+                  <div class="data">
+                    <input type="date" />
+                  </div>
+                </div>
+                <p><i>*</i> 희망하시는 출동 일정 구간을 선택해주세요.</p>
+              </div>
+            </div>
+            <div class="input story">
+              <span>사연내용<i>*</i></span>
               <input type="text" />
             </div>
+            <div class="input automatic">
+              <span>자동입력방지코드<i>*</i></span>
+              <span class="code">1</span>
+              <input type="text" placeholder="자동입력방지 코드" />
+            </div>
+            <p class="input-bottom">
+              <i>*</i> [벤티럭 사연접수 프로젝트]는 접수된 사연 중 선정을 통해
+              진행되며, 선정된 사연에 한하여 별도 연락드릴 예정입니다.
+            </p>
+            <input type="submit" value="작성하기" />
           </form>
         </div>
       </div>
