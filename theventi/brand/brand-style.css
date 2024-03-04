@@ -1,34 +1,6 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-li {
-  list-style: none;
-}
-
+@import "//font";
 /* reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-li {
-  list-style: none;
-}
-
+@import "//reset";
 .header {
   width: 100%;
   height: 91px;
@@ -38,7 +10,7 @@ li {
 .brand {
   width: 100%;
   height: 510px;
-  background: url(./img/03brand/sv_1.png) center/cover no-repeat;
+  background: url(../img/03brand/sv_1.png) center/cover no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;

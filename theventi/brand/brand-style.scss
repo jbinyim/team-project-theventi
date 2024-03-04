@@ -1,8 +1,8 @@
 // font
-@import "reset";
+@import "/font";
 
 /* reset */
-@import "reset";
+@import "/reset";
 
 .header {
   width: 100%;
@@ -14,7 +14,7 @@
 .brand {
   width: 100%;
   height: 510px;
-  background: url(./img/03brand/sv_1.png) center/cover no-repeat;
+  background: url(../img/03brand/sv_1.png) center/cover no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
