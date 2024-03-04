@@ -1,0 +1,216 @@
+@font-face {
+  font-family: "geometos";
+  src: url("./font/Geometos-Rounded.ttf");
+}
+@font-face {
+  font-family: "nanum";
+  src: url("./font/NanumSquareB.ttf");
+}
+@font-face {
+  font-family: "noto";
+  src: url("./font/NotoSansKR-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: "suitB";
+  src: url("./font/SUIT-Bold.ttf");
+}
+@font-face {
+  font-family: "suitL";
+  src: url("./font/SUIT-Light.ttf");
+}
+@font-face {
+  font-family: "suitM";
+  src: url("./font/SUIT-Medium.ttf");
+}
+@font-face {
+  font-family: "suitSB";
+  src: url("./font/SUIT-SemiBold.ttf");
+}
+@font-face {
+  font-family: "xeicon";
+  src: url("./font/xeicon.ttf");
+}
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+.header {
+  width: 100%;
+  height: 91px;
+}
+
+/* custom  */
+.brand {
+  width: 100%;
+  height: 510px;
+  background: url(../img/03brand/sv_1.png) center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.brand .br-content {
+  color: #fff;
+  text-align: center;
+}
+.brand .br-content h1 {
+  font: bold 2.8rem/1 "geometos";
+  line-height: -1px;
+  margin-bottom: 19px;
+}
+.brand .br-content p {
+  font: 1.12rem/1 "suitL";
+}
+
+.sub-nav {
+  width: 100%;
+  height: 67px;
+  border-bottom: 2px solid #ddd;
+}
+.sub-nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.sub-nav ul li {
+  padding: 21px 30px;
+  font: 1.12rem/1.2 "suitM";
+  color: #333;
+  transition: all 0.3s;
+}
+.sub-nav ul li:hover {
+  color: #780997;
+  border-bottom: 3px solid #780997;
+}
+
+.active a {
+  color: #780997;
+}
+
+.bi-content {
+  width: 100%;
+  height: 1105px;
+}
+.bi-content .bi-section {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 100px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 160px;
+}
+.bi-content .bi-section .bi-content-top {
+  display: flex;
+  gap: 68px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+.bi-content .bi-section .bi-content-top h1 {
+  font: bold 2rem/0.8 "suitB";
+}
+.bi-content .bi-section .bi-content-top .bi-logo-text {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.bi-content .bi-section .bi-content-top .bi-logo-text p:nth-child(1) {
+  font: 600 0.9375rem/1 "noto";
+  color: #111;
+}
+.bi-content .bi-section .bi-content-top .bi-logo-text p:nth-child(2) {
+  font: 200 0.9375rem/1 "noto";
+  color: #666;
+}
+.bi-content .bi-section .bi-content-botoom {
+  display: flex;
+  gap: 40px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+}
+.bi-content .bi-section .bi-content-botoom h2 {
+  font: bold 2rem/0.8 "suitB";
+}
+.bi-content .bi-section .bi-content-botoom .bi-symbol-text {
+  font: 600 0.9375rem/1 "noto";
+  color: #111;
+}
+.bi-content .bi-section .bi-content-botoom .symbol-items {
+  display: flex;
+  gap: 35px;
+}
+.bi-content .bi-section .bi-content-botoom .symbol-items .symbol-item1 {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.bi-content .bi-section .bi-content-botoom .symbol-items .symbol-item1 span {
+  width: 65px;
+  height: 65px;
+  background: #7b00a0;
+}
+.bi-content .bi-section .bi-content-botoom .symbol-items .symbol-item1 p {
+  font: 0.9rem/1 "suitM";
+  color: #666;
+}
+.bi-content .bi-section .bi-content-botoom .symbol-items .symbol-item2 {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.bi-content .bi-section .bi-content-botoom .symbol-items .symbol-item2 span {
+  width: 65px;
+  height: 65px;
+  background: #ff5b28;
+}
+.bi-content .bi-section .bi-content-botoom .symbol-items .symbol-item2 p {
+  font: 0.9rem/1 "suitM";
+  color: #666;
+}
+.bi-content .bi-section .bi-content-botoom .symbol-items .symbol-item3 {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.bi-content .bi-section .bi-content-botoom .symbol-items .symbol-item3 span {
+  width: 65px;
+  height: 65px;
+  background: #291b35;
+}
+.bi-content .bi-section .bi-content-botoom .symbol-items .symbol-item3 p {
+  font: 0.9rem/1 "suitM";
+  color: #666;
+}
+.bi-content .bi-section .bi-content-botoom .symbol-items .symbol-item4 {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.bi-content .bi-section .bi-content-botoom .symbol-items .symbol-item4 span {
+  width: 65px;
+  height: 65px;
+  background: #e9e8e8;
+}
+.bi-content .bi-section .bi-content-botoom .symbol-items .symbol-item4 p {
+  font: 0.9rem/1 "suitM";
+  color: #666;
+}
+
+.footer {
+  width: 100%;
+  height: 426px;
+  background: #780997;
+}/*# sourceMappingURL=brand-style02.css.map */
