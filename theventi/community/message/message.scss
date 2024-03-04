@@ -192,15 +192,24 @@
         }
       }
       .message-checkbox {
-        border: 1px solid #f00;
         #message-agree {
           width: 19px;
           height: 19px;
           accent-color: map-get($main-color, org);
         }
         label {
+          cursor: pointer;
           font: 1.0625rem/20px "noto";
+          &:hover #message-agree {
+            border-color: #f00;
+          }
         }
+      }
+    }
+    .message-article-input {
+      width: 1200px;
+      .input-name {
+        border-top: 1px solid #000;
       }
     }
     .show {
