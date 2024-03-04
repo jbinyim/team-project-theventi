@@ -222,11 +222,15 @@
 .wrap .message-container .message-article-form .message-form-box p {
   font: 0.8125rem "noto";
 }
-.wrap .message-container .message-article-form #message-agree {
+.wrap .message-container .message-article-form .message-checkbox {
+  border: 1px solid #f00;
+}
+.wrap .message-container .message-article-form .message-checkbox #message-agree {
   width: 19px;
   height: 19px;
+  accent-color: #ff5b28;
 }
-.wrap .message-container .message-article-form label {
+.wrap .message-container .message-article-form .message-checkbox label {
   font: 1.0625rem/20px "noto";
 }
 .wrap .message-container .show {

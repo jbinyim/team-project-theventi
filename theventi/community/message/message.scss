@@ -191,12 +191,16 @@
           font: 0.8125rem "noto";
         }
       }
-      #message-agree {
-        width: 19px;
-        height: 19px;
-      }
-      label {
-        font: 1.0625rem/20px "noto";
+      .message-checkbox {
+        border: 1px solid #f00;
+        #message-agree {
+          width: 19px;
+          height: 19px;
+          accent-color: map-get($main-color, org);
+        }
+        label {
+          font: 1.0625rem/20px "noto";
+        }
       }
     }
     .show {
