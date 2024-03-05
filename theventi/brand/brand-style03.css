@@ -11,6 +11,10 @@
   src: url("./font/NotoSansKR-VariableFont_wght.ttf");
 }
 @font-face {
+  font-family: "noto500";
+  src: url("./font/noto-sans-kr-v13-latin_korean-500.ttf");
+}
+@font-face {
   font-family: "suitB";
   src: url("./font/SUIT-Bold.ttf");
 }
@@ -35,6 +39,47 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+*::-moz-selection {
+  background: #d9d9d9;
+  color: #ff5b28;
+  text-shadow: none;
+}
+*::selection {
+  background: #d9d9d9;
+  color: #ff5b28;
+  text-shadow: none;
+}
+*::-webkit-scrollbar {
+  margin: 0;
+  padding: 0;
+  width: 8px;
+}
+*::-webkit-scrollbar-button {
+  height: 0;
+  -webkit-transition: 300ms all;
+  transition: 300ms all;
+}
+*::-webkit-scrollbar-corner {
+  background-color: #222;
+}
+*::-webkit-scrollbar-thumb {
+  /* background: rgba(123, 0, 160, 0.7); */
+  background: rgba(255, 91, 40, 0.7);
+  border-radius: 8px;
+  border: 1px solid #000;
+}
+*::-webkit-scrollbar-thumb:hover, *::-webkit-scrollbar-thumb:active {
+  /* background: rgba(123, 0, 160, 0.9); */
+  background: rgba(255, 91, 40, 0.9);
+}
+*::-webkit-scrollbar-track {
+  background-color: #222;
+  border-radius: 0;
+  border: 0;
+}
+*::-webkit-scrollbar-track:hover, *::-webkit-scrollbar-track:active {
+  background: #222;
 }
 
 a {
@@ -97,4 +142,100 @@ li {
 
 .active a {
   color: #780997;
+}
+
+.map-view {
+  width: 100%;
+  height: 1110px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.map-view .map-contents {
+  width: 70%;
+  max-width: 1300px;
+  height: 710px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.map-view .map-contents .map-left {
+  width: 550px;
+  height: 710px;
+  border-top: 3px solid #780997;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+  display: flex;
+  gap: 30px;
+  flex-direction: column;
+  align-items: center;
+}
+.map-view .map-contents .map-left .map-left-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin-top: 40px;
+}
+.map-view .map-contents .map-left .map-left-text h3 {
+  font: 600 1.19rem/1 "suitB";
+  color: #222;
+  position: relative;
+}
+.map-view .map-contents .map-left .map-left-text h3::before {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  width: 20px;
+  height: 2px;
+  background: #780997;
+}
+.map-view .map-contents .map-left .map-left-text p {
+  font: 200 0.9375rem/1 "noto";
+  color: #666;
+}
+.map-view .map-contents .map-left .map01 {
+  width: 90%;
+  height: 500px;
+  border: 1px solid #ddd;
+}
+.map-view .map-contents .map-right {
+  width: 550px;
+  height: 710px;
+  border-top: 3px solid #780997;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+  display: flex;
+  gap: 30px;
+  flex-direction: column;
+  align-items: center;
+}
+.map-view .map-contents .map-right .map-right-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin-top: 40px;
+}
+.map-view .map-contents .map-right .map-right-text h3 {
+  font: 600 1.19rem/1 "suitB";
+  color: #222;
+  position: relative;
+}
+.map-view .map-contents .map-right .map-right-text h3::before {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  width: 20px;
+  height: 2px;
+  background: #780997;
+}
+.map-view .map-contents .map-right .map-right-text p {
+  font: 200 0.9375rem/1 "noto";
+  color: #666;
+}
+.map-view .map-contents .map-right .map02 {
+  width: 90%;
+  height: 500px;
+  border: 1px solid #ddd;
 }/*# sourceMappingURL=brand-style03.css.map */

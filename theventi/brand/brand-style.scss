@@ -1,10 +1,10 @@
 // ======더벤티 소개=======
 
 // font
-@import "../font";
+@import "../font.scss";
 
 /* reset */
-@import "../reset";
+@import "../reset.scss";
 
 .header {
   width: 100%;
@@ -274,4 +274,16 @@
   width: 100%;
   height: 426px;
   background: #780997;
+}
+
+// ===========1200px===========
+@media screen and (max-width: 1200px) {
+}
+
+// ===========1024px===========
+@media screen and (max-width: 1240px) {
+}
+
+// ===========320px===========
+@media screen and (max-width: 320px) {
 }
