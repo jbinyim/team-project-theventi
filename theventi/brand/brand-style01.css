@@ -1,0 +1,100 @@
+@font-face {
+  font-family: "geometos";
+  src: url("./font/Geometos-Rounded.ttf");
+}
+@font-face {
+  font-family: "nanum";
+  src: url("./font/NanumSquareB.ttf");
+}
+@font-face {
+  font-family: "noto";
+  src: url("./font/NotoSansKR-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: "suitB";
+  src: url("./font/SUIT-Bold.ttf");
+}
+@font-face {
+  font-family: "suitL";
+  src: url("./font/SUIT-Light.ttf");
+}
+@font-face {
+  font-family: "suitM";
+  src: url("./font/SUIT-Medium.ttf");
+}
+@font-face {
+  font-family: "suitSB";
+  src: url("./font/SUIT-SemiBold.ttf");
+}
+@font-face {
+  font-family: "xeicon";
+  src: url("./font/xeicon.ttf");
+}
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+.header {
+  width: 100%;
+  height: 91px;
+}
+
+/* custom  */
+.brand {
+  width: 100%;
+  height: 510px;
+  background: url(../img/03brand/sv_1.png) center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.brand .br-content {
+  color: #fff;
+  text-align: center;
+}
+.brand .br-content h1 {
+  font: bold 2.8rem/1 "geometos";
+  line-height: -1px;
+  margin-bottom: 19px;
+}
+.brand .br-content p {
+  font: 1.12rem/1 "suitL";
+}
+
+.sub-nav {
+  width: 100%;
+  height: 67px;
+  border-bottom: 2px solid #ddd;
+}
+.sub-nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.sub-nav ul li {
+  padding: 21px 30px;
+  font: 1.12rem/1.2 "suitM";
+  color: #333;
+  transition: all 0.3s;
+}
+.sub-nav ul li:hover {
+  color: #780997;
+  border-bottom: 3px solid #780997;
+}
+
+.active a {
+  color: #780997;
+}/*# sourceMappingURL=brand-style01.css.map */

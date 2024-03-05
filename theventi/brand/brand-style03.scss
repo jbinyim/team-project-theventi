@@ -1,0 +1,74 @@
+// =====찾아오시는길======
+
+// font
+@import "../font";
+
+/* reset */
+@import "../reset";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+li {
+  list-style: none;
+}
+
+/* custom  */
+
+.header {
+  width: 100%;
+  height: 91px;
+}
+
+//brand
+.brand {
+  width: 100%;
+  height: 510px;
+  background: url(../img/03brand/sv_1.png) center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .br-content {
+    color: #fff;
+    text-align: center;
+    h1 {
+      font: bold 2.8rem/1 "geometos";
+      line-height: -1px;
+      margin-bottom: 19px;
+    }
+    p {
+      font: 1.12rem/1 "suitL";
+    }
+  }
+}
+//sub-nav
+.sub-nav {
+  width: 100%;
+  height: 67px;
+  border-bottom: 2px solid #ddd;
+  ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    li {
+      padding: 21px 30px;
+      font: 1.12rem/1.2 "suitM";
+      color: #333;
+      transition: all 0.3s;
+      &:hover {
+        color: #780997;
+        border-bottom: 3px solid #780997;
+      }
+    }
+  }
+}
+.active a {
+  color: #780997;
+}
