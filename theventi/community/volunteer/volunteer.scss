@@ -82,6 +82,7 @@ html {
           }
         }
         .volun-list {
+          margin-bottom: 80px;
           ul {
             display: flex;
             gap: 10px;
@@ -125,6 +126,26 @@ html {
                 }
               }
             }
+          }
+        }
+        .volun-pages {
+          width: 100%;
+          margin-bottom: 56px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 4px;
+          .prevent-next {
+            width: 34px;
+            height: 34px;
+          }
+          .page {
+            width: 34px;
+            height: 34px;
+            // line-height: 100%;
+            text-align: center;
+            border: 1px solid #000;
+            font: 1rem "noto";
           }
         }
       }

@@ -162,7 +162,6 @@
   cursor: pointer;
 }
 .wrap .message-container .message-baner .message-banner-img {
-  border: 1px solid #f00;
   width: 100%;
   height: 368px;
   display: flex;
@@ -222,16 +221,164 @@
 .wrap .message-container .message-article-form .message-form-box p {
   font: 0.8125rem "noto";
 }
-.wrap .message-container .message-article-form .message-checkbox {
-  border: 1px solid #f00;
-}
 .wrap .message-container .message-article-form .message-checkbox #message-agree {
   width: 19px;
   height: 19px;
   accent-color: #ff5b28;
 }
 .wrap .message-container .message-article-form .message-checkbox label {
+  cursor: pointer;
   font: 1.0625rem/20px "noto";
+}
+.wrap .message-container .message-article-form .message-checkbox label:hover #message-agree {
+  border-color: #f00;
+}
+.wrap .message-container .message-article-input {
+  width: 1200px;
+  margin-bottom: 40px;
+  border-top: 1px solid #000;
+}
+.wrap .message-container .message-article-input .input {
+  width: 100%;
+  height: 79px;
+  border-bottom: 1px solid #ddd;
+  padding: 0 10px;
+  margin-bottom: 30px;
+  text-align: left;
+}
+.wrap .message-container .message-article-input .input span {
+  display: inline-block;
+  width: 13%;
+  font: 500 1rem "noto";
+}
+.wrap .message-container .message-article-input .input span i {
+  color: #ff5b28;
+}
+.wrap .message-container .message-article-input .input input {
+  height: 54px;
+  border: 1px solid #ddd;
+  padding: 0 0.625rem;
+}
+.wrap .message-container .message-article-input .input input:focus {
+  outline: none;
+}
+.wrap .message-container .message-article-input .input .name {
+  width: 25%;
+  margin: 12px 0;
+}
+.wrap .message-container .message-article-input .input .phone {
+  width: 13.83%;
+}
+.wrap .message-container .message-article-input .address {
+  width: 100%;
+  height: 241px;
+  display: flex;
+  align-items: center;
+  gap: 2.2%;
+}
+.wrap .message-container .message-article-input .address .detail-addres {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.wrap .message-container .message-article-input .address .detail-addres .detail {
+  height: 50px;
+}
+.wrap .message-container .message-article-input .address .detail-addres .detail input[type=text] {
+  width: 16.6%;
+}
+.wrap .message-container .message-article-input .address .detail-addres .detail input[type=button] {
+  width: 14.16%;
+  color: #fff;
+  background-color: #999;
+  transition: all 0.3s;
+}
+.wrap .message-container .message-article-input .address .detail-addres .detail input[type=button]:hover {
+  cursor: pointer;
+  background-color: #4d4d4d;
+}
+.wrap .message-container .message-article-input .address .detail-addres p {
+  color: #666;
+  font: 1rem "noto";
+}
+.wrap .message-container .message-article-input .address .detail-addres p i {
+  color: #ff5b28;
+}
+.wrap .message-container .message-article-input .datas {
+  width: 100%;
+  height: 109px;
+  display: flex;
+  align-items: center;
+  gap: 2.2%;
+}
+.wrap .message-container .message-article-input .datas .detail-data {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.wrap .message-container .message-article-input .datas .detail-data .detail {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.wrap .message-container .message-article-input .datas .detail-data .detail .data {
+  width: 19.75%;
+}
+.wrap .message-container .message-article-input .datas .detail-data .detail .data input {
+  width: 100%;
+}
+.wrap .message-container .message-article-input .datas .detail-data p {
+  color: #4d4d4d;
+  font: 1rem "noto";
+  margin-bottom: 12px;
+}
+.wrap .message-container .message-article-input .datas .detail-data p i {
+  color: #ff5b28;
+}
+.wrap .message-container .message-article-input .story {
+  width: 100%;
+  height: 175px;
+}
+.wrap .message-container .message-article-input .story input {
+  width: 85.3%;
+  height: 150px;
+}
+.wrap .message-container .message-article-input .automatic {
+  width: 100%;
+}
+.wrap .message-container .message-article-input .automatic .code {
+  width: 6.5%;
+  height: 54px;
+  line-height: 49px;
+  text-align: center;
+  background: #ddd;
+}
+.wrap .message-container .message-article-input .input-bottom {
+  margin-bottom: 30px;
+  text-align: center;
+  color: #666;
+  font: 1rem "noto";
+}
+.wrap .message-container .message-article-input .input-bottom i {
+  color: #ff5b28;
+}
+.wrap .message-container .message-article-input input[type=submit] {
+  display: block;
+  margin: 0 auto;
+  width: 14%;
+  height: 52px;
+  border: none;
+  background: #7b00a0;
+  color: #fff;
+  font: 1.0625rem "noto";
+  transition: all 0.3s;
+}
+.wrap .message-container .message-article-input input[type=submit]:hover {
+  cursor: pointer;
+  color: #ff5b28;
+  background-color: #520667;
 }
 .wrap .message-container .show {
   animation-play-state: paused !important;
