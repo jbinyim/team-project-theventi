@@ -4,6 +4,47 @@
   padding: 0;
   box-sizing: border-box;
 }
+*::-moz-selection {
+  background: #d9d9d9;
+  color: #ff5b28;
+  text-shadow: none;
+}
+*::selection {
+  background: #d9d9d9;
+  color: #ff5b28;
+  text-shadow: none;
+}
+*::-webkit-scrollbar {
+  margin: 0;
+  padding: 0;
+  width: 8px;
+}
+*::-webkit-scrollbar-button {
+  height: 0;
+  -webkit-transition: 300ms all;
+  transition: 300ms all;
+}
+*::-webkit-scrollbar-corner {
+  background-color: #222;
+}
+*::-webkit-scrollbar-thumb {
+  /* background: rgba(123, 0, 160, 0.7); */
+  background: rgba(255, 91, 40, 0.7);
+  border-radius: 8px;
+  border: 1px solid #000;
+}
+*::-webkit-scrollbar-thumb:hover, *::-webkit-scrollbar-thumb:active {
+  /* background: rgba(123, 0, 160, 0.9); */
+  background: rgba(255, 91, 40, 0.9);
+}
+*::-webkit-scrollbar-track {
+  background-color: #222;
+  border-radius: 0;
+  border: 0;
+}
+*::-webkit-scrollbar-track:hover, *::-webkit-scrollbar-track:active {
+  background: #222;
+}
 
 a {
   text-decoration: none;
@@ -25,6 +66,10 @@ li {
 @font-face {
   font-family: "noto";
   src: url("./font/NotoSansKR-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: "noto500";
+  src: url("./font/noto-sans-kr-v13-latin_korean-500.ttf");
 }
 @font-face {
   font-family: "suitB";

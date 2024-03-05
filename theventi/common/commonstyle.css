@@ -32,6 +32,20 @@
     top: 5px;
     transform: translate(0, 0px);
   }
+  body footer::after {
+    display: none;
+  }
+  body footer #footer-wrap #footer-container-wrap {
+    display: flex;
+    justify-content: center;
+  }
+  body footer #footer-wrap #footer-container-wrap #footer-container-top {
+    width: 100%;
+    border: 1px solid #f00;
+  }
+  body footer #footer-wrap #footer-container-wrap #footer-container-top .footer-info {
+    left: 0;
+  }
 }
 *::-moz-selection {
   background: #d9d9d9;
@@ -340,7 +354,8 @@
 }
 * footer #footer-wrap #footer-container-wrap #footer-container-top {
   position: absolute;
-  width: inherit;
+  width: 100%;
+  max-width: 1360px;
   height: 55px;
   display: flex;
   top: 13.2%;
