@@ -1,5 +1,5 @@
-@import "../reset.scss";
-@import "../font.scss";
+@import "reset";
+@import "font";
 
 body {
   display: flex;
@@ -17,6 +17,7 @@ header {
   height: 510px;
   background: url("../img/02menuImg/menuBg.png") center/cover no-repeat;
   .heading {
+    padding: 10px;
     width: 100%;
     height: 100%;
     color: #fff;
@@ -31,6 +32,7 @@ header {
     }
     p {
       font: 300 1.125rem/1.6 "suitL";
+      text-align: center;
     }
   }
 }
@@ -67,10 +69,44 @@ header {
 .menu-story-wrap {
   width: 1920px;
   .menu-story01 {
-    &-lt {
+    width: 100%;
+    overflow: hidden;
+    .menu-story01-lt {
+      float: left;
       width: 672px;
+      width: 35%;
       height: 716px;
       background: #f5f4f3;
+      &-inner {
+        padding: 144.11px 142px 192px;
+        h1 {
+          font: 700 4.125rem/1 "noto";
+          letter-spacing: -0.0825rem;
+          color: #780997;
+        }
+        p {
+          font: 3.2375rem/1.2046 "suitM";
+          letter-spacing: -0.065rem;
+          margin: 12px 0 40px;
+        }
+      }
+    }
+    .menu-story01-rt {
+      float: left;
+      width: 1248px;
+      width: 65%;
+      height: 716px;
+      &-inner {
+        width: 100%;
+        .menu-story-coffee {
+          width: 200px;
+          width: 10.4167;
+          &-01 {
+            width: 100%;
+            height: 286.39px;
+          }
+        }
+      }
     }
   }
 }
@@ -218,13 +254,11 @@ header {
               width: 100%;
               height: 100%;
               padding: 25px;
-              overflow: hidden;
               display: flex;
               .modal-pic {
                 width: 460px;
                 width: 40%;
                 height: auto;
-                float: left;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -236,18 +270,18 @@ header {
                 }
               }
               .modal-text {
-                float: left;
                 width: 690px;
                 width: 60%;
                 height: 100%;
+                overflow: hidden;
                 .title {
                   display: block;
                   width: auto;
                   padding: 8px 0 10px;
                   border-bottom: 3px solid #ff5b28;
-
-                  display: flex;
+                  overflow: hidden;
                   i {
+                    float: left;
                     width: 52px;
                     height: 52px;
                     border-radius: 100%;
@@ -266,6 +300,7 @@ header {
                     }
                   }
                   p {
+                    float: left;
                     vertical-align: middle;
                     font: 2.35294rem/1.44768 "noto";
                     color: #222;
@@ -278,14 +313,15 @@ header {
                     font: 0.875rem/1.6714 "noto";
                     height: auto;
                     width: auto;
-                    padding: 30px 0;
+                    margin: 30px 7px 30px 0;
                     color: #666;
+                    overflow: hidden;
+                    max-height: 240px;
+
                     &.diary {
-                      max-height: 240px;
-                      padding: 0 0;
-                      margin: 30px 0;
-                      overflow: hidden;
+                      padding: 0;
                       overflow-y: scroll;
+
                       &::-webkit-scrollbar {
                         width: 2px;
                         height: 237px;
@@ -304,13 +340,16 @@ header {
                 }
                 .detail {
                   width: 100%;
-                  font-size: 0.875rem/1.1 "noto";
+                  font: 0.875rem/1.1 "noto";
                   text-align: center;
+                  overflow: hidden;
                   table {
+                    min-width: 600px;
                     width: 100%;
                     border: none;
                     border-bottom: 1px solid #ddd;
                     border-collapse: collapse;
+                    overflow-x: auto;
                     th {
                       font: 0.875rem/1.1 "noto";
                       background: #7b009b;
@@ -320,7 +359,7 @@ header {
                     td {
                       font: 0.875rem/1.1 "noto";
                       color: #222;
-                      padding: 13px 0;
+                      padding: 13px 2px;
                     }
                   }
                 }
@@ -371,6 +410,9 @@ header {
   }
   .menu-nav {
     width: 100%;
+    text-align: center;
+    display: inline-block;
+    white-space: nowrap;
     ul {
       li {
         &:hover {
@@ -387,6 +429,7 @@ header {
       width: 100%;
       &-inner {
         width: 100%;
+        overflow: hidden;
       }
     }
     .menu-list {
@@ -395,9 +438,10 @@ header {
         width: 100%;
         .list-item {
           .menu-modal {
+            width: 100%;
+            padding: 0 8px;
             &-inner {
-              width: 1184px;
-              width: 98.6667%;
+              width: calc(100% - 16px);
               .modal-item {
                 width: 100%;
                 height: 100%;
@@ -443,6 +487,9 @@ header {
     ul {
       li {
         padding: 0 26.3672px;
+        &.active {
+          border-bottom: none;
+        }
         a {
           font: 1.0481rem/2.7955 "suitM";
         }
@@ -500,20 +547,17 @@ header {
           }
           .menu-modal {
             &-inner {
-              width: 1008px;
-              width: 98.4375%;
+              width: calc(100% - 16px);
               .modal-item {
                 width: 100%;
                 height: 100%;
                 padding: 10px;
                 .modal-pic {
                   width: 185px;
-                  width: 18.7246%;
-                  margin-right: 1.5174%;
+                  margin-right: 15px;
                 }
                 .modal-text {
-                  width: 788px;
-                  width: 79.758%;
+                  width: calc(100% - 200px);
                   .title {
                     border-bottom: 1px solid #ff5b28;
                     i {
@@ -524,7 +568,7 @@ header {
                       }
                     }
                     p {
-                      font: 1.9118rem/1.4548 "noto";
+                      font: 1.9117rem/1.4548 "noto";
                     }
                   }
                   .info {
@@ -532,12 +576,148 @@ header {
                     height: auto;
                     p {
                       font: 0.75rem/1.6833 "noto";
-                      padding: 15px 0;
+                      margin: 15px 6px 15px 0;
                       &.diary {
-                        margin: 15px 0;
                         &::-webkit-scrollbar-thumb {
                           height: 220px; /*임의지정*/
                         }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 576px) {
+  .menu-main {
+    width: 100%;
+    height: 65vw;
+    .heading {
+      width: 100%;
+      height: 100%;
+      gap: 13px;
+      .title {
+        font: 600 1.4219rem/1.2 "geometos";
+        letter-spacing: -0.0413rem;
+      }
+      p {
+        font: 300 0.8125rem/1.6 "suitL";
+      }
+    }
+  }
+  .menu-nav {
+    width: 100%;
+    height: 40.63px;
+    ul {
+      li {
+        padding: 0 22.8516px;
+        a {
+          font: 0.9141rem/2.7781 "suitM";
+        }
+      }
+    }
+  }
+  /*menu-story*/
+  /*menu-whole*/
+  .menu-whole-wrap {
+    .menu-list {
+      .list-inner {
+        .list-item {
+          .menu-modal {
+            padding: 0 6px;
+            &-inner {
+              width: calc(100% - 12px);
+              .modal-item {
+                width: 100%;
+                height: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 480px) {
+  /*menu-story*/
+  /*menu-whole*/
+  .menu-whole-wrap {
+    .menu-list {
+      .list-inner {
+        .list-item {
+          .menu-modal {
+            &-inner {
+              .modal-item {
+                width: 100%;
+                height: 100%;
+                flex-direction: column;
+                .modal-pic {
+                  width: 100%;
+                  margin: 0;
+                }
+                .modal-text {
+                  width: 100%;
+                  height: 100%;
+                  .info {
+                    p {
+                      max-height: 170px;
+                    }
+                  }
+                  .detail {
+                    width: 100%;
+                    table {
+                      th {
+                        font: 0.75rem/1.1 "noto";
+                      }
+                      td {
+                        font: 0.75rem/1.1 "noto";
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 320px) {
+  .menu-whole-wrap {
+    .menu-list {
+      .list-inner {
+        .list-item {
+          .menu-modal {
+            &-inner {
+              .modal-item {
+                width: 100%;
+                height: 100%;
+                .modal-pic {
+                  width: 100%;
+                  margin: 0;
+                }
+                .modal-text {
+                  width: 100%;
+                  height: 100%;
+                  .info {
+                    p {
+                      max-height: 170px;
+                    }
+                  }
+                  .detail {
+                    width: 100%;
+                    table {
+                      th {
+                        font: 0.75rem/1.1 "noto";
+                      }
+                      td {
+                        font: 0.75rem/1.1 "noto";
                       }
                     }
                   }

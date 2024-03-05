@@ -5,13 +5,47 @@
   box-sizing: border-box;
 }
 
+li {
+  list-style: none;
+}
+
 a {
   text-decoration: none;
   color: inherit;
 }
 
-li {
-  list-style: none;
+*::-webkit-scrollbar {
+  margin: 0;
+  padding: 0;
+  width: 8px;
+}
+*::-webkit-scrollbar-button {
+  height: 0;
+  -webkit-transition: 300ms all;
+  transition: 300ms all;
+}
+*::-webkit-scrollbar-corner {
+  background-color: #222;
+}
+*::-webkit-scrollbar-thumb {
+  /* background: rgba(123, 0, 160, 0.7); */
+  background: rgba(255, 91, 40, 0.7);
+  border-radius: 8px;
+  border: 1px solid #000;
+}
+*::-webkit-scrollbar-thumb:hover,
+*::-webkit-scrollbar-thumb:active {
+  /* background: rgba(123, 0, 160, 0.9); */
+  background: rgba(255, 91, 40, 0.9);
+}
+*::-webkit-scrollbar-track {
+  background-color: #222;
+  border-radius: 0;
+  border: 0;
+}
+*::-webkit-scrollbar-track:hover,
+*::-webkit-scrollbar-track:active {
+  background: #222;
 }
 
 @font-face {
@@ -21,10 +55,6 @@ li {
 @font-face {
   font-family: "nanum";
   src: url("./font/NanumSquareB.ttf");
-}
-@font-face {
-  font-family: "noto";
-  src: url("./font/NotoSansKR-VariableFont_wght.ttf");
 }
 @font-face {
   font-family: "suitB";
@@ -46,6 +76,10 @@ li {
   font-family: "xeicon";
   src: url("./font/xeicon.ttf");
 }
+@font-face {
+  font-family: "noto";
+  src: url("./font/NotoSansKR-VariableFont_wght.ttf");
+}
 body {
   display: flex;
   flex-direction: column;
@@ -62,9 +96,10 @@ header {
 .menu-main {
   width: 100%;
   height: 510px;
-  background: url("../img/02menuImg/menuBg.png") center/cover no-repeat;
+  background: url("./img/02menuImg/menuBg.png") center/cover no-repeat;
 }
 .menu-main .heading {
+  padding: 10px;
   width: 100%;
   height: 100%;
   color: #fff;
@@ -80,6 +115,7 @@ header {
 }
 .menu-main .heading p {
   font: 300 1.125rem/1.6 "suitL";
+  text-align: center;
 }
 
 .menu-nav {
@@ -116,10 +152,46 @@ header {
 .menu-story-wrap {
   width: 1920px;
 }
-.menu-story-wrap .menu-story01-lt {
+.menu-story-wrap .menu-story01 {
+  width: 100%;
+  overflow: hidden;
+}
+.menu-story-wrap .menu-story01 .menu-story01-lt {
+  float: left;
   width: 672px;
+  width: 35%;
   height: 716px;
   background: #f5f4f3;
+}
+.menu-story-wrap .menu-story01 .menu-story01-lt-inner {
+  padding: 144.11px 142px 192px;
+}
+.menu-story-wrap .menu-story01 .menu-story01-lt-inner h1 {
+  font: 700 4.125rem/1 "noto";
+  letter-spacing: -0.0825rem;
+  color: #780997;
+}
+.menu-story-wrap .menu-story01 .menu-story01-lt-inner p {
+  font: 3.2375rem/1.2046 "suitM";
+  letter-spacing: -0.065rem;
+  margin: 12px 0 40px;
+}
+.menu-story-wrap .menu-story01 .menu-story01-rt {
+  float: left;
+  width: 1248px;
+  width: 65%;
+  height: 716px;
+}
+.menu-story-wrap .menu-story01 .menu-story01-rt-inner {
+  width: 100%;
+}
+.menu-story-wrap .menu-story01 .menu-story01-rt-inner .menu-story-coffee {
+  width: 200px;
+  width: 10.4167;
+}
+.menu-story-wrap .menu-story01 .menu-story01-rt-inner .menu-story-coffee-01 {
+  width: 100%;
+  height: 286.39px;
 }
 
 /*menu-whole*/
@@ -220,7 +292,13 @@ header {
   background: #e98004;
   color: #fff;
 }
-.menu-whole-wrap .menu-list .list-inner .list-item .menu-item .menu-pic i::before {
+.menu-whole-wrap
+  .menu-list
+  .list-inner
+  .list-item
+  .menu-item
+  .menu-pic
+  i::before {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -264,42 +342,80 @@ header {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.menu-whole-wrap .menu-list .list-inner .list-item .menu-modal-inner .modal-item {
+.menu-whole-wrap
+  .menu-list
+  .list-inner
+  .list-item
+  .menu-modal-inner
+  .modal-item {
   width: 100%;
   height: 100%;
   padding: 25px;
-  overflow: hidden;
   display: flex;
 }
-.menu-whole-wrap .menu-list .list-inner .list-item .menu-modal-inner .modal-item .modal-pic {
+.menu-whole-wrap
+  .menu-list
+  .list-inner
+  .list-item
+  .menu-modal-inner
+  .modal-item
+  .modal-pic {
   width: 460px;
   width: 40%;
   height: auto;
-  float: left;
   display: flex;
   justify-content: center;
   align-items: center;
   vertical-align: middle;
 }
-.menu-whole-wrap .menu-list .list-inner .list-item .menu-modal-inner .modal-item .modal-pic img {
+.menu-whole-wrap
+  .menu-list
+  .list-inner
+  .list-item
+  .menu-modal-inner
+  .modal-item
+  .modal-pic
+  img {
   display: block;
   width: 119px;
   height: 219px;
 }
-.menu-whole-wrap .menu-list .list-inner .list-item .menu-modal-inner .modal-item .modal-text {
-  float: left;
+.menu-whole-wrap
+  .menu-list
+  .list-inner
+  .list-item
+  .menu-modal-inner
+  .modal-item
+  .modal-text {
   width: 690px;
   width: 60%;
   height: 100%;
+  overflow: hidden;
 }
-.menu-whole-wrap .menu-list .list-inner .list-item .menu-modal-inner .modal-item .modal-text .title {
+.menu-whole-wrap
+  .menu-list
+  .list-inner
+  .list-item
+  .menu-modal-inner
+  .modal-item
+  .modal-text
+  .title {
   display: block;
   width: auto;
   padding: 8px 0 10px;
   border-bottom: 3px solid #ff5b28;
-  display: flex;
+  overflow: hidden;
 }
-.menu-whole-wrap .menu-list .list-inner .list-item .menu-modal-inner .modal-item .modal-text .title i {
+.menu-whole-wrap
+  .menu-list
+  .list-inner
+  .list-item
+  .menu-modal-inner
+  .modal-item
+  .modal-text
+  .title
+  i {
+  float: left;
   width: 52px;
   height: 52px;
   border-radius: 100%;
@@ -309,7 +425,15 @@ header {
   margin: 0 5px;
   text-align: center;
 }
-.menu-whole-wrap .menu-list .list-inner .list-item .menu-modal-inner .modal-item .modal-text .title i::before {
+.menu-whole-wrap
+  .menu-list
+  .list-inner
+  .list-item
+  .menu-modal-inner
+  .modal-item
+  .modal-text
+  .title
+  i::before {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -317,63 +441,154 @@ header {
   content: attr(data-tit);
   font: 0.875rem/1.1 "noto";
 }
-.menu-whole-wrap .menu-list .list-inner .list-item .menu-modal-inner .modal-item .modal-text .title p {
+.menu-whole-wrap
+  .menu-list
+  .list-inner
+  .list-item
+  .menu-modal-inner
+  .modal-item
+  .modal-text
+  .title
+  p {
+  float: left;
   vertical-align: middle;
   font: 2.35294rem/1.44768 "noto";
   color: #222;
 }
-.menu-whole-wrap .menu-list .list-inner .list-item .menu-modal-inner .modal-item .modal-text .info {
+.menu-whole-wrap
+  .menu-list
+  .list-inner
+  .list-item
+  .menu-modal-inner
+  .modal-item
+  .modal-text
+  .info {
   width: 100%;
   height: auto;
 }
-.menu-whole-wrap .menu-list .list-inner .list-item .menu-modal-inner .modal-item .modal-text .info p {
+.menu-whole-wrap
+  .menu-list
+  .list-inner
+  .list-item
+  .menu-modal-inner
+  .modal-item
+  .modal-text
+  .info
+  p {
   font: 0.875rem/1.6714 "noto";
   height: auto;
   width: auto;
-  padding: 30px 0;
+  margin: 30px 7px 30px 0;
   color: #666;
-}
-.menu-whole-wrap .menu-list .list-inner .list-item .menu-modal-inner .modal-item .modal-text .info p.diary {
-  max-height: 240px;
-  padding: 0 0;
-  margin: 30px 0;
   overflow: hidden;
+  max-height: 240px;
+}
+.menu-whole-wrap
+  .menu-list
+  .list-inner
+  .list-item
+  .menu-modal-inner
+  .modal-item
+  .modal-text
+  .info
+  p.diary {
+  padding: 0;
   overflow-y: scroll;
 }
-.menu-whole-wrap .menu-list .list-inner .list-item .menu-modal-inner .modal-item .modal-text .info p.diary::-webkit-scrollbar {
+.menu-whole-wrap
+  .menu-list
+  .list-inner
+  .list-item
+  .menu-modal-inner
+  .modal-item
+  .modal-text
+  .info
+  p.diary::-webkit-scrollbar {
   width: 2px;
   height: 237px;
 }
-.menu-whole-wrap .menu-list .list-inner .list-item .menu-modal-inner .modal-item .modal-text .info p.diary::-webkit-scrollbar-thumb {
+.menu-whole-wrap
+  .menu-list
+  .list-inner
+  .list-item
+  .menu-modal-inner
+  .modal-item
+  .modal-text
+  .info
+  p.diary::-webkit-scrollbar-thumb {
   background: rgba(255, 255, 255, 0.7490196078);
   border-radius: 10px;
   height: 167px;
   border: none;
 }
-.menu-whole-wrap .menu-list .list-inner .list-item .menu-modal-inner .modal-item .modal-text .info p.diary::-webkit-scrollbar-track {
+.menu-whole-wrap
+  .menu-list
+  .list-inner
+  .list-item
+  .menu-modal-inner
+  .modal-item
+  .modal-text
+  .info
+  p.diary::-webkit-scrollbar-track {
   background: rgba(0, 0, 0, 0.4);
 }
-.menu-whole-wrap .menu-list .list-inner .list-item .menu-modal-inner .modal-item .modal-text .detail {
+.menu-whole-wrap
+  .menu-list
+  .list-inner
+  .list-item
+  .menu-modal-inner
+  .modal-item
+  .modal-text
+  .detail {
   width: 100%;
-  font-size: 0.875rem/1.1 "noto";
+  font: 0.875rem/1.1 "noto";
   text-align: center;
+  overflow: hidden;
 }
-.menu-whole-wrap .menu-list .list-inner .list-item .menu-modal-inner .modal-item .modal-text .detail table {
+.menu-whole-wrap
+  .menu-list
+  .list-inner
+  .list-item
+  .menu-modal-inner
+  .modal-item
+  .modal-text
+  .detail
+  table {
+  min-width: 600px;
   width: 100%;
   border: none;
   border-bottom: 1px solid #ddd;
   border-collapse: collapse;
+  overflow-x: auto;
 }
-.menu-whole-wrap .menu-list .list-inner .list-item .menu-modal-inner .modal-item .modal-text .detail table th {
+.menu-whole-wrap
+  .menu-list
+  .list-inner
+  .list-item
+  .menu-modal-inner
+  .modal-item
+  .modal-text
+  .detail
+  table
+  th {
   font: 0.875rem/1.1 "noto";
   background: #7b009b;
   color: #fff;
   padding: 10px 2px;
 }
-.menu-whole-wrap .menu-list .list-inner .list-item .menu-modal-inner .modal-item .modal-text .detail table td {
+.menu-whole-wrap
+  .menu-list
+  .list-inner
+  .list-item
+  .menu-modal-inner
+  .modal-item
+  .modal-text
+  .detail
+  table
+  td {
   font: 0.875rem/1.1 "noto";
   color: #222;
-  padding: 13px 0;
+  padding: 13px 2px;
 }
 .menu-whole-wrap .menu-list .list-inner .list-item .menu-modal-inner button {
   position: absolute;
@@ -386,21 +601,45 @@ header {
   background: none;
   text-align: center;
 }
-.menu-whole-wrap .menu-list .list-inner .list-item .menu-modal-inner button:hover span {
+.menu-whole-wrap
+  .menu-list
+  .list-inner
+  .list-item
+  .menu-modal-inner
+  button:hover
+  span {
   background: #333;
 }
-.menu-whole-wrap .menu-list .list-inner .list-item .menu-modal-inner button span {
+.menu-whole-wrap
+  .menu-list
+  .list-inner
+  .list-item
+  .menu-modal-inner
+  button
+  span {
   width: 28px; /*임의지정*/
   height: 2px; /*임의지정*/
   background: #666;
   position: absolute;
   right: 10px;
 }
-.menu-whole-wrap .menu-list .list-inner .list-item .menu-modal-inner button span:nth-child(1) {
+.menu-whole-wrap
+  .menu-list
+  .list-inner
+  .list-item
+  .menu-modal-inner
+  button
+  span:nth-child(1) {
   top: 50%;
   transform: rotate(45deg);
 }
-.menu-whole-wrap .menu-list .list-inner .list-item .menu-modal-inner button span:nth-child(2) {
+.menu-whole-wrap
+  .menu-list
+  .list-inner
+  .list-item
+  .menu-modal-inner
+  button
+  span:nth-child(2) {
   top: 50%;
   transform: rotate(-45deg);
 }
@@ -412,6 +651,9 @@ header {
   }
   .menu-nav {
     width: 100%;
+    text-align: center;
+    display: inline-block;
+    white-space: nowrap;
   }
   .menu-nav ul li:hover {
     border-bottom: none;
@@ -426,6 +668,7 @@ header {
   }
   .menu-whole-wrap .menu-tab-inner {
     width: 100%;
+    overflow: hidden;
   }
   .menu-whole-wrap .menu-list {
     width: 100%;
@@ -433,19 +676,39 @@ header {
   .menu-whole-wrap .menu-list .list-inner {
     width: 100%;
   }
-  .menu-whole-wrap .menu-list .list-inner .list-item .menu-modal-inner {
-    width: 1184px;
-    width: 98.6667%;
+  .menu-whole-wrap .menu-list .list-inner .list-item .menu-modal {
+    width: 100%;
+    padding: 0 8px;
   }
-  .menu-whole-wrap .menu-list .list-inner .list-item .menu-modal-inner .modal-item {
+  .menu-whole-wrap .menu-list .list-inner .list-item .menu-modal-inner {
+    width: calc(100% - 16px);
+  }
+  .menu-whole-wrap
+    .menu-list
+    .list-inner
+    .list-item
+    .menu-modal-inner
+    .modal-item {
     width: 100%;
     height: 100%;
   }
-  .menu-whole-wrap .menu-list .list-inner .list-item .menu-modal-inner .modal-item .modal-pic {
+  .menu-whole-wrap
+    .menu-list
+    .list-inner
+    .list-item
+    .menu-modal-inner
+    .modal-item
+    .modal-pic {
     width: 460px;
     width: 40.5644%;
   }
-  .menu-whole-wrap .menu-list .list-inner .list-item .menu-modal-inner .modal-item .modal-text {
+  .menu-whole-wrap
+    .menu-list
+    .list-inner
+    .list-item
+    .menu-modal-inner
+    .modal-item
+    .modal-text {
     width: 59.4356%;
     height: 100%;
   }
@@ -476,6 +739,9 @@ header {
   }
   .menu-nav ul li {
     padding: 0 26.3672px;
+  }
+  .menu-nav ul li.active {
+    border-bottom: none;
   }
   .menu-nav ul li a {
     font: 1.0481rem/2.7955 "suitM";
@@ -521,55 +787,326 @@ header {
     width: 40px;
     height: 40px;
   }
-  .menu-whole-wrap .menu-list .list-inner .list-item .menu-item .menu-pic i::before {
+  .menu-whole-wrap
+    .menu-list
+    .list-inner
+    .list-item
+    .menu-item
+    .menu-pic
+    i::before {
     font: 0.75rem/1.1 "noto";
   }
   .menu-whole-wrap .menu-list .list-inner .list-item .menu-item span p {
     font: 0.8125rem/1.6 "noto";
   }
   .menu-whole-wrap .menu-list .list-inner .list-item .menu-modal-inner {
-    width: 1008px;
-    width: 98.4375%;
+    width: calc(100% - 16px);
   }
-  .menu-whole-wrap .menu-list .list-inner .list-item .menu-modal-inner .modal-item {
+  .menu-whole-wrap
+    .menu-list
+    .list-inner
+    .list-item
+    .menu-modal-inner
+    .modal-item {
     width: 100%;
     height: 100%;
     padding: 10px;
   }
-  .menu-whole-wrap .menu-list .list-inner .list-item .menu-modal-inner .modal-item .modal-pic {
+  .menu-whole-wrap
+    .menu-list
+    .list-inner
+    .list-item
+    .menu-modal-inner
+    .modal-item
+    .modal-pic {
     width: 185px;
-    width: 18.7246%;
-    margin-right: 1.5174%;
+    margin-right: 15px;
   }
-  .menu-whole-wrap .menu-list .list-inner .list-item .menu-modal-inner .modal-item .modal-text {
-    width: 788px;
-    width: 79.758%;
+  .menu-whole-wrap
+    .menu-list
+    .list-inner
+    .list-item
+    .menu-modal-inner
+    .modal-item
+    .modal-text {
+    width: calc(100% - 200px);
   }
-  .menu-whole-wrap .menu-list .list-inner .list-item .menu-modal-inner .modal-item .modal-text .title {
+  .menu-whole-wrap
+    .menu-list
+    .list-inner
+    .list-item
+    .menu-modal-inner
+    .modal-item
+    .modal-text
+    .title {
     border-bottom: 1px solid #ff5b28;
   }
-  .menu-whole-wrap .menu-list .list-inner .list-item .menu-modal-inner .modal-item .modal-text .title i {
+  .menu-whole-wrap
+    .menu-list
+    .list-inner
+    .list-item
+    .menu-modal-inner
+    .modal-item
+    .modal-text
+    .title
+    i {
     width: 40px;
     height: 40px;
   }
-  .menu-whole-wrap .menu-list .list-inner .list-item .menu-modal-inner .modal-item .modal-text .title i::before {
+  .menu-whole-wrap
+    .menu-list
+    .list-inner
+    .list-item
+    .menu-modal-inner
+    .modal-item
+    .modal-text
+    .title
+    i::before {
     font: 0.75rem/1.1 "noto";
   }
-  .menu-whole-wrap .menu-list .list-inner .list-item .menu-modal-inner .modal-item .modal-text .title p {
-    font: 1.9118rem/1.4548 "noto";
+  .menu-whole-wrap
+    .menu-list
+    .list-inner
+    .list-item
+    .menu-modal-inner
+    .modal-item
+    .modal-text
+    .title
+    p {
+    font: 1.9117rem/1.4548 "noto";
   }
-  .menu-whole-wrap .menu-list .list-inner .list-item .menu-modal-inner .modal-item .modal-text .info {
+  .menu-whole-wrap
+    .menu-list
+    .list-inner
+    .list-item
+    .menu-modal-inner
+    .modal-item
+    .modal-text
+    .info {
     width: 100%;
     height: auto;
   }
-  .menu-whole-wrap .menu-list .list-inner .list-item .menu-modal-inner .modal-item .modal-text .info p {
+  .menu-whole-wrap
+    .menu-list
+    .list-inner
+    .list-item
+    .menu-modal-inner
+    .modal-item
+    .modal-text
+    .info
+    p {
     font: 0.75rem/1.6833 "noto";
-    padding: 15px 0;
+    margin: 15px 6px 15px 0;
   }
-  .menu-whole-wrap .menu-list .list-inner .list-item .menu-modal-inner .modal-item .modal-text .info p.diary {
-    margin: 15px 0;
-  }
-  .menu-whole-wrap .menu-list .list-inner .list-item .menu-modal-inner .modal-item .modal-text .info p.diary::-webkit-scrollbar-thumb {
+  .menu-whole-wrap
+    .menu-list
+    .list-inner
+    .list-item
+    .menu-modal-inner
+    .modal-item
+    .modal-text
+    .info
+    p.diary::-webkit-scrollbar-thumb {
     height: 220px; /*임의지정*/
   }
-}/*# sourceMappingURL=menu.css.map */
+}
+@media screen and (max-width: 576px) {
+  .menu-main {
+    width: 100%;
+    height: 65vw;
+  }
+  .menu-main .heading {
+    width: 100%;
+    height: 100%;
+    gap: 13px;
+  }
+  .menu-main .heading .title {
+    font: 600 1.4219rem/1.2 "geometos";
+    letter-spacing: -0.0413rem;
+  }
+  .menu-main .heading p {
+    font: 300 0.8125rem/1.6 "suitL";
+  }
+  .menu-nav {
+    width: 100%;
+    height: 40.63px;
+  }
+  .menu-nav ul li {
+    padding: 0 22.8516px;
+  }
+  .menu-nav ul li a {
+    font: 0.9141rem/2.7781 "suitM";
+  }
+  /*menu-story*/
+  /*menu-whole*/
+  .menu-whole-wrap .menu-list .list-inner .list-item .menu-modal {
+    padding: 0 6px;
+  }
+  .menu-whole-wrap .menu-list .list-inner .list-item .menu-modal-inner {
+    width: calc(100% - 12px);
+  }
+  .menu-whole-wrap
+    .menu-list
+    .list-inner
+    .list-item
+    .menu-modal-inner
+    .modal-item {
+    width: 100%;
+    height: 100%;
+  }
+}
+@media screen and (max-width: 480px) {
+  /*menu-story*/
+  /*menu-whole*/
+  .menu-whole-wrap
+    .menu-list
+    .list-inner
+    .list-item
+    .menu-modal-inner
+    .modal-item {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+  }
+  .menu-whole-wrap
+    .menu-list
+    .list-inner
+    .list-item
+    .menu-modal-inner
+    .modal-item
+    .modal-pic {
+    width: 100%;
+    margin: 0;
+  }
+  .menu-whole-wrap
+    .menu-list
+    .list-inner
+    .list-item
+    .menu-modal-inner
+    .modal-item
+    .modal-text {
+    width: 100%;
+    height: 100%;
+  }
+  .menu-whole-wrap
+    .menu-list
+    .list-inner
+    .list-item
+    .menu-modal-inner
+    .modal-item
+    .modal-text
+    .info
+    p {
+    max-height: 170px;
+  }
+  .menu-whole-wrap
+    .menu-list
+    .list-inner
+    .list-item
+    .menu-modal-inner
+    .modal-item
+    .modal-text
+    .detail {
+    width: 100%;
+  }
+  .menu-whole-wrap
+    .menu-list
+    .list-inner
+    .list-item
+    .menu-modal-inner
+    .modal-item
+    .modal-text
+    .detail
+    table
+    th {
+    font: 0.75rem/1.1 "noto";
+  }
+  .menu-whole-wrap
+    .menu-list
+    .list-inner
+    .list-item
+    .menu-modal-inner
+    .modal-item
+    .modal-text
+    .detail
+    table
+    td {
+    font: 0.75rem/1.1 "noto";
+  }
+}
+@media screen and (max-width: 320px) {
+  .menu-whole-wrap
+    .menu-list
+    .list-inner
+    .list-item
+    .menu-modal-inner
+    .modal-item {
+    width: 100%;
+    height: 100%;
+  }
+  .menu-whole-wrap
+    .menu-list
+    .list-inner
+    .list-item
+    .menu-modal-inner
+    .modal-item
+    .modal-pic {
+    width: 100%;
+    margin: 0;
+  }
+  .menu-whole-wrap
+    .menu-list
+    .list-inner
+    .list-item
+    .menu-modal-inner
+    .modal-item
+    .modal-text {
+    width: 100%;
+    height: 100%;
+  }
+  .menu-whole-wrap
+    .menu-list
+    .list-inner
+    .list-item
+    .menu-modal-inner
+    .modal-item
+    .modal-text
+    .info
+    p {
+    max-height: 170px;
+  }
+  .menu-whole-wrap
+    .menu-list
+    .list-inner
+    .list-item
+    .menu-modal-inner
+    .modal-item
+    .modal-text
+    .detail {
+    width: 100%;
+  }
+  .menu-whole-wrap
+    .menu-list
+    .list-inner
+    .list-item
+    .menu-modal-inner
+    .modal-item
+    .modal-text
+    .detail
+    table
+    th {
+    font: 0.75rem/1.1 "noto";
+  }
+  .menu-whole-wrap
+    .menu-list
+    .list-inner
+    .list-item
+    .menu-modal-inner
+    .modal-item
+    .modal-text
+    .detail
+    table
+    td {
+    font: 0.75rem/1.1 "noto";
+  }
+} /*# sourceMappingURL=style.css.map */
