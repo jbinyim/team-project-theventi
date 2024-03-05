@@ -1,10 +1,60 @@
 // ======더벤티 연혁=======
 
 // font
+<<<<<<< HEAD
 @import "../font";
 
 /* reset */
 @import "../reset";
+=======
+@font-face {
+  font-family: "geometos";
+  src: url("./font/Geometos-Rounded.ttf");
+}
+@font-face {
+  font-family: "nanum";
+  src: url("./font/NanumSquareB.ttf");
+}
+@font-face {
+  font-family: "noto";
+  src: url("./font/NotoSansKR-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: "suitB";
+  src: url("./font/SUIT-Bold.ttf");
+}
+@font-face {
+  font-family: "suitL";
+  src: url("./font/SUIT-Light.ttf");
+}
+@font-face {
+  font-family: "suitM";
+  src: url("./font/SUIT-Medium.ttf");
+}
+@font-face {
+  font-family: "suitSB";
+  src: url("./font/SUIT-SemiBold.ttf");
+}
+@font-face {
+  font-family: "xeicon";
+  src: url("./font/xeicon.ttf");
+}
+
+/* reset */
+// @import ".reset";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+li {
+  list-style: none;
+}
+>>>>>>> 7d9f69041fe9c5a98b2e8d282bbf394569672cf2
 
 .header {
   width: 100%;
