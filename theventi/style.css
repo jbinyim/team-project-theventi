@@ -67,6 +67,10 @@ li {
   src: url("./font/NotoSansKR-VariableFont_wght.ttf");
 }
 @font-face {
+  font-family: "noto500";
+  src: url("./font/noto-sans-kr-v13-latin_korean-500.ttf");
+}
+@font-face {
   font-family: "suitB";
   src: url("./font/SUIT-Bold.ttf");
 }

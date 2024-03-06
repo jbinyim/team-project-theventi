@@ -1,0 +1,145 @@
+@font-face {
+  font-family: "geometos";
+  src: url("./font/Geometos-Rounded.ttf");
+}
+@font-face {
+  font-family: "nanum";
+  src: url("./font/NanumSquareB.ttf");
+}
+@font-face {
+  font-family: "noto";
+  src: url("./font/NotoSansKR-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: "noto500";
+  src: url("./font/noto-sans-kr-v13-latin_korean-500.ttf");
+}
+@font-face {
+  font-family: "suitB";
+  src: url("./font/SUIT-Bold.ttf");
+}
+@font-face {
+  font-family: "suitL";
+  src: url("./font/SUIT-Light.ttf");
+}
+@font-face {
+  font-family: "suitM";
+  src: url("./font/SUIT-Medium.ttf");
+}
+@font-face {
+  font-family: "suitSB";
+  src: url("./font/SUIT-SemiBold.ttf");
+}
+@font-face {
+  font-family: "xeicon";
+  src: url("./font/xeicon.ttf");
+}
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+*::-moz-selection {
+  background: #d9d9d9;
+  color: #ff5b28;
+  text-shadow: none;
+}
+*::selection {
+  background: #d9d9d9;
+  color: #ff5b28;
+  text-shadow: none;
+}
+*::-webkit-scrollbar {
+  margin: 0;
+  padding: 0;
+  width: 8px;
+}
+*::-webkit-scrollbar-button {
+  height: 0;
+  -webkit-transition: 300ms all;
+  transition: 300ms all;
+}
+*::-webkit-scrollbar-corner {
+  background-color: #222;
+}
+*::-webkit-scrollbar-thumb {
+  /* background: rgba(123, 0, 160, 0.7); */
+  background: rgba(255, 91, 40, 0.7);
+  border-radius: 8px;
+  border: 1px solid #000;
+}
+*::-webkit-scrollbar-thumb:hover, *::-webkit-scrollbar-thumb:active {
+  /* background: rgba(123, 0, 160, 0.9); */
+  background: rgba(255, 91, 40, 0.9);
+}
+*::-webkit-scrollbar-track {
+  background-color: #222;
+  border-radius: 0;
+  border: 0;
+}
+*::-webkit-scrollbar-track:hover, *::-webkit-scrollbar-track:active {
+  background: #222;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+/* custom  */
+.header {
+  width: 100%;
+  height: 91px;
+}
+
+.brand {
+  width: 100%;
+  height: 510px;
+  background: url(../img/03brand/sv_1.png) center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.brand .br-content {
+  color: #fff;
+  text-align: center;
+}
+.brand .br-content h1 {
+  font: bold 2.8rem/1 "geometos";
+  line-height: -1px;
+  margin-bottom: 19px;
+}
+.brand .br-content p {
+  font: 1.12rem/1 "suitL";
+}
+
+.sub-nav {
+  width: 100%;
+  height: 67px;
+  border-bottom: 2px solid #ddd;
+}
+.sub-nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.sub-nav ul li {
+  padding: 21px 30px;
+  font: 1.12rem/1.2 "suitM";
+  color: #333;
+  transition: all 0.3s;
+}
+.sub-nav ul li:hover {
+  color: #780997;
+  border-bottom: 3px solid #780997;
+}
+
+.active a {
+  color: #780997;
+}/*# sourceMappingURL=brand-style03.css.map */
