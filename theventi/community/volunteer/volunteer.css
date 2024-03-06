@@ -2,22 +2,24 @@
 @import "../../font.css";
 @import "./reset.css";
 @import "./font.css";
-html {
+body {
   font-size: 16px;
   line-height: 1.6rem;
   font-weight: 400;
+  overflow-x: hidden;
 }
-html .wrap {
+body .wrap {
   width: 100%;
   height: 100%;
 }
-html .wrap .volun-figuer {
+body .wrap .volun-figuer {
   margin-top: 91px;
   width: 100%;
   height: 510px;
   background: url("../../img/04community/bg/community-bg.png") center/cover no-repeat;
 }
-html .wrap .volun-figuer .volun-title {
+body .wrap .volun-figuer .volun-title {
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -26,18 +28,18 @@ html .wrap .volun-figuer .volun-title {
   height: 100%;
   color: #fff;
 }
-html .wrap .volun-figuer .volun-title h1 {
+body .wrap .volun-figuer .volun-title h1 {
   font: 2.8125rem "geometos";
 }
-html .wrap .volun-figuer .volun-title p {
+body .wrap .volun-figuer .volun-title p {
   font: 1.125rem "suitL";
 }
-html .wrap .volun-nav {
+body .wrap .volun-nav {
   width: 100%;
   height: 68px;
   border-bottom: 1px solid #ddd;
 }
-html .wrap .volun-nav .volun-bar {
+body .wrap .volun-nav .volun-bar {
   width: 100%;
   height: 100%;
   display: flex;
@@ -45,10 +47,10 @@ html .wrap .volun-nav .volun-bar {
   align-items: center;
   border-bottom: 1px solid #ddd;
 }
-html .wrap .volun-nav .volun-bar ul {
+body .wrap .volun-nav .volun-bar ul {
   display: flex;
 }
-html .wrap .volun-nav .volun-bar ul li a {
+body .wrap .volun-nav .volun-bar ul li a {
   display: inline-flex;
   align-items: center;
   padding: 0 1.5625em;
@@ -56,114 +58,122 @@ html .wrap .volun-nav .volun-bar ul li a {
   font: 1.125rem "suitM";
   border-bottom: 2.5px solid transparent;
 }
-html .wrap .volun-nav .volun-bar ul li a:hover {
+body .wrap .volun-nav .volun-bar ul li a:hover {
   transform: translateY(-1px);
   color: #780997;
   border-bottom: 2.5px solid #780997;
 }
-html .wrap .volun-nav .volun-bar ul .active {
+body .wrap .volun-nav .volun-bar ul .active {
   display: inline-flex;
   color: #780997;
   border-bottom: 2.5px solid #780997;
 }
-html .wrap .container {
+body .wrap .container {
   width: 100%;
   height: 100%;
   padding-top: 100px;
 }
-html .wrap .container .volun-article {
+body .wrap .container .volun-article {
   margin: 0 auto;
   width: 1200px;
   height: 100%;
 }
-html .wrap .container .volun-article .volun-article-title {
+body .wrap .container .volun-article .volun-article-title {
   margin-bottom: 20px;
 }
-html .wrap .container .volun-article .volun-article-title h1 {
+body .wrap .container .volun-article .volun-article-title h1 {
   font: 2.8125rem "noto";
 }
-html .wrap .container .volun-article .volun-article-title h1 span {
+body .wrap .container .volun-article .volun-article-title h1 span {
   font: bold 3rem "noto";
   color: #7b00a0;
 }
-html .wrap .container .volun-article .volun-img {
+body .wrap .container .volun-article .volun-img {
   margin-bottom: 34px;
   width: 100%;
   height: 302px;
   overflow: hidden;
+  display: flex;
+  gap: 7px;
 }
-html .wrap .container .volun-article .volun-img span {
+body .wrap .container .volun-article .volun-img span {
   display: inline-block;
   width: 32.7%;
   height: 100%;
   overflow: hidden;
 }
-html .wrap .container .volun-article .volun-img span img {
+body .wrap .container .volun-article .volun-img span img {
   width: 100%;
   height: 100%;
   transition: all 0.3s;
 }
-html .wrap .container .volun-article .volun-img span img:hover {
+body .wrap .container .volun-article .volun-img span img:hover {
   transform: scale(1.1);
 }
-html .wrap .container .volun-article .volun-text {
+body .wrap .container .volun-article .volun-text {
   margin-bottom: 60px;
 }
-html .wrap .container .volun-article .volun-text h3 {
+body .wrap .container .volun-article .volun-text h3 {
   font: bold 1.5rem "noto";
   margin-bottom: 25px;
 }
-html .wrap .container .volun-article .volun-text p {
+body .wrap .container .volun-article .volun-text p {
   font: 1.125rem "noto";
 }
-html .wrap .container .volun-article .volun-text p span {
+body .wrap .container .volun-article .volun-text p span {
   font-weight: bold;
   color: #7b00a0;
   text-decoration: underline;
 }
-html .wrap .container .volun-article .volun-symbol {
+body .wrap .container .volun-article .volun-symbol {
   margin-bottom: 60px;
 }
-html .wrap .container .volun-article .volun-symbol h1 {
+body .wrap .container .volun-article .volun-symbol h1 {
   font: bold 3rem "noto";
   color: #7b00a0;
   margin-bottom: 20px;
 }
-html .wrap .container .volun-article .volun-symbol p {
+body .wrap .container .volun-article .volun-symbol p {
   margin-top: 19px;
   font: light 1.125rem "noto";
 }
-html .wrap .container .volun-article .volun-list {
+body .wrap .container .volun-article .volun-list {
   margin-bottom: 80px;
+  width: 100%;
+  height: auto;
 }
-html .wrap .container .volun-article .volun-list ul {
+body .wrap .container .volun-article .volun-list ul {
+  width: 100%;
+  height: 100%;
   display: flex;
   gap: 10px;
 }
-html .wrap .container .volun-article .volun-list ul li {
-  width: 24.7%;
+body .wrap .container .volun-article .volun-list ul li {
+  width: 24.4%;
+  height: 100%;
 }
-html .wrap .container .volun-article .volun-list ul li a {
+body .wrap .container .volun-article .volun-list ul li a {
   display: inline-block;
   width: 100%;
+  height: 100%;
 }
-html .wrap .container .volun-article .volun-list ul li a span {
+body .wrap .container .volun-article .volun-list ul li a span {
   display: inline-block;
   overflow: hidden;
   width: 100%;
   height: 295px;
 }
-html .wrap .container .volun-article .volun-list ul li a span img {
+body .wrap .container .volun-article .volun-list ul li a span img {
   width: 100%;
   height: 100%;
   transition: all 0.3s;
   -o-object-fit: cover;
      object-fit: cover;
 }
-html .wrap .container .volun-article .volun-list ul li a span img:hover {
+body .wrap .container .volun-article .volun-list ul li a span img:hover {
   transform: scale(1.1);
 }
-html .wrap .container .volun-article .volun-list ul li a h5 {
+body .wrap .container .volun-article .volun-list ul li a h5 {
   width: 100%;
   height: 25px;
   font: 500 1rem "noto";
@@ -172,29 +182,183 @@ html .wrap .container .volun-article .volun-list ul li a h5 {
   text-overflow: ellipsis;
   margin: 20px 0 5px;
 }
-html .wrap .container .volun-article .volun-list ul li a p {
+body .wrap .container .volun-article .volun-list ul li a p {
   font: 0.9rem "noto";
   color: #999;
 }
-html .wrap .container .volun-article .volun-list ul li a:hover h5 {
+body .wrap .container .volun-article .volun-list ul li a:hover h5 {
   color: #7b00a0;
 }
-html .wrap .container .volun-article .volun-pages {
+body .wrap .container .volun-article .volun-list ul li a:hover span {
+  border: 2px solid #7b00a0;
+}
+body .wrap .container .volun-article .volun-pages {
   width: 100%;
+  height: 34px;
   margin-bottom: 56px;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 4px;
 }
-html .wrap .container .volun-article .volun-pages .prevent-next {
-  width: 34px;
-  height: 34px;
+body .wrap .container .volun-article .volun-pages .prevent-next {
+  width: 28px;
+  height: 28px;
 }
-html .wrap .container .volun-article .volun-pages .page {
-  width: 34px;
-  height: 34px;
+body .wrap .container .volun-article .volun-pages .prevent-next img {
+  width: 100%;
+  height: 100%;
+}
+body .wrap .container .volun-article .volun-pages .page {
+  width: 28px;
+  height: 28px;
   text-align: center;
   border: 1px solid #000;
   font: 1rem "noto";
+}
+body .wrap .container .volun-article .volun-search {
+  width: 100%;
+  height: 82px;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 150px;
+}
+body .wrap .container .volun-article .volun-search form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+body .wrap .container .volun-article .volun-search form #find {
+  width: 8.3%;
+  height: 40px;
+  border: 1px solid #ddd;
+  outline: none;
+  font: 1rem "noto";
+}
+body .wrap .container .volun-article .volun-search form .search {
+  width: 20%;
+  height: 40px;
+  border: 1px solid #ddd;
+  outline: none;
+  padding: 0 5px;
+  font: 1rem "noto";
+}
+body .wrap .container .volun-article .volun-search form .search-button {
+  width: 7.5%;
+  height: 40px;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  font: 1rem "noto";
+}
+
+@media screen and (max-width: 1024px) {
+  body {
+    font-size: 13px;
+    overflow-x: hidden;
+  }
+  body .wrap {
+    width: 100%;
+    height: 100%;
+  }
+  body .wrap .volun-figuer .volun-title h1 {
+    font-size: 1.75rem;
+  }
+  body .wrap .volun-figuer .volun-title p {
+    font-size: 1rem;
+  }
+  body .wrap .volun-nav .volun-bar ul {
+    white-space: nowrap;
+    width: 100%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+  }
+  body .wrap .volun-nav .volun-bar ul::-webkit-scrollbar-track {
+    background: auto;
+  }
+  body .wrap .volun-nav .volun-bar ul::-webkit-scrollbar-thumb {
+    background: auto;
+  }
+  body .wrap .container {
+    width: 100%;
+    height: 100%;
+    padding-top: 40px;
+  }
+  body .wrap .container .volun-article {
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 15px;
+  }
+  body .wrap .container .volun-article .volun-article-title h1 {
+    font-size: 20px;
+  }
+  body .wrap .container .volun-article .volun-article-title h1 span {
+    font-size: 24px;
+  }
+  body .wrap .container .volun-article .volun-img {
+    width: 100%;
+    height: auto;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 50% 50%;
+  }
+  body .wrap .container .volun-article .volun-img span {
+    width: 100%;
+    height: auto;
+  }
+  body .wrap .container .volun-article .volun-symbol h1 {
+    font-size: 24px;
+  }
+  body .wrap .container .volun-article .volun-symbol img {
+    margin-left: 50%;
+    transform: translateX(-50%);
+  }
+  body .wrap .container .volun-article .volun-list {
+    width: 100%;
+    height: auto;
+  }
+  body .wrap .container .volun-article .volun-list ul {
+    width: 100%;
+    max-width: 1200px;
+    height: 100%;
+    display: grid;
+    justify-content: space-between;
+    align-items: center;
+    grid-template-columns: 49.5% 49.5%;
+  }
+  body .wrap .container .volun-article .volun-list ul li {
+    width: 100%;
+    height: 100%;
+  }
+  body .wrap .container .volun-article .volun-list ul li a {
+    width: 100%;
+    height: 100%;
+  }
+  body .wrap .container .volun-article .volun-list ul li a span {
+    width: 100%;
+    height: 100%;
+  }
+  body .wrap .container .volun-article .volun-list ul li a span img {
+    width: 100%;
+    height: 100%;
+  }
+  body .wrap .container .volun-article .volun-list ul li a h5 {
+    font-size: 13px;
+  }
+  body .wrap .container .volun-article .volun-list ul li a p {
+    font-size: 11.7px;
+  }
+  body .wrap .container .volun-article .volun-search form #find {
+    width: 20.89%;
+  }
+  body .wrap .container .volun-article .volun-search form .search {
+    width: 53.9%;
+  }
+  body .wrap .container .volun-article .volun-search form .search-button {
+    width: 20.89%;
+  }
 }/*# sourceMappingURL=volunteer.css.map */
