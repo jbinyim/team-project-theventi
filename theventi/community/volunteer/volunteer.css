@@ -139,17 +139,23 @@ body .wrap .container .volun-article .volun-symbol p {
 }
 body .wrap .container .volun-article .volun-list {
   margin-bottom: 80px;
+  width: 100%;
+  height: auto;
 }
 body .wrap .container .volun-article .volun-list ul {
+  width: 100%;
+  height: 100%;
   display: flex;
   gap: 10px;
 }
 body .wrap .container .volun-article .volun-list ul li {
-  width: 25%;
+  width: 24.4%;
+  height: 100%;
 }
 body .wrap .container .volun-article .volun-list ul li a {
   display: inline-block;
   width: 100%;
+  height: 100%;
 }
 body .wrap .container .volun-article .volun-list ul li a span {
   display: inline-block;
@@ -313,8 +319,7 @@ body .wrap .container .volun-article .volun-search form .search-button {
   }
   body .wrap .container .volun-article .volun-list {
     width: 100%;
-    height: 1165px;
-    margin-bottom: 0;
+    height: auto;
   }
   body .wrap .container .volun-article .volun-list ul {
     width: 100%;
@@ -327,7 +332,7 @@ body .wrap .container .volun-article .volun-search form .search-button {
   }
   body .wrap .container .volun-article .volun-list ul li {
     width: 100%;
-    height: 95%;
+    height: 100%;
   }
   body .wrap .container .volun-article .volun-list ul li a {
     width: 100%;
@@ -335,7 +340,7 @@ body .wrap .container .volun-article .volun-search form .search-button {
   }
   body .wrap .container .volun-article .volun-list ul li a span {
     width: 100%;
-    height: 80%;
+    height: 100%;
   }
   body .wrap .container .volun-article .volun-list ul li a span img {
     width: 100%;

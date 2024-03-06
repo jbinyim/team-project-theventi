@@ -86,14 +86,20 @@ body {
         }
         .volun-list {
           margin-bottom: 80px;
+          width: 100%;
+          height: auto;
           ul {
+            width: 100%;
+            height: 100%;
             display: flex;
             gap: 10px;
             li {
-              width: 25%;
+              width: 24.4%;
+              height: 100%;
               a {
                 display: inline-block;
                 width: 100%;
+                height: 100%;
                 span {
                   display: inline-block;
                   overflow: hidden;
@@ -273,8 +279,7 @@ body {
           }
           .volun-list {
             width: 100%;
-            height: 1165px;
-            margin-bottom: 0;
+            height: auto;
             ul {
               width: 100%;
               max-width: 1200px;
@@ -285,13 +290,13 @@ body {
               grid-template-columns: 49.5% 49.5%;
               li {
                 width: 100%;
-                height: 95%;
+                height: 100%;
                 a {
                   width: 100%;
                   height: 100%;
                   span {
                     width: 100%;
-                    height: 80%;
+                    height: 100%;
                     img {
                       width: 100%;
                       height: 100%;
