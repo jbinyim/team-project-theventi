@@ -39,10 +39,156 @@
     overflow-x: hidden;
   }
   header {
+    
     @include header-1920;
   }
   aside {
-    @include aside-1920;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 600px;
+    height: 100%;
+    background: #fff;
+    // @include aside-1920;
+    .mobile-menu-head-wrap{
+  
+    width: 600px;
+   
+     .mobile-menu-head {
+     height: 60px;
+  
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+  
+  .mobile-menu-head-logo{
+    margin-left: 15px;
+    width: 150px;
+    height: 26.19px;
+    img {
+      width: inherit;
+      height: 26.19px;
+    }
+  }
+  #mobile-menu-wrap {
+
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+  #mobile-menu-head-logoback {
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 101px;
+    height: 29px;
+    background: #780997;
+  
+    border-radius: 35px;
+    // padding: 0 22.5px;
+    // transition: all 0.3s;
+    & a{
+    & p {
+      width: 73px;
+      height: 25.6px;
+      line-height: 25.6px;
+      font-size: 0.8125rem;
+      text-align: center;
+      color: #fff;
+      font-family: noto500;
+      font-weight: bold;
+    }
+  }
+    img {
+      width: 15px;
+      height: 11.53px;
+      // margin-left: 5px;
+      display: flex;
+      align-items: center;
+    }
+     
+  }
+  .mobile-menu-head-btn {
+    
+    text-align: center;
+    color: #222;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    .xi-close {
+      font-family: xeicon ;
+      display: inline-block;
+      font-style: normal;
+      font-weight: 400;
+      font-variant: normal;
+      // line-height: 1;
+      &::before {
+        content: "\e921";
+      }
+    }
+  }
+}
+
+
+}
+    }
+    .mobile-menu-body {
+    
+      .mobile-menu-body-list {
+        
+  
+        .list-depth-1{
+          
+          border-top: 1px solid #ddd;
+          border-bottom: 1px solid #ddd;
+          width: 600px;
+          text-align: left;
+          color: #000;
+          
+          display: block;
+          padding: 1rem 1rem;
+          font-size: 1.2rem;
+          position: relative;
+          font-family: "geometos";
+          & .depth-1a:first-child {
+            border-top: none;
+          } 
+          ::before {
+            position: absolute;
+            top: 50%;
+            font-size: 1.5rem;
+            margin-top: -0.5rem;
+            right: 1rem;
+            color: #999;
+            font-family: xeicon !important;
+            display: inline-block;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 1;
+            content: "\e941";
+          }
+        }
+          .list-depth-2{
+            display: none;
+            padding: 1rem 1rem;
+            font-family: "noto";
+    font-size: 13px;
+    color: #666;
+    line-height: 1.6;
+    font-weight: 400;
+            .list-depth-3{
+              margin-bottom: 20px;
+              &:last-of-type {
+                margin-bottom: 0px
+              }
+            }
+          }
+        
+      }
+    }
+
   }
   // section {
   //   width: 1920px;
