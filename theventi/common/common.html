@@ -29,7 +29,9 @@
                 <a href="../menu/menu.html" class="nav-items">MENU</a>
                 <a href="#" class="nav-items">STORE</a>
                 <a href="#" class="nav-items">MEMBERSHIP</a>
-                <a href="../community/message/message.html" class="nav-items">COMMUNITY</a>
+                <a href="../community/message/message.html" class="nav-items"
+                  >COMMUNITY</a
+                >
               </div>
               <div id="logo-back">
                 <a href="">
@@ -56,10 +58,18 @@
           </div>
           <div id="dropdown-list">
             <div id="brand-list">
-              <a href="../brand/brand-index.html" class="brand-list">더벤티 소개</a>
-              <a href="../brand/brand-index01.html" class="brand-list">더벤티 연혁</a>
-              <a href="../brand/brand-index02.html" class="brand-list">BI 소개</a>
-              <a href="../brand/brand-index03.html" class="brand-list">찾아오시는길</a>
+              <a href="../brand/brand-index.html" class="brand-list"
+                >더벤티 소개</a
+              >
+              <a href="../brand/brand-index01.html" class="brand-list"
+                >더벤티 연혁</a
+              >
+              <a href="../brand/brand-index02.html" class="brand-list"
+                >BI 소개</a
+              >
+              <a href="../brand/brand-index03.html" class="brand-list"
+                >찾아오시는길</a
+              >
             </div>
             <div id="menu-list">
               <a href="#" class="menu-list">더벤티 커피이야기</a>
@@ -80,13 +90,90 @@
               <a href="#" class="community-list">더벤티 이야기</a>
               <a href="#" class="community-list">SNS</a>
               <a href="#" class="community-list">자주하는 질문</a>
-              <a href="../community/message/message.html" class="community-list">벤티럭 사연접수</a>
-              <a href="../community/volunteer/volunteer.html" class="community-list">THEVENGERS 봉사활동</a>
+              <a href="../community/message/message.html" class="community-list"
+                >벤티럭 사연접수</a
+              >
+              <a
+                href="../community/volunteer/volunteer.html"
+                class="community-list"
+                >THEVENGERS 봉사활동</a
+              >
             </div>
           </div>
         </div>
       </div>
     </header>
+    <aside id="mobile-menu">
+      <div class="mobile-menu-head-wrap">
+        <div class="mobile-menu-head">
+          <a class="mobile-menu-head-logo" href="./common.html"
+            ><img src="../img/01main/common/header/theventilogo.png" alt=""
+          /></a>
+          <div id="mobile-menu-head-logoback">
+            <a href="">
+              <p>프랜차이즈</p>
+            </a>
+            <div class="mobile-menu-head-logoback">
+              <img src="../img/01main/common/header/theventilogo.png" alt="" />
+            </div>
+          </div>
+          <button class="mobile-menu-head-btn">
+            <i class="xi-close"></i>
+          </button>
+        </div>
+      </div>
+      <div class="mobile-menu-body">
+        <ul class="mobile-menu-body-list">
+          <li class="list-depth-1">
+            <a href=""> BRAND </a>
+            <ul class="list-depth-2">
+              <li class="list-depth-3"><a href="">더벤티 소개</a></li>
+              <li class="list-depth-3"><a href="">더벤티 연혁</a></li>
+              <li class="list-depth-3"><a href="">BI 소개</a></li>
+              <li class="list-depth-3"><a href="">찾아오시는 길</a></li>
+            </ul>
+          </li>
+          <li class="list-depth-1">
+            <a href=""> MENU </a>
+            <ul class="list-depth-2">
+              <li class="list-depth-3"><a href="">더벤티 커피이야기</a></li>
+              <li class="list-depth-3"><a href="">신메뉴</a></li>
+              <li class="list-depth-3"><a href="">전체메뉴</a></li>
+            </ul>
+          </li>
+          <li class="list-depth-1">
+            <a href=""> STORE </a>
+            <ul class="list-depth-2">
+              <li class="list-depth-3"><a href="">매장찾기</a></li>
+            </ul>
+          </li>
+          <li class="list-depth-1">
+            <a href=""> MEMBERSHIP </a>
+            <ul class="list-depth-2">
+              <li class="list-depth-3"><a href="">더벤티 APP소개</a></li>
+            </ul>
+          </li>
+          <li class="list-depth-1">
+            <a href=""> COMMUNITY </a>
+            <ul class="list-depth-2">
+              <li class="list-depth-3"><a href="">공지사항</a></li>
+              <li class="list-depth-3"><a href="">보도자료</a></li>
+              <li class="list-depth-3"><a href="">이벤트</a></li>
+              <li class="list-depth-3"><a href="">칭찬매장</a></li>
+              <li class="list-depth-3"><a href="">더벤티 이야기</a></li>
+              <li class="list-depth-3"><a href="">SNS</a></li>
+              <li class="list-depth-3"><a href="">자주하는 질문</a></li>
+              <li class="list-depth-3"><a href="">벤티럭 사연접수</a></li>
+              <li class="list-depth-3"><a href="">THEVENGERS 봉사활동</a></li>
+            </ul>
+          </li>
+          <li class="list-depth-1">
+            <a href=""> 고객의소리 </a>
+            <ul class="list-depth-2"></ul>
+          </li>
+        </ul>
+      </div>
+    </aside>
     <section>
       <div class="text">
         <img src="../img/01main/main/topsection/res-banner01.jpg" alt="" />
@@ -145,8 +232,8 @@
               <a href="../brand/brand-index.html"><p>더벤티 소개</p></a>
               <a href="#"><p>제휴/제안</p></a>
               <a href="#"><p>고객상담</p></a>
-              <a href="#"><p>개인정보 처리방침</p></a>
-              <a href="#"><p>이용약관</p></a>
+              <a href="#" id="popup2"><p>개인정보 처리방침</p></a>
+              <a href="#" id="popup3"><p>이용약관</p></a>
             </div>
             <div class="footer-sns">
               <a href="#">
