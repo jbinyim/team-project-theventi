@@ -280,6 +280,11 @@
 
 // ===========1200px===========
 @media screen and (max-width: 1200px) {
+}
+
+// ===========1024px===========
+@media screen and (max-width: 1024px) {
+  //brand
   .brand {
     width: 100%;
     height: 510px;
@@ -291,12 +296,12 @@
       color: #fff;
       text-align: center;
       h1 {
-        font: bold 2.8rem/1 "geometos";
+        font: bold 1.75rem/1 "geometos";
         line-height: -1px;
         margin-bottom: 19px;
       }
       p {
-        font: 1.12rem/1 "suitL";
+        font: 0.85rem/1 "suitL";
       }
     }
   }
@@ -536,10 +541,6 @@
       }
     }
   }
-}
-
-// ===========1024px===========
-@media screen and (max-width: 1024px) {
 }
 
 // ===========320px===========

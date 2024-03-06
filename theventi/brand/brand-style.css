@@ -354,7 +354,7 @@ li {
   background: #780997;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1024px) {
   .brand {
     width: 100%;
     height: 510px;
@@ -368,12 +368,12 @@ li {
     text-align: center;
   }
   .brand .br-content h1 {
-    font: bold 2.8rem/1 "geometos";
+    font: bold 1.75rem/1 "geometos";
     line-height: -1px;
     margin-bottom: 19px;
   }
   .brand .br-content p {
-    font: 1.12rem/1 "suitL";
+    font: 0.85rem/1 "suitL";
   }
   .sub-nav {
     width: 100%;
