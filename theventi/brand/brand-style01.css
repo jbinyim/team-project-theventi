@@ -142,4 +142,15 @@ li {
 
 .active a {
   color: #780997;
+}
+
+.history {
+  width: 100%;
+  height: 1106px;
+}
+.history .history-wrap {
+  padding: 100px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }/*# sourceMappingURL=brand-style01.css.map */

@@ -286,12 +286,6 @@
 @media screen and (max-width: 1024px) {
   //brand
   .brand {
-    width: 100%;
-    height: 510px;
-    background: url(../img/03brand/sv_1.png) center/cover no-repeat;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     .br-content {
       color: #fff;
       text-align: center;
@@ -308,21 +302,16 @@
   //sub-nav
   .sub-nav {
     width: 100%;
-    height: 67px;
+    height: 46px;
     border-bottom: 2px solid #ddd;
     ul {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100%;
       li {
-        padding: 21px 30px;
-        font: 1.12rem/1.2 "suitM";
+        padding: 15px 20px;
+        font: 1rem/1 "suitB";
         color: #333;
         transition: all 0.3s;
         &:hover {
-          color: #780997;
-          border-bottom: 3px solid #780997;
+          border: none;
         }
       }
     }
