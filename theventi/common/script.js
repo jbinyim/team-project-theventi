@@ -4,9 +4,7 @@
 const headerList = document.querySelector("#header-nav");
 const header = document.querySelector("header");
 
-console.log(header);
 const dropDown = document.querySelector("#dropdown");
-console.log(dropDown);
 
 const opendrop = () => {
   dropDown.style.display = "block";
@@ -19,8 +17,6 @@ const closedrop = () => {
 headerList.onmouseover = opendrop;
 dropDown.onmouseover = opendrop;
 dropDown.onmouseout = closedrop;
-
-console.log(opendrop);
 
 //===============================================================
 // footer popup
@@ -63,3 +59,37 @@ popup3.addEventListener("click", () => {
 //     "event",
 //     `width=${popupWidth3} height =${popupheight3} left =${left} top=${top}`;
 // };
+
+//===============================================================
+// aside
+
+const body = document.querySelector("body");
+const toggleBtn = document.querySelector(".toggle-button");
+const mobileMenu = document.querySelector("#bgmobile");
+const close = document.querySelector(".xi-close");
+const aside = document.querySelector("aside");
+// const arrow =document.querySelectorAll(".depth-1a");
+
+console.log(mobileMenu);
+console.log(toggleBtn);
+
+const arrow = document.querySelectorAll('.list-depth-1 .depth-1a a::before');
+console.log(arrow);
+
+// // arrow.addEventListener("click", () => {
+// //   console.log("click");
+// // });
+// arrow.onclick
+
+toggleBtn.addEventListener("click", () => {
+  console.log("click");
+  mobileMenu.style.right = "0px";
+  aside.classList.toggle("active");
+  // body.style.filter = "blur(6px)";
+});
+
+close.addEventListener("click", () => {
+  console.log("click");
+  mobileMenu.style.right = "-100%";
+  aside.classList.toggle("active");
+});
