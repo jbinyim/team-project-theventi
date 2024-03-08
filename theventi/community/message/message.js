@@ -1,18 +1,5 @@
-const triggerShow = 1000;
-const sa = document.querySelectorAll(".sa");
+const rnum = document.querySelector(".rnum");
 
-const saFunc = function () {
-  for (const element of sa) {
-    if (!element.classList.contains("show")) {
-      if (
-        window.innerHeight >
-        element.getBoundingClientRect().top + triggerShow
-      ) {
-        element.classList.add("show");
-      }
-    }
-  }
-};
+const ran = Math.floor(Math.random() * 999999);
 
-window.addEventListener("load", saFunc);
-window.addEventListener("scroll", saFunc);
+rnum.innerText = ran;
