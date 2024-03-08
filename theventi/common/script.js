@@ -70,22 +70,59 @@ const close = document.querySelector(".xi-close");
 const aside = document.querySelector("aside");
 // const arrow =document.querySelectorAll(".depth-1a");
 
-console.log(mobileMenu);
-console.log(toggleBtn);
+// const depth1 = document.querySelector(".list-depth-1");
 
-const arrow = document.querySelectorAll('.list-depth-1 .depth-1a a::before');
-console.log(arrow);
+// let depthAfterStyle = document.createElement("style");
 
-// // arrow.addEventListener("click", () => {
-// //   console.log("click");
-// // });
-// arrow.onclick
+// depthAfterStyle.innerHTML = `.list-depth-1::before {
+//   position: absolute;
+//   top: 50%;
+//   font-size: 1.5rem;
+//   margin-top: -0.5rem;
+//   right: 1rem;
+//   color: #999;
+//   font-family: xeicon !important;
+//   display: inline-block;
+//   font-style: normal;
+//   font-weight: 400;
+//   line-height: 1;
+//   content: '\e941';
+// }`;
+
+// depth1.appendChild(depthAfterStyle);
+
+const depthIcons = document.querySelectorAll(".xi-depth");
+
+// const depth2 = document.querySelectorAll(".list-depth-2");
+// console.log(depth2);
+// depth2.forEach((d) => {
+//   d.style.display = "block";
+// });
+// console.log(depthicon);
+
+const depthIconsFnc = depthIcons.forEach((depthicon, index1) => {
+  depthicon.addEventListener("click", () => {
+    depthicon.classList.toggle("clicked");
+    const depth2 = document.querySelectorAll(".list-depth-2");
+    depth2.forEach((d, index2) => {
+      if (index1 === index2) {
+        d.classList.toggle("dropdown");
+      }
+    });
+  });
+});
+// depthIconsFnc();
+// depth2.forEach((d) => {});
+
+// for (i = 0; i < d.length - 1; i++) {
+//   d.classList.toggle("dropdown");
+//   console.log(d[i]);
+// }
 
 toggleBtn.addEventListener("click", () => {
   console.log("click");
   mobileMenu.style.right = "0px";
   aside.classList.toggle("active");
-  // body.style.filter = "blur(6px)";
 });
 
 close.addEventListener("click", () => {

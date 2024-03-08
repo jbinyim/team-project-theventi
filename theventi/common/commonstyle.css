@@ -440,6 +440,7 @@
   align-items: center;
 }
 * aside #bgmobile .mobile-menu-head-wrap .mobile-menu-head #mobile-menu-wrap .mobile-menu-head-btn {
+  margin-right: 20px;
   text-align: center;
   color: #222;
   font-size: 2rem;
@@ -471,7 +472,7 @@
 * aside #bgmobile .mobile-menu-body .mobile-menu-body-list .list-depth-1 .depth-lasta:last-of-type::before {
   opacity: 0;
 }
-* aside #bgmobile .mobile-menu-body .mobile-menu-body-list .list-depth-1 ::before {
+* aside #bgmobile .mobile-menu-body .mobile-menu-body-list .list-depth-1 .xi-depth {
   position: absolute;
   top: 50%;
   font-size: 1.5rem;
@@ -483,7 +484,14 @@
   font-style: normal;
   font-weight: 400;
   line-height: 1;
+  cursor: pointer;
+  transition: all 0s;
+}
+* aside #bgmobile .mobile-menu-body .mobile-menu-body-list .list-depth-1 .xi-depth::before {
   content: "\e941";
+}
+* aside #bgmobile .mobile-menu-body .mobile-menu-body-list .list-depth-1 .clicked {
+  transform: rotate(180deg);
 }
 * aside #bgmobile .mobile-menu-body .mobile-menu-body-list .list-depth-2 {
   display: none;
@@ -493,12 +501,16 @@
   color: #666;
   line-height: 1.6;
   font-weight: 400;
+  border-bottom: 1px solid #ddd;
 }
 * aside #bgmobile .mobile-menu-body .mobile-menu-body-list .list-depth-2 .list-depth-3 {
   margin-bottom: 20px;
 }
 * aside #bgmobile .mobile-menu-body .mobile-menu-body-list .list-depth-2 .list-depth-3:last-of-type {
   margin-bottom: 0px;
+}
+* aside #bgmobile .mobile-menu-body .mobile-menu-body-list .dropdown {
+  display: block;
 }
 * #quick-menu {
   z-index: 1;
