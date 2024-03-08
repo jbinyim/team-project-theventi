@@ -663,3 +663,51 @@
     }
   }
 }
+@mixin menuTable {
+  &:nth-of-type(1) {
+    width: 13%;
+  }
+  &:nth-of-type(2) {
+    width: 9.8%;
+  }
+  &:nth-of-type(3) {
+    width: 9.8%;
+  }
+  &:nth-of-type(4) {
+    width: 9.8%;
+  }
+  &:nth-of-type(5) {
+    width: 9.8%;
+  }
+  &:nth-of-type(6) {
+    width: 9.8%;
+  }
+  &:nth-of-type(7) {
+    width: 18%;
+  }
+  &:nth-of-type(8) {
+    width: 20%;
+  }
+}
+@mixin menuTit-h1 {
+  font: 700 4.125rem/1 "noto";
+  letter-spacing: -0.0825rem;
+}
+@mixin menuTit-h2 {
+  font: 3.2375rem/1.2046 "suitM";
+  letter-spacing: -0.065rem;
+}
+@mixin menuTit-h5 {
+  font: 2.625rem/1.229 "suitM";
+}
+@mixin menuTit-p {
+  font: 300 1.125rem/1.5 "suitL";
+  padding-left: 14px;
+  position: relative;
+  &::before {
+    content: "*";
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
