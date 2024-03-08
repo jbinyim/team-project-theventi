@@ -369,7 +369,148 @@
   flex-direction: column;
 }
 * aside {
+  transition: all 0.5s;
+}
+* aside.active {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+* aside #bgmobile {
+  z-index: 99;
+  transition: all 0.5s;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 600px;
+  height: 100%;
+  background: #fff;
+}
+* aside #bgmobile .mobile-menu-head-wrap {
+  width: 600px;
+}
+* aside #bgmobile .mobile-menu-head-wrap .mobile-menu-head {
+  height: 60px;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+* aside #bgmobile .mobile-menu-head-wrap .mobile-menu-head .mobile-menu-head-logo {
+  margin-left: 15px;
+  width: 150px;
+  height: 26.19px;
+}
+* aside #bgmobile .mobile-menu-head-wrap .mobile-menu-head .mobile-menu-head-logo img {
+  width: inherit;
+  height: 26.19px;
+}
+* aside #bgmobile .mobile-menu-head-wrap .mobile-menu-head #mobile-menu-wrap {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+* aside #bgmobile .mobile-menu-head-wrap .mobile-menu-head #mobile-menu-wrap #mobile-menu-head-logoback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 101px;
+  height: 29px;
+  background: #780997;
+  border-radius: 35px;
+}
+* aside #bgmobile .mobile-menu-head-wrap .mobile-menu-head #mobile-menu-wrap #mobile-menu-head-logoback a p {
+  width: 73px;
+  height: 25.6px;
+  line-height: 25.6px;
+  font-size: 0.8125rem;
+  text-align: center;
+  color: #fff;
+  font-family: noto500;
+  font-weight: bold;
+}
+* aside #bgmobile .mobile-menu-head-wrap .mobile-menu-head #mobile-menu-wrap #mobile-menu-head-logoback img {
+  width: 15px;
+  height: 11.53px;
+  display: flex;
+  align-items: center;
+}
+* aside #bgmobile .mobile-menu-head-wrap .mobile-menu-head #mobile-menu-wrap .mobile-menu-head-btn {
+  margin-right: 20px;
+  text-align: center;
+  color: #222;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+* aside #bgmobile .mobile-menu-head-wrap .mobile-menu-head #mobile-menu-wrap .mobile-menu-head-btn .xi-close {
+  font-family: xeicon;
+  display: inline-block;
+  font-style: normal;
+  font-weight: 400;
+  font-variant: normal;
+}
+* aside #bgmobile .mobile-menu-head-wrap .mobile-menu-head #mobile-menu-wrap .mobile-menu-head-btn .xi-close::before {
+  content: "\e921";
+}
+* aside #bgmobile .mobile-menu-body .mobile-menu-body-list .list-depth-1 {
+  border-bottom: 1px solid #ddd;
+  width: 600px;
+  text-align: left;
+  color: #000;
+  display: block;
+  padding: 1rem 1rem;
+  font-size: 1.2rem;
+  position: relative;
+  font-family: "geometos";
+}
+* aside #bgmobile .mobile-menu-body .mobile-menu-body-list .list-depth-1 .depth-lasta:last-of-type::before {
+  opacity: 0;
+}
+* aside #bgmobile .mobile-menu-body .mobile-menu-body-list .list-depth-1 .xi-depth {
+  position: absolute;
+  top: 50%;
+  font-size: 1.5rem;
+  margin-top: -0.5rem;
+  right: 1rem;
+  color: #999;
+  font-family: xeicon !important;
+  display: inline-block;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  cursor: pointer;
+  transition: all 0s;
+}
+* aside #bgmobile .mobile-menu-body .mobile-menu-body-list .list-depth-1 .xi-depth::before {
+  content: "\e941";
+}
+* aside #bgmobile .mobile-menu-body .mobile-menu-body-list .list-depth-1 .clicked {
+  transform: rotate(180deg);
+}
+* aside #bgmobile .mobile-menu-body .mobile-menu-body-list .list-depth-2 {
   display: none;
+  padding: 1rem 1rem;
+  font-family: "noto";
+  font-size: 13px;
+  color: #666;
+  line-height: 1.6;
+  font-weight: 400;
+  border-bottom: 1px solid #ddd;
+}
+* aside #bgmobile .mobile-menu-body .mobile-menu-body-list .list-depth-2 .list-depth-3 {
+  margin-bottom: 20px;
+}
+* aside #bgmobile .mobile-menu-body .mobile-menu-body-list .list-depth-2 .list-depth-3:last-of-type {
+  margin-bottom: 0px;
+}
+* aside #bgmobile .mobile-menu-body .mobile-menu-body-list .dropdown {
+  display: block;
 }
 * #quick-menu {
   z-index: 1;
