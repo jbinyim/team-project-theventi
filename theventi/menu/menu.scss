@@ -12,6 +12,9 @@ body {
     header {
       @include header-1920;
     }
+    aside {
+      @include aside-1920;
+    }
     .menu-main {
       width: 100%;
       height: 510px;
@@ -69,35 +72,36 @@ body {
     .menu-story-wrap {
       width: 100%;
       height: 100%;
-      .menu-story {
+      section {
         width: 100%;
         height: 720px;
-        &-inner {
+        .menu-story {
           width: 1920px;
           height: 100%;
           margin: 0 auto;
           display: flex;
           justify-content: center;
           &.tea {
-            .menu-tea-tit {
+            width: 100%;
+            height: 100%;
+            .tea-tit {
               display: flex;
               width: 872px;
               height: 100%;
               position: relative;
-              .menu-tea-tit-text {
+              .tea-tit-text {
+                width: 672px;
                 height: 100%;
                 padding-left: 192px;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 h1 {
-                  font: 700 4.125rem/1 "noto";
-                  letter-spacing: -0.0825rem;
+                  @include menuTit-h1;
                   color: #780997;
                 }
                 h2 {
-                  font: 3.2375rem/1.2046 "suitM";
-                  letter-spacing: -0.065rem;
+                  @include menuTit-h2;
                   margin: 12px 0 40px;
                 }
                 img {
@@ -105,7 +109,7 @@ body {
                   height: 185px;
                 }
               }
-              .menu-tea-coffee {
+              .tea-coffee {
                 width: 200px;
                 height: 100%;
                 color: #fff;
@@ -113,12 +117,10 @@ body {
                 position: absolute;
                 top: 0;
                 right: 0;
-                display: grid;
-                grid-template-columns: 2 1 1 1;
-                .menu-tea-coffee-01,
-                .menu-tea-coffee-02,
-                .menu-tea-coffee-03,
-                .menu-tea-coffee-04 {
+                &-01,
+                &-02,
+                &-03,
+                &-04 {
                   width: 100%;
                   display: flex;
                   flex-direction: column;
@@ -131,6 +133,7 @@ body {
                 }
                 &-01 {
                   background: #7b00a0;
+                  height: 286.39px;
                   img {
                     width: 69px;
                     height: 68px;
@@ -139,98 +142,83 @@ body {
                 }
                 &-02 {
                   background: #ff5b28;
+                  height: 143.19px;
                 }
                 &-03 {
                   background: #ff8c68;
+                  height: 143.19px;
                 }
                 &-04 {
                   background: #ffad93;
+                  height: 143.19px;
                 }
               }
             }
-            .menu-tea-info {
+            .tea-info {
               width: 1048px;
               height: 100%;
               background: url("../img/02menuImg/secBg-specialtea.png")
                 center/cover no-repeat;
-              &-inner {
-                padding-left: 80px;
+              &-text {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 20px;
+                margin-left: 80px;
+                color: #fff;
+                width: 1048px;
                 height: 100%;
-                .menu-tea-text {
-                  display: flex;
-                  flex-direction: column;
-                  justify-content: center;
-                  gap: 20px;
-                  padding-left: 80px;
-                  color: #fff;
-                  width: 1048px;
-                  height: 100%;
-                  color: #fff;
-                  h5 {
-                    font: 2.625rem/1.229 "suitM";
-                  }
-                  p {
-                    font: 300 1.125rem/1.5 "suitL";
-                    padding-left: 14px;
-                    position: relative;
-                    &::before {
-                      content: "*";
-                      position: absolute;
-                      top: 0;
-                      left: 0;
-                    }
-                  }
+                color: #fff;
+                h5 {
+                  @include menuTit-h5;
+                }
+                p {
+                  @include menuTit-p;
                 }
               }
             }
           }
           &.bsca {
-            .menu-bsca-tit {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .bsca-inner {
+              width: 1400px;
+              height: 368.78px;
               display: flex;
-              width: 872px;
-              height: 100%;
-              .menu-bsca-tit-text {
-                padding: 175.61px 0 175.61px 260px;
-                color: #fff;
-                h1 {
-                  font: 700 4.125rem/1 "noto";
-                  letter-spacing: -0.0825rem;
-                }
-                h2 {
-                  font: 3.2375rem/1.2046 "suitM";
-                  letter-spacing: -0.065rem;
-                  margin: 12px 0 60px;
+              .bsca-tit {
+                width: 490px;
+                height: 100%;
+                &-text {
+                  color: #fff;
+                  h1 {
+                    @include menuTit-h1;
+                  }
+                  h2 {
+                    @include menuTit-h2;
+                    margin: 12px 0 60px;
+                  }
                 }
               }
-            }
-            .menu-bsca-info {
-              width: 1048px;
-              height: 100%;
-              &-inner {
-                padding-left: 80px;
+              .bsca-info {
+                width: 910px;
                 height: 100%;
-                .menu-bsca-text {
+                display: flex;
+                align-items: center;
+                &-text {
                   display: flex;
                   flex-direction: column;
                   justify-content: center;
                   gap: 20px;
                   color: #fff;
-                  width: 1048px;
-                  height: 100%;
-                  color: #fff;
+                  padding-left: 80px;
                   h5 {
-                    font: 2.625rem/1.229 "suitM";
+                    @include menuTit-h5;
                   }
                   p {
-                    font: 300 1.125rem/1.5 "suitL";
-                    padding-left: 14px;
-                    position: relative;
-                    &::before {
-                      content: "*";
-                      position: absolute;
-                      top: 0;
-                      left: 0;
-                    }
+                    @include menuTit-p;
                     span {
                       padding-left: 9px;
                     }
@@ -240,153 +228,91 @@ body {
             }
           }
           &.taste {
-            .menu-taste-tit {
+            .taste-tit {
               display: flex;
               width: 872px;
               height: 100%;
-              .menu-taste-tit-text {
+              .taste-tit-text {
                 padding: 170px 0 347px 249.59px;
                 color: #fff;
                 h1 {
-                  font: 700 4.125rem/1 "noto";
-                  letter-spacing: -0.0825rem;
+                  @include menuTit-h1;
                   margin-bottom: 12px;
                 }
                 h2 {
-                  font: 3.2375rem/1.2046 "suitM";
-                  letter-spacing: -0.065rem;
+                  @include menuTit-h2;
                 }
               }
             }
-            .menu-taste-info {
+            .taste-info {
               width: 1048px;
               height: 100%;
             }
           }
           &.roasting {
-            .menu-roasting-tit {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .roasting-inner {
+              width: 1400px;
+              height: 254.78px;
               display: flex;
-              width: 872px;
-              height: 100%;
-              .menu-roasting-tit-text {
-                padding: 175.61px 0 175.61px 260px;
-                color: #fff;
-                h1 {
-                  font: 700 4.125rem/1 "noto";
-                  letter-spacing: -0.0825rem;
-                }
-                h2 {
-                  font: 3.2375rem/1.2046 "suitM";
-                  letter-spacing: -0.065rem;
-                  margin: 12px 0 0px;
+              .roasting-tit {
+                width: 490px;
+                height: 100%;
+                padding: 26px 0;
+                &-text {
+                  color: #fff;
+                  h1 {
+                    @include menuTit-h1;
+                  }
+                  h2 {
+                    @include menuTit-h2;
+                    margin: 12px 0 0;
+                  }
                 }
               }
-            }
-            .menu-roasting-info {
-              width: 1048px;
-              height: 100%;
-              &-inner {
-                padding-left: 80px;
+              .roasting-info {
+                width: 910px;
                 height: 100%;
-                .menu-roasting-text {
+                display: flex;
+                align-items: center;
+                &-text {
                   display: flex;
                   flex-direction: column;
                   justify-content: center;
-                  padding-top: 40px;
                   gap: 20px;
                   color: #fff;
-                  width: 1048px;
-                  height: 100%;
-                  color: #fff;
+                  padding-left: 80px;
+                  margin-top: 80px;
                   h5 {
-                    font: 2.625rem/1.229 "suitM";
+                    @include menuTit-h5;
                   }
                   p {
-                    font: 300 1.125rem/1.5 "suitL";
-                    font: 300 1.125rem/1.5 "suitL";
-                    padding-left: 14px;
-                    position: relative;
-                    &::before {
-                      content: "*";
-                      position: absolute;
-                      top: 0;
-                      left: 0;
-                    }
-                  }
-                }
-              }
-            }
-          }
-          &.wq {
-            .menu-wq-tit {
-              display: flex;
-              width: 872px;
-              height: 100%;
-              .menu-wq-tit-text {
-                padding: 175.61px 0 175.61px 260px;
-                color: #fff;
-                h1 {
-                  font: 700 4.125rem/1 "noto";
-                  letter-spacing: -0.0825rem;
-                }
-                h2 {
-                  font: 3.2375rem/1.2046 "suitM";
-                  letter-spacing: -0.065rem;
-                  margin: 12px 0 0px;
-                }
-              }
-            }
-            .menu-wq-info {
-              width: 1048px;
-              height: 100%;
-              &-inner {
-                padding-left: 80px;
-                height: 100%;
-                .menu-wq-text {
-                  display: flex;
-                  flex-direction: column;
-                  justify-content: center;
-                  padding-top: 40px;
-                  gap: 20px;
-                  color: #fff;
-                  width: 1048px;
-                  height: 100%;
-                  color: #fff;
-                  h5 {
-                    font: 2.625rem/1.229 "suitM";
-                  }
-                  p {
-                    font: 300 1.125rem/1.5 "suitL";
-                    font: 300 1.125rem/1.5 "suitL";
-                    padding-left: 14px;
-                    position: relative;
-                    &::before {
-                      content: "*";
-                      position: absolute;
-                      top: 0;
-                      left: 0;
-                    }
+                    @include menuTit-p;
                   }
                 }
               }
             }
           }
         }
-        &.tea {
+        &:nth-child(1) {
           height: 716px;
           background: #f5f4f3;
         }
-        &.bsca {
+        &:nth-child(2) {
           background: url("../img/02menuImg/secBg-bsca.png") center/cover
             no-repeat;
         }
-        &.taste {
+        &:nth-child(3) {
           background: #362b27;
         }
-        &.roasting {
+        &:nth-child(4) {
           background: url("../img/02menuImg/secBg-roasting.png") center/cover;
         }
-        &.wq {
+        &:nth-child(5) {
           background: #291b35;
         }
       }
@@ -633,13 +559,13 @@ body {
                             background: #7b009b;
                             color: #fff;
                             padding: 10px 2px;
-                            @include menu-table;
+                            @include menuTable;
                           }
                           td {
                             font: 0.875rem/1.1 "noto";
                             color: #222;
                             padding: 13px 2px;
-                            @include menu-table;
+                            @include menuTable;
                           }
                         }
                       }

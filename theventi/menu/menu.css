@@ -311,6 +311,9 @@ body .menu-wrap header #dropdown #dropdown-container #dropdown-list #community-l
   display: flex;
   flex-direction: column;
 }
+body .menu-wrap aside {
+  display: none;
+}
 body .menu-wrap .menu-main {
   width: 100%;
   height: 510px;
@@ -368,45 +371,50 @@ body .menu-wrap .menu-story-wrap {
   width: 100%;
   height: 100%;
 }
-body .menu-wrap .menu-story-wrap .menu-story {
+body .menu-wrap .menu-story-wrap section {
   width: 100%;
   height: 720px;
 }
-body .menu-wrap .menu-story-wrap .menu-story-inner {
+body .menu-wrap .menu-story-wrap section .menu-story {
   width: 1920px;
   height: 100%;
   margin: 0 auto;
   display: flex;
   justify-content: center;
 }
-body .menu-wrap .menu-story-wrap .menu-story-inner.tea .menu-tea-tit {
+body .menu-wrap .menu-story-wrap section .menu-story.tea {
+  width: 100%;
+  height: 100%;
+}
+body .menu-wrap .menu-story-wrap section .menu-story.tea .tea-tit {
   display: flex;
   width: 872px;
   height: 100%;
   position: relative;
 }
-body .menu-wrap .menu-story-wrap .menu-story-inner.tea .menu-tea-tit .menu-tea-tit-text {
+body .menu-wrap .menu-story-wrap section .menu-story.tea .tea-tit .tea-tit-text {
+  width: 672px;
   height: 100%;
   padding-left: 192px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-body .menu-wrap .menu-story-wrap .menu-story-inner.tea .menu-tea-tit .menu-tea-tit-text h1 {
+body .menu-wrap .menu-story-wrap section .menu-story.tea .tea-tit .tea-tit-text h1 {
   font: 700 4.125rem/1 "noto";
   letter-spacing: -0.0825rem;
   color: #780997;
 }
-body .menu-wrap .menu-story-wrap .menu-story-inner.tea .menu-tea-tit .menu-tea-tit-text h2 {
+body .menu-wrap .menu-story-wrap section .menu-story.tea .tea-tit .tea-tit-text h2 {
   font: 3.2375rem/1.2046 "suitM";
   letter-spacing: -0.065rem;
   margin: 12px 0 40px;
 }
-body .menu-wrap .menu-story-wrap .menu-story-inner.tea .menu-tea-tit .menu-tea-tit-text img {
+body .menu-wrap .menu-story-wrap section .menu-story.tea .tea-tit .tea-tit-text img {
   width: 119px;
   height: 185px;
 }
-body .menu-wrap .menu-story-wrap .menu-story-inner.tea .menu-tea-tit .menu-tea-coffee {
+body .menu-wrap .menu-story-wrap section .menu-story.tea .tea-tit .tea-coffee {
   width: 200px;
   height: 100%;
   color: #fff;
@@ -414,270 +422,222 @@ body .menu-wrap .menu-story-wrap .menu-story-inner.tea .menu-tea-tit .menu-tea-c
   position: absolute;
   top: 0;
   right: 0;
-  display: grid;
-  grid-template-columns: 2 1 1 1;
 }
-body .menu-wrap .menu-story-wrap .menu-story-inner.tea .menu-tea-tit .menu-tea-coffee .menu-tea-coffee-01,
-body .menu-wrap .menu-story-wrap .menu-story-inner.tea .menu-tea-tit .menu-tea-coffee .menu-tea-coffee-02,
-body .menu-wrap .menu-story-wrap .menu-story-inner.tea .menu-tea-tit .menu-tea-coffee .menu-tea-coffee-03,
-body .menu-wrap .menu-story-wrap .menu-story-inner.tea .menu-tea-tit .menu-tea-coffee .menu-tea-coffee-04 {
+body .menu-wrap .menu-story-wrap section .menu-story.tea .tea-tit .tea-coffee-01, body .menu-wrap .menu-story-wrap section .menu-story.tea .tea-tit .tea-coffee-02, body .menu-wrap .menu-story-wrap section .menu-story.tea .tea-tit .tea-coffee-03, body .menu-wrap .menu-story-wrap section .menu-story.tea .tea-tit .tea-coffee-04 {
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-body .menu-wrap .menu-story-wrap .menu-story-inner.tea .menu-tea-tit .menu-tea-coffee .menu-tea-coffee-01 p,
-body .menu-wrap .menu-story-wrap .menu-story-inner.tea .menu-tea-tit .menu-tea-coffee .menu-tea-coffee-02 p,
-body .menu-wrap .menu-story-wrap .menu-story-inner.tea .menu-tea-tit .menu-tea-coffee .menu-tea-coffee-03 p,
-body .menu-wrap .menu-story-wrap .menu-story-inner.tea .menu-tea-tit .menu-tea-coffee .menu-tea-coffee-04 p {
+body .menu-wrap .menu-story-wrap section .menu-story.tea .tea-tit .tea-coffee-01 p, body .menu-wrap .menu-story-wrap section .menu-story.tea .tea-tit .tea-coffee-02 p, body .menu-wrap .menu-story-wrap section .menu-story.tea .tea-tit .tea-coffee-03 p, body .menu-wrap .menu-story-wrap section .menu-story.tea .tea-tit .tea-coffee-04 p {
   font: 1.3644rem/1.1086 "suitM";
   letter-spacing: 0.03125em;
 }
-body .menu-wrap .menu-story-wrap .menu-story-inner.tea .menu-tea-tit .menu-tea-coffee-01 {
+body .menu-wrap .menu-story-wrap section .menu-story.tea .tea-tit .tea-coffee-01 {
   background: #7b00a0;
+  height: 286.39px;
 }
-body .menu-wrap .menu-story-wrap .menu-story-inner.tea .menu-tea-tit .menu-tea-coffee-01 img {
+body .menu-wrap .menu-story-wrap section .menu-story.tea .tea-tit .tea-coffee-01 img {
   width: 69px;
   height: 68px;
   margin-bottom: 10px;
 }
-body .menu-wrap .menu-story-wrap .menu-story-inner.tea .menu-tea-tit .menu-tea-coffee-02 {
+body .menu-wrap .menu-story-wrap section .menu-story.tea .tea-tit .tea-coffee-02 {
   background: #ff5b28;
+  height: 143.19px;
 }
-body .menu-wrap .menu-story-wrap .menu-story-inner.tea .menu-tea-tit .menu-tea-coffee-03 {
+body .menu-wrap .menu-story-wrap section .menu-story.tea .tea-tit .tea-coffee-03 {
   background: #ff8c68;
+  height: 143.19px;
 }
-body .menu-wrap .menu-story-wrap .menu-story-inner.tea .menu-tea-tit .menu-tea-coffee-04 {
+body .menu-wrap .menu-story-wrap section .menu-story.tea .tea-tit .tea-coffee-04 {
   background: #ffad93;
+  height: 143.19px;
 }
-body .menu-wrap .menu-story-wrap .menu-story-inner.tea .menu-tea-info {
+body .menu-wrap .menu-story-wrap section .menu-story.tea .tea-info {
   width: 1048px;
   height: 100%;
   background: url("../img/02menuImg/secBg-specialtea.png") center/cover no-repeat;
 }
-body .menu-wrap .menu-story-wrap .menu-story-inner.tea .menu-tea-info-inner {
-  padding-left: 80px;
-  height: 100%;
-}
-body .menu-wrap .menu-story-wrap .menu-story-inner.tea .menu-tea-info-inner .menu-tea-text {
+body .menu-wrap .menu-story-wrap section .menu-story.tea .tea-info-text {
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 20px;
-  padding-left: 80px;
+  margin-left: 80px;
   color: #fff;
   width: 1048px;
   height: 100%;
   color: #fff;
 }
-body .menu-wrap .menu-story-wrap .menu-story-inner.tea .menu-tea-info-inner .menu-tea-text h5 {
+body .menu-wrap .menu-story-wrap section .menu-story.tea .tea-info-text h5 {
   font: 2.625rem/1.229 "suitM";
 }
-body .menu-wrap .menu-story-wrap .menu-story-inner.tea .menu-tea-info-inner .menu-tea-text p {
+body .menu-wrap .menu-story-wrap section .menu-story.tea .tea-info-text p {
   font: 300 1.125rem/1.5 "suitL";
   padding-left: 14px;
   position: relative;
 }
-body .menu-wrap .menu-story-wrap .menu-story-inner.tea .menu-tea-info-inner .menu-tea-text p::before {
+body .menu-wrap .menu-story-wrap section .menu-story.tea .tea-info-text p::before {
   content: "*";
   position: absolute;
   top: 0;
   left: 0;
 }
-body .menu-wrap .menu-story-wrap .menu-story-inner.bsca .menu-bsca-tit {
+body .menu-wrap .menu-story-wrap section .menu-story.bsca {
+  width: 100%;
+  height: 100%;
   display: flex;
-  width: 872px;
+  justify-content: center;
+  align-items: center;
+}
+body .menu-wrap .menu-story-wrap section .menu-story.bsca .bsca-inner {
+  width: 1400px;
+  height: 368.78px;
+  display: flex;
+}
+body .menu-wrap .menu-story-wrap section .menu-story.bsca .bsca-inner .bsca-tit {
+  width: 490px;
   height: 100%;
 }
-body .menu-wrap .menu-story-wrap .menu-story-inner.bsca .menu-bsca-tit .menu-bsca-tit-text {
-  padding: 175.61px 0 175.61px 260px;
+body .menu-wrap .menu-story-wrap section .menu-story.bsca .bsca-inner .bsca-tit-text {
   color: #fff;
 }
-body .menu-wrap .menu-story-wrap .menu-story-inner.bsca .menu-bsca-tit .menu-bsca-tit-text h1 {
+body .menu-wrap .menu-story-wrap section .menu-story.bsca .bsca-inner .bsca-tit-text h1 {
   font: 700 4.125rem/1 "noto";
   letter-spacing: -0.0825rem;
 }
-body .menu-wrap .menu-story-wrap .menu-story-inner.bsca .menu-bsca-tit .menu-bsca-tit-text h2 {
+body .menu-wrap .menu-story-wrap section .menu-story.bsca .bsca-inner .bsca-tit-text h2 {
   font: 3.2375rem/1.2046 "suitM";
   letter-spacing: -0.065rem;
   margin: 12px 0 60px;
 }
-body .menu-wrap .menu-story-wrap .menu-story-inner.bsca .menu-bsca-info {
-  width: 1048px;
+body .menu-wrap .menu-story-wrap section .menu-story.bsca .bsca-inner .bsca-info {
+  width: 910px;
   height: 100%;
+  display: flex;
+  align-items: center;
 }
-body .menu-wrap .menu-story-wrap .menu-story-inner.bsca .menu-bsca-info-inner {
-  padding-left: 80px;
-  height: 100%;
-}
-body .menu-wrap .menu-story-wrap .menu-story-inner.bsca .menu-bsca-info-inner .menu-bsca-text {
+body .menu-wrap .menu-story-wrap section .menu-story.bsca .bsca-inner .bsca-info-text {
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 20px;
   color: #fff;
-  width: 1048px;
-  height: 100%;
-  color: #fff;
+  padding-left: 80px;
 }
-body .menu-wrap .menu-story-wrap .menu-story-inner.bsca .menu-bsca-info-inner .menu-bsca-text h5 {
+body .menu-wrap .menu-story-wrap section .menu-story.bsca .bsca-inner .bsca-info-text h5 {
   font: 2.625rem/1.229 "suitM";
 }
-body .menu-wrap .menu-story-wrap .menu-story-inner.bsca .menu-bsca-info-inner .menu-bsca-text p {
+body .menu-wrap .menu-story-wrap section .menu-story.bsca .bsca-inner .bsca-info-text p {
   font: 300 1.125rem/1.5 "suitL";
   padding-left: 14px;
   position: relative;
 }
-body .menu-wrap .menu-story-wrap .menu-story-inner.bsca .menu-bsca-info-inner .menu-bsca-text p::before {
+body .menu-wrap .menu-story-wrap section .menu-story.bsca .bsca-inner .bsca-info-text p::before {
   content: "*";
   position: absolute;
   top: 0;
   left: 0;
 }
-body .menu-wrap .menu-story-wrap .menu-story-inner.bsca .menu-bsca-info-inner .menu-bsca-text p span {
+body .menu-wrap .menu-story-wrap section .menu-story.bsca .bsca-inner .bsca-info-text p span {
   padding-left: 9px;
 }
-body .menu-wrap .menu-story-wrap .menu-story-inner.taste .menu-taste-tit {
+body .menu-wrap .menu-story-wrap section .menu-story.taste .taste-tit {
   display: flex;
   width: 872px;
   height: 100%;
 }
-body .menu-wrap .menu-story-wrap .menu-story-inner.taste .menu-taste-tit .menu-taste-tit-text {
+body .menu-wrap .menu-story-wrap section .menu-story.taste .taste-tit .taste-tit-text {
   padding: 170px 0 347px 249.59px;
   color: #fff;
 }
-body .menu-wrap .menu-story-wrap .menu-story-inner.taste .menu-taste-tit .menu-taste-tit-text h1 {
+body .menu-wrap .menu-story-wrap section .menu-story.taste .taste-tit .taste-tit-text h1 {
   font: 700 4.125rem/1 "noto";
   letter-spacing: -0.0825rem;
   margin-bottom: 12px;
 }
-body .menu-wrap .menu-story-wrap .menu-story-inner.taste .menu-taste-tit .menu-taste-tit-text h2 {
+body .menu-wrap .menu-story-wrap section .menu-story.taste .taste-tit .taste-tit-text h2 {
   font: 3.2375rem/1.2046 "suitM";
   letter-spacing: -0.065rem;
 }
-body .menu-wrap .menu-story-wrap .menu-story-inner.taste .menu-taste-info {
+body .menu-wrap .menu-story-wrap section .menu-story.taste .taste-info {
   width: 1048px;
   height: 100%;
 }
-body .menu-wrap .menu-story-wrap .menu-story-inner.roasting .menu-roasting-tit {
-  display: flex;
-  width: 872px;
+body .menu-wrap .menu-story-wrap section .menu-story.roasting {
+  width: 100%;
   height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-body .menu-wrap .menu-story-wrap .menu-story-inner.roasting .menu-roasting-tit .menu-roasting-tit-text {
-  padding: 175.61px 0 175.61px 260px;
+body .menu-wrap .menu-story-wrap section .menu-story.roasting .roasting-inner {
+  width: 1400px;
+  height: 254.78px;
+  display: flex;
+}
+body .menu-wrap .menu-story-wrap section .menu-story.roasting .roasting-inner .roasting-tit {
+  width: 490px;
+  height: 100%;
+  padding: 26px 0;
+}
+body .menu-wrap .menu-story-wrap section .menu-story.roasting .roasting-inner .roasting-tit-text {
   color: #fff;
 }
-body .menu-wrap .menu-story-wrap .menu-story-inner.roasting .menu-roasting-tit .menu-roasting-tit-text h1 {
+body .menu-wrap .menu-story-wrap section .menu-story.roasting .roasting-inner .roasting-tit-text h1 {
   font: 700 4.125rem/1 "noto";
   letter-spacing: -0.0825rem;
 }
-body .menu-wrap .menu-story-wrap .menu-story-inner.roasting .menu-roasting-tit .menu-roasting-tit-text h2 {
+body .menu-wrap .menu-story-wrap section .menu-story.roasting .roasting-inner .roasting-tit-text h2 {
   font: 3.2375rem/1.2046 "suitM";
   letter-spacing: -0.065rem;
-  margin: 12px 0 0px;
+  margin: 12px 0 0;
 }
-body .menu-wrap .menu-story-wrap .menu-story-inner.roasting .menu-roasting-info {
-  width: 1048px;
+body .menu-wrap .menu-story-wrap section .menu-story.roasting .roasting-inner .roasting-info {
+  width: 910px;
   height: 100%;
+  display: flex;
+  align-items: center;
 }
-body .menu-wrap .menu-story-wrap .menu-story-inner.roasting .menu-roasting-info-inner {
-  padding-left: 80px;
-  height: 100%;
-}
-body .menu-wrap .menu-story-wrap .menu-story-inner.roasting .menu-roasting-info-inner .menu-roasting-text {
+body .menu-wrap .menu-story-wrap section .menu-story.roasting .roasting-inner .roasting-info-text {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-top: 40px;
   gap: 20px;
   color: #fff;
-  width: 1048px;
-  height: 100%;
-  color: #fff;
+  padding-left: 80px;
+  margin-top: 80px;
 }
-body .menu-wrap .menu-story-wrap .menu-story-inner.roasting .menu-roasting-info-inner .menu-roasting-text h5 {
+body .menu-wrap .menu-story-wrap section .menu-story.roasting .roasting-inner .roasting-info-text h5 {
   font: 2.625rem/1.229 "suitM";
 }
-body .menu-wrap .menu-story-wrap .menu-story-inner.roasting .menu-roasting-info-inner .menu-roasting-text p {
-  font: 300 1.125rem/1.5 "suitL";
+body .menu-wrap .menu-story-wrap section .menu-story.roasting .roasting-inner .roasting-info-text p {
   font: 300 1.125rem/1.5 "suitL";
   padding-left: 14px;
   position: relative;
 }
-body .menu-wrap .menu-story-wrap .menu-story-inner.roasting .menu-roasting-info-inner .menu-roasting-text p::before {
+body .menu-wrap .menu-story-wrap section .menu-story.roasting .roasting-inner .roasting-info-text p::before {
   content: "*";
   position: absolute;
   top: 0;
   left: 0;
 }
-body .menu-wrap .menu-story-wrap .menu-story-inner.wq .menu-wq-tit {
-  display: flex;
-  width: 872px;
-  height: 100%;
-}
-body .menu-wrap .menu-story-wrap .menu-story-inner.wq .menu-wq-tit .menu-wq-tit-text {
-  padding: 175.61px 0 175.61px 260px;
-  color: #fff;
-}
-body .menu-wrap .menu-story-wrap .menu-story-inner.wq .menu-wq-tit .menu-wq-tit-text h1 {
-  font: 700 4.125rem/1 "noto";
-  letter-spacing: -0.0825rem;
-}
-body .menu-wrap .menu-story-wrap .menu-story-inner.wq .menu-wq-tit .menu-wq-tit-text h2 {
-  font: 3.2375rem/1.2046 "suitM";
-  letter-spacing: -0.065rem;
-  margin: 12px 0 0px;
-}
-body .menu-wrap .menu-story-wrap .menu-story-inner.wq .menu-wq-info {
-  width: 1048px;
-  height: 100%;
-}
-body .menu-wrap .menu-story-wrap .menu-story-inner.wq .menu-wq-info-inner {
-  padding-left: 80px;
-  height: 100%;
-}
-body .menu-wrap .menu-story-wrap .menu-story-inner.wq .menu-wq-info-inner .menu-wq-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-top: 40px;
-  gap: 20px;
-  color: #fff;
-  width: 1048px;
-  height: 100%;
-  color: #fff;
-}
-body .menu-wrap .menu-story-wrap .menu-story-inner.wq .menu-wq-info-inner .menu-wq-text h5 {
-  font: 2.625rem/1.229 "suitM";
-}
-body .menu-wrap .menu-story-wrap .menu-story-inner.wq .menu-wq-info-inner .menu-wq-text p {
-  font: 300 1.125rem/1.5 "suitL";
-  font: 300 1.125rem/1.5 "suitL";
-  padding-left: 14px;
-  position: relative;
-}
-body .menu-wrap .menu-story-wrap .menu-story-inner.wq .menu-wq-info-inner .menu-wq-text p::before {
-  content: "*";
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-body .menu-wrap .menu-story-wrap .menu-story.tea {
+body .menu-wrap .menu-story-wrap section:nth-child(1) {
   height: 716px;
   background: #f5f4f3;
 }
-body .menu-wrap .menu-story-wrap .menu-story.bsca {
+body .menu-wrap .menu-story-wrap section:nth-child(2) {
   background: url("../img/02menuImg/secBg-bsca.png") center/cover no-repeat;
 }
-body .menu-wrap .menu-story-wrap .menu-story.taste {
+body .menu-wrap .menu-story-wrap section:nth-child(3) {
   background: #362b27;
 }
-body .menu-wrap .menu-story-wrap .menu-story.roasting {
+body .menu-wrap .menu-story-wrap section:nth-child(4) {
   background: url("../img/02menuImg/secBg-roasting.png") center/cover;
 }
-body .menu-wrap .menu-story-wrap .menu-story.wq {
+body .menu-wrap .menu-story-wrap section:nth-child(5) {
   background: #291b35;
 }
 body .menu-wrap .menu-whole-wrap {
