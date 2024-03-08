@@ -23,9 +23,7 @@ body {
       gap: 50px;
       .ani {
         animation: start 1.5s ease-out;
-        .message-move {
-          animation: truck 2.5s infinite;
-        }
+        animation: truck 2.5s infinite;
       }
       .boun {
         animation: bounce 1s;
@@ -374,6 +372,55 @@ body {
     }
   }
 }
+
+@media screen and (max-width: 1024px) {
+  body {
+    font-size: 13px;
+    .wrap {
+      width: 100%;
+      height: 100%;
+      header {
+        @include header-1024;
+      }
+      .message-figuer {
+        width: 100%;
+        height: 563px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        .ani {
+          img {
+            width: 200px;
+          }
+        }
+      }
+      .volun-nav {
+        .volun-bar {
+          ul {
+            white-space: nowrap;
+            width: 100%;
+            overflow-x: scroll;
+            overflow-y: hidden;
+            -webkit-overflow-scrolling: touch;
+            &::-webkit-scrollbar-track {
+              background: auto;
+            }
+            &::-webkit-scrollbar-thumb {
+              background: auto;
+            }
+          }
+        }
+      }
+      .message-container {
+        padding: 50px 10px 0;
+        .message-article-title {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
 @keyframes start {
   0% {
     opacity: 0;

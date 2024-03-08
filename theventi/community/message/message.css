@@ -229,8 +229,6 @@ body .wrap .message-figuer {
 }
 body .wrap .message-figuer .ani {
   animation: start 1.5s ease-out;
-}
-body .wrap .message-figuer .ani .message-move {
   animation: truck 2.5s infinite;
 }
 body .wrap .message-figuer .boun {
@@ -773,6 +771,75 @@ body .wrap footer #footer-wrap #footer-container-wrap #footer-container-bottom .
   height: 20px;
 }
 
+@media screen and (max-width: 1024px) {
+  body {
+    font-size: 13px;
+  }
+  body .wrap {
+    width: 100%;
+    height: 100%;
+  }
+  body .wrap header {
+    height: 60px;
+  }
+  body .wrap header #dropdown {
+    display: none !important;
+  }
+  body .wrap header #header-container-wrap {
+    position: relative;
+  }
+  body .wrap header #header-container-wrap #header-container {
+    height: 60px;
+  }
+  body .wrap header #header-container-wrap #header-container #logogif {
+    position: absolute;
+    left: -10px;
+  }
+  body .wrap header #header-container-wrap #header-container #logogif img {
+    width: 122px !important;
+  }
+  body .wrap header #header-container-wrap #header-container #header-nav .nav-items {
+    display: none !important;
+  }
+  body .wrap header #header-container-wrap #header-container #logo-back {
+    display: none !important;
+  }
+  body .wrap header .button-nav {
+    display: inline-block;
+    position: fixed;
+    top: 5px;
+    transform: translate(0, 0px);
+  }
+  body .wrap .message-figuer {
+    width: 100%;
+    height: 563px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  body .wrap .message-figuer .ani img {
+    width: 200px;
+  }
+  body .wrap .volun-nav .volun-bar ul {
+    white-space: nowrap;
+    width: 100%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+  }
+  body .wrap .volun-nav .volun-bar ul::-webkit-scrollbar-track {
+    background: auto;
+  }
+  body .wrap .volun-nav .volun-bar ul::-webkit-scrollbar-thumb {
+    background: auto;
+  }
+  body .wrap .message-container {
+    padding: 50px 10px 0;
+  }
+  body .wrap .message-container .message-article-title {
+    width: 100%;
+  }
+}
 @keyframes start {
   0% {
     opacity: 0;
