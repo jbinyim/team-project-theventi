@@ -1,0 +1,54 @@
+@import "../../reset.css";
+@import "../../font.css";
+@import "../../variables.scss";
+@import "../../mixin.scss";
+
+body {
+  font-size: 16px;
+  .wrap {
+    width: 100%;
+    height: 100%;
+    header {
+      @include header-1920;
+    }
+    .volun-figuer {
+      @include community-figuer;
+    }
+    .volun-nav {
+      @include community-nav;
+    }
+    .container {
+      width: 1200px;
+      height: 100%;
+      padding-top: 100px;
+      margin: 0 auto;
+      .qna-search {
+        width: 100%;
+        height: 100%;
+        margin-bottom: 20px;
+        #catagory {
+          width: 8.33%;
+          height: 40px;
+          outline: none;
+          border: 1px solid #ddd;
+          font: 1rem "noto";
+        }
+        input[type="text"] {
+          width: 20%;
+          height: 40px;
+          outline: none;
+          padding: 5px;
+          border: 1px solid #ddd;
+          font: 1rem "noto";
+        }
+        input[type="submit"] {
+          width: 7.5%;
+          height: 40px;
+          outline: none;
+          border: 1px solid #ddd;
+          font: 1rem "noto";
+        }
+      }
+    }
+  }
+}

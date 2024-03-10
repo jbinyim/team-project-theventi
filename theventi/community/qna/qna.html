@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./qna.css" />
+    <script defer src="../../common/script.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <div id="fixed-header-wrap">
+          <div id="fixed-header">
+            <div id="header-container-wrap">
+              <div id="header-container">
+                <a href="../../common/common.html" id="logogif">
+                  <div class="logogif">
+                    <img
+                      src="../../img/01main/common/header/logogif.gif"
+                      alt="logogif"
+                    />
+                  </div>
+                </a>
+                <div id="header-nav">
+                  <a href="../../brand/brand-index.html" class="nav-items"
+                    >BRAND</a
+                  >
+                  <a href="../../menu/menu.html" class="nav-items">MENU</a>
+                  <a href="#" class="nav-items">STORE</a>
+                  <a href="#" class="nav-items">MEMBERSHIP</a>
+                  <a
+                    href="../../community/message/message.html"
+                    class="nav-items"
+                    >COMMUNITY</a
+                  >
+                </div>
+                <div id="logo-back">
+                  <a href="">
+                    <p>프랜차이즈</p>
+                  </a>
+                  <div class="logo-back">
+                    <img
+                      src="../../img/01main/common/header/theventilogo.png"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="button-nav">
+          <i class="toggle-button"></i>
+        </button>
+        <div id="dropdown" class="dropdown">
+          <div id="dropdown-container">
+            <div id="dropdown-img">
+              <img src="../../img/01main/common/header/bannerimg.jpg" alt="" />
+            </div>
+            <div id="dropdown-list">
+              <div id="brand-list">
+                <a href="../../brand/brand-index.html" class="brand-list"
+                  >더벤티 소개</a
+                >
+                <a href="../../brand/brand-index01.html" class="brand-list"
+                  >더벤티 연혁</a
+                >
+                <a href="../../brand/brand-index02.html" class="brand-list"
+                  >BI 소개</a
+                >
+                <a href="../../brand/brand-index03.html" class="brand-list"
+                  >찾아오시는길</a
+                >
+              </div>
+              <div id="menu-list">
+                <a href="#" class="menu-list">더벤티 커피이야기</a>
+                <a href="#" class="menu-list">신메뉴</a>
+                <a href="../../menu/menu.html" class="menu-list">전체메뉴</a>
+              </div>
+              <div id="store-list">
+                <a href="#" class="store-list">매장찾기</a>
+              </div>
+              <div id="membership-list">
+                <a href="#" class="membership-list">더벤티 APP소개</a>
+              </div>
+              <div id="community-list">
+                <a href="#" class="community-list">공지사항</a>
+                <a href="#" class="community-list">보도자료</a>
+                <a href="#" class="community-list">이벤트</a>
+                <a href="#" class="community-list">칭찬매장</a>
+                <a href="#" class="community-list">더벤티 이야기</a>
+                <a href="#" class="community-list">SNS</a>
+                <a href="#" class="community-list">자주하는 질문</a>
+                <a
+                  href="../../community/message/message.html"
+                  class="community-list"
+                  >벤티럭 사연접수</a
+                >
+                <a
+                  href="../../community/volunteer/volunteer.html"
+                  class="community-list"
+                  >THEVENGERS 봉사활동</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="volun-figuer">
+        <div class="volun-title">
+          <h1>자주하는 질문</h1>
+          <p>궁금하신 내용을 입력해주세요.</p>
+        </div>
+      </div>
+      <div class="volun-nav">
+        <div class="volun-bar">
+          <ul>
+            <li>
+              <a class="volun-bar-link" href="">공지사항</a>
+            </li>
+            <li>
+              <a class="volun-bar-link" href="">보도자료</a>
+            </li>
+            <li>
+              <a class="volun-bar-link" href="">이벤트</a>
+            </li>
+            <li>
+              <a class="volun-bar-link" href="">칭찬매장</a>
+            </li>
+            <li>
+              <a class="volun-bar-link" href="">더벤티 이야기</a>
+            </li>
+            <li>
+              <a class="volun-bar-link" href="">SNS</a>
+            </li>
+            <li>
+              <a class="volun-bar-link active" href="">자주하는 질문</a>
+            </li>
+            <li>
+              <a class="volun-bar-link" href="../message/message.html"
+                >벤티력 사연접수</a
+              >
+            </li>
+            <li>
+              <a
+                class="volun-bar-link"
+                href="../../community/volunteer/volunteer.html"
+                >THEVENGERS 봉사활동</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="container">
+        <div class="qna-search">
+          <form action="https://localhost/3000">
+            <select name="catagory" id="catagory">
+              <option value="entire">전체</option>
+              <option value="title">제목</option>
+              <option value="content">내용</option>
+            </select>
+            <input type="text" />
+            <input type="submit" value="검색" />
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

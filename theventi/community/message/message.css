@@ -838,6 +838,7 @@ body .wrap footer #footer-wrap #footer-container-wrap #footer-container-bottom .
   }
   body .wrap .message-container {
     padding: 50px 10px 0;
+    margin-bottom: 75px;
   }
   body .wrap .message-container .message-article-title {
     width: 100%;
@@ -1072,6 +1073,9 @@ body .wrap footer #footer-wrap #footer-container-wrap #footer-container-bottom .
     width: 100%;
     height: 100%;
   }
+  body .wrap .message-container .message-article-how .message-how-info .msg .msg-volun-text {
+    gap: 8px;
+  }
   body .wrap .message-container .message-article-how .message-how-info .msg .msg-volun-text h4 {
     font-size: 1.125rem;
   }
@@ -1083,6 +1087,96 @@ body .wrap footer #footer-wrap #footer-container-wrap #footer-container-bottom .
   }
   body .wrap .message-container .message-article-how p span {
     font-size: 0.8125rem;
+  }
+  body .wrap .message-container .message-baner {
+    width: 100%;
+  }
+  body .wrap .message-container .message-baner .message-banner-title h1 {
+    font-size: 1.75rem;
+  }
+  body .wrap .message-container .message-baner .message-banner-title img {
+    width: 30px;
+  }
+  body .wrap .message-container .message-baner .message-banner-img {
+    gap: 60px;
+  }
+  body .wrap .message-container .message-article-input {
+    width: 100%;
+  }
+  body .wrap .message-container .message-article-input .msg {
+    height: 97px;
+    flex-direction: column;
+    align-items: normal;
+    gap: 10px;
+  }
+  body .wrap .message-container .message-article-input .msg .label {
+    width: 100%;
+  }
+  body .wrap .message-container .message-article-input .msg input {
+    height: 43px;
+  }
+  body .wrap .message-container .message-article-input .msg .name {
+    width: 300px;
+  }
+  body .wrap .message-container .message-article-input .msg .people {
+    width: 200px;
+  }
+  body .wrap .message-container .message-article-input .msg-phone .input-phone .phone {
+    width: 150px;
+  }
+  body .wrap .message-container .message-article-input .msg-adress {
+    width: 100%;
+    height: 235px;
+  }
+  body .wrap .message-container .message-article-input .msg-adress .label {
+    width: 100%;
+  }
+  body .wrap .message-container .message-article-input .msg-adress .input-adress {
+    width: 100%;
+  }
+  body .wrap .message-container .message-article-input .msg-adress .input-adress .search .adress-search {
+    width: 200px;
+  }
+  body .wrap .message-container .message-article-input .msg-adress .input-adress .search button {
+    width: 86px;
+    height: 43px;
+    font-size: 0.8125rem;
+  }
+  body .wrap .message-container .message-article-input .msg-people {
+    display: inline-block;
+  }
+  body .wrap .message-container .message-article-input .msg-people .label {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  body .wrap .message-container .message-article-input .msg-day {
+    height: 123px;
+  }
+  body .wrap .message-container .message-article-input .msg-day .date {
+    width: 100%;
+  }
+  body .wrap .message-container .message-article-input .msg-day .date .input-day .day {
+    width: 130px;
+  }
+  body .wrap .message-container .message-article-input .msg-story {
+    height: 203px;
+  }
+  body .wrap .message-container .message-article-input .msg-story .story {
+    width: 100%;
+  }
+  body .wrap .message-container .message-article-input .msg-preven {
+    height: 118px;
+  }
+  body .wrap .message-container .message-article-input .msg-preven .input-preven {
+    width: 100%;
+  }
+  body .wrap .message-container .message-article-input .msg-preven .input-preven .rnum {
+    width: 67px;
+    height: 43px;
+    line-height: 3rem;
+  }
+  body .wrap .message-container .message-article-input .msg-preven .input-preven .preven {
+    width: 156px;
   }
 }
 @keyframes start {

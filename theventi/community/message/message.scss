@@ -416,6 +416,7 @@ body {
       }
       .message-container {
         padding: 50px 10px 0;
+        margin-bottom: 75px;
         .message-article-title {
           width: 100%;
           height: auto;
@@ -584,6 +585,7 @@ body {
                 }
               }
               .msg-volun-text {
+                gap: 8px;
                 h4 {
                   font-size: 1.125rem;
                 }
@@ -598,6 +600,106 @@ body {
               font-size: 0.8125rem;
             }
             font-size: 0.8125rem;
+          }
+        }
+        .message-baner {
+          width: 100%;
+          .message-banner-title {
+            h1 {
+              font-size: 1.75rem;
+            }
+            img {
+              width: 30px;
+            }
+          }
+          .message-banner-img {
+            gap: 60px;
+          }
+        }
+        .message-article-input {
+          width: 100%;
+          .msg {
+            height: 97px;
+            flex-direction: column;
+            align-items: normal;
+            gap: 10px;
+            .label {
+              width: 100%;
+            }
+            input {
+              height: 43px;
+            }
+            .name {
+              width: 300px;
+            }
+            .people {
+              width: 200px;
+            }
+          }
+          .msg-phone {
+            .input-phone {
+              .phone {
+                width: 150px;
+              }
+            }
+          }
+          .msg-adress {
+            width: 100%;
+            height: 235px;
+            .label {
+              width: 100%;
+            }
+            .input-adress {
+              width: 100%;
+              .search {
+                .adress-search {
+                  width: 200px;
+                }
+                button {
+                  width: 86px;
+                  height: 43px;
+                  font-size: 0.8125rem;
+                }
+              }
+            }
+          }
+          .msg-people {
+            display: inline-block;
+            .label {
+              width: 100%;
+              margin-bottom: 10px;
+            }
+          }
+          .msg-day {
+            height: 123px;
+            .date {
+              width: 100%;
+              .input-day {
+                .day {
+                  width: 130px;
+                }
+              }
+            }
+          }
+          .msg-story {
+            height: 203px;
+            .story {
+              width: 100%;
+            }
+          }
+          .msg-preven {
+            height: 118px;
+            .input-preven {
+              width: 100%;
+              .rnum {
+                width: 67px;
+                height: 43px;
+                line-height: 3rem;
+              }
+              .preven {
+                width: 156px;
+              }
+            }
           }
         }
       }
