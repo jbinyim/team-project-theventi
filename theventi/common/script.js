@@ -50,15 +50,6 @@ popup3.addEventListener("click", () => {
   );
 });
 
-// const open = window.open();
-
-// open = () => {
-//   const left = (window.screen.availWidth - popupWidth3) / 2;
-//   const top = (window.screen.availHeight - popupheight3) / 2;
-//   "popup2.html",
-//     "event",
-//     `width=${popupWidth3} height =${popupheight3} left =${left} top=${top}`;
-// };
 
 //===============================================================
 // aside
@@ -68,38 +59,7 @@ const toggleBtn = document.querySelector(".toggle-button");
 const mobileMenu = document.querySelector("#bgmobile");
 const close = document.querySelector(".xi-close");
 const aside = document.querySelector("aside");
-// const arrow =document.querySelectorAll(".depth-1a");
-
-// const depth1 = document.querySelector(".list-depth-1");
-
-// let depthAfterStyle = document.createElement("style");
-
-// depthAfterStyle.innerHTML = `.list-depth-1::before {
-//   position: absolute;
-//   top: 50%;
-//   font-size: 1.5rem;
-//   margin-top: -0.5rem;
-//   right: 1rem;
-//   color: #999;
-//   font-family: xeicon !important;
-//   display: inline-block;
-//   font-style: normal;
-//   font-weight: 400;
-//   line-height: 1;
-//   content: '\e941';
-// }`;
-
-// depth1.appendChild(depthAfterStyle);
-
 const depthIcons = document.querySelectorAll(".xi-depth");
-
-// const depth2 = document.querySelectorAll(".list-depth-2");
-// console.log(depth2);
-// depth2.forEach((d) => {
-//   d.style.display = "block";
-// });
-// console.log(depthicon);
-
 const depthIconsFnc = depthIcons.forEach((depthicon, index1) => {
   depthicon.addEventListener("click", () => {
     depthicon.classList.toggle("clicked");
@@ -111,22 +71,115 @@ const depthIconsFnc = depthIcons.forEach((depthicon, index1) => {
     });
   });
 });
-// depthIconsFnc();
-// depth2.forEach((d) => {});
-
-// for (i = 0; i < d.length - 1; i++) {
-//   d.classList.toggle("dropdown");
-//   console.log(d[i]);
-// }
-
 toggleBtn.addEventListener("click", () => {
   console.log("click");
   mobileMenu.style.right = "0px";
   aside.classList.toggle("active");
 });
-
 close.addEventListener("click", () => {
   console.log("click");
-  mobileMenu.style.right = "-100%";
+  mobileMenu.style.right = "-999px";
   aside.classList.toggle("active");
+});
+
+const depth3s = document.querySelectorAll(".list-depth-3");
+
+depth3s.forEach((depth3) => {
+  depth3.addEventListener("click", ()=> {
+    depth3.classList.toggle("depth3clicked")
+  })
+});
+
+
+//=================================
+//slider
+
+const arrows = document.querySelectorAll(".arrow");
+const imgContainer = document.querySelector("#img-container");
+const img = document.createElement("img");
+const src = document.createAttribute("src");
+const slidePagers = document.querySelector(".slide_pagers");
+const pagers = document.querySelectorAll(".slide_pagers li");
+
+const imgs = ["res-banner01.jpg", "res-banner02.jpg", "res-banner03.jpg", "res-banner04.jpg"];
+
+const imgSrc = `../img/01main/main/topsection/${imgs[0]}`;
+
+src.value = imgSrc;
+
+img.setAttributeNode(src);
+imgContainer.appendChild(img);
+
+let i = 0;
+const changeImg = (direction) => {
+  if (direction === "next") {
+    i++;
+    if (i >= imgs.length) {
+      i = 0;
+    }
+    reset();
+    pagers[i].classList.add("active");
+  } else if (direction === "prev") {
+    i--;
+    if (i < 0) {
+      i = imgs.length - 1;
+    }
+    reset();
+    pagers[i].classList.add("active");
+  }
+  src.value = `../img/01main/main/topsection/${imgs[i]}`;
+};
+
+arrows.forEach((arrow) => {
+  arrow.addEventListener("click", (e) => {
+    const direction = e.target.id === "left" ? "prev" : "next";
+    changeImg(direction);
+  });
+});
+
+const autoSlide = () => {
+  timer = setInterval(() => {
+    changeImg("next");
+  }, 3000);
+};
+
+autoSlide();
+
+const stopSlied = () => {
+  clearInterval(timer);
+};
+
+const reset = () => {
+  pagers.forEach((pager, idx) => {
+    pagers[idx].classList.remove("active");
+  });
+};
+
+imgContainer.addEventListener("mouseenter", () => {
+  stopSlied();
+});
+slidePagers.addEventListener("mouseenter", () => {
+  stopSlied();
+});
+
+imgContainer.addEventListener("mouseleave", () => {
+  autoSlide();
+});
+slidePagers.addEventListener("mouseleave", () => {
+  autoSlide();
+});
+
+const pagerChange = (e) => {
+  const target = e.target.dataset.index;
+  reset();
+  for (let i = 0; i < pagers.length; i++) {
+    if (target == i) {
+      pagers[i].classList.add("active");
+      src.value = `../img/01main/main/topsection/${imgs[i]}`;
+    }
+  }
+};
+
+pagers.forEach((pager) => {
+  pager.addEventListener("click", pagerChange);
 });
