@@ -630,4 +630,26 @@ footer #footer-wrap #footer-container-wrap #footer-container-bottom .footer-icon
 footer #footer-wrap #footer-container-wrap #footer-container-bottom .footer-icon a img {
   width: 26px;
   height: 20px;
+}
+
+@media screen and (max-width: 1500px) {
+  #quick-menu ul img {
+    width: 20px;
+    height: 20px;
+  }
+  #quick-menu ul li {
+    width: 80px;
+    height: 80px;
+  }
+  #quick-menu ul li a .quick-tit {
+    font-size: 0.75rem;
+  }
+  #quick-menu ul li a .quick-tel {
+    font-size: 1.0625rem;
+  }
+}
+@media screen and (max-width: 1200px) {
+  #quick-menu {
+    display: none;
+  }
 }/*# sourceMappingURL=brand-style03.css.map */

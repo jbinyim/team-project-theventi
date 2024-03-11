@@ -186,3 +186,18 @@ header {
 footer {
   @include footer-1920;
 }
+
+// ======1500px======
+@media screen and (max-width: 1500px) {
+  #quick-menu {
+    @include quickmenu-1500;
+  }
+}
+
+// ======1200px======
+@media screen and (max-width: 1200px) {
+  // quick-menu
+  #quick-menu {
+    display: none;
+  }
+}
