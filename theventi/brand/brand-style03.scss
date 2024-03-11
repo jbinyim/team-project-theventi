@@ -6,6 +6,17 @@
 /* reset */
 @import "../reset.scss";
 
+// mixin
+@import "../mixin.scss";
+
+header {
+  @include header-1920;
+}
+
+#mobile-menu {
+  @include aside-1920;
+}
+
 /* custom  */
 
 .header {
@@ -154,4 +165,14 @@
       }
     }
   }
+}
+
+// quick-menu
+#quick-menu {
+  @include quickmenu-1920;
+}
+
+// footer
+footer {
+  @include footer-1920;
 }

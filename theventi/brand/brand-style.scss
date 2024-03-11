@@ -7,9 +7,15 @@
 /* reset */
 @import "../reset";
 
-.header {
-  width: 100%;
-  height: 91px;
+// mixin
+@import "../mixin.scss";
+
+header {
+  @include header-1920;
+}
+
+#mobile-menu {
+  @include aside-1920;
 }
 
 /* custom  */
@@ -271,9 +277,12 @@
   }
 }
 
+// quick-menu
+#quick-menu {
+  @include quickmenu-1920;
+}
+
 // footer
-.footer {
-  width: 100%;
-  height: 426px;
-  background: #780997;
+footer {
+  @include footer-1920;
 }

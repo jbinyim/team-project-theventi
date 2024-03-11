@@ -6,9 +6,15 @@
 /* reset */
 @import "../reset.scss";
 
-.header {
-  width: 100%;
-  height: 91px;
+// mixin
+@import "../mixin.scss";
+
+header {
+  @include header-1920;
+}
+
+#mobile-menu {
+  @include aside-1920;
 }
 
 /* custom  */
@@ -69,4 +75,14 @@
     flex-direction: column;
     align-items: center;
   }
+}
+
+// quick-menu
+#quick-menu {
+  @include quickmenu-1920;
+}
+
+// footer
+footer {
+  @include footer-1920;
 }
