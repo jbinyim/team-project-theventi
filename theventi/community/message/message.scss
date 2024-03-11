@@ -3,361 +3,377 @@
 @import "../../variables.scss";
 @import "../../mixin.scss";
 
-.wrap {
-  width: 100%;
-  height: 100%;
-  overflow-x: hidden;
-  .message-figuer {
-    margin-top: 91px;
-    width: 100%;
-    height: 510px;
-    background: #dcd5e3;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
-    .ani {
-      animation: start 1.5s ease-out;
-      .message-move {
-        animation: truck 2.5s infinite;
-      }
-    }
-  }
-  .volun-nav {
-    @include community-nav;
-  }
-  .message-container {
+body {
+  font-size: 16px;
+  font-weight: 400;
+  .wrap {
     width: 100%;
     height: 100%;
-    padding-top: 100px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    .message-article-title {
-      width: 1200px;
-      height: 283px;
+    overflow-x: hidden;
+    header {
+      @include header-1920;
+    }
+    .message-figuer {
+      width: 100%;
+      height: 510px;
+      background: #dcd5e3;
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
-      margin-bottom: 80px;
-      .article-title-text {
-        height: 100%;
-        animation: moveLeft 1s;
-        h1 {
-          font: 3rem/1.6 "suitSB";
-          margin-bottom: 20px;
-        }
-        p {
-          font: 500 1.375rem/1.6 "suitM";
-          letter-spacing: -1px;
-          span {
-            font-family: "suitSB";
-            color: map-get($text-color, textp);
-            text-decoration: underline;
-          }
+      gap: 50px;
+      .ani {
+        animation: start 1.5s ease-out;
+        .message-move {
+          animation: truck 2.5s infinite;
         }
       }
-      .article-title-img {
-        animation: moveRight 1s;
+      .boun {
+        animation: bounce 1s;
       }
     }
-    .message-article-how {
-      width: 1200px;
-      height: auto;
-      h1 {
-        font: 3rem "suitSB";
-        animation: moveLeft 1s;
-      }
-      .message-how-info {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        gap: 240px;
-        margin: 50px 0;
-        .msg {
-          display: flex;
-          gap: 34px;
-          animation: sizeb 1.5s;
-          .msg-volun-text {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            gap: 18px;
-            h4 {
-              font: 600 1.5rem "suitL";
-              color: map-get($text-color, textp);
-            }
-            p {
-              font: 1.125rem "suitL";
-              letter-spacing: -1px;
-              color: #999;
-            }
-          }
-        }
-        .msg:last-child {
-          animation-delay: 0.2s;
-        }
-      }
-      p {
-        font: 1rem "suitM";
-        letter-spacing: -1px;
-        color: #666;
-        span {
-          font: 1rem "suitSB";
-          color: #333;
-        }
-      }
+    .volun-nav {
+      @include community-nav;
     }
-    .message-baner {
-      width: 1310px;
-      margin: 100px 0 120px;
-      .message-banner-title {
-        h1 {
-          display: inline-block;
-          font: 4.5rem "geometos";
-          margin-right: 2%;
-        }
-        img {
-          vertical-align: top;
-        }
-      }
-      .msg-banner-direction {
-        margin: 5px 0 60px;
-        display: flex;
-        justify-content: flex-end;
-        cursor: pointer;
-      }
-      .message-banner-img {
-        width: 100%;
-        height: 368px;
+    .message-container {
+      width: 100%;
+      height: 100%;
+      padding-top: 100px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 150px;
+      .message-article-title {
+        width: 1200px;
+        height: 283px;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        .sum {
-          position: relative;
-          &:hover img {
-            outline: 4px solid map-get($main-color, puple);
+        margin-bottom: 80px;
+        .article-title-text {
+          height: 100%;
+          animation: moveLeft 1s;
+          h1 {
+            font: 3rem/1.6 "suitSB";
+            margin-bottom: 20px;
           }
-          .sum-img {
-            width: 19.6875rem;
-            height: 19.6875rem;
-            img {
-              width: 100%;
-              height: 100%;
-              object-fit: cover;
-              border-radius: 100% 0 100% 100%;
-              transition: all 0.2s;
+          p {
+            font: 500 1.375rem/1.6 "suitM";
+            letter-spacing: -1px;
+            span {
+              font-family: "suitSB";
+              color: map-get($text-color, textp);
+              text-decoration: underline;
             }
           }
-          .sum-insta {
-            position: absolute;
-            bottom: -20px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 54px;
-            height: 53px;
-            background: url("../../img/04community/05message/insta-icon.png")
-              center/cover no-repeat;
+        }
+        .article-title-img {
+          animation: moveRight 1s;
+        }
+      }
+      .message-article-how {
+        width: 1200px;
+        height: auto;
+        h1 {
+          font: 3rem "suitSB";
+          animation: moveLeft 1s;
+        }
+        .message-how-info {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          gap: 240px;
+          margin: 50px 0;
+          .msg {
+            display: flex;
+            gap: 34px;
+            animation: sizeb 1.5s;
+            .msg-volun-text {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              gap: 18px;
+              h4 {
+                font: 600 1.5rem "suitL";
+                color: map-get($text-color, textp);
+              }
+              p {
+                font: 1.125rem "suitL";
+                letter-spacing: -1px;
+                color: #999;
+              }
+            }
+          }
+          .msg:last-child {
+            animation-delay: 0.2s;
+          }
+        }
+        p {
+          font: 1rem "suitM";
+          letter-spacing: -1px;
+          color: #666;
+          span {
+            font: 1rem "suitSB";
+            color: #333;
           }
         }
       }
-    }
-    .message-article-form {
-      width: 1200px;
-      margin-bottom: 30px;
-      color: #333;
-      .message-form-text {
-        margin-bottom: 5px;
-        h5 {
-          font: 1.1875rem "suitM";
-          margin-bottom: 10px;
+      .message-baner {
+        width: 1310px;
+        margin: 100px 0 120px;
+        .message-banner-title {
+          h1 {
+            display: inline-block;
+            font: 4.5rem "geometos";
+            margin-right: 2%;
+          }
+          img {
+            vertical-align: top;
+          }
         }
-        p {
-          font: 1rem "noto";
-        }
-      }
-      .message-form-box {
-        width: 100%;
-        height: 150px;
-        padding: 20px;
-        margin-bottom: 11px;
-        overflow-y: auto;
-        border: 1px solid #dedede;
-        p {
-          font: 0.8125rem "noto";
-        }
-      }
-      .message-checkbox {
-        #message-agree {
-          width: 19px;
-          height: 19px;
-          accent-color: map-get($main-color, org);
-        }
-        label {
+        .msg-banner-direction {
+          margin: 5px 0 60px;
+          display: flex;
+          justify-content: flex-end;
           cursor: pointer;
-          font: 1.0625rem/20px "noto";
-          &:hover #message-agree {
-            border-color: #f00;
+        }
+        .message-banner-img {
+          width: 100%;
+          height: 368px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          .sum {
+            position: relative;
+            &:hover img {
+              outline: 4px solid map-get($main-color, puple);
+            }
+            .sum-img {
+              width: 19.6875rem;
+              height: 19.6875rem;
+              img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 100% 0 100% 100%;
+                transition: all 0.2s;
+              }
+            }
+            .sum-insta {
+              position: absolute;
+              bottom: -20px;
+              left: 50%;
+              transform: translateX(-50%);
+              width: 54px;
+              height: 53px;
+              background: url("../../img/04community/05message/insta-icon.png")
+                center/cover no-repeat;
+            }
           }
         }
       }
-    }
-    .message-article-input {
-      width: 1200px;
-      margin-bottom: 40px;
-      border-top: 1px solid #000;
-      .input {
-        width: 100%;
-        height: 79px;
-        border-bottom: 1px solid #ddd;
-        padding: 0 10px;
+      .message-article-form {
+        width: 1200px;
         margin-bottom: 30px;
-        text-align: left;
-        span {
-          display: inline-block;
-          width: 13%;
-          font: 500 1rem "noto";
+        color: #333;
+        .message-form-text {
+          margin-bottom: 5px;
+          h5 {
+            font: 1.1875rem "suitM";
+            margin-bottom: 10px;
+          }
+          p {
+            font: 1rem "noto";
+          }
+        }
+        .message-form-box {
+          width: 100%;
+          height: 150px;
+          padding: 20px;
+          margin-bottom: 11px;
+          overflow-y: auto;
+          border: 1px solid #dedede;
+          p {
+            font: 0.8125rem "noto";
+          }
+        }
+        .message-checkbox {
+          #message-agree {
+            width: 19px;
+            height: 19px;
+            accent-color: map-get($main-color, org);
+          }
+          label {
+            cursor: pointer;
+            font: 1.0625rem/20px "noto";
+            &:hover #message-agree {
+              border-color: #f00;
+            }
+          }
+        }
+      }
+      .message-article-input {
+        width: 1200px;
+        height: 100%;
+        border-top: 1px solid #000;
+        .msg {
+          width: 100%;
+          height: 79px;
+          border-bottom: 1px solid #ddd;
+          display: flex;
+          align-items: center;
+          padding: 12px 10px;
+          .label {
+            width: 13%;
+            font: 500 1rem "noto";
+            color: #222;
+            i {
+              color: map-get($main-color, org);
+            }
+          }
+          input {
+            height: 54px;
+            border: 1px solid #ddd;
+            outline: none;
+            padding: 0 10px;
+            font: 500 1rem "noto";
+          }
+          .note {
+            font: 1rem "noto";
+            color: #666;
+            i {
+              color: map-get($main-color, org);
+            }
+          }
+          .name {
+            width: 25%;
+          }
+          .people {
+            width: 16.66%;
+          }
+        }
+        .msg-phone {
+          width: 100%;
+          .input-phone {
+            width: 87%;
+            display: flex;
+            align-items: center;
+            .phone {
+              width: 16%;
+            }
+          }
+        }
+        .msg-adress {
+          width: 100%;
+          height: 241px;
+          .input-adress {
+            width: 87%;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            .search {
+              .adress-search {
+                width: 19.493%;
+              }
+              button {
+                width: 16.56%;
+                height: 54px;
+                border: none;
+                background: #999;
+                color: #fff;
+                font: 1.0625rem "noto";
+              }
+            }
+            .adress {
+              width: 100%;
+            }
+          }
+        }
+        .msg-day {
+          width: 100%;
+          height: 109px;
+          .date {
+            width: 87%;
+            .input-day {
+              margin-bottom: 4px;
+              .day {
+                width: 19.493%;
+              }
+            }
+          }
+        }
+        .msg-story {
+          width: 100%;
+          height: 175px;
+          .story {
+            width: 87%;
+            height: 100%;
+          }
+        }
+        .msg-preven {
+          width: 100%;
+          .input-preven {
+            width: 87%;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            .rnum {
+              width: 7.33%;
+              height: 3.375rem;
+              background: #ddd;
+              text-align: center;
+              font: bold 1rem/3.375rem "noto";
+              color: #333;
+            }
+            .preven {
+              width: 18%;
+            }
+          }
+        }
+        .msg-bottom {
+          margin: 30px 0;
+          text-align: center;
+          font: 1rem "noto";
+          color: #666;
           i {
             color: map-get($main-color, org);
           }
         }
-        input {
-          height: 54px;
-          border: 1px solid #ddd;
-          padding: 0 0.625rem;
-          &:focus {
-            outline: none;
-          }
-        }
-        .name {
-          width: 25%;
-          margin: 12px 0;
-        }
-        .phone {
-          width: 13.83%;
-        }
-      }
-      .address {
-        width: 100%;
-        height: 241px;
-        display: flex;
-        align-items: center;
-        gap: 2.2%;
-        .detail-addres {
+        .submit {
           width: 100%;
           display: flex;
-          flex-direction: column;
-          gap: 8px;
-          .detail {
-            height: 50px;
-            input[type="text"] {
-              width: 16.6%;
-            }
-            input[type="button"] {
-              width: 14.16%;
-              color: #fff;
-              background-color: #999;
-              transition: all 0.3s;
-              &:hover {
-                cursor: pointer;
-                background-color: #4d4d4d;
-              }
-            }
-          }
-          p {
-            color: #666;
-            font: 1rem "noto";
-            i {
+          justify-content: center;
+          align-items: center;
+          .write {
+            width: 168px;
+            height: 52px;
+            background: map-get($main-color, puple);
+            color: #fff;
+            border: none;
+            font: 1.0625rem "noto";
+            transition: all 0.3s;
+            cursor: pointer;
+            &:hover {
               color: map-get($main-color, org);
+              background: #520667;
             }
           }
         }
       }
-      .datas {
-        width: 100%;
-        height: 109px;
-        display: flex;
-        align-items: center;
-        gap: 2.2%;
-        .detail-data {
-          width: 100%;
-          height: 100%;
-          display: flex;
-          flex-direction: column;
-          .detail {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            .data {
-              width: 19.75%;
-              input {
-                width: 100%;
-              }
-            }
-          }
-          p {
-            color: #4d4d4d;
-            font: 1rem "noto";
-            margin-bottom: 12px;
-            i {
-              color: map-get($main-color, org);
-            }
-          }
-        }
-      }
-      .story {
-        width: 100%;
-        height: 175px;
-        input {
-          width: 85.3%;
-          height: 150px;
-        }
-      }
-      .automatic {
-        width: 100%;
-        .code {
-          width: 6.5%;
-          height: 54px;
-          line-height: 49px;
-          text-align: center;
-          background: #ddd;
-        }
-      }
-      .input-bottom {
-        margin-bottom: 30px;
-        text-align: center;
-        color: #666;
-        font: 1rem "noto";
-        i {
-          color: map-get($main-color, org);
-        }
-      }
-      input[type="submit"] {
-        display: block;
-        margin: 0 auto;
-        width: 14%;
-        height: 52px;
-        border: none;
-        background: map-get($main-color, puple);
-        color: #fff;
-        font: 1.0625rem "noto";
-        transition: all 0.3s;
-        &:hover {
-          cursor: pointer;
-          color: map-get($main-color, org);
-          background-color: #520667;
-        }
+      .show {
+        animation-play-state: paused !important;
       }
     }
-    .show {
-      animation-play-state: paused !important;
+    #quick-menu {
+      @include quickmenu-1920;
+    }
+    footer {
+      @include footer-1920;
     }
   }
 }
-
 @keyframes start {
   0% {
     opacity: 0;
@@ -428,5 +444,21 @@
   100% {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+@keyframes bounce {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
   }
 }

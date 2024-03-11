@@ -1,5 +1,28 @@
 @import url("../font.css");
 @import url("../reset.css");
+@import "./reset.css";
+@import "./font.css";
+@media (max-width: 1500px) {
+  body #quick-menu ul img {
+    width: 20px;
+    height: 20px;
+  }
+  body #quick-menu ul li {
+    width: 80px;
+    height: 80px;
+  }
+  body #quick-menu ul li a .quick-tit {
+    font-size: 0.75rem;
+  }
+  body #quick-menu ul li a .quick-tel {
+    font-size: 1.0625rem;
+  }
+}
+@media (max-width: 1200px) {
+  body #quick-menu {
+    display: none;
+  }
+}
 @media (max-width: 1024px) {
   body header {
     height: 60px;
@@ -32,19 +55,95 @@
     top: 5px;
     transform: translate(0, 0px);
   }
+  body footer {
+    display: block;
+  }
   body footer::after {
     display: none;
   }
+  body footer #footer-wrap {
+    margin-left: 10px;
+    display: flex;
+    justify-content: flex-start;
+  }
   body footer #footer-wrap #footer-container-wrap {
     display: flex;
-    justify-content: center;
   }
   body footer #footer-wrap #footer-container-wrap #footer-container-top {
     width: 100%;
-    border: 1px solid #f00;
+  }
+  body footer #footer-wrap #footer-container-wrap #footer-container-top .footer-logo img {
+    width: 206.72px;
+    height: 35.86px;
   }
   body footer #footer-wrap #footer-container-wrap #footer-container-top .footer-info {
     left: 0;
+    top: 116%;
+    transform: translate(0%, -100%);
+    font-size: 0.9375rem;
+  }
+  body footer #footer-wrap #footer-container-wrap #footer-container-top .footer-sns {
+    margin-right: 15px;
+  }
+  body footer #footer-wrap #footer-container-wrap #footer-container-top .footer-sns img {
+    width: 34.39px;
+    height: 34.39px;
+  }
+  body footer #footer-wrap #footer-container-wrap #footer-container-bottom {
+    top: 37%;
+    width: 100%;
+    display: block;
+  }
+  body footer #footer-wrap #footer-container-wrap #footer-container-bottom .footer-tel {
+    margin-bottom: 20px;
+    font-size: 1.875rem;
+  }
+  body footer #footer-wrap #footer-container-wrap #footer-container-bottom .footer-tel p {
+    margin-bottom: 10px;
+    display: flex;
+    font-size: 1.2890625rem;
+  }
+  body footer #footer-wrap #footer-container-wrap #footer-container-bottom .footer-tel p span {
+    margin-right: 10px;
+    font-size: 0.8203125rem;
+    font-family: suitL;
+    color: #fff;
+  }
+  body footer #footer-wrap #footer-container-wrap #footer-container-bottom .footer-text .footer-text-middle {
+    margin-bottom: 20px;
+  }
+  body footer #footer-wrap #footer-container-wrap #footer-container-bottom .footer-text .footer-text-middle p {
+    margin-right: 10px;
+  }
+  body footer #footer-wrap #footer-container-wrap #footer-container-bottom .footer-text .footer-text-middle p span {
+    margin-bottom: 2000px;
+  }
+  body footer #footer-wrap #footer-container-wrap #footer-container-bottom .footer-text .footer-text-end {
+    margin-bottom: 16px;
+  }
+  body footer #footer-wrap #footer-container-wrap #footer-container-bottom .footer-text .footer-text-end span {
+    display: inline-block;
+  }
+  body footer #footer-wrap #footer-container-wrap #footer-container-bottom .footer-text p {
+    margin-bottom: 6px;
+    font-size: 0.8203125rem;
+  }
+  body footer #footer-wrap #footer-container-wrap #footer-container-bottom .footer-text p span {
+    display: block;
+    font-size: 0.8203125rem;
+  }
+  body footer #footer-wrap #footer-container-wrap #footer-container-bottom .footer-icon {
+    width: 120px;
+    height: 35px;
+  }
+  body footer #footer-wrap #footer-container-wrap #footer-container-bottom .footer-icon a p {
+    font-size: 1.0546875rem;
+    height: 35px;
+    line-height: 35px;
+  }
+  body footer #footer-wrap #footer-container-wrap #footer-container-bottom .footer-icon a img {
+    width: 26px;
+    height: 20px;
   }
 }
 *::-moz-selection {
@@ -73,11 +172,12 @@
   height: 90px;
 }
 * header #fixed-header-wrap {
+  display: flex;
+  justify-content: center;
   width: 1920px;
 }
 * header #fixed-header-wrap #fixed-header {
   border-bottom: 1px solid #ddd;
-  position: absolute;
   top: 0;
   position: fixed;
   background: #fff;
@@ -268,18 +368,149 @@
   display: flex;
   flex-direction: column;
 }
-* section {
-  width: 1920px;
+* aside {
+  transition: all 0.5s;
+}
+* aside.active {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+* aside #bgmobile {
+  z-index: 99;
+  transition: all 0.5s;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 600px;
+  height: 100%;
+  background: #fff;
+}
+* aside #bgmobile .mobile-menu-head-wrap {
+  width: 600px;
+}
+* aside #bgmobile .mobile-menu-head-wrap .mobile-menu-head {
+  height: 60px;
+  border-bottom: 1px solid #ddd;
   display: flex;
-  justify-content: center;
   align-items: center;
-  margin: 0 auto;
+  justify-content: space-between;
 }
-* section .text {
-  width: 1920px;
+* aside #bgmobile .mobile-menu-head-wrap .mobile-menu-head .mobile-menu-head-logo {
+  margin-left: 15px;
+  width: 150px;
+  height: 26.19px;
 }
-* section .text img {
-  width: 1920px;
+* aside #bgmobile .mobile-menu-head-wrap .mobile-menu-head .mobile-menu-head-logo img {
+  width: inherit;
+  height: 26.19px;
+}
+* aside #bgmobile .mobile-menu-head-wrap .mobile-menu-head #mobile-menu-wrap {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+* aside #bgmobile .mobile-menu-head-wrap .mobile-menu-head #mobile-menu-wrap #mobile-menu-head-logoback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 101px;
+  height: 29px;
+  background: #780997;
+  border-radius: 35px;
+}
+* aside #bgmobile .mobile-menu-head-wrap .mobile-menu-head #mobile-menu-wrap #mobile-menu-head-logoback a p {
+  width: 73px;
+  height: 25.6px;
+  line-height: 25.6px;
+  font-size: 0.8125rem;
+  text-align: center;
+  color: #fff;
+  font-family: noto500;
+  font-weight: bold;
+}
+* aside #bgmobile .mobile-menu-head-wrap .mobile-menu-head #mobile-menu-wrap #mobile-menu-head-logoback img {
+  width: 15px;
+  height: 11.53px;
+  display: flex;
+  align-items: center;
+}
+* aside #bgmobile .mobile-menu-head-wrap .mobile-menu-head #mobile-menu-wrap .mobile-menu-head-btn {
+  margin-right: 20px;
+  text-align: center;
+  color: #222;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+* aside #bgmobile .mobile-menu-head-wrap .mobile-menu-head #mobile-menu-wrap .mobile-menu-head-btn .xi-close {
+  font-family: xeicon;
+  display: inline-block;
+  font-style: normal;
+  font-weight: 400;
+  font-variant: normal;
+}
+* aside #bgmobile .mobile-menu-head-wrap .mobile-menu-head #mobile-menu-wrap .mobile-menu-head-btn .xi-close::before {
+  content: "\e921";
+}
+* aside #bgmobile .mobile-menu-body .mobile-menu-body-list .list-depth-1 {
+  border-bottom: 1px solid #ddd;
+  width: 600px;
+  text-align: left;
+  color: #000;
+  display: block;
+  padding: 1rem 1rem;
+  font-size: 1.2rem;
+  position: relative;
+  font-family: "geometos";
+}
+* aside #bgmobile .mobile-menu-body .mobile-menu-body-list .list-depth-1 .depth-lasta:last-of-type::before {
+  opacity: 0;
+}
+* aside #bgmobile .mobile-menu-body .mobile-menu-body-list .list-depth-1 .xi-depth {
+  position: absolute;
+  top: 50%;
+  font-size: 1.5rem;
+  margin-top: -0.5rem;
+  right: 1rem;
+  color: #999;
+  font-family: xeicon !important;
+  display: inline-block;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  cursor: pointer;
+  transition: all 0s;
+}
+* aside #bgmobile .mobile-menu-body .mobile-menu-body-list .list-depth-1 .xi-depth::before {
+  content: "\e941";
+}
+* aside #bgmobile .mobile-menu-body .mobile-menu-body-list .list-depth-1 .clicked {
+  transform: rotate(180deg);
+}
+* aside #bgmobile .mobile-menu-body .mobile-menu-body-list .list-depth-2 {
+  display: none;
+  padding: 1rem 1rem;
+  font-family: "noto";
+  font-size: 13px;
+  color: #666;
+  line-height: 1.6;
+  font-weight: 400;
+  border-bottom: 1px solid #ddd;
+}
+* aside #bgmobile .mobile-menu-body .mobile-menu-body-list .list-depth-2 .list-depth-3 {
+  margin-bottom: 20px;
+}
+* aside #bgmobile .mobile-menu-body .mobile-menu-body-list .list-depth-2 .list-depth-3:last-of-type {
+  margin-bottom: 0px;
+}
+* aside #bgmobile .mobile-menu-body .mobile-menu-body-list .dropdown {
+  display: block;
 }
 * #quick-menu {
   z-index: 1;
