@@ -1,6 +1,6 @@
-@import "./reset.css";
-@import "./font.css";
-@import "./variables.scss";
+@import './reset.css';
+@import './font.css';
+@import './variables.scss';
 
 @mixin community-nav {
   width: 100%;
@@ -22,7 +22,7 @@
           padding: 0 1.5625em;
           height: 4.25rem;
           // padding: 18px 28px 24px;
-          font: 1.125rem "suitM";
+          font: 1.125rem 'suitM';
           border-bottom: 2.5px solid transparent;
           &:hover {
             transform: translateY(-1px);
@@ -43,7 +43,7 @@
 @mixin community-figuer {
   width: 100%;
   height: 510px;
-  background: url("../../img/04community/bg/community-bg.png") center/cover
+  background: url('../../img/04community/bg/community-bg.png') center/cover
     no-repeat;
   .volun-title {
     width: 100%;
@@ -55,10 +55,10 @@
     height: 100%;
     color: #fff;
     h1 {
-      font: 2.8125rem "geometos";
+      font: 2.8125rem 'geometos';
     }
     p {
-      font: 1.125rem "suitL";
+      font: 1.125rem 'suitL';
     }
   }
 }
@@ -122,7 +122,7 @@
               align-items: center;
               transition: all 0.3s;
               &::before {
-                content: "";
+                content: '';
                 bottom: 0%;
                 position: absolute;
                 width: 0%;
@@ -190,7 +190,7 @@
     // opacity: 0;
     .toggle-button {
       &::before {
-        content: "\e91c";
+        content: '\e91c';
       }
       font-family: xeicon !important;
 
@@ -366,7 +366,7 @@
   flex-direction: column;
   border-bottom: 1px solid #ccc;
   &::after {
-    content: "";
+    content: '';
     height: 1px;
     width: 100%;
     position: absolute;
@@ -690,22 +690,22 @@
   }
 }
 @mixin menuTit-h1 {
-  font: 700 4.125rem/1 "noto";
+  font: 700 4.125rem/1 'noto';
   letter-spacing: -0.0825rem;
 }
 @mixin menuTit-h2 {
-  font: 3.2375rem/1.2046 "suitM";
+  font: 3.2375rem/1.2046 'suitM';
   letter-spacing: -0.065rem;
 }
-@mixin menuTit-h5 {
-  font: 2.625rem/1.229 "suitM";
+@mixin menuInfo-h5 {
+  font: 2.625rem/1.229 'suitM';
 }
-@mixin menuTit-p {
-  font: 300 1.125rem/1.5 "suitL";
+@mixin menuInfo-p {
+  font: 300 1.125rem/1.5 'suitL';
   padding-left: 14px;
   position: relative;
   &::before {
-    content: "*";
+    content: '*';
     position: absolute;
     top: 0;
     left: 0;
