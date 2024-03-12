@@ -2,7 +2,7 @@
 
 // font
 // @import "../font.scss";
-@import "../font.scss";
+@import "../font.css";
 
 /* reset */
 @import "../reset";
@@ -31,9 +31,9 @@ header {
     color: #fff;
     text-align: center;
     h1 {
-      font: bold 2.8rem/1 "geometos";
+      font: 2.8rem/1 "geometos";
       line-height: -1px;
-      margin-bottom: 19px;
+      margin-bottom: 20px;
     }
     p {
       font: 1.12rem/1 "suitL";
@@ -89,6 +89,9 @@ header {
       color: #666;
       p {
         margin-bottom: 10px;
+        span {
+          font: 300 1rem/1 "geometos";
+        }
       }
     }
   }
@@ -113,7 +116,7 @@ header {
       width: 60px;
       margin-bottom: 25px;
       .vi-inner {
-        font: bold 1.2rem/1 "nanum";
+        font: 1.2rem/1 "nanum";
         position: relative;
         &::before {
           content: "";
@@ -314,19 +317,19 @@ footer {
   .brand {
     .br-content {
       h1 {
-        font: bold 1.64rem/1 "geometos";
+        font: 1.64rem/1 "geometos";
         line-height: -1px;
-        margin-bottom: 19px;
+        margin-bottom: 20px;
       }
       p {
-        font: 0.9rem/1 "suitL";
+        font: 0.95rem/1 "suitL";
       }
     }
   }
   //sub-nav
   .sub-nav {
     width: 100%;
-    height: 67px;
+    height: 46px;
     border-bottom: 2px solid #ddd;
     ul {
       display: flex;
@@ -334,13 +337,15 @@ footer {
       align-items: center;
       height: 100%;
       li {
-        padding: 21px 30px;
-        font: 1.12rem/1.2 "suitM";
+        height: 100%;
+        padding: 0 26px;
+        font: 1.05rem/1 "suitM";
+        line-height: 46px;
         color: #333;
-        transition: all 0.3s;
+        transition: none;
         &:hover {
           color: #780997;
-          border-bottom: 3px solid #780997;
+          border-bottom: none;
         }
       }
     }
@@ -352,7 +357,7 @@ footer {
   // content-text
   .content-text {
     width: 100%;
-    height: 336px;
+    height: 270px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -361,18 +366,22 @@ footer {
     div {
       h1 {
         color: #222;
-        font: 2.62rem/2.6 "suitM";
-        letter-spacing: -2.5px;
+        font: 1.43rem/2.6 "suitM";
+        letter-spacing: -1px;
         margin-bottom: 20px;
         span {
           color: #780997;
         }
       }
       div {
-        font: 100 1rem/1 "geometos";
+        padding: 0 20px;
+        font: 100 1rem/1.2 "geometos";
         color: #666;
         p {
           margin-bottom: 10px;
+          span {
+            font: 300 1rem/1 "geometos";
+          }
         }
       }
     }
@@ -380,13 +389,14 @@ footer {
   //vision
   .vision {
     width: 100%;
-    height: 567px;
+    height: 361.05px;
     background: url(../img/03brand/intro_bg.png) center/cover no-repeat;
     display: flex;
     justify-content: start;
     align-items: center;
     .vi-content {
-      width: 1200px;
+      width: 100%;
+      padding: 0 15px;
       margin: 0 auto;
       color: #fff;
       .vi-head {
@@ -397,7 +407,7 @@ footer {
         width: 60px;
         margin-bottom: 25px;
         .vi-inner {
-          font: bold 1.2rem/1 "nanum";
+          font: 0.95rem/1 "noto";
           position: relative;
           &::before {
             content: "";
@@ -405,7 +415,7 @@ footer {
             top: -12px;
             left: 50%;
             transform: translateX(-50%);
-            width: 12px;
+            width: 15px;
             height: 2px;
             background: #780997;
           }
@@ -413,12 +423,12 @@ footer {
       }
       .vi-text {
         h1 {
-          font: 2.8rem/1.3 "suitM";
+          font: 2.3rem/1.3 "noto";
           letter-spacing: 1.2px;
           margin-bottom: 40px;
         }
         p {
-          font: 100 1.1rem/1.4 "suitM";
+          font: 0.9rem/1.4 "noto";
           letter-spacing: 1.5px;
         }
       }

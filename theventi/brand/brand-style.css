@@ -1,42 +1,7 @@
+@import "../font.css";
+/* reset */
 @import "./reset.css";
 @import "./font.css";
-@font-face {
-  font-family: "geometos";
-  src: url("./font/Geometos-Rounded.ttf");
-}
-@font-face {
-  font-family: "nanum";
-  src: url("./font/NanumSquareB.ttf");
-}
-@font-face {
-  font-family: "noto";
-  src: url("./font/NotoSansKR-VariableFont_wght.ttf");
-}
-@font-face {
-  font-family: "noto500";
-  src: url("./font/noto-sans-kr-v13-latin_korean-500.ttf");
-}
-@font-face {
-  font-family: "suitB";
-  src: url("./font/SUIT-Bold.ttf");
-}
-@font-face {
-  font-family: "suitL";
-  src: url("./font/SUIT-Light.ttf");
-}
-@font-face {
-  font-family: "suitM";
-  src: url("./font/SUIT-Medium.ttf");
-}
-@font-face {
-  font-family: "suitSB";
-  src: url("./font/SUIT-SemiBold.ttf");
-}
-@font-face {
-  font-family: "xeicon";
-  src: url("./font/xeicon.ttf");
-}
-/* reset */
 * {
   margin: 0;
   padding: 0;
@@ -319,9 +284,9 @@ header #dropdown #dropdown-container #dropdown-list #community-list {
   text-align: center;
 }
 .brand .br-content h1 {
-  font: bold 2.8rem/1 "geometos";
+  font: 2.8rem/1 "geometos";
   line-height: -1px;
-  margin-bottom: 19px;
+  margin-bottom: 20px;
 }
 .brand .br-content p {
   font: 1.12rem/1 "suitL";
@@ -378,6 +343,9 @@ header #dropdown #dropdown-container #dropdown-list #community-list {
 .content-text div div p {
   margin-bottom: 10px;
 }
+.content-text div div p span {
+  font: 300 1rem/1 "geometos";
+}
 
 .vision {
   width: 100%;
@@ -401,7 +369,7 @@ header #dropdown #dropdown-container #dropdown-list #community-list {
   margin-bottom: 25px;
 }
 .vision .vi-content .vi-head .vi-inner {
-  font: bold 1.2rem/1 "nanum";
+  font: 1.2rem/1 "nanum";
   position: relative;
 }
 .vision .vi-content .vi-head .vi-inner::before {
@@ -793,16 +761,16 @@ footer #footer-wrap #footer-container-wrap #footer-container-bottom .footer-icon
   }
   /* custom  */
   .brand .br-content h1 {
-    font: bold 1.64rem/1 "geometos";
+    font: 1.64rem/1 "geometos";
     line-height: -1px;
-    margin-bottom: 19px;
+    margin-bottom: 20px;
   }
   .brand .br-content p {
-    font: 0.9rem/1 "suitL";
+    font: 0.95rem/1 "suitL";
   }
   .sub-nav {
     width: 100%;
-    height: 67px;
+    height: 46px;
     border-bottom: 2px solid #ddd;
   }
   .sub-nav ul {
@@ -812,21 +780,23 @@ footer #footer-wrap #footer-container-wrap #footer-container-bottom .footer-icon
     height: 100%;
   }
   .sub-nav ul li {
-    padding: 21px 30px;
-    font: 1.12rem/1.2 "suitM";
+    height: 100%;
+    padding: 0 26px;
+    font: 1.05rem/1 "suitM";
+    line-height: 46px;
     color: #333;
-    transition: all 0.3s;
+    transition: none;
   }
   .sub-nav ul li:hover {
     color: #780997;
-    border-bottom: 3px solid #780997;
+    border-bottom: none;
   }
   .active a {
     color: #780997;
   }
   .content-text {
     width: 100%;
-    height: 336px;
+    height: 270px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -835,30 +805,35 @@ footer #footer-wrap #footer-container-wrap #footer-container-bottom .footer-icon
   }
   .content-text div h1 {
     color: #222;
-    font: 2.62rem/2.6 "suitM";
-    letter-spacing: -2.5px;
+    font: 1.43rem/2.6 "suitM";
+    letter-spacing: -1px;
     margin-bottom: 20px;
   }
   .content-text div h1 span {
     color: #780997;
   }
   .content-text div div {
-    font: 100 1rem/1 "geometos";
+    padding: 0 20px;
+    font: 100 1rem/1.2 "geometos";
     color: #666;
   }
   .content-text div div p {
     margin-bottom: 10px;
   }
+  .content-text div div p span {
+    font: 300 1rem/1 "geometos";
+  }
   .vision {
     width: 100%;
-    height: 567px;
+    height: 361.05px;
     background: url(../img/03brand/intro_bg.png) center/cover no-repeat;
     display: flex;
     justify-content: start;
     align-items: center;
   }
   .vision .vi-content {
-    width: 1200px;
+    width: 100%;
+    padding: 0 15px;
     margin: 0 auto;
     color: #fff;
   }
@@ -871,7 +846,7 @@ footer #footer-wrap #footer-container-wrap #footer-container-bottom .footer-icon
     margin-bottom: 25px;
   }
   .vision .vi-content .vi-head .vi-inner {
-    font: bold 1.2rem/1 "nanum";
+    font: 0.95rem/1 "noto";
     position: relative;
   }
   .vision .vi-content .vi-head .vi-inner::before {
@@ -880,17 +855,17 @@ footer #footer-wrap #footer-container-wrap #footer-container-bottom .footer-icon
     top: -12px;
     left: 50%;
     transform: translateX(-50%);
-    width: 12px;
+    width: 15px;
     height: 2px;
     background: #780997;
   }
   .vision .vi-content .vi-text h1 {
-    font: 2.8rem/1.3 "suitM";
+    font: 2.3rem/1.3 "noto";
     letter-spacing: 1.2px;
     margin-bottom: 40px;
   }
   .vision .vi-content .vi-text p {
-    font: 100 1.1rem/1.4 "suitM";
+    font: 0.9rem/1.4 "noto";
     letter-spacing: 1.5px;
   }
   .core-value {
