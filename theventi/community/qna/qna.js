@@ -8,29 +8,46 @@ xhr.send();
 
 const renderHTML = (qna) => {
   let output = "";
-  qna.forEach((qa) => {
-    if (qa.catagory == "[스탬프]") {
-      output += `
+  for (let i = 0; i < 3; i++) {
+    output += `
     <div class="qna-front">
-    ${qa.catagory} ${qa.question}
+        ${qna[0].catagory} ${qna[0].question[i]}
     </div>
     <div class="qna-back">
-    ${qa.answer}
+    ${qna[0].answer[i]}
     </div>
-      `;
-      document.querySelector(".stemp").innerHTML = output;
-    } else if (qa.catagory == "[탄소중립포인트제도]") {
-      output += `
-      <div class="qna-front">
-      ${qa.catagory} ${qa.question}
-      </div>
-      <div class="qna-back">
-      ${qa.answer}
-      </div>
-        `;
-      document.querySelector(".guitar").innerHTML = output;
-    }
-  });
+    `;
+    document.querySelector(".qna").innerHTML = output;
+  }
+  for (let i = 0; i < 7; i++) {
+    output += `
+    <div class="qna-front">
+      ${qna[1].catagory} ${qna[1].question[i]}
+    </div>
+    <div class="qna-back">
+    ${qna[1].answer[i]}
+    </div>
+    `;
+    document.querySelector(".qna").innerHTML = output;
+  }
+
+  output = "";
+  for (let i = 0; i < 9; i++) {
+    output += `
+    <div class="qna-front">
+      ${qna[1].catagory} ${qna[1].question[i]}
+    </div>
+    `;
+    document.querySelector(".stemp").innerHTML = output;
+  }
+  for (let i = 0; i < 1; i++) {
+    output += `
+    <div class="qna-front">
+      ${qna[2].catagory} ${qna[2].question[i]}
+    </div>
+    `;
+    document.querySelector(".stemp").innerHTML = output;
+  }
 };
 
 xhr.onreadystatechange = () => {
@@ -39,27 +56,6 @@ xhr.onreadystatechange = () => {
     renderHTML(qna);
   }
 };
-
-// const btn = qnas.forEach((qn) => {
-//   qn.addEventListener("click", () => {
-//     for (let i = 0; i < navs.length; i++) {
-//       qnas[i].classList.remove("active");
-//     }
-//     qn.classList.add("active");
-//     console.log(qn);
-//   });
-// });
-
-// navs.forEach((nav) => {
-//   nav.addEventListener("click", () => {
-//     for (let i = 0; i < navs.length; i++) {
-//       navs[i].classList.remove("active");
-//       // qnas[i].classList.remove("active");
-//     }
-//     nav.classList.add("active");
-//     // qnas.classList.add("active");
-//   });
-// });
 
 for (let i = 0; i < navs.length; i++) {
   navs[i].addEventListener("click", function () {

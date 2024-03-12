@@ -333,7 +333,10 @@ body .wrap .container .qna-content {
 body .wrap .container .qna-content .qna-total li {
   display: none;
 }
-body .wrap .container .qna-content .qna-total li .qna-front {
+body .wrap .container .qna-content .qna-total li.active {
+  display: block;
+}
+body .wrap .container .qna-content .qna-total .qna-front {
   cursor: pointer;
   width: 100%;
   height: 59px;
@@ -343,12 +346,12 @@ body .wrap .container .qna-content .qna-total li .qna-front {
   position: relative;
   border-bottom: 1px solid #ddd;
 }
-body .wrap .container .qna-content .qna-total li .qna-front::before {
+body .wrap .container .qna-content .qna-total .qna-front::before {
   content: "Q. ";
   font: bold 1.1rem "noto";
   color: #666;
 }
-body .wrap .container .qna-content .qna-total li .qna-front::after {
+body .wrap .container .qna-content .qna-total .qna-front::after {
   content: "\f078";
   font-family: "fontawesome";
   position: absolute;
@@ -356,7 +359,7 @@ body .wrap .container .qna-content .qna-total li .qna-front::after {
   right: 0.833%;
   transform: translateY(-50%);
 }
-body .wrap .container .qna-content .qna-total li .qna-back {
+body .wrap .container .qna-content .qna-total .qna-back {
   display: none;
   width: 100%;
   height: auto;
@@ -364,12 +367,12 @@ body .wrap .container .qna-content .qna-total li .qna-back {
   font: 1rem "noto";
   background: #f6f6f6;
 }
-body .wrap .container .qna-content .qna-total li .qna-back::before {
+body .wrap .container .qna-content .qna-total .qna-back::before {
   content: "A. ";
   font: bold 1.1rem "noto";
   color: #7b00a0;
 }
-body .wrap .container .qna-content .qna-total li.active {
+body .wrap .container .qna-content .qna-total .qna-back.active {
   display: block;
 }
 body .wrap .container .qna-pages {
