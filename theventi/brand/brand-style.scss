@@ -34,12 +34,19 @@ header {
       font: 2.8rem/1 "geometos";
       line-height: -1px;
       margin-bottom: 20px;
+      animation-name: txtmoveUD;
+      animation-duration: 0.5s;
+      animation-timing-function: ease-in;
     }
     p {
       font: 1.12rem/1 "suitL";
+      animation-name: txtmoveDU;
+      animation-duration: 0.5s;
+      animation-timing-function: ease-in;
     }
   }
 }
+
 //sub-nav
 .sub-nav {
   width: 100%;
@@ -51,8 +58,9 @@ header {
     align-items: center;
     height: 100%;
     li {
-      padding: 21px 30px;
+      padding: 0 28px;
       font: 1.12rem/1.2 "suitM";
+      line-height: 67px;
       color: #333;
       transition: all 0.3s;
       &:hover {
@@ -85,12 +93,12 @@ header {
       }
     }
     div {
-      font: 100 1rem/1 "geometos";
+      font: 1rem/1 "geometos";
       color: #666;
       p {
         margin-bottom: 10px;
         span {
-          font: 300 1rem/1 "geometos";
+          font: 1rem/1 "geometos";
         }
       }
     }
@@ -116,8 +124,11 @@ header {
       width: 60px;
       margin-bottom: 25px;
       .vi-inner {
-        font: 1.2rem/1 "nanum";
+        font: 1.2rem/1 "noto";
         position: relative;
+        animation-name: txtmoveDU01;
+        animation-duration: 1s;
+        animation-timing-function: ease-in;
         &::before {
           content: "";
           position: absolute;
@@ -132,17 +143,24 @@ header {
     }
     .vi-text {
       h1 {
-        font: 2.8rem/1.3 "suitM";
+        font: 2.8rem/1.3 "noto";
         letter-spacing: 1.2px;
         margin-bottom: 40px;
+        animation-name: txtmoveDU02;
+        animation-duration: 1s;
+        animation-timing-function: ease-in;
       }
       p {
-        font: 100 1.1rem/1.4 "suitM";
+        font: 1.1rem/1.4 "noto";
         letter-spacing: 1.5px;
+        animation-name: txtmoveDU03;
+        animation-duration: 1s;
+        animation-timing-function: ease-in;
       }
     }
   }
 }
+
 //core-value
 .core-value {
   width: 100%;
@@ -181,6 +199,9 @@ header {
         display: flex;
         justify-content: center;
         align-items: center;
+        animation-name: opacity01;
+        animation-duration: 1.5s;
+        animation-timing-function: ease-in;
         .item-wrap {
           display: flex;
           gap: 15px;
@@ -190,7 +211,7 @@ header {
             flex-direction: column;
             align-items: center;
             gap: 25px;
-            font: 1rem/1 "suitM";
+            font: 1rem/1 "noto";
             color: #666;
             .bar {
               width: 24px;
@@ -207,6 +228,9 @@ header {
         display: flex;
         justify-content: center;
         align-items: center;
+        animation-name: opacity02;
+        animation-duration: 1.5s;
+        animation-timing-function: ease-in;
         .item-wrap {
           display: flex;
           gap: 15px;
@@ -216,7 +240,7 @@ header {
             flex-direction: column;
             align-items: center;
             gap: 25px;
-            font: 1rem/1 "suitM";
+            font: 1rem/1 "noto";
             color: #666;
             .bar {
               width: 24px;
@@ -233,6 +257,9 @@ header {
         display: flex;
         justify-content: center;
         align-items: center;
+        animation-name: opacity03;
+        animation-duration: 1.5s;
+        animation-timing-function: ease-in;
         .item-wrap {
           display: flex;
           gap: 15px;
@@ -244,7 +271,7 @@ header {
             flex-direction: column;
             align-items: center;
             gap: 25px;
-            font: 1rem/1 "suitM";
+            font: 1rem/1 "noto";
             color: #666;
             .bar {
               width: 24px;
@@ -275,6 +302,137 @@ header {
         }
       }
     }
+  }
+}
+
+// animation
+@keyframes txtmoveUD {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes txtmoveDU {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes txtmoveDU01 {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes txtmoveDU02 {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  25% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes txtmoveDU03 {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  25% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes opacity01 {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes opacity02 {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes opacity03 {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
@@ -375,12 +533,12 @@ footer {
       }
       div {
         padding: 0 20px;
-        font: 100 1rem/1.2 "geometos";
+        font: 1rem/1.2 "geometos";
         color: #666;
         p {
           margin-bottom: 10px;
           span {
-            font: 300 1rem/1 "geometos";
+            font: 1rem/1 "geometos";
           }
         }
       }
@@ -458,16 +616,18 @@ footer {
           background: #780997;
         }
         p {
-          font: 1.2rem/1 "suitM";
+          font: 0.9rem/1 "suitM";
         }
       }
       .core-items {
+        border: 1px solid #f00;
         display: flex;
         gap: 50px;
-        margin-bottom: 20px;
+        width: 100%;
+        padding: 0 24px;
         .item1 {
-          width: 304px;
-          height: 304px;
+          width: 200px;
+          height: 200px;
           border: 2px solid #b7b7b7;
           border-radius: 100%;
           display: flex;
@@ -492,8 +652,8 @@ footer {
           }
         }
         .item2 {
-          width: 304px;
-          height: 304px;
+          width: 200px;
+          height: 200px;
           border: 2px solid #b7b7b7;
           border-radius: 100%;
           display: flex;
@@ -518,8 +678,8 @@ footer {
           }
         }
         .item3 {
-          width: 304px;
-          height: 304px;
+          width: 200px;
+          height: 200px;
           border: 2px solid #b7b7b7;
           border-radius: 100%;
           display: flex;
