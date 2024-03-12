@@ -1040,8 +1040,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 12.23%;
-  max-width: 160px;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0px 18px 0px 18px;
+  max-width: 180px;
   max-height: 90px;
   background: #780997;
   border-radius: 35px;
@@ -1051,7 +1053,7 @@
   background: #000;
 }
 * header #fixed-header-wrap #fixed-header #header-container-wrap #header-container #logo-back a p {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   text-align: center;
   color: #fff;
   font-family: noto500;
@@ -1108,21 +1110,26 @@
   width: 1360px;
   margin: 0 auto;
 }
+* header #dropdown #dropdown-container #dropdown-img {
+  width: 20.7352941176%;
+  margin-right: 20px;
+}
 * header #dropdown #dropdown-container #dropdown-img img {
-  width: 282px;
   height: 300px;
   margin-right: 19px;
 }
 * header #dropdown #dropdown-container #dropdown-list {
   width: 58.3985%;
+  margin-left: -3px;
   display: flex;
+  justify-content: space-between;
   font-size: 0.9375rem;
 }
 * header #dropdown #dropdown-container #dropdown-list div {
   text-align: center;
-  flex: 1;
   margin-top: 17px;
   padding: 0 10px 10px 0px;
+  width: auto;
 }
 * header #dropdown #dropdown-container #dropdown-list a {
   padding: 10px 0 0 10px;
@@ -1144,14 +1151,14 @@
   flex: 0.5;
   display: flex;
   flex-direction: column;
-  margin-left: 6px;
+  margin-left: 0px;
   flex: 0.9;
 }
 * header #dropdown #dropdown-container #dropdown-list #store-list {
   flex: 0.5;
   display: flex;
   flex-direction: column;
-  margin-left: -20px;
+  margin-left: -30px;
 }
 * header #dropdown #dropdown-container #dropdown-list #membership-list {
   flex: 1;

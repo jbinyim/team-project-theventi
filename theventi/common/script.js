@@ -16,7 +16,7 @@ const closedrop = () => {
 };
 headerList.onmouseover = opendrop;
 dropDown.onmouseover = opendrop;
-dropDown.onmouseout = closedrop;
+header.onmouseout = closedrop;
 //===============================================================
 // main popup
 

@@ -917,14 +917,11 @@
       }
     }
   }
+  
   #quick-menu {
     @include quickmenu-1920;
   }
   footer {
     @include footer-1920;
-    // // position: relative;
-    // // bottom: 0;
-    // // height: 500px;
-    // position: bottom;
   }
 }
