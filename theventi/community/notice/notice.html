@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./notice.css" />
-    <script src="./notice.js"></script>
+    <script defer src="./notice.js"></script>
     <script defer src="../../common/script.js"></script>
     <title>Document</title>
   </head>
@@ -172,6 +172,55 @@
               <option value="event">이벤트</option>
               <option value="produce">발표</option>
             </select>
+          </form>
+        </div>
+        <div class="notice-title">
+          <ul class="notice-content title">
+            <li>번호</li>
+            <li>분류</li>
+            <li>제목</li>
+            <li>이름</li>
+            <li>작성일</li>
+          </ul>
+        </div>
+        <div class="notice-contents">
+          <!-- <ul class="notice-content content">
+            <li class="action">1</li>
+            <li class="action">소식</li>
+            <li class="action">
+              <a>[더벤티 (실버/퍼플)텀블러 2종] 출시 안내</a>
+            </li>
+            <li class="action">더벤티</li>
+            <li class="action">2023.11.29</li>
+          </ul> -->
+        </div>
+        <div class="volun-pages">
+          <div class="prevent-next">
+            <a href="#">
+              <img
+                src="../../img/04community/06volunteer/prev-first.png"
+                alt=""
+              />
+            </a>
+          </div>
+          <div class="page">1</div>
+          <div class="prevent-next">
+            <a href="#">
+              <img
+                src="../../img/04community/06volunteer/next-last.png"
+                alt=""
+              />
+            </a>
+          </div>
+        </div>
+        <div class="volun-search">
+          <form action="http://localhost:3000" method="post">
+            <select name="find" id="find">
+              <option value="title">제목</option>
+              <option value="content">내용</option>
+            </select>
+            <input type="text" name="search" class="search" />
+            <input type="submit" value="검색" class="search-button" />
           </form>
         </div>
       </div>
