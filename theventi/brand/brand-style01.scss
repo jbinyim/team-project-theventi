@@ -1,18 +1,19 @@
 // ======더벤티 연혁=======
 
 // font
-@import "../font.scss";
+// @import "../font.scss";
+@import "../font.css";
 
 /* reset */
-@import "../reset.scss";
+@import "../reset";
 
 // mixin
 @import "../mixin.scss";
 
+//======= 1920px=======
 header {
   @include header-1920;
 }
-
 #mobile-menu {
   @include aside-1920;
 }
@@ -30,15 +31,22 @@ header {
     color: #fff;
     text-align: center;
     h1 {
-      font: bold 2.8rem/1 "geometos";
+      font: 2.8rem/1 "geometos";
       line-height: -1px;
-      margin-bottom: 19px;
+      margin-bottom: 20px;
+      animation-name: txtmoveUD;
+      animation-duration: 0.5s;
+      animation-timing-function: ease-in;
     }
     p {
       font: 1.12rem/1 "suitL";
+      animation-name: txtmoveDU;
+      animation-duration: 0.5s;
+      animation-timing-function: ease-in;
     }
   }
 }
+
 //sub-nav
 .sub-nav {
   width: 100%;
@@ -50,8 +58,9 @@ header {
     align-items: center;
     height: 100%;
     li {
-      padding: 21px 30px;
+      padding: 0 28px;
       font: 1.12rem/1.2 "suitM";
+      line-height: 67px;
       color: #333;
       transition: all 0.3s;
       &:hover {
@@ -76,15 +85,35 @@ header {
     align-items: center;
   }
 }
-
 // quick-menu
 #quick-menu {
   @include quickmenu-1920;
 }
-
 // footer
 footer {
   @include footer-1920;
+}
+
+// animation
+@keyframes txtmoveUD {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes txtmoveDU {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 // ======1500px======

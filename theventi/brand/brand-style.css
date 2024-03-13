@@ -325,6 +325,10 @@ header #dropdown #dropdown-container #dropdown-list #community-list {
   color: #780997;
 }
 
+.active li {
+  border-bottom: 3px solid #780997;
+}
+
 .content-text {
   width: 100%;
   height: 336px;

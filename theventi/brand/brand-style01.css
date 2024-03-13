@@ -1,42 +1,7 @@
+@import "../font.css";
+/* reset */
 @import "./reset.css";
 @import "./font.css";
-@font-face {
-  font-family: "geometos";
-  src: url("./font/Geometos-Rounded.ttf");
-}
-@font-face {
-  font-family: "nanum";
-  src: url("./font/NanumSquareB.ttf");
-}
-@font-face {
-  font-family: "noto";
-  src: url("./font/NotoSansKR-VariableFont_wght.ttf");
-}
-@font-face {
-  font-family: "noto500";
-  src: url("./font/noto-sans-kr-v13-latin_korean-500.ttf");
-}
-@font-face {
-  font-family: "suitB";
-  src: url("./font/SUIT-Bold.ttf");
-}
-@font-face {
-  font-family: "suitL";
-  src: url("./font/SUIT-Light.ttf");
-}
-@font-face {
-  font-family: "suitM";
-  src: url("./font/SUIT-Medium.ttf");
-}
-@font-face {
-  font-family: "suitSB";
-  src: url("./font/SUIT-SemiBold.ttf");
-}
-@font-face {
-  font-family: "xeicon";
-  src: url("./font/xeicon.ttf");
-}
-/* reset */
 * {
   margin: 0;
   padding: 0;
@@ -319,12 +284,18 @@ header #dropdown #dropdown-container #dropdown-list #community-list {
   text-align: center;
 }
 .brand .br-content h1 {
-  font: bold 2.8rem/1 "geometos";
+  font: 2.8rem/1 "geometos";
   line-height: -1px;
-  margin-bottom: 19px;
+  margin-bottom: 20px;
+  animation-name: txtmoveUD;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in;
 }
 .brand .br-content p {
   font: 1.12rem/1 "suitL";
+  animation-name: txtmoveDU;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in;
 }
 
 .sub-nav {
@@ -339,8 +310,9 @@ header #dropdown #dropdown-container #dropdown-list #community-list {
   height: 100%;
 }
 .sub-nav ul li {
-  padding: 21px 30px;
+  padding: 0 28px;
   font: 1.12rem/1.2 "suitM";
+  line-height: 67px;
   color: #333;
   transition: all 0.3s;
 }
@@ -542,6 +514,26 @@ footer #footer-wrap #footer-container-wrap #footer-container-bottom .footer-icon
   height: 20px;
 }
 
+@keyframes txtmoveUD {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes txtmoveDU {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 @media screen and (max-width: 1500px) {
   #quick-menu ul img {
     width: 20px;
