@@ -73,9 +73,7 @@ header {
 .active a {
   color: #780997;
 }
-.active li {
-  border-bottom: 3px solid #780997;
-}
+
 // content-text
 .content-text {
   width: 100%;
@@ -330,7 +328,6 @@ header {
     opacity: 1;
   }
 }
-
 @keyframes txtmoveDU01 {
   0% {
     transform: translateY(20px);
