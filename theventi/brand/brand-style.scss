@@ -192,6 +192,7 @@ header {
     }
     .core-items {
       display: flex;
+      width: 100%;
       gap: 50px;
       margin-bottom: 20px;
       .item1 {
@@ -629,7 +630,7 @@ footer {
         width: 100%;
         padding: 0 24px;
         .item1 {
-          width: 200px;
+          width: calc((100%-(50 * 2)) / 3);
           height: 200px;
           border: 2px solid #b7b7b7;
           border-radius: 100%;
