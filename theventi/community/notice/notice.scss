@@ -2,3 +2,66 @@
 @import "../../font.css";
 @import "../../variables.scss";
 @import "../../mixin.scss";
+
+body {
+  font-size: 16px;
+  overflow-x: hidden;
+  .wrap {
+    width: 100%;
+    height: 100%;
+    header {
+      @include header-1920;
+    }
+    .notice-figuer {
+      @include community-figuer;
+    }
+    .notice-nav {
+      @include community-nav;
+    }
+    .notice-container {
+      width: 1200px;
+      height: 100%;
+      margin: 0 auto;
+      .notice-nav {
+        width: 50%;
+        height: 48px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 100px auto 0;
+        a {
+          display: inline-block;
+          width: 50%;
+          height: 100%;
+          font: bold 1.125rem/48px "noto";
+          text-align: center;
+          background: map-get($main-color, lbrown);
+          &.active {
+            color: #fff;
+            background: map-get($main-color, dbrown);
+          }
+        }
+      }
+      .notice-select {
+        width: 100%;
+        height: 100%;
+        text-align: right;
+        margin-bottom: 30px;
+        select {
+          width: 16.66%;
+          height: 54px;
+          outline: none;
+          border: 1px solid #ddd;
+          font: 1rem "noto";
+          padding: 0 22px 0 10px;
+        }
+      }
+    }
+    #quick-menu {
+      @include quickmenu-1920;
+    }
+    footer {
+      @include footer-1920;
+    }
+  }
+}
