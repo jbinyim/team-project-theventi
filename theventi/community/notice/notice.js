@@ -13,7 +13,9 @@ fetch("notice.json")
             <ul class="notice-content content">
             <li class="action">${i + 1}</li>
             <li class="action">${json[0].name}</li>
-            <li class="action"><a>${json[0].title[i]}</a></li>
+            <li class="action"><a class="search-title">${
+              json[0].title[i]
+            }</a></li>
             <li class="action">더벤티</li>
             <li class="action">${json[0].day[i]}</li>
             </ul>
@@ -30,7 +32,7 @@ fetch("notice.json")
           <ul class="notice-content content">
           <li class="action">${i + 20}</li>
           <li class="action">${json[1].name}</li>
-          <li class="action"><a>${json[1].title}</a></li>
+          <li class="action"><a class="search-title">${json[1].title}</a></li>
           <li class="action">더벤티</li>
           <li class="action">${json[1].day}</li>
           </ul>
@@ -77,7 +79,14 @@ fetch("notice.json")
       e.preventDefault();
       const find = document.querySelector("#find");
       if (find.value == "title") {
-        console.log("a");
+        const titles = document.querySelectorAll(".search-title");
+        const text = document.querySelector(".search").value;
+        titles.forEach((title) => {
+          console.log(title.innerText == text);
+          // if (title.innerText == text) {
+          //   console.log("c");
+          // }
+        });
       } else if (find.value == "content") {
         console.log("b");
       }
