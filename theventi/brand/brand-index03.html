@@ -5,13 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- jeajon -->
     <script defer src="../common/script.js"></script>
+    <!-- kakao Map API -->
+    <script
+      type="text/javascript"
+      src="//dapi.kakao.com/v2/maps/sdk.js?appkey=190ccdfe13008f323f2b6a65725c51ad"
+    ></script>
     <!-- custom -->
     <link rel="stylesheet" href="./brand-style03.css" />
-    <script src="./brand-script03.js"></script>
+    <script defer src="./brand-script03.js"></script>
     <title>찾아오시는길 - 더벤티(theventi)</title>
   </head>
   <body>
-    <section class="wrap">
+    <section>
       <header>
         <div id="fixed-header-wrap">
           <div id="fixed-header">
@@ -221,21 +226,71 @@
           </li>
         </ul>
       </article>
-      <article class="map-view">
-        <div class="map-contents">
-          <div class="map-left">
-            <div class="map-left-text">
-              <h3>더벤티 부산&교육센터</h3>
-              <p>부산광역시 해운대구 센텀서로30, 2507~2509호 (KNN타워)</p>
+      <article class="directions">
+        <div class="wrapper">
+          <div class="content">
+            <div class="left">
+              <div class="left-contents">
+                <div class="left-txt">
+                  <h3>더벤티 부산&교육센터</h3>
+                  <p>부산광역시 해운대구 센텀서로30, 2507~2509호 (KNN타워)</p>
+                </div>
+                <div id="map01" class="map01"></div>
+                <div class="map-bottom">
+                  <span>
+                    <a href="https://map.kakao.com/" target="_blank"
+                      >kakao<b>map</b></a
+                    >
+                  </span>
+                  <div>
+                    <span>
+                      <a
+                        href="https://map.kakao.com/?from=roughmap&srcid=904601571&confirmid=904601571&q=%EB%8D%94%EB%B2%A4%ED%8B%B0%20%EB%B3%B8%EC%82%AC&rv=on"
+                        target="_blank"
+                        >로드뷰</a
+                      >
+                    </span>
+                    <span
+                      ><a
+                        href="https://map.kakao.com/?from=roughmap&eName=%EB%8D%94%EB%B2%A4%ED%8B%B0%20%EB%B3%B8%EC%82%AC&eX=984811.0&eY=470550.0"
+                        target="_blank"
+                        >길찾기</a
+                      ></span
+                    >
+                    <span
+                      ><a
+                        href="https://map.kakao.com/?map_type=TYPE_MAP&from=roughmap&srcid=904601571&itemId=904601571&q=%EB%8D%94%EB%B2%A4%ED%8B%B0%20%EB%B3%B8%EC%82%AC&urlX=984811.0&urlY=470550.0"
+                        target="_blank"
+                        >지도 크게 보기</a
+                      ></span
+                    >
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="map01"></div>
-          </div>
-          <div class="map-right">
-            <div class="map-right-text">
-              <h3>더벤티 서울&교육센터</h3>
-              <p>서울특별시 구로구 디지털로33길 27 408~414호</p>
+            <div class="right">
+              <div class="right-contents">
+                <div class="right-txt">
+                  <h3>더벤티 서울&교육센터</h3>
+                  <p>서울특별시 구로구 디지털로33길 27 408~414호</p>
+                </div>
+                <div id="map02" class="map02"></div>
+                <div class="map-bottom">
+                  <a href="https://map.kakao.com/" target="_blank"
+                    >kakao<b>map</b></a
+                  >
+                  <div>
+                    <!-- <span>로드뷰</span> -->
+                    <span
+                      ><a href="https://map.kakao.com/" target="_blank"
+                        >길찾기</a
+                      ></span
+                    >
+                    <!-- <span>지도 크게 보기</span> -->
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="map02"></div>
           </div>
         </div>
       </article>

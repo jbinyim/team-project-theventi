@@ -7,7 +7,7 @@ const lng02 = 126.897173; // 경도
 const mapContainer01 = document.getElementById("map01"), // 지도를 표시할 div
   mapOption01 = {
     center: new kakao.maps.LatLng(lat01, lng01), // 지도의 중심좌표
-    level: 5, // 지도의 확대 레벨
+    level: 3, // 지도의 확대 레벨
   };
 
 // 지도를 표시할 div와  지도 옵션으로  지도를 생성합니다
@@ -47,11 +47,11 @@ function setMapType(maptype) {
   const roadmapControl = document.getElementById("btnRoadmap");
   const skyviewControl = document.getElementById("btnSkyview");
   if (maptype === "roadmap") {
-    map.setMapTypeId(kakao.maps.MapTypeId.ROADMAP);
+    map01.setMapTypeId(kakao.maps.MapTypeId.ROADMAP);
     roadmapControl.className = "selected_btn";
     skyviewControl.className = "btn";
   } else {
-    map.setMapTypeId(kakao.maps.MapTypeId.HYBRID);
+    map01.setMapTypeId(kakao.maps.MapTypeId.HYBRID);
     skyviewControl.className = "selected_btn";
     roadmapControl.className = "btn";
   }
@@ -71,7 +71,7 @@ function zoomOut() {
 const mapContainer02 = document.getElementById("map02"), // 지도를 표시할 div
   mapOption02 = {
     center: new kakao.maps.LatLng(lat02, lng02), // 지도의 중심좌표
-    level: 5, // 지도의 확대 레벨
+    level: 3, // 지도의 확대 레벨
   };
 
 // 지도를 표시할 div와  지도 옵션으로  지도를 생성합니다
