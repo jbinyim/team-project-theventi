@@ -1,1 +1,47 @@
-/*# sourceMappingURL=popup.css.map */
+@import url("../font.css");
+@import url("../reset.css");
+body {
+  width: 478px;
+  height: 578px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  font-family: noto;
+  font-size: 13px;
+  color: #666;
+}
+body .popup-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+body .popup-container p:first-child {
+  height: 50.8px;
+  text-align: left;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+}
+body .popup-container img {
+  padding: 10px;
+}
+body .popup-container .popup-bottom {
+  display: flex;
+  justify-content: space-between;
+  height: 51.86px;
+  border-top: 1px solid #ddd;
+  align-items: center;
+}
+body .popup-container .popup-bottom .popup-close {
+  cursor: pointer;
+}
+body .popup-container .popup-bottom form {
+  padding: 10px;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+body .popup-container .popup-bottom form input {
+  border: 1px solid #ddd;
+}/*# sourceMappingURL=popup.css.map */

@@ -23,9 +23,7 @@ body {
       gap: 50px;
       .ani {
         animation: start 1.5s ease-out;
-        .message-move {
-          animation: truck 2.5s infinite;
-        }
+        animation: truck 2.5s infinite;
       }
       .boun {
         animation: bounce 1s;
@@ -69,6 +67,9 @@ body {
         }
         .article-title-img {
           animation: moveRight 1s;
+          img {
+            max-width: 100%;
+          }
         }
       }
       .message-article-how {
@@ -151,8 +152,8 @@ body {
               outline: 4px solid map-get($main-color, puple);
             }
             .sum-img {
-              width: 19.6875rem;
-              height: 19.6875rem;
+              width: 19.6875em;
+              height: 19.6875em;
               img {
                 width: 100%;
                 height: 100%;
@@ -374,6 +375,338 @@ body {
     }
   }
 }
+
+@media screen and (max-width: 1024px) {
+  body {
+    font-size: 13px;
+    .wrap {
+      width: 100%;
+      height: 100%;
+      header {
+        @include header-1024;
+      }
+      .message-figuer {
+        width: 100%;
+        height: 563px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        .ani {
+          img {
+            width: 200px;
+          }
+        }
+      }
+      .volun-nav {
+        .volun-bar {
+          ul {
+            white-space: nowrap;
+            width: 100%;
+            overflow-x: scroll;
+            overflow-y: hidden;
+            -webkit-overflow-scrolling: touch;
+            &::-webkit-scrollbar-track {
+              background: auto;
+            }
+            &::-webkit-scrollbar-thumb {
+              background: auto;
+            }
+          }
+        }
+      }
+      .message-container {
+        padding: 50px 10px 0;
+        margin-bottom: 75px;
+        .message-article-title {
+          width: 100%;
+          height: auto;
+          margin-bottom: 0;
+        }
+        .message-article-how {
+          width: 100%;
+          .message-how-info {
+            gap: 0;
+            .msg {
+              width: 100%;
+              .msg-volun-text {
+                p {
+                  font-size: 1.0625rem;
+                }
+              }
+            }
+          }
+        }
+        .message-baner {
+          width: 100%;
+          margin: 100px 0 50px;
+
+          .message-banner-title {
+            h1 {
+              font-size: 2.875rem;
+              margin-right: 0;
+            }
+          }
+          .msg-banner-direction {
+            margin-bottom: 20px;
+          }
+          .message-banner-img {
+            width: 100%;
+            height: auto;
+            gap: 80px;
+            .sum {
+              .sum-img {
+                width: 18.4375em;
+                height: 18.4375em;
+                img {
+                  width: 100%;
+                  height: 100%;
+                }
+              }
+              .sum-insta {
+                width: 40px;
+                height: 39px;
+              }
+            }
+          }
+        }
+        .message-article-form {
+          width: 100%;
+          .message-form-text {
+            h5 {
+              font-size: 0.9375rem;
+            }
+            p {
+              font-size: 0.8125rem;
+            }
+          }
+          .message-form-box {
+            height: 120px;
+            padding: 10px;
+            p {
+              font-size: 0.6875rem;
+              color: #666;
+            }
+          }
+          .message-checkbox {
+            label {
+              font-size: 1rem;
+            }
+          }
+        }
+        .message-article-input {
+          width: 100%;
+          .msg {
+            .label {
+              font-size: 13px;
+            }
+            .note {
+              font-size: 13px;
+            }
+          }
+          .msg-preven {
+            .input-preven {
+              .rnum {
+                font-size: 13px;
+              }
+            }
+          }
+          .msg-bottom {
+            font-size: 13px;
+          }
+        }
+      }
+      #quick-menu {
+        display: none;
+      }
+      footer {
+        @include footer-1024;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  body {
+    .wrap {
+      .message-figuer {
+        height: 378px;
+        .boun {
+          width: 200px;
+          img {
+            width: 100%;
+          }
+        }
+      }
+      .message-container {
+        width: 100%;
+        height: 100%;
+        .message-article-title {
+          width: 100%;
+          height: auto;
+          flex-direction: column;
+          align-items: normal;
+          gap: 20px;
+          margin-bottom: 60px;
+          .article-title-text {
+            height: 100%;
+            h1 {
+              font-size: 1.5625rem;
+            }
+            p {
+              font-size: 0.875rem;
+            }
+          }
+          .article-title-img {
+            width: 250px;
+            height: 113px;
+            margin: 0 auto;
+            img {
+              width: 100%;
+              height: 100%;
+            }
+          }
+        }
+        .message-article-how {
+          width: 100%;
+          h1 {
+            font-size: 1.5625rem;
+          }
+          .message-how-info {
+            margin-top: 30px;
+            flex-direction: column;
+            gap: 25px;
+            .msg {
+              .msg-volun-img {
+                width: 60px;
+                height: 60px;
+                img {
+                  width: 100%;
+                  height: 100%;
+                }
+              }
+              .msg-volun-text {
+                gap: 8px;
+                h4 {
+                  font-size: 1.125rem;
+                }
+                p {
+                  font-size: 0.8125rem;
+                }
+              }
+            }
+          }
+          p {
+            span {
+              font-size: 0.8125rem;
+            }
+            font-size: 0.8125rem;
+          }
+        }
+        .message-baner {
+          width: 100%;
+          .message-banner-title {
+            h1 {
+              font-size: 1.75rem;
+            }
+            img {
+              width: 30px;
+            }
+          }
+          .message-banner-img {
+            gap: 60px;
+          }
+        }
+        .message-article-input {
+          width: 100%;
+          .msg {
+            height: 97px;
+            flex-direction: column;
+            align-items: normal;
+            gap: 10px;
+            .label {
+              width: 100%;
+            }
+            input {
+              height: 43px;
+            }
+            .name {
+              width: 300px;
+            }
+            .people {
+              width: 200px;
+            }
+          }
+          .msg-phone {
+            .input-phone {
+              .phone {
+                width: 150px;
+              }
+            }
+          }
+          .msg-adress {
+            width: 100%;
+            height: 235px;
+            .label {
+              width: 100%;
+            }
+            .input-adress {
+              width: 100%;
+              .search {
+                .adress-search {
+                  width: 200px;
+                }
+                button {
+                  width: 86px;
+                  height: 43px;
+                  font-size: 0.8125rem;
+                }
+              }
+            }
+          }
+          .msg-people {
+            display: inline-block;
+            .label {
+              width: 100%;
+              margin-bottom: 10px;
+            }
+          }
+          .msg-day {
+            height: 123px;
+            .date {
+              width: 100%;
+              .input-day {
+                .day {
+                  width: 130px;
+                }
+              }
+            }
+          }
+          .msg-story {
+            height: 203px;
+            .story {
+              width: 100%;
+            }
+          }
+          .msg-preven {
+            height: 118px;
+            .input-preven {
+              width: 100%;
+              .rnum {
+                width: 67px;
+                height: 43px;
+                line-height: 3rem;
+              }
+              .preven {
+                width: 156px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 @keyframes start {
   0% {
     opacity: 0;
