@@ -1,7 +1,7 @@
 @import url("../font.css");
 @import url("../reset.css");
-@import "./reset.css";
-@import "./font.css";
+@import './reset.css';
+@import './font.css';
 @media (max-width: 1500px) {
   body #quick-menu ul img {
     width: 20px;
