@@ -3,15 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="shortcut icon"
-      href="../../img/01main/common/favicon/favicon.ico"
-      type="image/x-icon"
-    />
-    <link rel="stylesheet" href="./volunteer.css" />
-    <script defer src="./volunteer.js"></script>
+    <link rel="stylesheet" href="./notice.css" />
+    <script defer src="./notice.js"></script>
     <script defer src="../../common/script.js"></script>
-    <title>더벤져스 - 더벤티(theventi)</title>
+    <title>Document</title>
   </head>
   <body>
     <div class="wrap">
@@ -32,7 +27,7 @@
                   <a href="../../brand/brand-index.html" class="nav-items"
                     >BRAND</a
                   >
-                  <a href="../../menu/menu.html" class="nav-items">MENU</a>
+                  <a href="../../menu/menuStory.html" class="nav-items">MENU</a>
                   <a href="#" class="nav-items">STORE</a>
                   <a href="#" class="nav-items">MEMBERSHIP</a>
                   <a
@@ -113,7 +108,7 @@
           </div>
         </div>
       </header>
-      <div class="volun-figuer">
+      <div class="notice-figuer">
         <div class="volun-title">
           <h1>COMMUNITY</h1>
           <p>
@@ -122,11 +117,11 @@
           </p>
         </div>
       </div>
-      <div class="volun-nav">
+      <div class="notice-nav">
         <div class="volun-bar">
           <ul>
             <li>
-              <a class="volun-bar-link" href="../notice/notice.html"
+              <a class="volun-bar-link active" href="../notice/notice.html"
                 >공지사항</a
               >
             </li>
@@ -155,7 +150,7 @@
             </li>
             <li>
               <a
-                class="volun-bar-link active"
+                class="volun-bar-link"
                 href="../../community/volunteer/volunteer.html"
                 >THEVENGERS 봉사활동</a
               >
@@ -163,149 +158,70 @@
           </ul>
         </div>
       </div>
-      <div class="container">
-        <div class="volun-article">
-          <div class="volun-article-title">
-            <h1><span>THEVENGERS</span> 봉사활동</h1>
-          </div>
-          <div class="volun-img">
-            <span>
+      <div class="notice-container">
+        <div class="notice-nav">
+          <a class="notice-gnb active" href="../notice/notice.html">공지사항</a>
+          <a class="news-gnb" href="">보도자료</a>
+        </div>
+        <div class="notice-select">
+          <form action="https://localhost:3000">
+            <select name="catagory" id="catagory">
+              <option value="all">분류</option>
+              <option value="news">소식</option>
+              <option value="open">출시</option>
+              <option value="event">이벤트</option>
+              <option value="produce">발표</option>
+            </select>
+          </form>
+        </div>
+        <div class="notice-title">
+          <ul class="notice-content title">
+            <li>번호</li>
+            <li>분류</li>
+            <li>제목</li>
+            <li>이름</li>
+            <li>작성일</li>
+          </ul>
+        </div>
+        <div class="notice-contents">
+          <!-- <ul class="notice-content content">
+            <li class="action">1</li>
+            <li class="action">소식</li>
+            <li class="action">
+              <a>[더벤티 (실버/퍼플)텀블러 2종] 출시 안내</a>
+            </li>
+            <li class="action">더벤티</li>
+            <li class="action">2023.11.29</li>
+          </ul> -->
+        </div>
+        <div class="volun-pages">
+          <div class="prevent-next">
+            <a href="#">
               <img
-                src="../../img/04community/06volunteer/volunteer01.png"
-                alt="v1"
+                src="../../img/04community/06volunteer/prev-first.png"
+                alt=""
               />
-            </span>
-            <span>
+            </a>
+          </div>
+          <div class="page">1</div>
+          <div class="prevent-next">
+            <a href="#">
               <img
-                src="../../img/04community/06volunteer/volunteer02.png"
-                alt="v1"
+                src="../../img/04community/06volunteer/next-last.png"
+                alt=""
               />
-            </span>
-            <span>
-              <img
-                src="../../img/04community/06volunteer/volunteer03.png"
-                alt="v1"
-              />
-            </span>
+            </a>
           </div>
-          <div class="volun-text">
-            <h3>
-              더벤티 임직원 CSR 실전단체 THEVENGERS(더벤져스)는 더 나은 삶과
-              세상을 위해 움직이는 더벤티의 발걸음입니다
-            </h3>
-            <p>
-              더벤티를 사랑해주시는 고객들이 우리를 통해 더 특별한 가치를
-              발견하고, 더 나은 내일을 만들며, 더 아름다운 언젠가를 마주하시길
-              소원하는 마음으로 모인<br />
-              <span>THEVENGERS의 이야기를 만나보세요.</span>
-            </p>
-          </div>
-          <div class="volun-symbol">
-            <h1>SYMBOL</h1>
-            <img
-              src="../../img/04community/06volunteer/volunteer-logo.jpg"
-              alt=""
-            />
-            <p>
-              더벤티 임직원들의 결속을 의미하는 브랜드 심볼과 그 가장자리를
-              아우르는 화살표 서클은 우리를 통한 변화와 회복, 순환을 의미합니다.
-            </p>
-          </div>
-          <div class="volun-list">
-            <ul>
-              <li>
-                <a href="">
-                  <span>
-                    <img
-                      src="../../img/04community/06volunteer/volunteer-news01.jpg"
-                      alt="news01"
-                    />
-                  </span>
-                  <h5>
-                    ‘솔선수범 리더십 보여준다’ 더벤티, 임직원 봉사단 리더급 구성
-                    ‘더벤져스’ 유기동물 보호소 ‘카라 더봄센터’ 정기 봉사활동
-                    진행
-                  </h5>
-                  <p>2023.12.19</p>
-                </a>
-              </li>
-              <li>
-                <a href="">
-                  <span>
-                    <img
-                      src="../../img/04community/06volunteer/volunteer-news02.jpg"
-                      alt="news02"
-                    />
-                  </span>
-                  <h5>
-                    ‘유기견·묘 보호, 더벤티가 앞장서겠습니다!’ 더벤티, 임직원
-                    봉사단 ‘더벤져스’ 유기동물 보호소 ‘카라 더봄센터’ 정기
-                    봉사활동 진행 결정
-                  </h5>
-                  <p>2023.09.25</p>
-                </a>
-              </li>
-              <li>
-                <a href="">
-                  <span>
-                    <img
-                      src="../../img/04community/06volunteer/volunteer-news03.jpg"
-                      alt="news.3"
-                    />
-                  </span>
-                  <h5>
-                    더벤티, 임직원 봉사단 ‘더벤져스’ 유기동물 보호소 정기
-                    봉사활동 진행
-                  </h5>
-                  <p>2023.08.21</p>
-                </a>
-              </li>
-              <li>
-                <a href="">
-                  <span>
-                    <img
-                      src="../../img/04community/06volunteer/volunteer-news04.jpg"
-                      alt="news04"
-                    />
-                  </span>
-                  <h5>
-                    더벤티, 임직원 봉사단 ‘더벤져스’ 발족, 유기동물 보호소에서
-                    첫 봉사 활동
-                  </h5>
-                  <p>2023.08.09</p>
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div class="volun-pages">
-            <div class="prevent-next">
-              <a href="#">
-                <img
-                  src="../../img/04community/06volunteer/prev-first.png"
-                  alt=""
-                />
-              </a>
-            </div>
-            <div class="page">1</div>
-            <div class="prevent-next">
-              <a href="#">
-                <img
-                  src="../../img/04community/06volunteer/next-last.png"
-                  alt=""
-                />
-              </a>
-            </div>
-          </div>
-          <div class="volun-search">
-            <form action="http://localhost:3000" method="post">
-              <select name="find" id="find">
-                <option value="title">제목</option>
-                <option value="content">내용</option>
-              </select>
-              <input type="text" name="search" class="search" />
-              <input type="submit" value="검색" class="search-button" />
-            </form>
-          </div>
+        </div>
+        <div class="volun-search">
+          <form action="http://localhost:3000" method="post">
+            <select name="find" id="find">
+              <option value="title">제목</option>
+              <option value="content">내용</option>
+            </select>
+            <input type="text" name="search" class="search" />
+            <input type="submit" value="검색" class="search-button" />
+          </form>
         </div>
       </div>
       <div id="quick-menu">
