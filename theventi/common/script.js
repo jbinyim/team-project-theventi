@@ -283,21 +283,23 @@ const moveSlide = (num) => {
     }, 600);
   }
 };
+// 03.14 scale 넣는거 작업하다 일단 정지함*****
 const scale = (i) => {
-  slide[i].classList.toggle("scale");
+  slide[i].classList.add("scale");
 };
 // const scaleNum = () => {
-//   for (let i = 2; i < 5; i++) {
-
+//   for (let i = 0; i < 5; i++) {
+//     const num = i;
 //   }
 // };
 nextBtn.addEventListener("click", () => {
   moveSlide(currentIdx + 1);
-  // scale(scaleNum);
+  // scale(scaleNum(i));
 });
 
 prevBtn.addEventListener("click", () => {
   moveSlide(currentIdx - 1);
+  scale(scaleNum);
 });
 
 // auto slide

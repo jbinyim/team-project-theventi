@@ -1106,7 +1106,32 @@
       }
     }
   }
-
+  #bottom-slider {
+    width: 100%;
+    height: 200px;
+    border: 1px solid #f00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    ul {
+      border: 1px solid #f00;
+      width: 1360px;
+      display: flex;
+      .bottom-slide {
+        display: flex;
+        gap: 5px;
+        align-items: center;
+        img {
+        }
+        p {
+          font-size: 14px;
+          color: #666;
+          font-family: noto;
+          padding-right: 10px;
+        }
+      }
+    }
+  }
   #quick-menu {
     @include quickmenu-1920;
   }
