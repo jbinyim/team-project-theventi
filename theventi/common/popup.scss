@@ -1,0 +1,48 @@
+@import url("../font.css");
+@import url("../reset.css");
+
+body {
+  width: 478px;
+  height: 578px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  font-family: noto;
+  font-size: 13px;
+  color: #666;
+  .popup-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    & p:first-child {
+      height: 50.8px;
+      text-align: left;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid #ddd;
+    }
+    img {
+      padding: 10px;
+    }
+    .popup-bottom {
+      display: flex;
+      justify-content: space-between;
+      height: 51.86px;
+      border-top: 1px solid #ddd;
+      align-items: center;
+      .popup-close {
+        cursor: pointer;
+      }
+      form {
+        padding: 10px;
+        display: flex;
+        gap: 5px;
+        align-items: center;
+        input {
+          border: 1px solid #ddd;
+        }
+      }
+    }
+  }
+}
