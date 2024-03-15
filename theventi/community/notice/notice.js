@@ -2,6 +2,54 @@ const contents = document.querySelector(".notice-contents");
 const select = document.querySelector("#catagory");
 const search = document.querySelector(".volun-search form");
 
+const searchSubmit = (e) => {
+  e.preventDefault();
+  const find = document.querySelector("#find").value;
+  if (find === "title") {
+    const titles = document.querySelectorAll(".search-title");
+    const searchText = document.querySelector(".search").value;
+    titles.forEach((title) => {
+      const titleText = title.innerText;
+      // console.log(titleText);
+      // for (let i = 0; i < titleText.length; i++) {
+      //   // console.log(titleText[i]);
+      //   console.log(searchText);
+      //   if (titleText[i] == searchText) {
+      //     console.log(titleText[i]);
+      //   }
+      // if (searchText[i] === titleText) {
+      //   output = "";
+      //   contents.innerHTML = output;
+      //   output += title.parentNode.parentNode.innerHTML;
+      //   const newUl = document.createElement("ul");
+      //   newUl.classList.add("notice-content");
+      //   newUl.innerHTML = output;
+      //   contents.appendChild(newUl);
+      //   contents.style.display = "block";
+      // } else {
+      //   contents.style.display = "";
+      // }
+      // }
+
+      if (titleText == searchText) {
+        output = "";
+        contents.innerHTML = output;
+
+        output += title.parentNode.parentNode.innerHTML;
+        const newUl = document.createElement("ul");
+        newUl.classList.add("notice-content");
+        newUl.innerHTML = output;
+
+        contents.appendChild(newUl);
+        contents.style.display = "block";
+      } else {
+        contents.style.display = "";
+      }
+    });
+  } else if (find === "content") {
+  }
+};
+
 fetch("notice.json")
   .then((response) => response.json())
   .then((json) => {
@@ -40,6 +88,7 @@ fetch("notice.json")
       }
       contents.innerHTML = output;
     };
+
     open();
 
     const selectCategory = (e) => {
@@ -75,56 +124,7 @@ fetch("notice.json")
       }
     };
 
-    // const searchSubmit = (e) => {
-    //   e.preventDefault();
-    //   const find = document.querySelector("#find");
-    //   if (find.value == "title") {
-    //     const titles = document.querySelectorAll(".search-title");
-    //     const text = document.querySelector(".search").value;
-    //     titles.forEach((title) => {
-    //       // console.log(typeof title.innerText);
-    //       // console.log(typeof text);
-    //       console.log(text.includes(title.innerText));
-    //       // console.log(title.innerText == text);
-    //       // if (title.innerText == text) {
-    //       //   console.log("c");
-    //       // }
-    //     });
-    //   } else if (find.value == "content") {
-    //     console.log("b");
-    //   }
-    // };
-    const searchSubmit = (e) => {
-      e.preventDefault();
-      const find = document.querySelector("#find").value;
-      const searchText = document.querySelector(".search").value.toLowerCase();
-
-      if (find === "title") {
-        const titles = document.querySelectorAll(".search-title");
-        titles.forEach((title) => {
-          const titleText = title.innerText.toLowerCase();
-          if (!titleText.includes(searchText)) {
-            // output = "";
-            // contents.innerHTML = output;
-            contents.style.display = "none"; // 제목이 검색어를 포함하지 않으면 해당 공지사항을 숨깁니다.
-          } else {
-            // output = "";
-            // contents.innerHTML = output;
-            // news();
-            // open();
-            // contents.style.display = ""; // 검색어를 포함하는 공지사항은 보입니다.
-            title.parentElement.style.display = "none";
-            if (title.textContent.toLowerCase().includes(searchQuery)) {
-              title.parentElement.style.display = "";
-              // contents.style.display = "";
-            }
-          }
-        });
-      } else if (find === "content") {
-        // 내용 기반 검색 로직 (예시 코드에는 내용 검색에 대한 부분이 구현되어 있지 않습니다.)
-      }
-    };
-
     select.addEventListener("change", selectCategory);
-    search.addEventListener("submit", searchSubmit);
   });
+
+search.addEventListener("submit", searchSubmit);
