@@ -33,14 +33,14 @@ function openPopup() {
 
 const popup3 = document.querySelector("#popup3");
 const popup3Pop = document.querySelector(".popup3");
-const popup3Close = document.querySelector("#popup3-close");
+// const popup3Close = document.querySelector("#popup3-close");
 
 popup3.addEventListener("click", () => {
   popup3Pop.style.display = "inline-block";
 });
-popup3Close.addEventListener("click", () => {
-  popup3Pop.style.display = "none";
-});
+// popup3Close.addEventListener("click", () => {
+//   popup3Pop.style.display = "none";
+// });
 
 const popup2 = document.querySelector("#popup2");
 const popup2Pop = document.querySelector(".popup2");
