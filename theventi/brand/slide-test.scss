@@ -1,0 +1,196 @@
+@import "../font.css";
+
+/* reset */
+@import "../reset";
+// mixin
+@import "../mixin.scss";
+
+//========1920px=======
+header {
+  @include header-1920;
+  background: #780997;
+}
+#mobile-menu {
+  @include aside-1920;
+}
+
+/* ===custom===  */
+//brand
+.brand {
+  width: 100%;
+  height: 510px;
+  background: url(../img/03brand/sv_1.png) center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .br-content {
+    color: #fff;
+    text-align: center;
+    h1 {
+      font: 2.8rem/1 "geometos";
+      line-height: -1px;
+      margin-bottom: 20px;
+      animation-name: txtmoveUD;
+      animation-duration: 0.5s;
+      animation-timing-function: ease-in;
+    }
+    p {
+      font: 1.12rem/1 "suitL";
+      animation-name: txtmoveDU;
+      animation-duration: 0.5s;
+      animation-timing-function: ease-in;
+    }
+  }
+}
+//sub-nav
+.sub-nav {
+  width: 100%;
+  height: 67px;
+  border-bottom: 2px solid #ddd;
+  ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    li {
+      padding: 0 28px;
+      font: 1.12rem/1.2 "suitM";
+      line-height: 67px;
+      color: #333;
+      transition: all 0.3s;
+      &:hover {
+        color: #780997;
+        border-bottom: 3px solid #780997;
+      }
+    }
+  }
+}
+.active a {
+  color: #780997;
+}
+// animation
+@keyframes txtmoveUD {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes txtmoveDU {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+// ==========================
+
+// .history-container {
+//   width: 100%;
+//   // height: 100%;
+//   /* height => 나중에 JS에서 높이값을 처리  */
+//   overflow: hidden;
+//   position: relative;
+//   .slider-container {
+//     width: 100%;
+//     /* height => 나중에 JS에서 높이값을 처리  */
+//     // height: 100%;
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     .history-slide {
+//       width: 50%;
+//       position: absolute;
+//       top: 50%;
+//       left: 50%;
+//       // 슬라이드시 50%
+//       transform: translate(50%, -50%);
+//       text-align: center;
+//       padding: 0 5%;
+//       blockquote {
+//         color: #636363;
+//         font: italic 18px/1 "arial";
+//         margin-bottom: 1.5rem;
+//       }
+//       cite {
+//         font: normal 14px/1 "arial";
+//       }
+//     }
+//     &.animated {
+//       transition: left 0.3s ease-in;
+//     }
+//   }
+//   #prev,
+//   #next {
+//     font-size: 20px;
+//     // border: 1px solid #f00;
+//     position: absolute;
+//     top: 50%;
+//     left: 50%;
+//     transform: translate(-50%, -50%);
+//     display: inline-block;
+//     width: 50px;
+//     height: 50px;
+//     text-align: center;
+//     line-height: 50px;
+//     transition: all 0.3s ease-in;
+//   }
+//   #prev {
+//     margin-left: -25%;
+//   }
+//   #next {
+//     margin-left: 25%;
+//   }
+//   #prev.disabled,
+//   #next.disabled {
+//     display: none;
+//   }
+// }
+
+.history {
+  width: 100%;
+  height: 1110px;
+  .history-header {
+    width: 1160px;
+    height: 155px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 100px auto;
+    .history-header-text {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+      h1 {
+        font: 500 2.6rem/1 "geometos";
+        color: #780997;
+        letter-spacing: -2px;
+      }
+      p {
+        font: 1rem/1 "geometos";
+        color: #666;
+      }
+    }
+    .history-header-bar {
+      width: 1160px;
+      height: 3px;
+      background: #780997;
+    }
+  }
+  .history-container {
+    border: 1px solid #f00;
+  }
+}

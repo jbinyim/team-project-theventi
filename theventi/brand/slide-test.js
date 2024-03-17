@@ -1,14 +1,14 @@
-const sliderWrapper = document.querySelector(".container");
-const sliderContainer = document.querySelector(".slider-container");
-const slides = document.querySelectorAll(".slide");
+const historySliderWrapper = document.querySelector(".history-container");
+const historySliderContainer = document.querySelector(".slider-container");
+const historySlides = document.querySelectorAll(".history-slide");
 
 const navPrev = document.querySelector("#prev");
 const navNext = document.querySelector("#next");
 
 // slide count
-const slideCount = slides.length;
+const slideCount = historySlides.length;
 for (let i = 0; i < slideCount; i++) {
-  slides[i].style.left = `${i * 100}%`;
+  historySlides[i].style.left = `${i * 100}%`;
 }
 
 // slide height
@@ -16,12 +16,12 @@ let topHeight = 0;
 
 const calculateTallestSlide = () => {
   for (let i = 0; i < slideCount; i++) {
-    if (slides[i].offsetHeight > topHeight) {
-      topHeight = slides[i].offsetHeight;
+    if (historySlides[i].offsetHeight > topHeight) {
+      topHeight = historySlides[i].offsetHeight;
     }
   }
-  sliderWrapper.style.height = `${topHeight}px`;
-  sliderContainer.style.height = `${topHeight}px`;
+  historySliderWrapper.style.height = `${topHeight}px`;
+  historySliderContainer.style.height = `${topHeight}px`;
 };
 
 calculateTallestSlide();
@@ -44,8 +44,8 @@ const updateNav = () => {
 
 // 클릭했을 때 옆으로 넘어가게 하는거, 왼쪽으로 넘어가는거
 const gotoSlide = (i) => {
-  sliderContainer.style.left = `${i * -100}%`;
-  sliderContainer.classList.add("animated");
+  historySliderContainer.style.left = `${i * -100}%`;
+  historySliderContainer.classList.add("animated");
   currentIndex = i;
   updateNav();
 };
