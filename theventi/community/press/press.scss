@@ -1,0 +1,156 @@
+@import "../../reset.css";
+@import "../../font.css";
+@import "../../variables.scss";
+@import "../../mixin.scss";
+
+body {
+  font-size: 16px;
+  overflow-x: hidden;
+  font-weight: 400;
+  .wrap {
+    width: 100%;
+    height: 100%;
+    header {
+      @include header-1920;
+    }
+    .press-figuer {
+      @include community-figuer;
+    }
+    .press-nav {
+      @include community-nav;
+    }
+    .press-container {
+      width: 1200px;
+      height: 100%;
+      margin: 0 auto;
+      .press-nav {
+        width: 50%;
+        height: 48px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 100px auto 35px;
+        a {
+          display: inline-block;
+          width: 50%;
+          height: 100%;
+          font: bold 1.125rem/48px "noto";
+          text-align: center;
+          background: map-get($main-color, lbrown);
+          &.active {
+            color: #fff;
+            background: map-get($main-color, dbrown);
+          }
+        }
+      }
+      .press-table {
+        width: 100%;
+        height: 100%;
+        border-bottom: 1px solid #ddd;
+        border-top: 1px solid map-get($main-color, puple);
+        border-collapse: collapse;
+        border-spacing: 0;
+        thead {
+          tr {
+            width: 100%;
+            height: 52px;
+            border-bottom: 1px solid #ddd;
+            th {
+              padding: 13px 2px;
+              font: 500 1rem "noto";
+            }
+          }
+        }
+        tbody {
+          tr {
+            width: 100%;
+            height: 56px;
+            border-bottom: 1px solid #ddd;
+            text-align: center;
+            td {
+              padding: 15px 5px;
+              font: 1rem "noto";
+              color: #666;
+              &:nth-child(2) {
+                text-align: left;
+              }
+              a:hover {
+                color: map-get($main-color, puple);
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+      }
+      .press-pages {
+        width: 100%;
+        height: 34px;
+        margin: 50px 0 56px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 4px;
+        .prevent-next {
+          width: 34px;
+          height: 34px;
+          cursor: pointer;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        .page {
+          cursor: pointer;
+          width: 34px;
+          height: 34px;
+          text-align: center;
+          border: 1px solid #000;
+          font: 1rem/30px "noto";
+        }
+      }
+      .press-search {
+        width: 100%;
+        height: 82px;
+        border-top: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+        margin: 60px 0 150px;
+        form {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 4px;
+          #find {
+            width: 8.3%;
+            height: 40px;
+            border: 1px solid #ddd;
+            outline: none;
+            font: 1rem "noto";
+          }
+          .search {
+            width: 20%;
+            height: 40px;
+            border: 1px solid #ddd;
+            outline: none;
+            padding: 0 5px;
+            font: 1rem "noto";
+          }
+          .search-button {
+            width: 7.5%;
+            height: 40px;
+            border: 1px solid #ddd;
+            cursor: pointer;
+            font: 1rem "noto";
+          }
+        }
+      }
+    }
+    #quick-menu {
+      @include quickmenu-1920;
+    }
+    footer {
+      @include footer-1920;
+    }
+  }
+}
