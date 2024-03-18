@@ -325,23 +325,45 @@ body .wrap .press-container .press-table thead tr th {
   padding: 13px 2px;
   font: 500 1rem "noto";
 }
-body .wrap .press-container .press-table tbody tr {
+body .wrap .press-container .press-table thead .press-head-tr {
   width: 100%;
   height: 56px;
   border-bottom: 1px solid #ddd;
   text-align: center;
 }
-body .wrap .press-container .press-table tbody tr td {
+body .wrap .press-container .press-table thead .press-head-tr .fa-solid {
+  color: #7b00a0;
+}
+body .wrap .press-container .press-table thead .press-head-tr .press-head-td {
   padding: 15px 5px;
   font: 1rem "noto";
   color: #666;
 }
-body .wrap .press-container .press-table tbody tr td:nth-child(2) {
+body .wrap .press-container .press-table thead .press-head-tr .press-head-td:nth-child(2) {
   text-align: left;
 }
-body .wrap .press-container .press-table tbody tr td a:hover {
+body .wrap .press-container .press-table thead .press-head-tr .press-head-td a:hover {
   color: #7b00a0;
   text-decoration: underline;
+}
+body .wrap .press-container .press-table tbody .press-tr {
+  width: 100%;
+  height: 56px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+body .wrap .press-container .press-table tbody .press-tr .press-td {
+  padding: 15px 5px;
+  font: 1rem "noto";
+  color: #666;
+}
+body .wrap .press-container .press-table tbody .press-tr .press-td:nth-child(2) {
+  text-align: left;
+}
+body .wrap .press-container .press-table tbody .press-tr .press-td a:hover {
+  color: #7b00a0;
+  text-decoration: underline;
+  cursor: pointer;
 }
 body .wrap .press-container .press-pages {
   width: 100%;
@@ -363,11 +385,21 @@ body .wrap .press-container .press-pages .prevent-next img {
 }
 body .wrap .press-container .press-pages .page {
   cursor: pointer;
-  width: 34px;
+  width: 63%;
   height: 34px;
   text-align: center;
-  border: 1px solid #000;
+  display: flex;
+  gap: 4px;
+}
+body .wrap .press-container .press-pages .page .number-button {
+  display: inline-block;
+  width: 34px;
+  height: 100%;
+  border: 1px solid #ddd;
   font: 1rem/30px "noto";
+}
+body .wrap .press-container .press-pages .page .selected {
+  border: 1px solid #000;
 }
 body .wrap .press-container .press-search {
   width: 100%;

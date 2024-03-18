@@ -60,14 +60,15 @@ body {
               font: 500 1rem "noto";
             }
           }
-        }
-        tbody {
-          tr {
+          .press-head-tr {
             width: 100%;
             height: 56px;
             border-bottom: 1px solid #ddd;
             text-align: center;
-            td {
+            .fa-solid {
+              color: map-get($main-color, puple);
+            }
+            .press-head-td {
               padding: 15px 5px;
               font: 1rem "noto";
               color: #666;
@@ -77,6 +78,27 @@ body {
               a:hover {
                 color: map-get($main-color, puple);
                 text-decoration: underline;
+              }
+            }
+          }
+        }
+        tbody {
+          .press-tr {
+            width: 100%;
+            height: 56px;
+            border-bottom: 1px solid #ddd;
+            text-align: center;
+            .press-td {
+              padding: 15px 5px;
+              font: 1rem "noto";
+              color: #666;
+              &:nth-child(2) {
+                text-align: left;
+              }
+              a:hover {
+                color: map-get($main-color, puple);
+                text-decoration: underline;
+                cursor: pointer;
               }
             }
           }
@@ -100,12 +122,23 @@ body {
           }
         }
         .page {
+          //border: 1px solid #f00;
           cursor: pointer;
-          width: 34px;
+          width: 63%;
           height: 34px;
           text-align: center;
-          border: 1px solid #000;
-          font: 1rem/30px "noto";
+          display: flex;
+          gap: 4px;
+          .number-button {
+            display: inline-block;
+            width: 34px;
+            height: 100%;
+            border: 1px solid #ddd;
+            font: 1rem/30px "noto";
+          }
+          .selected {
+            border: 1px solid #000;
+          }
         }
       }
       .press-search {
