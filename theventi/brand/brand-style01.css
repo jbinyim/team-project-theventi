@@ -59,6 +59,7 @@ li {
 }
 
 header {
+  z-index: 9999;
   position: relative;
   overflow: hidden;
   display: flex;
@@ -67,13 +68,16 @@ header {
   margin: 0 auto;
   width: 100%;
   height: 90px;
+  top: 0;
 }
 header #fixed-header-wrap {
+  z-index: 9999;
   display: flex;
   justify-content: center;
   width: 1920px;
 }
 header #fixed-header-wrap #fixed-header {
+  z-index: 9999;
   border-bottom: 1px solid #ddd;
   top: 0;
   position: fixed;
@@ -82,12 +86,13 @@ header #fixed-header-wrap #fixed-header {
   max-height: 91px;
 }
 header #fixed-header-wrap #fixed-header #header-container-wrap {
-  width: 1360px;
+  width: 100%;
   margin: 0 auto;
 }
 header #fixed-header-wrap #fixed-header #header-container-wrap #header-container {
   font-family: geometos;
-  width: 100%;
+  width: 1360px;
+  max-width: 100%;
   max-height: 90px;
   display: flex;
   justify-content: space-around;
@@ -143,18 +148,20 @@ header #fixed-header-wrap #fixed-header #header-container-wrap #header-container
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 12.23%;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0px 18px 0px 18px;
+  max-width: 180px;
+  max-height: 90px;
   background: #780997;
-  max-height: 54.4%;
   border-radius: 35px;
-  padding: 0 22.5px;
   transition: all 0.3s;
 }
 header #fixed-header-wrap #fixed-header #header-container-wrap #header-container #logo-back:hover {
   background: #000;
 }
 header #fixed-header-wrap #fixed-header #header-container-wrap #header-container #logo-back a p {
-  font-size: 1.125rem;
+  font-size: 1.05rem;
   text-align: center;
   color: #fff;
   font-family: noto500;
@@ -211,21 +218,26 @@ header #dropdown #dropdown-container {
   width: 1360px;
   margin: 0 auto;
 }
+header #dropdown #dropdown-container #dropdown-img {
+  width: 20.7352941176%;
+  margin-right: 20px;
+}
 header #dropdown #dropdown-container #dropdown-img img {
-  width: 282px;
   height: 300px;
   margin-right: 19px;
 }
 header #dropdown #dropdown-container #dropdown-list {
   width: 58.3985%;
+  margin-left: -3px;
   display: flex;
+  justify-content: space-between;
   font-size: 0.9375rem;
 }
 header #dropdown #dropdown-container #dropdown-list div {
   text-align: center;
-  flex: 1;
   margin-top: 17px;
   padding: 0 10px 10px 0px;
+  width: auto;
 }
 header #dropdown #dropdown-container #dropdown-list a {
   padding: 10px 0 0 10px;
@@ -247,14 +259,14 @@ header #dropdown #dropdown-container #dropdown-list #menu-list {
   flex: 0.5;
   display: flex;
   flex-direction: column;
-  margin-left: 6px;
+  margin-left: 0px;
   flex: 0.9;
 }
 header #dropdown #dropdown-container #dropdown-list #store-list {
   flex: 0.5;
   display: flex;
   flex-direction: column;
-  margin-left: -20px;
+  margin-left: -30px;
 }
 header #dropdown #dropdown-container #dropdown-list #membership-list {
   flex: 1;
@@ -267,7 +279,158 @@ header #dropdown #dropdown-container #dropdown-list #community-list {
 }
 
 #mobile-menu {
+  z-index: 200;
+  transition: all 0.5s;
+}
+#mobile-menu.active {
+  position: fixed;
+  z-index: 101;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+#mobile-menu #bgmobile {
+  z-index: 99;
+  transition: all 0.5s;
+  position: fixed;
+  top: 0;
+  right: -999px;
+  width: 600px;
+  height: 100%;
+  background: #fff;
+}
+#mobile-menu #bgmobile .mobile-menu-head-wrap {
+  width: 600px;
+}
+#mobile-menu #bgmobile .mobile-menu-head-wrap .mobile-menu-head {
+  height: 60px;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#mobile-menu #bgmobile .mobile-menu-head-wrap .mobile-menu-head .mobile-menu-head-logo {
+  margin-left: 15px;
+  width: 150px;
+  height: 26.19px;
+}
+#mobile-menu #bgmobile .mobile-menu-head-wrap .mobile-menu-head .mobile-menu-head-logo img {
+  width: inherit;
+  height: 26.19px;
+}
+#mobile-menu #bgmobile .mobile-menu-head-wrap .mobile-menu-head #mobile-menu-wrap {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+#mobile-menu #bgmobile .mobile-menu-head-wrap .mobile-menu-head #mobile-menu-wrap #mobile-menu-head-logoback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 101px;
+  height: 29px;
+  background: #780997;
+  border-radius: 35px;
+}
+#mobile-menu #bgmobile .mobile-menu-head-wrap .mobile-menu-head #mobile-menu-wrap #mobile-menu-head-logoback a p {
+  width: 73px;
+  height: 25.6px;
+  line-height: 25.6px;
+  font-size: 0.8125rem;
+  text-align: center;
+  color: #fff;
+  font-family: noto500;
+  font-weight: bold;
+}
+#mobile-menu #bgmobile .mobile-menu-head-wrap .mobile-menu-head #mobile-menu-wrap #mobile-menu-head-logoback img {
+  width: 15px;
+  height: 11.53px;
+  display: flex;
+  align-items: center;
+}
+#mobile-menu #bgmobile .mobile-menu-head-wrap .mobile-menu-head #mobile-menu-wrap .mobile-menu-head-btn {
+  margin-right: 20px;
+  text-align: center;
+  color: #222;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+#mobile-menu #bgmobile .mobile-menu-head-wrap .mobile-menu-head #mobile-menu-wrap .mobile-menu-head-btn .xi-close {
+  font-family: xeicon;
+  display: inline-block;
+  font-style: normal;
+  font-weight: 400;
+  font-variant: normal;
+}
+#mobile-menu #bgmobile .mobile-menu-head-wrap .mobile-menu-head #mobile-menu-wrap .mobile-menu-head-btn .xi-close::before {
+  content: "\e921";
+}
+#mobile-menu #bgmobile .mobile-menu-body .mobile-menu-body-list .list-depth-1 {
+  border-bottom: 1px solid #ddd;
+  width: 600px;
+  text-align: left;
+  color: #000;
+  display: block;
+  padding: 1rem 1rem;
+  font-size: 1.2rem;
+  position: relative;
+  font-family: "geometos";
+}
+#mobile-menu #bgmobile .mobile-menu-body .mobile-menu-body-list .list-depth-1 a:hover {
+  color: #780997;
+}
+#mobile-menu #bgmobile .mobile-menu-body .mobile-menu-body-list .list-depth-1 .depth-lasta:last-of-type::before {
+  opacity: 0;
+}
+#mobile-menu #bgmobile .mobile-menu-body .mobile-menu-body-list .list-depth-1 .xi-depth {
+  position: absolute;
+  top: 50%;
+  font-size: 1.5rem;
+  margin-top: -0.5rem;
+  right: 1rem;
+  color: #999;
+  font-family: xeicon !important;
+  display: inline-block;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  cursor: pointer;
+  transition: all 0s;
+}
+#mobile-menu #bgmobile .mobile-menu-body .mobile-menu-body-list .list-depth-1 .xi-depth::before {
+  content: "\e941";
+}
+#mobile-menu #bgmobile .mobile-menu-body .mobile-menu-body-list .list-depth-1 .clicked {
+  transform: rotate(180deg);
+}
+#mobile-menu #bgmobile .mobile-menu-body .mobile-menu-body-list .list-depth-2 {
   display: none;
+  padding: 1rem 1rem;
+  font-family: "noto";
+  font-size: 13px;
+  color: #666;
+  line-height: 1.6;
+  font-weight: 400;
+  border-bottom: 1px solid #ddd;
+}
+#mobile-menu #bgmobile .mobile-menu-body .mobile-menu-body-list .list-depth-2 .list-depth-3 {
+  margin-bottom: 20px;
+}
+#mobile-menu #bgmobile .mobile-menu-body .mobile-menu-body-list .list-depth-2 .list-depth-3:last-of-type {
+  margin-bottom: 0px;
+}
+#mobile-menu #bgmobile .mobile-menu-body .mobile-menu-body-list .list-depth-2 .list-depth-3:hover {
+  color: #780997;
+}
+#mobile-menu #bgmobile .mobile-menu-body .mobile-menu-body-list .depth3clicked {
+  color: #780997;
+}
+#mobile-menu #bgmobile .mobile-menu-body .mobile-menu-body-list .dropdown {
+  display: block;
 }
 
 /* custom  */
@@ -390,6 +553,8 @@ footer {
   align-items: center;
   flex-direction: column;
   border-bottom: 1px solid #ccc;
+  bottom: 0;
+  left: 0;
 }
 footer::after {
   content: "";
@@ -403,7 +568,7 @@ footer #footer-wrap {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 1920px;
+  width: 100%;
 }
 footer #footer-wrap #footer-container-wrap {
   width: 1360px;
@@ -447,7 +612,8 @@ footer #footer-wrap #footer-container-wrap #footer-container-top .footer-sns img
 }
 footer #footer-wrap #footer-container-wrap #footer-container-bottom {
   display: flex;
-  width: inherit;
+  width: 100%;
+  max-width: 1360px;
   height: 146px;
   justify-content: space-between;
   align-items: center;
