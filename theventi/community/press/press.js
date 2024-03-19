@@ -8,10 +8,37 @@ const form = document.querySelector("form");
 let pageNumberBtns;
 let currentPage = 1;
 
-const resetPageOf = (data) => {
-  console.log(data.length);
-  for (let i = 0; i < data.length; i++) {
-    console.log(data[i]);
+const newPage = (press, searchText) => {
+  tbody.innerHTML = "";
+  for (let i = 0; i < press.length; i++) {
+    if (press[i].title.includes(searchText)) {
+      const tr = document.createElement("tr");
+      tr.className = "press-tr";
+
+      const pressNumber = document.createElement("td");
+      pressNumber.className = "press-td number";
+
+      const pressTitle = document.createElement("td");
+      pressTitle.className = "press-td title";
+
+      const pressLink = document.createElement("a");
+      pressLink.className = "press-link";
+
+      const pressVenti = document.createElement("td");
+      pressVenti.className = "press-td venti";
+
+      const pressDay = document.createElement("td");
+      pressDay.className = "press-td day";
+
+      pressNumber.innerHTML = press[i].id;
+      pressLink.innerHTML = press[i].title;
+      pressVenti.innerText = "더벤티";
+      pressDay.innerHTML = press[i].day;
+
+      pressTitle.appendChild(pressLink);
+      tr.append(pressNumber, pressTitle, pressVenti, pressDay);
+      tbody.appendChild(tr);
+    }
   }
 };
 
@@ -113,18 +140,14 @@ fetch("press.json")
       const find = document.querySelector("#find").value;
       if (find === "title") {
         const searchText = document.querySelector(".search").value;
-
-        press.forEach((data) => {
-          if (data.title.includes(searchText)) {
-            resetPageOf(data);
-            // console.log(setPageOf(press.length));
-            // console.log(resetPageOf(data));
-          } else {
-            // tbody.style.display = "";
-            // tbody.innerHTML = "";
-          }
-        });
+        if (searchText !== "") {
+          newPage(press, searchText);
+        } else {
+          location.href = location.href;
+        }
+      } else if (find === "content") {
       }
     };
+
     form.addEventListener("submit", searchBtn);
   });
