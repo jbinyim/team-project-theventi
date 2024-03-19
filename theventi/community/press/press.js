@@ -3,9 +3,17 @@ const numberPage = document.querySelector(".page");
 const tbody = document.querySelector(".press-tbody");
 const prevBtn = document.querySelector(".prev");
 const nextBtn = document.querySelector(".next");
+const form = document.querySelector("form");
 
 let pageNumberBtns;
 let currentPage = 1;
+
+const resetPageOf = (data) => {
+  console.log(data.length);
+  for (let i = 0; i < data.length; i++) {
+    console.log(data[i]);
+  }
+};
 
 const getTotalPages = (press) => {
   return Math.ceil(press.length / countPages);
@@ -99,4 +107,24 @@ fetch("press.json")
         moveselectPage();
       }
     });
+
+    const searchBtn = (e) => {
+      e.preventDefault();
+      const find = document.querySelector("#find").value;
+      if (find === "title") {
+        const searchText = document.querySelector(".search").value;
+
+        press.forEach((data) => {
+          if (data.title.includes(searchText)) {
+            resetPageOf(data);
+            // console.log(setPageOf(press.length));
+            // console.log(resetPageOf(data));
+          } else {
+            // tbody.style.display = "";
+            // tbody.innerHTML = "";
+          }
+        });
+      }
+    };
+    form.addEventListener("submit", searchBtn);
   });
