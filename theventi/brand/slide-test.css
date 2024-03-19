@@ -544,12 +544,31 @@ header #dropdown #dropdown-container #dropdown-list #community-list {
   font: 1rem/1 "geometos";
   color: #666;
 }
-.history .history-container .slider-container {
-  width: 1000px;
-  height: 700px;
-  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
-  padding: 20px;
+.history .history-container {
+  width: 880px;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
 }
-.history .history-container .slider-container .history-slide .history-inner01 .history-top {
+.history .history-container .slider-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.history .history-container .slider-container .history-slide {
+  width: 100%;
+  height: auto;
+  padding: 20px;
+  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.3);
+}
+.history .history-container .slider-container .history-slide .history-inner {
   display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.history .history-container .slider-container .history-slide .history-inner .history-top {
+  display: flex;
+  gap: 20px;
 }/*# sourceMappingURL=slide-test.css.map */
