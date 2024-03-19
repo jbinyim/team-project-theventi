@@ -687,7 +687,8 @@ body .wrap footer #footer-wrap #footer-container-wrap #footer-container-bottom .
     display: none !important;
   }
   body .wrap header .button-nav {
-    display: inline-block;
+    z-index: 999999 !important;
+    display: block !important;
     position: fixed;
     top: 5px;
     transform: translate(0, 0px);
