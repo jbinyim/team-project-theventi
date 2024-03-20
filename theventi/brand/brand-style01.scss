@@ -145,14 +145,15 @@ footer {
   }
   // history
   .history-container {
-    border: 1px solid #f00;
+    box-shadow: 0 0 8px rgba($color: #000000, $alpha: 0.3);
+    // border: 1px solid #f00;
     width: 900px;
     /* height => 나중에 JS 처리 */
     height: 100%;
     overflow: hidden;
     position: relative;
+    // ul
     .history-slider {
-      border: 1px solid #f00;
       width: 100%;
       /* height => 나중에 JS 처리 */
       height: 100%;
@@ -163,21 +164,25 @@ footer {
         transition: left 0.3s ease-in;
       }
       .history-slide {
-        width: 50%;
+        border: 1px solid #ccc;
+        width: 100%;
         // height: 500px;
         position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(50%, -50%);
+        top: 0;
+        left: 0;
         text-align: center;
-        // padding: 0 5%;
-        /* border: 1px solid crimson; */
+        padding: 20px;
+        .history-slide-inner {
+          border: 1px solid #f00;
+          width: 100%;
+          height: 500px;
+        }
       }
     }
     #prev,
     #next {
-      font-size: 20px;
-      border: 1px solid #f00;
+      font-size: 25px;
+      // border: 1px solid #f00;
       position: absolute;
       top: 50%;
       left: 50%;
