@@ -1320,16 +1320,16 @@
     align-items: center;
     width: 100%;
     overflow: hidden;
-    // border: 1px solid #f00;
+    border: 1px solid #f00;
     .sectionfive-slide_wrapper {
       // border: 1px solid #f00;
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 1420px;
+      width: 1400px;
       height: 100%;
       position: relative !important;
-      // overflow: hidden;
+      overflow: hidden;
       margin: 0 auto;
       // padding-left: 11px;
       .five-slides {
@@ -1341,11 +1341,11 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        // margin: 0 auto;
+        margin: 0 auto;
         overflow: hidden;
-        // .animated {
-        //   transition: all 0.5s ease-out;
-        // }
+        .animated {
+          transition: all 0.5s ease-out;
+        }
         li {
           // border: 1px solid #0f0;
           width: 100%;
@@ -1355,7 +1355,6 @@
           justify-content: center;
           align-items: center;
           cursor: pointer;
-
           img {
             width: 315px;
             height: 315px;

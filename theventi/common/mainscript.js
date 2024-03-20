@@ -347,7 +347,7 @@ const fivemoveSlide = (num) => {
 // };
 fivenextBtn.addEventListener("click", () => {
   fivemoveSlide(fivecurrentIdx + 1);
-  console.log(moveSlide);
+
   // scale(scaleNum(i));
 });
 

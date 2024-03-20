@@ -1907,14 +1907,16 @@
   align-items: center;
   width: 100%;
   overflow: hidden;
+  border: 1px solid #f00;
 }
 #sectionfive #sectionfive-slider .sectionfive-slide_wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 1420px;
+  width: 1400px;
   height: 100%;
   position: relative !important;
+  overflow: hidden;
   margin: 0 auto;
 }
 #sectionfive #sectionfive-slider .sectionfive-slide_wrapper .five-slides {
@@ -1926,7 +1928,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0 auto;
   overflow: hidden;
+}
+#sectionfive #sectionfive-slider .sectionfive-slide_wrapper .five-slides .animated {
+  transition: all 0.5s ease-out;
 }
 #sectionfive #sectionfive-slider .sectionfive-slide_wrapper .five-slides li {
   width: 100%;
