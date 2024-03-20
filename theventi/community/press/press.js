@@ -38,6 +38,7 @@ const newPage = (press, searchText) => {
       pressTitle.appendChild(pressLink);
       tr.append(pressNumber, pressTitle, pressVenti, pressDay);
       tbody.appendChild(tr);
+      document.querySelector(".press-pages").style.display = "none";
     }
   }
 };
