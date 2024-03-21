@@ -745,18 +745,60 @@ footer #footer-wrap #footer-container-wrap #footer-container-bottom .footer-icon
   transition: left 0.3s ease-in;
 }
 .history .history-container .history-slider .history-slide {
-  border: 1px solid #ccc;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  text-align: center;
-  padding: 20px;
+  width: 900px;
+  height: 520px;
 }
 .history .history-container .history-slider .history-slide .history-slide-inner {
-  border: 1px solid #f00;
   width: 100%;
-  height: 500px;
+  height: 100%;
+  padding: 25px 20px;
+  display: flex;
+  flex-direction: column;
+}
+.history .history-container .history-slider .history-slide .history-slide-inner .slide-inner-top {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.history .history-container .history-slider .history-slide .history-slide-inner .slide-inner-top .inner-txt {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.history .history-container .history-slider .history-slide .history-slide-inner .slide-inner-top .inner-txt h1 {
+  font: 2.625rem/2 "geometos";
+  color: #7b00a0;
+}
+.history .history-container .history-slider .history-slide .history-slide-inner .slide-inner-top .inner-txt .inner-txt-detail {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  gap: 30px;
+  margin-bottom: 10px;
+}
+.history .history-container .history-slider .history-slide .history-slide-inner .slide-inner-top .inner-txt .inner-txt-detail h3 {
+  font: 600 1rem/1 "noto";
+  color: #222;
+}
+.history .history-container .history-slider .history-slide .history-slide-inner .slide-inner-top .inner-txt .inner-txt-detail .inner-txt-detail-p {
+  font: 1rem/1 "noto";
+  color: #666;
+}
+.history .history-container .history-slider .history-slide .history-slide-inner .slide-inner-top .inner-txt .inner-txt-detail .inner-txt-detail-p p {
+  margin-bottom: 10px;
+}
+.history .history-container .history-slider .history-slide .history-slide-inner .slide-inner-bottom {
+  color: #ff5b28;
+}
+.history .history-container .history-slider .history-slide .history-slide-inner .slide-inner-bottom .inner-summary {
+  font: 0.9rem/1 "noto";
+}
+.history .history-container .history-slider .history-slide .history-slide-inner .slide-inner-bottom .inner-summary i {
+  font-size: 20px;
+  margin-right: 8px;
 }
 .history .history-container #prev,
 .history .history-container #next {

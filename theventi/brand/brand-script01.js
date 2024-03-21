@@ -12,7 +12,7 @@ for (let i = 0; i < slideCount; i++) {
 }
 
 // slide height
-let topHeight = 500;
+let topHeight = 520;
 
 const calculateTallestSlide = () => {
   for (let i = 0; i < slideCount; i++) {
