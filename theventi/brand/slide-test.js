@@ -1,27 +1,27 @@
-const historySliderWrapper = document.querySelector(".history-container");
-const historySliderContainer = document.querySelector(".slider-container");
-const historySlides = document.querySelectorAll(".history-slide");
+const historyContainer = document.querySelector(".history-container");
+const historySlider = document.querySelector(".history-slider");
+const historySlide = document.querySelectorAll(".history-slide");
 
 const navPrev = document.querySelector("#prev");
 const navNext = document.querySelector("#next");
 
 // slide count
-const slideCount = historySlides.length;
+const slideCount = historySlide.length;
 for (let i = 0; i < slideCount; i++) {
-  historySlides[i].style.left = `${i * 100}%`;
+  historySlide[i].style.left = `${i * 100}%`;
 }
 
 // slide height
-let topHeight = 0;
+let topHeight = 520;
 
 const calculateTallestSlide = () => {
   for (let i = 0; i < slideCount; i++) {
-    if (historySlides[i].offsetHeight > topHeight) {
-      topHeight = historySlides[i].offsetHeight;
+    if (historySlide[i].offsetHeight > topHeight) {
+      topHeight = historySlide[i].offsetHeight;
     }
   }
-  historySliderWrapper.style.height = `${topHeight}px`;
-  historySliderContainer.style.height = `${topHeight}px`;
+  historyContainer.style.height = `${topHeight}px`;
+  historySlider.style.height = `${topHeight}px`;
 };
 
 calculateTallestSlide();
@@ -42,10 +42,9 @@ const updateNav = () => {
   }
 };
 
-// 클릭했을 때 옆으로 넘어가게 하는거, 왼쪽으로 넘어가는거
 const gotoSlide = (i) => {
-  historySliderContainer.style.left = `${i * -100}%`;
-  historySliderContainer.classList.add("animated");
+  historySlider.style.left = `${i * -100}%`;
+  historySlider.classList.add("animated");
   currentIndex = i;
   updateNav();
 };
@@ -68,5 +67,4 @@ navNext.addEventListener("click", (e) => {
   }
 });
 
-// 처음에도 버튼이 안보이게 하는거
 gotoSlide(0);

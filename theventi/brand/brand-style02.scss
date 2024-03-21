@@ -92,18 +92,30 @@ header {
       align-items: start;
       h1 {
         font: bold 2rem/0.8 "suitB";
+        animation-name: txtmoveUD;
+        animation-duration: 0.5s;
+        animation-timing-function: ease-in;
+      }
+      .bi-img01 {
+        animation-name: txtmoveDU;
+        animation-duration: 0.5s;
+        animation-timing-function: ease-in;
       }
       .bi-logo-text {
+        width: 100%;
         display: flex;
         flex-direction: column;
         gap: 25px;
         p {
+          animation-name: txtmoveLR;
+          animation-duration: 0.5s;
+          animation-timing-function: ease-in;
           &:nth-child(1) {
-            font: 600 0.9375rem/1 "noto";
+            font: 600 0.9rem/1.5 "noto";
             color: #111;
           }
           &:nth-child(2) {
-            font: 200 0.9375rem/1 "noto";
+            font: 200 0.9rem/1 "noto";
             color: #666;
           }
         }
@@ -117,18 +129,31 @@ header {
       align-items: end;
       h2 {
         font: bold 2rem/0.8 "suitB";
+        animation-name: txtmoveUD;
+        animation-duration: 0.5s;
+        animation-timing-function: ease-in;
+      }
+      .bi-img02 {
+        animation-name: txtmoveDU;
+        animation-duration: 0.5s;
+        animation-timing-function: ease-in;
       }
       .bi-symbol-text {
         font: 600 0.9375rem/1 "noto";
         color: #111;
+        animation-name: txtmoveRL;
+        animation-duration: 0.5s;
+        animation-timing-function: ease-in;
       }
       .symbol-items {
         display: flex;
-        gap: 35px;
         .symbol-item1 {
           display: flex;
           flex-direction: column;
           gap: 16px;
+          animation-name: txtmove04;
+          animation-duration: 1.1s;
+          animation-timing-function: ease-in;
           span {
             width: 65px;
             height: 65px;
@@ -143,6 +168,10 @@ header {
           display: flex;
           flex-direction: column;
           gap: 16px;
+          margin-left: 45px;
+          animation-name: txtmove03;
+          animation-duration: 0.9s;
+          animation-timing-function: ease-in;
           span {
             width: 65px;
             height: 65px;
@@ -157,6 +186,10 @@ header {
           display: flex;
           flex-direction: column;
           gap: 16px;
+          margin-left: 45px;
+          animation-name: txtmove02;
+          animation-duration: 0.7s;
+          animation-timing-function: ease-in;
           span {
             width: 65px;
             height: 65px;
@@ -171,6 +204,10 @@ header {
           display: flex;
           flex-direction: column;
           gap: 16px;
+          margin-left: 30px;
+          animation-name: txtmove01;
+          animation-duration: 0.5s;
+          animation-timing-function: ease-in;
           span {
             width: 65px;
             height: 65px;
@@ -193,6 +230,7 @@ header {
 footer {
   @include footer-1920;
 }
+
 // animation
 @keyframes txtmoveUD {
   0% {
@@ -211,6 +249,103 @@ footer {
   }
   100% {
     transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes txtmoveLR {
+  0% {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes txtmoveRL {
+  0% {
+    transform: translateX(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes txtmove01 {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes txtmove02 {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  25% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes txtmove03 {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  25% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes txtmove04 {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  25% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
     opacity: 1;
   }
 }

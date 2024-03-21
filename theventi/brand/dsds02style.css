@@ -90,13 +90,48 @@ body {
 .history-slide .history-slide-inner {
   width: 100%;
   height: 100%;
-  border: 1px solid #f00;
   display: flex;
-  align-items: end;
+  align-items: center;
   gap: 40px;
 }
 .history-slide .history-slide-inner .inner-left {
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+.history-slide .history-slide-inner .inner-left .inner-summary {
+  color: #ff5b28;
+  font: 0.9rem/1 "noto";
+}
+.history-slide .history-slide-inner .inner-left .inner-summary i {
+  font-size: 20px;
+  margin-right: 8px;
+}
+.history-slide .history-slide-inner .inner-right {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.history-slide .history-slide-inner .inner-right h1 {
+  font: 2.625rem/2 "geometos";
+  color: #7b00a0;
+}
+.history-slide .history-slide-inner .inner-right .inner-txt-detail {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  gap: 30px;
+  margin-bottom: 10px;
+}
+.history-slide .history-slide-inner .inner-right .inner-txt-detail h3 {
+  font: 600 1rem/1 "noto";
+  color: #222;
+}
+.history-slide .history-slide-inner .inner-right .inner-txt-detail .inner-txt-detail-p {
+  font: 1rem/1 "noto";
+  color: #666;
+}
+.history-slide .history-slide-inner .inner-right .inner-txt-detail .inner-txt-detail-p p {
+  margin-bottom: 10px;
 }/*# sourceMappingURL=dsds02style.css.map */

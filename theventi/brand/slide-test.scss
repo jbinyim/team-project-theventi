@@ -1,20 +1,24 @@
+// ======더벤티 연혁=======
+
+// font
+// @import "../font.scss";
 @import "../font.css";
 
 /* reset */
 @import "../reset";
+
 // mixin
 @import "../mixin.scss";
 
-//========1920px=======
+//======= 1920px=======
 header {
   @include header-1920;
-  background: #780997;
 }
 #mobile-menu {
   @include aside-1920;
 }
 
-/* ===custom===  */
+/* custom  */
 //brand
 .brand {
   width: 100%;
@@ -42,6 +46,7 @@ header {
     }
   }
 }
+
 //sub-nav
 .sub-nav {
   width: 100%;
@@ -68,6 +73,16 @@ header {
 .active a {
   color: #780997;
 }
+
+// quick-menu
+#quick-menu {
+  @include quickmenu-1920;
+}
+// footer
+footer {
+  @include footer-1920;
+}
+
 // animation
 @keyframes txtmoveUD {
   0% {
@@ -90,73 +105,9 @@ header {
   }
 }
 
-// ==========================
-
-// .history-container {
-//   width: 100%;
-//   // height: 100%;
-//   /* height => 나중에 JS에서 높이값을 처리  */
-//   overflow: hidden;
-//   position: relative;
-//   .slider-container {
-//     width: 100%;
-//     /* height => 나중에 JS에서 높이값을 처리  */
-//     // height: 100%;
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     .history-slide {
-//       width: 50%;
-//       position: absolute;
-//       top: 50%;
-//       left: 50%;
-//       // 슬라이드시 50%
-//       transform: translate(50%, -50%);
-//       text-align: center;
-//       padding: 0 5%;
-//       blockquote {
-//         color: #636363;
-//         font: italic 18px/1 "arial";
-//         margin-bottom: 1.5rem;
-//       }
-//       cite {
-//         font: normal 14px/1 "arial";
-//       }
-//     }
-//     &.animated {
-//       transition: left 0.3s ease-in;
-//     }
-//   }
-//   #prev,
-//   #next {
-//     font-size: 20px;
-//     // border: 1px solid #f00;
-//     position: absolute;
-//     top: 50%;
-//     left: 50%;
-//     transform: translate(-50%, -50%);
-//     display: inline-block;
-//     width: 50px;
-//     height: 50px;
-//     text-align: center;
-//     line-height: 50px;
-//     transition: all 0.3s ease-in;
-//   }
-//   #prev {
-//     margin-left: -25%;
-//   }
-//   #next {
-//     margin-left: 25%;
-//   }
-//   #prev.disabled,
-//   #next.disabled {
-//     display: none;
-//   }
-// }
-
 .history {
   width: 100%;
-  height: 100%;
+  height: 1110px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -191,54 +142,121 @@ header {
     }
   }
   .history-container {
-    width: 100%;
-    // height: 100%;
-    /* height => 나중에 JS에서 높이값을 처리  */
+    box-shadow: 0 0 8px rgba($color: #000000, $alpha: 0.3);
+    // border: 1px solid #f00;
+    width: 900px;
+    /* height => 나중에 JS 처리 */
+    height: 100%;
     overflow: hidden;
     position: relative;
-    .slider-container {
+    // ul
+    .history-slider {
       width: 100%;
-      /* height => 나중에 JS에서 높이값을 처리  */
-      // height: 100%;
+      /* height => 나중에 JS 처리 */
+      height: 100%;
       position: absolute;
       top: 0;
       left: 0;
+      &.animated {
+        transition: left 0.3s ease-in;
+      }
       .history-slide {
-        border: 1.5px solid #ccc;
-        width: 50%;
         position: absolute;
-        top: 50%;
-        left: 50%;
-        // 슬라이드시 50%
-        transform: translate(50%, -50%);
-        text-align: center;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 520px;
         padding: 20px;
-        .history-inner {
+        .history-slide-inner {
+          width: 100%;
+          height: 100%;
           display: flex;
-          flex-direction: column;
-          align-items: start;
-          gap: 20px;
-          .history-top {
+          align-items: center;
+          gap: 40px;
+          .inner-left {
             display: flex;
-            gap: 30px;
-            .txt_bx {
-              border: 1px solid #f00;
-              display: flex;
-              flex-direction: column;
-              justify-content: center;
-              align-items: center;
+            flex-direction: column;
+            gap: 10px;
+            .inner-summary {
+              color: #ff5b28;
+              font: 0.9rem/1 "noto";
+              i {
+                font-size: 20px;
+                margin-right: 8px;
+              }
             }
           }
-          .history-bottom {
-            font: 0.8rem/1 "noto";
-            color: #ff5b28;
-            i {
-              font-size: 16px;
-              margin-right: 8px;
+          .inner-right {
+            // border: 1px solid #f00;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            h1 {
+              font: 2.625rem/2 "geometos";
+              color: #7b00a0;
+            }
+            .inner-txt-detail {
+              // border: 1px solid #00f;
+              width: 100%;
+              height: 100%;
+              display: flex;
+              gap: 30px;
+              margin-bottom: 10px;
+              h3 {
+                font: 600 1rem/1 "noto";
+                color: #222;
+              }
+              .inner-txt-detail-p {
+                font: 1rem/1 "noto";
+                color: #666;
+                p {
+                  margin-bottom: 10px;
+                }
+              }
             }
           }
         }
       }
     }
+    #prev,
+    #next {
+      font-size: 25px;
+      // border: 1px solid #f00;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      text-align: center;
+      line-height: 50px;
+      transition: all 0.3s ease-in;
+    }
+    #prev {
+      margin-left: -40%;
+    }
+    #next {
+      margin-left: 40%;
+    }
+    #prev.disabled,
+    #next.disabled {
+      display: none;
+    }
+  }
+}
+// ======1500px======
+@media screen and (max-width: 1500px) {
+  #quick-menu {
+    @include quickmenu-1500;
+  }
+}
+
+// ======1200px======
+@media screen and (max-width: 1200px) {
+  // quick-menu
+  #quick-menu {
+    display: none;
   }
 }
