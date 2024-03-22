@@ -13,7 +13,9 @@ body .wrap {
   height: 100%;
 }
 body .wrap header {
+
   z-index: 9999;
+
   position: relative;
   overflow: hidden;
   display: flex;

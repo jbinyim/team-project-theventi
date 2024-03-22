@@ -12,7 +12,9 @@ body .wrap {
   overflow-x: hidden;
 }
 body .wrap header {
+
   z-index: 9999;
+
   position: relative;
   overflow: hidden;
   display: flex;

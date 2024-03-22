@@ -1,0 +1,373 @@
+@import "../../reset.css";
+@import "../../font.css";
+@import "../../variables.scss";
+@import "../../mixin.scss";
+
+body {
+  font-size: 16px;
+  overflow-x: hidden;
+  font-weight: 400;
+  .wrap {
+    width: 100%;
+    height: 100%;
+    header {
+      @include header-1920;
+    }
+    .press-figuer {
+      @include community-figuer;
+    }
+    .press-nav {
+      @include community-nav;
+    }
+    .press-container {
+      width: 1200px;
+      height: 100%;
+      margin: 0 auto;
+      .press-nav {
+        width: 50%;
+        height: 48px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 100px auto 35px;
+        a {
+          display: inline-block;
+          width: 50%;
+          height: 100%;
+          font: bold 1.125rem/48px "noto";
+          text-align: center;
+          background: map-get($main-color, lbrown);
+          &.active {
+            color: #fff;
+            background: map-get($main-color, dbrown);
+          }
+        }
+      }
+      .press-table {
+        width: 100%;
+        height: 100%;
+        border-bottom: 1px solid #ddd;
+        border-top: 1px solid map-get($main-color, puple);
+        border-collapse: collapse;
+        border-spacing: 0;
+        thead {
+          tr {
+            width: 100%;
+            height: 52px;
+            border-bottom: 1px solid #ddd;
+            th {
+              padding: 13px 2px;
+              font: 500 1rem "noto";
+            }
+          }
+          .press-head-tr {
+            width: 100%;
+            height: 56px;
+            border-bottom: 1px solid #ddd;
+            text-align: center;
+            .fa-solid {
+              color: map-get($main-color, puple);
+            }
+            .press-head-td {
+              padding: 15px 5px;
+              font: 1rem "noto";
+              color: #666;
+              &:nth-child(2) {
+                text-align: left;
+              }
+              a:hover {
+                color: map-get($main-color, puple);
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+        tbody {
+          .press-tr {
+            width: 100%;
+            height: 56px;
+            border-bottom: 1px solid #ddd;
+            text-align: center;
+            .press-td {
+              padding: 15px 5px;
+              font: 1rem "noto";
+              color: #666;
+              &:nth-child(2) {
+                text-align: left;
+              }
+              a:hover {
+                color: map-get($main-color, puple);
+                text-decoration: underline;
+                cursor: pointer;
+              }
+            }
+          }
+        }
+      }
+      .press-pages {
+        width: 100%;
+        height: 34px;
+        margin: 50px 0 56px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 4px;
+        .prevent-next {
+          width: 34px;
+          height: 34px;
+          cursor: pointer;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        .page {
+          //border: 1px solid #f00;
+          cursor: pointer;
+          width: 63%;
+          height: 34px;
+          text-align: center;
+          display: flex;
+          gap: 4px;
+          .number-button {
+            display: inline-block;
+            width: 34px;
+            height: 100%;
+            border: 1px solid #ddd;
+            font: 1rem/30px "noto";
+          }
+          .selected {
+            border: 1px solid #000;
+          }
+        }
+      }
+      .press-search {
+        width: 100%;
+        height: 82px;
+        border-top: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+        margin: 60px 0 150px;
+        form {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 4px;
+          #find {
+            width: 8.3%;
+            height: 40px;
+            padding: 5px;
+            border: 1px solid #ddd;
+            outline: none;
+            font: 1rem "noto";
+          }
+          .search {
+            width: 20%;
+            height: 40px;
+            border: 1px solid #ddd;
+            outline: none;
+            padding: 0 5px;
+            font: 1rem "noto";
+          }
+          .search-button {
+            width: 7.5%;
+            height: 40px;
+            border: 1px solid #ddd;
+            cursor: pointer;
+            font: 1rem "noto";
+          }
+        }
+      }
+    }
+    #quick-menu {
+      @include quickmenu-1920;
+    }
+    footer {
+      @include footer-1920;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  body {
+    font-size: 13px;
+    .wrap {
+      width: 100%;
+      height: 100%;
+      header {
+        @include header-1024;
+      }
+      .press-figuer {
+        .volun-title {
+          h1 {
+            font-size: 1.75rem;
+          }
+          p {
+            font-size: 1rem;
+          }
+        }
+      }
+      .press-nav {
+        .volun-bar {
+          ul {
+            white-space: nowrap;
+            width: 100%;
+            overflow-x: scroll;
+            overflow-y: hidden;
+            -webkit-overflow-scrolling: touch;
+            &::-webkit-scrollbar-track {
+              background: auto;
+            }
+            &::-webkit-scrollbar-thumb {
+              background: auto;
+            }
+          }
+        }
+      }
+      .press-container {
+        width: 100%;
+        height: 100%;
+        padding: 0 15px;
+        .press-nav {
+          width: 70%;
+          height: 38px;
+          a {
+            font: 0.9375rem/38px "noto";
+          }
+        }
+        .press-table {
+          thead {
+            tr {
+              th {
+                font-size: 0.875rem;
+              }
+            }
+            .press-head-tr {
+              .press-head-td {
+                font-size: 0.875rem;
+              }
+            }
+          }
+          tbody {
+            .press-tr {
+              .press-td {
+                font-size: 0.875rem;
+              }
+            }
+          }
+        }
+        .press-pages {
+          width: 100%;
+          height: 28px;
+          .prevent-next {
+            width: 28px;
+            height: 28px;
+          }
+          .page {
+            height: 28px;
+            .number-button {
+              width: 28px;
+              height: 100%;
+              font: 0.8125rem/28px "noto";
+            }
+          }
+        }
+        .press-search {
+          width: 100%;
+          height: 79px;
+          form {
+            width: 100%;
+            height: 100%;
+            #find {
+              width: 21.5%;
+            }
+            .search {
+              width: 50%;
+            }
+            .search-button {
+              width: 21.5%;
+            }
+          }
+        }
+      }
+      #quick-menu {
+        display: none;
+      }
+      footer {
+        @include footer-1024;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  body {
+    .wrap {
+      width: 100%;
+      height: 100%;
+      .press-container {
+        width: 100%;
+        height: 100%;
+        .press-nav {
+          width: 100%;
+        }
+        .press-table {
+          thead {
+            tr {
+              th {
+                font-size: 0.8125rem;
+              }
+            }
+            .press-head-tr {
+              .press-head-td {
+                font-size: 0.8125rem;
+                letter-spacing: -1px;
+                &:nth-child(3) {
+                  font-size: 0.6875rem;
+                }
+                &:nth-child(4) {
+                  font-size: 0.6875rem;
+                }
+              }
+            }
+          }
+          tbody {
+            .press-tr {
+              .press-td {
+                font-size: 0.8125rem;
+                letter-spacing: -1px;
+                &:nth-child(3) {
+                  font-size: 0.6875rem;
+                }
+                &:nth-child(4) {
+                  font-size: 0.6875rem;
+                }
+              }
+            }
+          }
+        }
+        .press-pages {
+          width: 100%;
+          justify-content: space-between;
+          gap: 0;
+          .prevent-next {
+            width: 23px;
+            height: 23px;
+          }
+          .page {
+            width: 85%;
+            height: 28px;
+            gap: 1px;
+            .number-button {
+              display: inline-block;
+              width: 23px;
+              height: 100%;
+              font: 0.6875rem/28px "noto";
+            }
+          }
+        }
+      }
+    }
+  }
+}

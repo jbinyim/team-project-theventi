@@ -2,6 +2,42 @@ const contents = document.querySelector(".notice-contents");
 const select = document.querySelector("#catagory");
 const search = document.querySelector(".volun-search form");
 
+const posterDetail = (e) => {
+  const { id } = e.target.parentElement;
+  const detailURL = `https://www.theventi.co.kr/new2022/news/notice.html?bmain=view&uid=${id}`;
+  window.open(detailURL, "_blank");
+};
+
+const searchSubmit = (e) => {
+  e.preventDefault();
+  const find = document.querySelector("#find").value;
+  let output = "";
+
+  if (find === "title") {
+    const titles = document.querySelectorAll(".search-title");
+    const searchText = document.querySelector(".search").value;
+    const newUl = document.createElement("ul");
+    newUl.classList.add("notice-content");
+    contents.innerHTML = output;
+    titles.forEach((title) => {
+      const titleText = title.innerText;
+
+      if (titleText.includes(searchText)) {
+        output += `
+        <ul class="notice-content content">
+        ${title.parentNode.parentNode.innerHTML}
+        </ul>`;
+      }
+    });
+    contents.innerHTML = output;
+    const posters = document.querySelectorAll(".search-title");
+    posters.forEach((poster) => {
+      poster.addEventListener("click", posterDetail);
+    });
+  } else if (find === "content") {
+  }
+};
+
 fetch("notice.json")
   .then((response) => response.json())
   .then((json) => {
@@ -13,9 +49,11 @@ fetch("notice.json")
             <ul class="notice-content content">
             <li class="action">${i + 1}</li>
             <li class="action">${json[0].name}</li>
-            <li class="action"><a class="search-title">${
-              json[0].title[i]
-            }</a></li>
+            <li id=${json[0].id[i]} class="action">
+              <a class="search-title">
+                ${json[0].title[i]}
+              </a>
+            </li>
             <li class="action">더벤티</li>
             <li class="action">${json[0].day[i]}</li>
             </ul>
@@ -32,7 +70,9 @@ fetch("notice.json")
           <ul class="notice-content content">
           <li class="action">${i + 20}</li>
           <li class="action">${json[1].name}</li>
-          <li class="action"><a class="search-title">${json[1].title}</a></li>
+          <li id=${json[1].id} class="action"><a class="search-title">${
+          json[1].title
+        }</a></li>
           <li class="action">더벤티</li>
           <li class="action">${json[1].day}</li>
           </ul>
@@ -40,6 +80,7 @@ fetch("notice.json")
       }
       contents.innerHTML = output;
     };
+
     open();
 
     const selectCategory = (e) => {
@@ -75,23 +116,11 @@ fetch("notice.json")
       }
     };
 
-    const searchSubmit = (e) => {
-      e.preventDefault();
-      const find = document.querySelector("#find");
-      if (find.value == "title") {
-        const titles = document.querySelectorAll(".search-title");
-        const text = document.querySelector(".search").value;
-        titles.forEach((title) => {
-          console.log(title.innerText == text);
-          // if (title.innerText == text) {
-          //   console.log("c");
-          // }
-        });
-      } else if (find.value == "content") {
-        console.log("b");
-      }
-    };
-
     select.addEventListener("change", selectCategory);
-    search.addEventListener("submit", searchSubmit);
+
+    const posters = document.querySelectorAll(".search-title");
+    posters.forEach((poster) => {
+      poster.addEventListener("click", posterDetail);
+    });
   });
+search.addEventListener("submit", searchSubmit);

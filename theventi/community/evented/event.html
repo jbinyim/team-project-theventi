@@ -3,15 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="shortcut icon"
-      href="../../img/01main/common/favicon/favicon.ico"
-      type="image/x-icon"
-    />
-    <link rel="stylesheet" href="./notice.css" />
-    <script defer src="./notice.js"></script>
-    <script defer src="../../common/script.js"></script>
-    <title>보도자료 - 더벤티(theventi)</title>
+    <link rel="stylesheet" href="./event.css" />
+    <script src="./event.js"></script>
+    <title>Document</title>
   </head>
   <body>
     <div class="wrap">
@@ -35,9 +29,7 @@
                   <a href="../../menu/menuStory.html" class="nav-items">MENU</a>
                   <a href="#" class="nav-items">STORE</a>
                   <a href="#" class="nav-items">MEMBERSHIP</a>
-                  <a
-                    href="../../community/message/message.html"
-                    class="nav-items"
+                  <a href="../../community/notice/notice.html" class="nav-items"
                     >COMMUNITY</a
                   >
                 </div>
@@ -91,13 +83,35 @@
                 <a href="#" class="membership-list">더벤티 APP소개</a>
               </div>
               <div id="community-list">
-                <a href="#" class="community-list">공지사항</a>
-                <a href="#" class="community-list">보도자료</a>
-                <a href="#" class="community-list">이벤트</a>
-                <a href="#" class="community-list">칭찬매장</a>
-                <a href="#" class="community-list">더벤티 이야기</a>
-                <a href="#" class="community-list">SNS</a>
-                <a href="#" class="community-list">자주하는 질문</a>
+                <a
+                  href="../../community/notice/notice.html"
+                  class="community-list"
+                  >공지사항</a
+                >
+                <a
+                  href="../../community/press/press.html"
+                  class="community-list"
+                  >보도자료</a
+                >
+                <a
+                  href="../../community/evented/event.html"
+                  class="community-list"
+                  >이벤트</a
+                >
+                <a href="../../community/good/good.html" class="community-list"
+                  >칭찬매장</a
+                >
+                <a
+                  href="../../community/story/story.html"
+                  class="community-list"
+                  >더벤티 이야기</a
+                >
+                <a href="../../community/sns/sns.html" class="community-list"
+                  >SNS</a
+                >
+                <a href="../../community/qna/qna.html" class="community-list"
+                  >자주하는 질문</a
+                >
                 <a
                   href="../../community/message/message.html"
                   class="community-list"
@@ -113,7 +127,7 @@
           </div>
         </div>
       </header>
-      <div class="notice-figuer">
+      <div class="event-figuer">
         <div class="volun-title">
           <h1>COMMUNITY</h1>
           <p>
@@ -122,11 +136,11 @@
           </p>
         </div>
       </div>
-      <div class="notice-nav">
+      <div class="event-nav">
         <div class="volun-bar">
           <ul>
             <li>
-              <a class="volun-bar-link active" href="../notice/notice.html"
+              <a class="volun-bar-link" href="../notice/notice.html"
                 >공지사항</a
               >
             </li>
@@ -134,16 +148,20 @@
               <a class="volun-bar-link" href="../press/press.html">보도자료</a>
             </li>
             <li>
-              <a class="volun-bar-link" href="">이벤트</a>
+              <a class="volun-bar-link active" href="../evented/event.html"
+                >이벤트</a
+              >
             </li>
             <li>
-              <a class="volun-bar-link" href="">칭찬매장</a>
+              <a class="volun-bar-link" href="../good/good.html">칭찬매장</a>
             </li>
             <li>
-              <a class="volun-bar-link" href="">더벤티 이야기</a>
+              <a class="volun-bar-link" href="../story/story.html"
+                >더벤티 이야기</a
+              >
             </li>
             <li>
-              <a class="volun-bar-link" href="">SNS</a>
+              <a class="volun-bar-link" href="../sns/sns.html">SNS</a>
             </li>
             <li>
               <a class="volun-bar-link" href="../qna/qna.html">자주하는 질문</a>
@@ -163,62 +181,151 @@
           </ul>
         </div>
       </div>
-      <div class="notice-container">
-        <div class="notice-nav">
-          <a class="notice-gnb active" href="../notice/notice.html">공지사항</a>
-          <a class="news-gnb" href="../press/press.html">보도자료</a>
-        </div>
-        <div class="notice-select">
-          <form action="https://localhost:3000">
-            <select name="catagory" id="catagory">
-              <option value="all">분류</option>
-              <option value="news">소식</option>
-              <option value="open">출시</option>
-              <option value="event">이벤트</option>
-              <option value="produce">발표</option>
-            </select>
-          </form>
-        </div>
-        <div class="notice-title">
-          <ul class="notice-content title">
-            <li>번호</li>
-            <li>분류</li>
-            <li>제목</li>
-            <li>이름</li>
-            <li>작성일</li>
-          </ul>
-        </div>
-        <div class="notice-contents">
-          <!-- <ul class="notice-content content">
-            <li class="action">1</li>
-            <li class="action">소식</li>
-            <li class="action">
-              <a class="search-title">[더벤티 (실버/퍼플)텀블러 2종] 출시 안내</a>
-            </li>
-            <li class="action">더벤티</li>
-            <li class="action">2023.11.29</li>
-          </ul> -->
-        </div>
-        <div class="volun-pages">
-          <div class="prevent-next">
+      <div class="event-container">
+        <ul class="event-gnb">
+          <li class="gnb active">
+            <a href="../evented/event.html">진행중 이벤트</a>
+          </li>
+          <li class="gnb"><a href="">당첨자 발표</a></li>
+        </ul>
+        <ul class="event-contents">
+          <li class="content">
             <a href="#">
-              <img
-                src="../../img/04community/06volunteer/prev-first.png"
-                alt=""
-              />
+              <div class="image">
+                <span></span>
+              </div>
+              <div class="text">
+                <p class="title">
+                  [프로모션] 2월 더벤티데이에는 100원 아메리카노 쿠폰 증정!
+                </p>
+                <p class="date">
+                  <span>이벤트 기간 :</span> 2024-02-20 ~ 2024-02-20
+                </p>
+              </div>
             </a>
-          </div>
-          <div class="page">1</div>
-          <div class="prevent-next">
+          </li>
+          <li class="content">
             <a href="#">
-              <img
-                src="../../img/04community/06volunteer/next-last.png"
-                alt=""
-              />
+              <div class="image">
+                <span></span>
+              </div>
+              <div class="text">
+                <p class="title">
+                  [프로모션] 2월 더벤티데이에는 100원 아메리카노 쿠폰 증정!
+                </p>
+                <p class="date">
+                  <span>이벤트 기간 :</span> 2024-02-20 ~ 2024-02-20
+                </p>
+              </div>
             </a>
+          </li>
+          <li class="content">
+            <a href="#">
+              <div class="image">
+                <span></span>
+              </div>
+              <div class="text">
+                <p class="title">
+                  [프로모션] 2월 더벤티데이에는 100원 아메리카노 쿠폰 증정!
+                </p>
+                <p class="date">
+                  <span>이벤트 기간 :</span> 2024-02-20 ~ 2024-02-20
+                </p>
+              </div>
+            </a>
+          </li>
+          <li class="content">
+            <a href="#">
+              <div class="image">
+                <span></span>
+              </div>
+              <div class="text">
+                <p class="title">
+                  [프로모션] 2월 더벤티데이에는 100원 아메리카노 쿠폰 증정!
+                </p>
+                <p class="date">
+                  <span>이벤트 기간 :</span> 2024-02-20 ~ 2024-02-20
+                </p>
+              </div>
+            </a>
+          </li>
+          <li class="content">
+            <a href="#">
+              <div class="image">
+                <span></span>
+              </div>
+              <div class="text">
+                <p class="title">
+                  [프로모션] 2월 더벤티데이에는 100원 아메리카노 쿠폰 증정!
+                </p>
+                <p class="date">
+                  <span>이벤트 기간 :</span> 2024-02-20 ~ 2024-02-20
+                </p>
+              </div>
+            </a>
+          </li>
+          <li class="content">
+            <a href="#">
+              <div class="image">
+                <span></span>
+              </div>
+              <div class="text">
+                <p class="title">
+                  [프로모션] 2월 더벤티데이에는 100원 아메리카노 쿠폰 증정!
+                </p>
+                <p class="date">
+                  <span>이벤트 기간 :</span> 2024-02-20 ~ 2024-02-20
+                </p>
+              </div>
+            </a>
+          </li>
+          <li class="content">
+            <a href="#">
+              <div class="image">
+                <span></span>
+              </div>
+              <div class="text">
+                <p class="title">
+                  [프로모션] 2월 더벤티데이에는 100원 아메리카노 쿠폰 증정!
+                </p>
+                <p class="date">
+                  <span>이벤트 기간 :</span> 2024-02-20 ~ 2024-02-20
+                </p>
+              </div>
+            </a>
+          </li>
+          <li class="content">
+            <a href="#">
+              <div class="image">
+                <span></span>
+              </div>
+              <div class="text">
+                <p class="title">
+                  [프로모션] 2월 더벤티데이에는 100원 아메리카노 쿠폰 증정!
+                </p>
+                <p class="date">
+                  <span>이벤트 기간 :</span> 2024-02-20 ~ 2024-02-20
+                </p>
+              </div>
+            </a>
+          </li>
+        </ul>
+        <div class="event-pages">
+          <div class="prevent-next prev">
+            <img
+              src="../../img/04community/06volunteer/prev-first.png"
+              alt="prev"
+            />
+          </div>
+          <div class="page"><span class="number-button">1</span></div>
+          <div class="prevent-next next">
+            <img
+              src="../../img/04community/06volunteer/next-last.png"
+              alt="next"
+            />
           </div>
         </div>
-        <div class="volun-search">
+        <div class="event-search">
           <form action="http://localhost:3000" method="post">
             <select name="find" id="find">
               <option value="title">제목</option>
