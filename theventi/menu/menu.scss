@@ -1,6 +1,6 @@
-@import '../reset.scss';
-@import '../font.scss';
-@import '../mixin.scss';
+@import "../reset.scss";
+@import "../font.scss";
+@import "../mixin.scss";
 
 body {
   display: flex;
@@ -18,7 +18,7 @@ body {
     .menu-main {
       width: 100%;
       height: 510px;
-      background: url('../img/02menuImg/menuBg.png') center/cover no-repeat;
+      background: url("../img/02menuImg/menuBg.png") center/cover no-repeat;
       .heading {
         padding: 10px;
         width: 100%;
@@ -30,11 +30,11 @@ body {
         align-items: center;
         gap: 18px;
         .title {
-          font: 600 2.8125rem/1.2 'geometos';
+          font: 600 2.8125rem/1.2 "geometos";
           letter-spacing: -0.0706rem;
         }
         p {
-          font: 300 1.125rem/1.6 'suitL';
+          font: 300 1.125rem/1.6 "suitL";
           text-align: center;
         }
       }
@@ -56,7 +56,7 @@ body {
             border-bottom: 2.5px solid #780997;
           }
           a {
-            font: 1.125rem/3.5556 'suitM';
+            font: 1.125rem/3.5556 "suitM";
             color: #333;
           }
           &:hover {
@@ -127,7 +127,7 @@ body {
                   justify-content: center;
                   align-items: center;
                   p {
-                    font: 1.3644rem/1.1086 'suitM';
+                    font: 1.3644rem/1.1086 "suitM";
                     letter-spacing: 0.03125em;
                   }
                 }
@@ -157,7 +157,7 @@ body {
             .tea-info {
               width: 1048px;
               height: 100%;
-              background: url('../img/02menuImg/secBg-specialtea.png')
+              background: url("../img/02menuImg/secBg-specialtea.png")
                 center/cover no-repeat;
               &-text {
                 display: flex;
@@ -260,7 +260,7 @@ body {
                   padding: 15px 10px;
                   width: 100%;
                   h6 {
-                    font: 800 3.125rem/1.6 'suit';
+                    font: 800 3.125rem/1.6 "suit";
                     position: relative;
                     img {
                       position: absolute;
@@ -269,7 +269,7 @@ body {
                     }
                   }
                   p:first-child {
-                    font: 1.0625rem/1 'suit';
+                    font: 1.0625rem/1 "suit";
                     position: relative;
                   }
                   .line {
@@ -279,7 +279,7 @@ body {
                     margin: 15px auto;
                   }
                   p:last-child {
-                    font: 1rem/1.2 'suit';
+                    font: 1rem/1.2 "suit";
                     position: relative;
                     padding-bottom: 15px;
                   }
@@ -298,7 +298,7 @@ body {
                     li {
                       width: calc(100% / 3);
                       p {
-                        font: 0.9375rem/1.1 'suit';
+                        font: 0.9375rem/1.1 "suit";
                         margin-bottom: 10px;
                       }
                       .per {
@@ -416,7 +416,7 @@ body {
                   color: #fff;
                   position: relative;
                   h5 {
-                    font: 2.5rem/1.4 'suitM';
+                    font: 2.5rem/1.4 "suitM";
                     position: relative;
                     z-index: 1;
                   }
@@ -430,7 +430,7 @@ body {
                     background: #ff5b28;
                   }
                   p {
-                    font: 1.375/1.6 'suitM';
+                    font: 1.375/1.6 "suitM";
                     margin: 10px 0 40px;
                     span {
                       padding-left: 9px;
@@ -447,7 +447,7 @@ body {
                       position: relative;
                       display: flex;
                       &::before {
-                        content: '';
+                        content: "";
                         width: 717.5px;
                         height: 1px;
                         position: absolute;
@@ -478,7 +478,7 @@ body {
                         }
                         .txt {
                           padding-top: 16px;
-                          font: 1rem/1.3 'suitL';
+                          font: 1rem/1.3 "suitL";
                         }
                       }
                     }
@@ -503,7 +503,7 @@ body {
                 height: 211.17px;
                 padding-left: 192px;
                 h2 {
-                  font: 700 3.25rem/1.2 'suitM';
+                  font: 700 3.25rem/1.2 "suitM";
                   letter-spacing: -0.02rem;
                   &:nth-child(1) {
                     color: #780997;
@@ -513,7 +513,7 @@ body {
                     }
                   }
                   &:nth-child(2) {
-                    font-family: 'suitL';
+                    font-family: "suitL";
                     color: #222;
                   }
                 }
@@ -530,14 +530,14 @@ body {
           background: #f5f4f3;
         }
         &:nth-child(2) {
-          background: url('../img/02menuImg/secBg-bsca.png') center/cover
+          background: url("../img/02menuImg/secBg-bsca.png") center/cover
             no-repeat;
         }
         &:nth-child(3) {
           background: #362b27;
         }
         &:nth-child(4) {
-          background: url('../img/02menuImg/secBg-roasting.png') center/cover;
+          background: url("../img/02menuImg/secBg-roasting.png") center/cover;
         }
         &:nth-child(5) {
           background: #291b35;
@@ -570,7 +570,7 @@ body {
             float: left;
             text-align: center;
             background: #e6deda;
-            font: 500 1rem/3 'noto';
+            font: 500 1rem/3 "noto";
             color: #222;
             letter-spacing: -0.03125rem;
           }
@@ -601,7 +601,7 @@ body {
               text-align: center;
               position: relative;
               &::before {
-                content: '';
+                content: "";
                 width: calc(100% - 8px);
                 height: calc(100% - 8px);
                 position: absolute;
@@ -647,13 +647,13 @@ body {
                     left: 50%;
                     transform: translate(-50%, -50%);
                     content: attr(data-alt);
-                    font: 0.875rem/1.1 'noto';
+                    font: 0.875rem/1.1 "noto";
                   }
                 }
               }
               span {
                 p {
-                  font: 1rem/1.6 'noto';
+                  font: 1rem/1.6 "noto";
                   color: #222;
                   i {
                     display: inline-block;
@@ -733,12 +733,12 @@ body {
                           left: 50%;
                           transform: translate(-50%, -50%);
                           content: attr(data-tit);
-                          font: 0.875rem/1.1 'noto';
+                          font: 0.875rem/1.1 "noto";
                         }
                       }
                       p {
                         vertical-align: middle;
-                        font: 2.35294rem/1.44768 'noto';
+                        font: 2.35294rem/1.44768 "noto";
                         color: #222;
                       }
                     }
@@ -746,7 +746,7 @@ body {
                       width: 100%;
                       height: auto;
                       p {
-                        font: 0.875rem/1.6714 'noto';
+                        font: 0.875rem/1.6714 "noto";
                         height: auto;
                         width: auto;
                         margin: 30px 7px 30px 0;
@@ -775,7 +775,7 @@ body {
                     .detail {
                       width: 100%;
                       width: 690px;
-                      font: 0.875rem/1.1 'noto';
+                      font: 0.875rem/1.1 "noto";
                       text-align: center;
                       overflow: auto;
                       table {
@@ -786,14 +786,14 @@ body {
                         border-collapse: collapse;
                         tbody {
                           th {
-                            font: 0.875rem/1.1 'noto';
+                            font: 0.875rem/1.1 "noto";
                             background: #7b009b;
                             color: #fff;
                             padding: 10px 2px;
                             @include menuTable;
                           }
                           td {
-                            font: 0.875rem/1.1 'noto';
+                            font: 0.875rem/1.1 "noto";
                             color: #222;
                             padding: 13px 2px;
                             @include menuTable;
@@ -933,11 +933,11 @@ body {
           height: 100%;
           gap: 15px;
           .title {
-            font: 600 1.6306rem/1.2074 'geometos';
+            font: 600 1.6306rem/1.2074 "geometos";
             letter-spacing: -0.0413rem;
           }
           p {
-            font: 300 0.9375rem/1.6 'suitL';
+            font: 300 0.9375rem/1.6 "suitL";
           }
         }
       }
@@ -951,7 +951,7 @@ body {
               border-bottom: none;
             }
             a {
-              font: 1.0481rem/2.7955 'suitM';
+              font: 1.0481rem/2.7955 "suitM";
             }
             &:hover {
               border-bottom: none;
@@ -973,7 +973,7 @@ body {
               width: 497px;
               width: 50%;
               height: 38px;
-              font: 500 0.8125rem/2.9231 'noto';
+              font: 500 0.8125rem/2.9231 "noto";
             }
           }
         }
@@ -995,13 +995,13 @@ body {
                     width: 40px;
                     height: 40px;
                     &::before {
-                      font: 0.75rem/1.1 'noto';
+                      font: 0.75rem/1.1 "noto";
                     }
                   }
                 }
                 span {
                   p {
-                    font: 0.8125rem/1.6 'noto';
+                    font: 0.8125rem/1.6 "noto";
                   }
                 }
               }
@@ -1024,18 +1024,18 @@ body {
                           width: 40px;
                           height: 40px;
                           &::before {
-                            font: 0.75rem/1.1 'noto';
+                            font: 0.75rem/1.1 "noto";
                           }
                         }
                         p {
-                          font: 1.9117rem/1.4548 'noto';
+                          font: 1.9117rem/1.4548 "noto";
                         }
                       }
                       .info {
                         width: 100%;
                         height: auto;
                         p {
-                          font: 0.75rem/1.6833 'noto';
+                          font: 0.75rem/1.6833 "noto";
                           margin: 15px 6px 15px 0;
                           &.diary {
                             &::-webkit-scrollbar-thumb {
@@ -1116,11 +1116,11 @@ body {
           height: 100%;
           gap: 13px;
           .title {
-            font: 600 1.4219rem/1.2 'geometos';
+            font: 600 1.4219rem/1.2 "geometos";
             letter-spacing: -0.0413rem;
           }
           p {
-            font: 300 0.8125rem/1.6 'suitL';
+            font: 300 0.8125rem/1.6 "suitL";
           }
         }
       }
@@ -1131,7 +1131,7 @@ body {
           li {
             padding: 0 22.8516px;
             a {
-              font: 0.9141rem/2.7781 'suitM';
+              font: 0.9141rem/2.7781 "suitM";
             }
           }
         }
@@ -1191,10 +1191,10 @@ body {
                         table {
                           tbody {
                             th {
-                              font: 0.75rem/1.1 'noto';
+                              font: 0.75rem/1.1 "noto";
                             }
                             td {
-                              font: 0.75rem/1.1 'noto';
+                              font: 0.75rem/1.1 "noto";
                             }
                           }
                         }
