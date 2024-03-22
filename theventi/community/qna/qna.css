@@ -10,9 +10,13 @@ body .wrap {
   height: 100%;
 }
 body .wrap header {
+<<<<<<< HEAD
+  z-index: 10;
+=======
 
   z-index: 9999;
 
+>>>>>>> b248e7f3bebbf2d871c24d15dbf75f7a0970849b
   position: relative;
   overflow: hidden;
   display: flex;
