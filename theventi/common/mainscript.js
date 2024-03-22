@@ -336,6 +336,7 @@ const fivemoveSlide = (num) => {
     }, 600);
   }
 };
+//???
 // 03.14 scale 넣는거 작업하다 일단 정지함*****
 // const scale = (i) => {
 //   slide[i].classList.add("scale");
@@ -347,8 +348,6 @@ const fivemoveSlide = (num) => {
 // };
 fivenextBtn.addEventListener("click", () => {
   fivemoveSlide(fivecurrentIdx + 1);
-
-  // scale(scaleNum(i));
 });
 
 fiveprevBtn.addEventListener("click", () => {
