@@ -1,23 +1,4 @@
 //===============================================================
-//header dropdown
-
-const headerList = document.querySelector("#header-nav");
-const header = document.querySelector("header");
-
-const dropDown = document.querySelector("#dropdown");
-
-const opendrop = () => {
-  dropDown.style.display = "block";
-  body.style.transition = "all 0.5s linear";
-};
-const closedrop = () => {
-  dropDown.style.display = "none";
-  body.style.transition = "all 0.5s";
-};
-headerList.onmouseover = opendrop;
-dropDown.onmouseover = opendrop;
-header.onmouseout = closedrop;
-//===============================================================
 // main popup
 
 function openPopup() {
@@ -28,97 +9,6 @@ function openPopup() {
   );
 }
 // openPopup();
-//===============================================================
-// footer popup
-
-const popup3 = document.querySelector("#popup3");
-const popup3Pop = document.querySelector(".popup3");
-const popup3Close = document.querySelector("#popup3-close");
-
-popup3.addEventListener("click", () => {
-  popup3Pop.style.display = "inline-block";
-});
-popup3Close.addEventListener("click", () => {
-  popup3Pop.style.display = "none";
-});
-
-const popup2 = document.querySelector("#popup2");
-const popup2Pop = document.querySelector(".popup2");
-const popup2Close = document.querySelector("#popup2-close");
-
-popup2.addEventListener("click", () => {
-  popup2Pop.style.display = "inline-block";
-});
-popup2Close.addEventListener("click", () => {
-  popup2Pop.style.display = "none";
-});
-// const popup2 = document.querySelector("#popup2");
-
-// const popupWidth2 = 600;
-// const popupheight2 = 500;
-
-// // popup2.addEventListener("click", () => {
-// //   const left = (window.screen.availWidth - popupWidth2) / 2;
-// //   const top = (window.screen.availHeight - popupheight2) / 2;
-// //   window.open(
-// //     "popup2.html",
-// //     "event",
-// //     `width=${popupWidth2} height =${popupheight2} left =${left} top=${top}`
-// //   );
-// // });
-// const popup3 = document.querySelector("#popup3");
-
-// const popupWidth3 = 600;
-// const popupheight3 = 500;
-
-// // popup3.addEventListener("click", () => {
-// //   const left = (window.screen.availWidth - popupWidth3) / 2;
-// //   const top = (window.screen.availHeight - popupheight3) / 2;
-// //   window.open(
-// //     "popup3.html",
-// //     "event",
-// //     `width=${popupWidth3} height =${popupheight3} left =${left} top=${top}`
-// //   );
-// // });
-
-//===============================================================
-// aside
-
-const body = document.querySelector("body");
-const toggleBtn = document.querySelector(".toggle-button");
-const mobileMenu = document.querySelector("#bgmobile");
-const close = document.querySelector(".xi-close");
-const aside = document.querySelector("aside");
-const depthIcons = document.querySelectorAll(".xi-depth");
-const depthIconsFnc = depthIcons.forEach((depthicon, index1) => {
-  depthicon.addEventListener("click", () => {
-    depthicon.classList.toggle("clicked");
-    const depth2 = document.querySelectorAll(".list-depth-2");
-    depth2.forEach((d, index2) => {
-      if (index1 === index2) {
-        d.classList.toggle("dropdown");
-      }
-    });
-  });
-});
-toggleBtn.addEventListener("click", () => {
-  console.log("click");
-  mobileMenu.style.right = "0px";
-  aside.classList.toggle("active");
-});
-close.addEventListener("click", () => {
-  console.log("click");
-  mobileMenu.style.right = "-999px";
-  aside.classList.toggle("active");
-});
-
-const depth3s = document.querySelectorAll(".list-depth-3");
-
-depth3s.forEach((depth3) => {
-  depth3.addEventListener("click", () => {
-    depth3.classList.toggle("depth3clicked");
-  });
-});
 
 //=================================
 //slider
@@ -271,7 +161,7 @@ makeClone();
 const moveSlide = (num) => {
   slides.style.left = `${-num * (slideWidth + slideMargin)}px`;
   currentIdx = num;
-  console.log(currentIdx, slideCount);
+
   if (currentIdx === slideCount || currentIdx === -slideCount) {
     setTimeout(() => {
       slides.classList.remove("animated");
@@ -299,7 +189,6 @@ nextBtn.addEventListener("click", () => {
 
 prevBtn.addEventListener("click", () => {
   moveSlide(currentIdx - 1);
-  scale(scaleNum);
 });
 
 // auto slide
@@ -358,3 +247,166 @@ function removeActiveClasses() {
     p.classList.remove("active");
   });
 }
+
+//==============================
+// bottom-banner
+
+let bottomBanner = document.querySelector(".bottom-slider-wrap");
+console.log(bottomBanner);
+bottomBanner.id = "bottomBanner1";
+
+let clone = bottomBanner.cloneNode(true);
+clone.id = "bottomBanner2";
+document.querySelector("#bottom-slider-scroll").appendChild(clone);
+bottomBanner.classList.add("original");
+clone.classList.add("clone");
+document.querySelector("#bottomBanner1").style.left = "50px";
+// document.querySelector("#bottomBanner1").style.marginRight = "20px";
+document.querySelector("#bottomBanner2").style.left = "2800px";
+// clone.addEventListener("mouseover", stop);
+// bottomBanner.addEventListener("mouseover", stop);
+// const stop = (clone.style.animationPlayState = "paused")(
+//   (bottomBanner.style.animationPlayState = "paused")
+// );
+
+//=========================================================
+// section5 slide
+
+const fiveslides = document.querySelector(".five-slides");
+const fiveslide = fiveslides.querySelectorAll("li");
+const fiveslideCount = fiveslide.length;
+
+const fiveslideWidth = 315;
+const fiveslideMargin = 43;
+const fiveprevBtn = document.querySelector(".five-prev");
+const fivenextBtn = document.querySelector(".five-next");
+
+// Initial Index Value
+let fivecurrentIdx = 0;
+
+// li style setting
+const fiveupdateWidth = () => {
+  const fivecurrentSlides = document.querySelectorAll(".five-slides li");
+  const fivenewSlideCount = fivecurrentSlides.length;
+  console.log(fivenewSlideCount);
+  const fivenewWidth = `${
+    (fiveslideWidth + fiveslideMargin) * fivenewSlideCount - fiveslideMargin
+  }px`;
+  fiveslides.style.width = fivenewWidth;
+};
+
+const fivesetInitialPos = () => {
+  const fiveinitialTranslateValue =
+    -(fiveslideWidth + fiveslideMargin) * fiveslideCount;
+  fiveslides.style.transform = `translateX(${fiveinitialTranslateValue} px)`;
+};
+
+const fivemakeClone = () => {
+  for (let i = 0; i < fiveslideCount; i++) {
+    const fivecloneSlide = fiveslide[i].cloneNode(true);
+    fivecloneSlide.classList.add("clone");
+    fiveslides.appendChild(fivecloneSlide);
+  }
+  for (let i = fiveslideCount - 1; i >= 0; i--) {
+    const fivecloneSlide = fiveslide[i].cloneNode(true);
+    fivecloneSlide.classList.add("clone");
+    fiveslides.prepend(fivecloneSlide);
+  }
+  fiveupdateWidth();
+  fivesetInitialPos();
+  setTimeout(() => {
+    fiveslides.classList.add("animated");
+  }, 100);
+};
+
+fivemakeClone();
+
+const fivemoveSlide = (num) => {
+  fiveslides.style.left = `${-num * (fiveslideWidth + fiveslideMargin)}px`;
+  fivecurrentIdx = num;
+
+  if (fivecurrentIdx === fiveslideCount || fivecurrentIdx === -fiveslideCount) {
+    setTimeout(() => {
+      fiveslides.classList.remove("animated");
+      fiveslides.style.left = "0px";
+      fivecurrentIdx = 0;
+    }, 0);
+    setTimeout(() => {
+      fiveslides.classList.add("animated");
+    }, 600);
+  }
+};
+//???
+// 03.14 scale 넣는거 작업하다 일단 정지함*****
+// const scale = (i) => {
+//   slide[i].classList.add("scale");
+// };
+// const scaleNum = () => {
+//   for (let i = 0; i < 5; i++) {
+//     const num = i;
+//   }
+// };
+fivenextBtn.addEventListener("click", () => {
+  fivemoveSlide(fivecurrentIdx + 1);
+});
+
+fiveprevBtn.addEventListener("click", () => {
+  fivemoveSlide(fivecurrentIdx - 1);
+});
+
+// auto slide
+
+// const fivethautoSlide = () => {
+//   timer = setInterval(() => {
+//     moveSlide(currentIdx + 1);
+//   }, 3000);
+// };
+
+// thautoSlide();
+
+// const stopSlide = () => {
+//   clearInterval(timer);
+// };
+
+// slides.addEventListener("mouseenter", stopSlide);
+
+// slides.addEventListener("mouseleave", autoSlide);
+
+//===================================================
+//section3 slide -content
+
+// const secHeaderNav = document.querySelectorAll("#sectionthree-header-nav a p");
+
+// console.log(secHeaderNav);
+
+// // secHeaderNav.forEach((a) => {
+// //   a.addEventListener("click", (a) => {
+// //     a.classList.toggle("active");
+// //   });
+// // });
+// console.log(secHeaderNav);
+
+// // function removeActiveClasses(p) {
+// //   p.addEventListener("click", () => {
+// //     p.classList.toggle("active");
+// //   });
+// // }
+
+// // secHeaderNav.forEach((p) => {
+// //   p.addEventListener("click", () => {
+// //     removeActiveClasses();
+// //     p.classList.toggle("active");
+// //   });
+// // });
+// secHeaderNav.forEach((p) => {
+//   p.addEventListener("click", function () {
+//     removeActiveClasses();
+//     this.classList.add("active");
+//   });
+// });
+
+// function removeActiveClasses() {
+//   secHeaderNav.forEach((p) => {
+//     p.classList.remove("active");
+//   });
+// }
