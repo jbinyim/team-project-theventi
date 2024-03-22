@@ -1,7 +1,7 @@
 @import "../../reset.css";
 @import "../../font.css";
-@import './reset.css';
-@import './font.css';
+@import "./reset.css";
+@import "./font.css";
 body {
   font-size: 16px;
   font-weight: 400;
@@ -12,7 +12,13 @@ body .wrap {
   overflow-x: hidden;
 }
 body .wrap header {
+<<<<<<< HEAD
   z-index: 10;
+=======
+
+  z-index: 9999;
+
+>>>>>>> b248e7f3bebbf2d871c24d15dbf75f7a0970849b
   position: relative;
   overflow: hidden;
   display: flex;
@@ -24,11 +30,13 @@ body .wrap header {
   top: 0;
 }
 body .wrap header #fixed-header-wrap {
+  z-index: 9999;
   display: flex;
   justify-content: center;
   width: 1920px;
 }
 body .wrap header #fixed-header-wrap #fixed-header {
+  z-index: 9999;
   border-bottom: 1px solid #ddd;
   top: 0;
   position: fixed;
@@ -823,7 +831,8 @@ body .wrap footer #footer-wrap #footer-container-wrap #footer-container-bottom .
     display: none !important;
   }
   body .wrap header .button-nav {
-    display: inline-block;
+    z-index: 999999 !important;
+    display: block !important;
     position: fixed;
     top: 5px;
     transform: translate(0, 0px);

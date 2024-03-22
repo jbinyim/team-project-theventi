@@ -1,23 +1,4 @@
 //===============================================================
-//header dropdown
-
-const headerList = document.querySelector("#header-nav");
-const header = document.querySelector("header");
-
-const dropDown = document.querySelector("#dropdown");
-
-const opendrop = () => {
-  dropDown.style.display = "block";
-  body.style.transition = "all 0.5s linear";
-};
-const closedrop = () => {
-  dropDown.style.display = "none";
-  body.style.transition = "all 0.5s";
-};
-headerList.onmouseover = opendrop;
-dropDown.onmouseover = opendrop;
-header.onmouseout = closedrop;
-//===============================================================
 // main popup
 
 function openPopup() {
@@ -28,6 +9,7 @@ function openPopup() {
   );
 }
 // openPopup();
+<<<<<<< HEAD:theventi/common/script.js
 //===============================================================
 // footer popup
 
@@ -119,6 +101,8 @@ depth3s.forEach((depth3) => {
     depth3.classList.toggle("depth3clicked");
   });
 });
+=======
+>>>>>>> b248e7f3bebbf2d871c24d15dbf75f7a0970849b:theventi/common/mainscript.js
 
 //=================================
 //slider
@@ -271,7 +255,7 @@ makeClone();
 const moveSlide = (num) => {
   slides.style.left = `${-num * (slideWidth + slideMargin)}px`;
   currentIdx = num;
-  console.log(currentIdx, slideCount);
+
   if (currentIdx === slideCount || currentIdx === -slideCount) {
     setTimeout(() => {
       slides.classList.remove("animated");
@@ -299,7 +283,6 @@ nextBtn.addEventListener("click", () => {
 
 prevBtn.addEventListener("click", () => {
   moveSlide(currentIdx - 1);
-  scale(scaleNum);
 });
 
 // auto slide
@@ -358,3 +341,166 @@ function removeActiveClasses() {
     p.classList.remove("active");
   });
 }
+
+//==============================
+// bottom-banner
+
+let bottomBanner = document.querySelector(".bottom-slider-wrap");
+console.log(bottomBanner);
+bottomBanner.id = "bottomBanner1";
+
+let clone = bottomBanner.cloneNode(true);
+clone.id = "bottomBanner2";
+document.querySelector("#bottom-slider-scroll").appendChild(clone);
+bottomBanner.classList.add("original");
+clone.classList.add("clone");
+document.querySelector("#bottomBanner1").style.left = "50px";
+// document.querySelector("#bottomBanner1").style.marginRight = "20px";
+document.querySelector("#bottomBanner2").style.left = "2800px";
+// clone.addEventListener("mouseover", stop);
+// bottomBanner.addEventListener("mouseover", stop);
+// const stop = (clone.style.animationPlayState = "paused")(
+//   (bottomBanner.style.animationPlayState = "paused")
+// );
+
+//=========================================================
+// section5 slide
+
+const fiveslides = document.querySelector(".five-slides");
+const fiveslide = fiveslides.querySelectorAll("li");
+const fiveslideCount = fiveslide.length;
+
+const fiveslideWidth = 315;
+const fiveslideMargin = 43;
+const fiveprevBtn = document.querySelector(".five-prev");
+const fivenextBtn = document.querySelector(".five-next");
+
+// Initial Index Value
+let fivecurrentIdx = 0;
+
+// li style setting
+const fiveupdateWidth = () => {
+  const fivecurrentSlides = document.querySelectorAll(".five-slides li");
+  const fivenewSlideCount = fivecurrentSlides.length;
+  console.log(fivenewSlideCount);
+  const fivenewWidth = `${
+    (fiveslideWidth + fiveslideMargin) * fivenewSlideCount - fiveslideMargin
+  }px`;
+  fiveslides.style.width = fivenewWidth;
+};
+
+const fivesetInitialPos = () => {
+  const fiveinitialTranslateValue =
+    -(fiveslideWidth + fiveslideMargin) * fiveslideCount;
+  fiveslides.style.transform = `translateX(${fiveinitialTranslateValue} px)`;
+};
+
+const fivemakeClone = () => {
+  for (let i = 0; i < fiveslideCount; i++) {
+    const fivecloneSlide = fiveslide[i].cloneNode(true);
+    fivecloneSlide.classList.add("clone");
+    fiveslides.appendChild(fivecloneSlide);
+  }
+  for (let i = fiveslideCount - 1; i >= 0; i--) {
+    const fivecloneSlide = fiveslide[i].cloneNode(true);
+    fivecloneSlide.classList.add("clone");
+    fiveslides.prepend(fivecloneSlide);
+  }
+  fiveupdateWidth();
+  fivesetInitialPos();
+  setTimeout(() => {
+    fiveslides.classList.add("animated");
+  }, 100);
+};
+
+fivemakeClone();
+
+const fivemoveSlide = (num) => {
+  fiveslides.style.left = `${-num * (fiveslideWidth + fiveslideMargin)}px`;
+  fivecurrentIdx = num;
+
+  if (fivecurrentIdx === fiveslideCount || fivecurrentIdx === -fiveslideCount) {
+    setTimeout(() => {
+      fiveslides.classList.remove("animated");
+      fiveslides.style.left = "0px";
+      fivecurrentIdx = 0;
+    }, 0);
+    setTimeout(() => {
+      fiveslides.classList.add("animated");
+    }, 600);
+  }
+};
+//???
+// 03.14 scale 넣는거 작업하다 일단 정지함*****
+// const scale = (i) => {
+//   slide[i].classList.add("scale");
+// };
+// const scaleNum = () => {
+//   for (let i = 0; i < 5; i++) {
+//     const num = i;
+//   }
+// };
+fivenextBtn.addEventListener("click", () => {
+  fivemoveSlide(fivecurrentIdx + 1);
+});
+
+fiveprevBtn.addEventListener("click", () => {
+  fivemoveSlide(fivecurrentIdx - 1);
+});
+
+// auto slide
+
+// const fivethautoSlide = () => {
+//   timer = setInterval(() => {
+//     moveSlide(currentIdx + 1);
+//   }, 3000);
+// };
+
+// thautoSlide();
+
+// const stopSlide = () => {
+//   clearInterval(timer);
+// };
+
+// slides.addEventListener("mouseenter", stopSlide);
+
+// slides.addEventListener("mouseleave", autoSlide);
+
+//===================================================
+//section3 slide -content
+
+// const secHeaderNav = document.querySelectorAll("#sectionthree-header-nav a p");
+
+// console.log(secHeaderNav);
+
+// // secHeaderNav.forEach((a) => {
+// //   a.addEventListener("click", (a) => {
+// //     a.classList.toggle("active");
+// //   });
+// // });
+// console.log(secHeaderNav);
+
+// // function removeActiveClasses(p) {
+// //   p.addEventListener("click", () => {
+// //     p.classList.toggle("active");
+// //   });
+// // }
+
+// // secHeaderNav.forEach((p) => {
+// //   p.addEventListener("click", () => {
+// //     removeActiveClasses();
+// //     p.classList.toggle("active");
+// //   });
+// // });
+// secHeaderNav.forEach((p) => {
+//   p.addEventListener("click", function () {
+//     removeActiveClasses();
+//     this.classList.add("active");
+//   });
+// });
+
+// function removeActiveClasses() {
+//   secHeaderNav.forEach((p) => {
+//     p.classList.remove("active");
+//   });
+// }
