@@ -19,5 +19,178 @@ body {
     .event-nav {
       @include community-nav;
     }
+    .event-container {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .event-gnb {
+        width: 1200px;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        margin: 100px 0 35px;
+        .gnb {
+          cursor: pointer;
+          width: 25%;
+          height: 45px;
+          background: map-get($main-color, lbrown);
+          text-align: center;
+          font: 1.125rem/45px "noto";
+        }
+        .active {
+          color: #fff;
+          background: map-get($main-color, dbrown);
+        }
+      }
+      .event-contents {
+        // border: 1px solid #f00;
+        width: 1220px;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        .content {
+          flex: 1 0 25%;
+          width: 25%;
+          max-width: 25%;
+          padding: 0 5px 10px;
+          a {
+            width: 100%;
+            height: 100%;
+            display: block;
+            outline: 3px solid transparent;
+            border: 1px solid #ddd;
+            transition: all 0.3s;
+            &:hover {
+              outline: 3px solid map-get($main-color, puple);
+              transition: all 0.3s;
+              .title {
+                color: map-get($main-color, puple);
+              }
+              span {
+                transform: scale(1.1);
+              }
+            }
+            .image {
+              width: 100%;
+              height: 293px;
+              overflow: hidden;
+              span {
+                display: inline-block;
+                width: 100%;
+                height: 100%;
+                background: url("../../img/04community/02event/event01.png")
+                  center/cover no-repeat;
+                transition: all 0.3s;
+              }
+            }
+            .text {
+              // width: 100%;
+              // height: 100%;
+              padding: 20px 15px;
+              background: #fff;
+              .title {
+                font: 500 1rem "noto";
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                transition: border 0.3;
+              }
+              .date {
+                margin-top: 0.4em;
+                font: 0.9rem/1.3 "noto";
+                color: #999;
+                span {
+                  color: #f00;
+                }
+              }
+            }
+          }
+        }
+      }
+      .event-pages {
+        // border: 1px solid #f00;
+        width: 100%;
+        height: 34px;
+        margin: 50px 0 56px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 4px;
+        .prevent-next {
+          width: 34px;
+          height: 34px;
+          cursor: pointer;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        .page {
+          //border: 1px solid #f00;
+          cursor: pointer;
+          // width: 100%;
+          height: 34px;
+          text-align: center;
+          display: flex;
+          gap: 4px;
+          .number-button {
+            display: inline-block;
+            width: 34px;
+            height: 100%;
+            border: 1px solid #ddd;
+            font: 1rem/30px "noto";
+          }
+          .selected {
+            border: 1px solid #000;
+          }
+        }
+      }
+      .event-search {
+        width: 1200px;
+        height: 82px;
+        border-top: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+        margin-bottom: 150px;
+        form {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 4px;
+          #find {
+            width: 8.3%;
+            height: 40px;
+            padding: 5px;
+            border: 1px solid #ddd;
+            outline: none;
+            font: 1rem "noto";
+          }
+          .search {
+            width: 20%;
+            height: 40px;
+            border: 1px solid #ddd;
+            outline: none;
+            padding: 0 5px;
+            font: 1rem "noto";
+          }
+          .search-button {
+            width: 7.5%;
+            height: 40px;
+            border: 1px solid #ddd;
+            cursor: pointer;
+            font: 1rem "noto";
+          }
+        }
+      }
+    }
+    #quick-menu {
+      @include quickmenu-1920;
+    }
+    footer {
+      @include footer-1920;
+    }
   }
 }
