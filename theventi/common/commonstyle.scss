@@ -1,6 +1,7 @@
 @import url("../font.css");
 @import url("../reset.css");
 @import "../mixin.scss";
+
 @media (max-width: 1500px) {
   body {
     #quick-menu {
@@ -15,7 +16,6 @@
     }
   }
 }
-
 @media (max-width: 1024px) {
   body {
     header {

@@ -1,8 +1,8 @@
 @charset "UTF-8";
 @import "../font.css";
 /* reset */
-@import './reset.css';
-@import './font.css';
+@import "./reset.css";
+@import "./font.css";
 * {
   margin: 0;
   padding: 0;
@@ -60,7 +60,7 @@ li {
 }
 
 header {
-  z-index: 10;
+  z-index: 9999;
   position: relative;
   overflow: hidden;
   display: flex;
@@ -72,11 +72,13 @@ header {
   top: 0;
 }
 header #fixed-header-wrap {
+  z-index: 9999;
   display: flex;
   justify-content: center;
   width: 1920px;
 }
 header #fixed-header-wrap #fixed-header {
+  z-index: 9999;
   border-bottom: 1px solid #ddd;
   top: 0;
   position: fixed;
