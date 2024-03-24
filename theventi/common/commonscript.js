@@ -1,9 +1,9 @@
-//===============================================================
+
 //header dropdown
 
 const headerList = document.querySelector("#header-nav");
 const header = document.querySelector("header");
-
+console.log(headerList)
 const dropDown = document.querySelector("#dropdown");
 
 const opendrop = () => {
