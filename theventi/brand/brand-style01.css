@@ -437,7 +437,6 @@ aside #bgmobile .mobile-menu-body .mobile-menu-body-list .dropdown {
   display: block;
 }
 
-/* custom  */
 .brand {
   width: 100%;
   height: 510px;
@@ -540,6 +539,212 @@ aside #bgmobile .mobile-menu-body .mobile-menu-body-list .dropdown {
   font-size: 1.25rem;
 }
 
+.history {
+  padding: 100px 0;
+  width: 100%;
+}
+.history .history-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.history .history-wrap .history-title {
+  text-align: center;
+  margin-bottom: 70px;
+}
+.history .history-wrap .history-title h3 {
+  font: 500 2.6rem/1 "geometos";
+  color: #780997;
+  letter-spacing: -2px;
+  animation-name: txtmoveUD;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in;
+}
+.history .history-wrap .history-title p {
+  font: 1rem/1 "geometos";
+  color: #666;
+  margin-top: 30px;
+  animation-name: txtmoveDU;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in;
+}
+.history .history-wrap .history-container {
+  position: relative;
+  animation-name: txtmoveUD;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in;
+}
+.history .history-wrap .history-container::before {
+  content: "";
+  width: 1px;
+  border-left: 1px solid #ddd;
+  height: 100%;
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 10px;
+}
+.history .history-wrap .history-container .content {
+  position: relative;
+  text-align: left;
+  display: flex;
+  overflow: hidden;
+}
+.history .history-wrap .history-container .content::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border: 6px solid #fff;
+  border-radius: 50%;
+  background: #780997;
+  position: absolute;
+  left: 50.4%;
+  top: 20px;
+  margin: -5px 0 0 -15px;
+}
+.history .history-wrap .history-container .content .img-box {
+  padding: 50px;
+  text-align: center;
+  width: 50%;
+}
+.history .history-wrap .history-container .content .img-box .img {
+  max-width: 410px;
+  margin: 0 auto;
+}
+.history .history-wrap .history-container .content .img-box .img p {
+  text-align: left;
+  font: 0.9rem/1.5 "noto";
+  color: #780997;
+  padding-left: 15px;
+  margin-top: 5px;
+  position: relative;
+}
+.history .history-wrap .history-container .content .img-box .img p::before {
+  content: "▶";
+  font-size: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  line-height: 24px;
+}
+.history .history-wrap .history-container .content .txt-box {
+  width: 50%;
+  float: left;
+  padding-left: 50px;
+  line-height: 1.4;
+}
+.history .history-wrap .history-container .content .txt-box h2 {
+  font: 2.625rem/2 "geometos";
+  color: #7b00a0;
+  margin-bottom: 20px;
+}
+.history .history-wrap .history-container .content .txt-box .inner-txt .month {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+.history .history-wrap .history-container .content .txt-box .inner-txt .month h3 {
+  width: 8%;
+  font: 500 1rem/1 "noto";
+  color: #222;
+}
+.history .history-wrap .history-container .content .txt-box .inner-txt .month .inner-txt-detail {
+  font: 1rem/1 "noto";
+  color: #666;
+}
+.history .history-wrap .history-container .content .txt-box .inner-txt .month .inner-txt-detail p {
+  margin-bottom: 8px;
+}
+.history .history-wrap .history-container .content:not(:first-child) {
+  margin-top: 60px;
+}
+.history .history-wrap .history-container .content:not(:first-child)::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border: 6px solid #fff;
+  border-radius: 50%;
+  background: #cacaca;
+  position: absolute;
+  left: 50.4%;
+  top: 20px;
+  margin: -5px 0 0 -15px;
+}
+.history .history-wrap .history-container .content:not(:first-child) .img-box {
+  padding: 50px;
+  text-align: center;
+  width: 50%;
+}
+.history .history-wrap .history-container .content:not(:first-child) .img-box .img {
+  max-width: 410px;
+  margin: 0 auto;
+}
+.history .history-wrap .history-container .content:not(:first-child) .img-box .img p {
+  text-align: left;
+  font: 0.9rem/1.5 "noto";
+  color: #780997;
+  padding-left: 15px;
+  margin-top: 5px;
+  position: relative;
+}
+.history .history-wrap .history-container .content:not(:first-child) .img-box .img p::before {
+  content: "▶";
+  font-size: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  line-height: 24px;
+}
+.history .history-wrap .history-container .content:not(:first-child) .txt-box {
+  width: 50%;
+  float: left;
+  padding-left: 50px;
+  line-height: 1.4;
+}
+.history .history-wrap .history-container .content:not(:first-child) .txt-box h2 {
+  font: 2.625rem/2 "geometos";
+  color: #666;
+  margin-bottom: 20px;
+}
+.history .history-wrap .history-container .content:not(:first-child) .txt-box .inner-txt .month {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+.history .history-wrap .history-container .content:not(:first-child) .txt-box .inner-txt .month h3 {
+  width: 8%;
+  font: 600 1rem/1 "noto";
+  color: #222;
+}
+.history .history-wrap .history-container .content:not(:first-child) .txt-box .inner-txt .month .inner-txt-detail {
+  font: 1rem/1 "noto";
+  color: #666;
+}
+.history .history-wrap .history-container .content:not(:first-child) .txt-box .inner-txt .month .inner-txt-detail p {
+  margin-bottom: 8px;
+}
+
+@keyframes txtmoveUD {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes txtmoveDU {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 footer {
   position: relative;
   width: 100%;
@@ -677,194 +882,6 @@ footer #footer-wrap #footer-container-wrap #footer-container-bottom .footer-icon
   height: 20px;
 }
 
-@keyframes txtmoveUD {
-  0% {
-    transform: translateY(-20px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-@keyframes txtmoveDU {
-  0% {
-    transform: translateY(20px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-.history {
-  width: 100%;
-  height: 1110px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 100px 0;
-  position: relative;
-}
-.history .history-header {
-  border-bottom: 3px solid #780997;
-  width: 1100px;
-  height: 155px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  margin-bottom: 100px;
-  animation-name: txtmoveUD;
-  animation-duration: 0.5s;
-  animation-timing-function: ease-in;
-}
-.history .history-header .history-header-text {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-}
-.history .history-header .history-header-text h1 {
-  font: 500 2.6rem/1 "geometos";
-  color: #780997;
-  letter-spacing: -2px;
-}
-.history .history-header .history-header-text p {
-  font: 1rem/1 "geometos";
-  color: #666;
-}
-.history .history-container {
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
-  width: 1000px;
-  /* height => 나중에 JS 처리 */
-  height: 100%;
-  overflow: hidden;
-  position: relative;
-  animation-name: txtmoveDU;
-  animation-duration: 0.5s;
-  animation-timing-function: ease-in;
-}
-.history .history-container .history-slider {
-  width: 100%;
-  /* height => 나중에 JS 처리 */
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-.history .history-container .history-slider.animated {
-  transition: left 0.3s ease-in;
-}
-.history .history-container .history-slider .history-slide {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 520px;
-  padding: 25px;
-}
-.history .history-container .history-slider .history-slide .history-slide-inner {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  gap: 40px;
-}
-.history .history-container .history-slider .history-slide .history-slide-inner .inner-left {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-.history .history-container .history-slider .history-slide .history-slide-inner .inner-left .inner-summary {
-  color: #ff5b28;
-  font: 0.9rem/1.5 "noto";
-}
-.history .history-container .history-slider .history-slide .history-slide-inner .inner-left .inner-summary i {
-  font-size: 20px;
-  margin-right: 8px;
-}
-.history .history-container .history-slider .history-slide .history-slide-inner .inner-right {
-  width: 100%;
-  height: auto;
-  min-height: 270px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-}
-.history .history-container .history-slider .history-slide .history-slide-inner .inner-right h1 {
-  width: 100%;
-  font: 2.625rem/2 "geometos";
-  color: #7b00a0;
-}
-.history .history-container .history-slider .history-slide .history-slide-inner .inner-right .inner-txt-wrap {
-  width: 100%;
-  height: auto;
-}
-.history .history-container .history-slider .history-slide .history-slide-inner .inner-right .inner-txt-wrap .inner-txt-detail {
-  width: 100%;
-  height: auto;
-  display: flex;
-  gap: 30px;
-  margin-bottom: 10px;
-}
-.history .history-container .history-slider .history-slide .history-slide-inner .inner-right .inner-txt-wrap .inner-txt-detail h3 {
-  width: 10%;
-  font: 600 1rem/1 "noto";
-  color: #222;
-}
-.history .history-container .history-slider .history-slide .history-slide-inner .inner-right .inner-txt-wrap .inner-txt-detail .inner-txt-detail-p {
-  width: 80%;
-  font: 1rem/1 "noto";
-  color: #666;
-}
-.history .history-container .history-slider .history-slide .history-slide-inner .inner-right .inner-txt-wrap .inner-txt-detail .inner-txt-detail-p p {
-  margin-bottom: 10px;
-}
-.history .button {
-  width: 1200px;
-  height: 50px;
-  display: flex;
-  justify-content: space-between;
-  font-size: 20px;
-  line-height: 50px;
-  position: absolute;
-  top: 53%;
-  animation-name: txtmoveDU;
-  animation-duration: 0.5s;
-  animation-timing-function: ease-in;
-}
-.history .button a {
-  width: 50px;
-  height: 50px;
-  text-align: center;
-}
-
-@keyframes txtmoveUD {
-  0% {
-    transform: translateY(-20px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-@keyframes txtmoveDU {
-  0% {
-    transform: translateY(20px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
 @media screen and (max-width: 1500px) {
   #quick-menu ul img {
     width: 20px;
@@ -989,6 +1006,164 @@ footer #footer-wrap #footer-container-wrap #footer-container-bottom .footer-icon
     color: #780997;
     border-bottom: none;
   }
+  .history {
+    padding: 50px 0;
+    width: 100%;
+  }
+  .history .history-wrap {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .history .history-wrap .history-title {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .history .history-wrap .history-title h3 {
+    font: 500 1.46rem/1 "geometos";
+    color: #780997;
+    letter-spacing: -2px;
+  }
+  .history .history-wrap .history-title p {
+    font: 0.95rem/1 "geometos";
+    color: #666;
+    margin-top: 20px;
+  }
+  .history .history-wrap .history-container::before {
+    content: "";
+    width: 1px;
+    border-left: 1px solid #ddd;
+    height: 100%;
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 10px;
+  }
+  .history .history-wrap .history-container .content .img-box {
+    padding: 40px 30px 0px 20px;
+    width: 50%;
+  }
+  .history .history-wrap .history-container .content .img-box .img {
+    max-width: 410px;
+    margin: 0 auto;
+  }
+  .history .history-wrap .history-container .content .img-box .img img {
+    width: 100%;
+  }
+  .history .history-wrap .history-container .content .img-box .img p {
+    text-align: left;
+    font: 0.7rem/1.5 "noto";
+    color: #780997;
+    padding-left: 15px;
+    margin-top: 5px;
+    position: relative;
+  }
+  .history .history-wrap .history-container .content .img-box .img p::before {
+    content: "▶";
+    font-size: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 15px;
+  }
+  .history .history-wrap .history-container .content .txt-box {
+    width: 50%;
+    float: left;
+    padding-left: 30px;
+    line-height: 1.4;
+  }
+  .history .history-wrap .history-container .content .txt-box h2 {
+    font: 2.25rem/2 "geometos";
+    color: #7b00a0;
+    margin-bottom: 10px;
+  }
+  .history .history-wrap .history-container .content .txt-box .inner-txt .month {
+    width: 100%;
+    display: flex;
+    gap: 15px;
+  }
+  .history .history-wrap .history-container .content .txt-box .inner-txt .month h3 {
+    font: 500 0.8rem/1 "noto";
+    color: #222;
+  }
+  .history .history-wrap .history-container .content .txt-box .inner-txt .month .inner-txt-detail {
+    font: 0.74rem/1 "noto";
+    color: #666;
+  }
+  .history .history-wrap .history-container .content .txt-box .inner-txt .month .inner-txt-detail p {
+    margin-bottom: 6px;
+  }
+  .history .history-wrap .history-container .content:not(:first-child) {
+    margin-top: 60px;
+  }
+  .history .history-wrap .history-container .content:not(:first-child)::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border: 6px solid #fff;
+    border-radius: 50%;
+    background: #cacaca;
+    position: absolute;
+    left: 50.4%;
+    top: 20px;
+    margin: -5px 0 0 -15px;
+  }
+  .history .history-wrap .history-container .content:not(:first-child) .img-box {
+    padding: 40px 30px 0px 20px;
+    width: 50%;
+  }
+  .history .history-wrap .history-container .content:not(:first-child) .img-box .img {
+    max-width: 410px;
+    margin: 0 auto;
+  }
+  .history .history-wrap .history-container .content:not(:first-child) .img-box .img img {
+    width: 100%;
+  }
+  .history .history-wrap .history-container .content:not(:first-child) .img-box .img p {
+    text-align: left;
+    font: 0.7rem/1.5 "noto";
+    color: #780997;
+    padding-left: 15px;
+    margin-top: 5px;
+    position: relative;
+  }
+  .history .history-wrap .history-container .content:not(:first-child) .img-box .img p::before {
+    content: "▶";
+    font-size: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 15px;
+  }
+  .history .history-wrap .history-container .content:not(:first-child) .txt-box {
+    width: 50%;
+    float: left;
+    padding-left: 30px;
+    line-height: 1.4;
+  }
+  .history .history-wrap .history-container .content:not(:first-child) .txt-box h2 {
+    font: 2.25rem/2 "geometos";
+    color: #666;
+    margin-bottom: 10px;
+  }
+  .history .history-wrap .history-container .content:not(:first-child) .txt-box .inner-txt .month {
+    display: flex;
+    gap: 18px;
+    margin-bottom: 10px;
+  }
+  .history .history-wrap .history-container .content:not(:first-child) .txt-box .inner-txt .month h3 {
+    width: 10%;
+    font: 500 0.8rem/1 "noto";
+    color: #222;
+  }
+  .history .history-wrap .history-container .content:not(:first-child) .txt-box .inner-txt .month .inner-txt-detail {
+    font: 0.74rem/1 "noto";
+    color: #666;
+  }
+  .history .history-wrap .history-container .content:not(:first-child) .txt-box .inner-txt .month .inner-txt-detail p {
+    margin-bottom: 6px;
+  }
   footer {
     display: block;
   }
@@ -1080,6 +1255,197 @@ footer #footer-wrap #footer-container-wrap #footer-container-bottom .footer-icon
     height: 20px;
   }
 }
+@media screen and (max-width: 768px) {
+  .history {
+    padding: 50px 0;
+    width: 100%;
+  }
+  .history .history-wrap {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .history .history-wrap .history-title {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .history .history-wrap .history-title h3 {
+    font: 500 1.46rem/1 "geometos";
+    color: #780997;
+    letter-spacing: -2px;
+  }
+  .history .history-wrap .history-title p {
+    font: 0.95rem/1 "geometos";
+    color: #666;
+    margin-top: 20px;
+  }
+  .history .history-wrap .history-container::before {
+    content: "";
+    width: 1px;
+    border-left: 1px solid #ddd;
+    height: 100%;
+    display: block;
+    position: absolute;
+    left: 36%;
+    top: 10px;
+  }
+  .history .history-wrap .history-container .content::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border: 6px solid #fff;
+    border-radius: 50%;
+    background: #780997;
+    position: absolute;
+    left: 36.5%;
+    top: 20px;
+    margin: -5px 0 0 -15px;
+  }
+  .history .history-wrap .history-container .content .img-box {
+    padding: 40px 30px 0px 20px;
+    width: 36%;
+  }
+  .history .history-wrap .history-container .content .img-box .img {
+    max-width: 410px;
+    margin: 0 auto;
+  }
+  .history .history-wrap .history-container .content .img-box .img img {
+    width: 100%;
+  }
+  .history .history-wrap .history-container .content .img-box .img p {
+    text-align: left;
+    font: 0.7rem/1.5 "noto";
+    color: #780997;
+    padding-left: 15px;
+    margin-top: 5px;
+    position: relative;
+  }
+  .history .history-wrap .history-container .content .img-box .img p::before {
+    content: "▶";
+    font-size: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 15px;
+  }
+  .history .history-wrap .history-container .content .txt-box {
+    width: 64%;
+    float: left;
+    padding-left: 30px;
+    line-height: 1.4;
+  }
+  .history .history-wrap .history-container .content .txt-box h2 {
+    font: 2.25rem/2 "geometos";
+    color: #7b00a0;
+    margin-bottom: 10px;
+  }
+  .history .history-wrap .history-container .content .txt-box .inner-txt {
+    width: 100%;
+    padding-right: 10px;
+  }
+  .history .history-wrap .history-container .content .txt-box .inner-txt .month {
+    width: 100%;
+    display: flex;
+    gap: 15px;
+  }
+  .history .history-wrap .history-container .content .txt-box .inner-txt .month h3 {
+    font: 500 0.8rem/1 "noto";
+    color: #222;
+  }
+  .history .history-wrap .history-container .content .txt-box .inner-txt .month .inner-txt-detail {
+    font: 0.74rem/1 "noto";
+    color: #666;
+  }
+  .history .history-wrap .history-container .content .txt-box .inner-txt .month .inner-txt-detail p {
+    margin-bottom: 8px;
+  }
+  .history .history-wrap .history-container .content:not(:first-child) {
+    margin-top: 30px;
+  }
+  .history .history-wrap .history-container .content:not(:first-child)::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border: 6px solid #fff;
+    border-radius: 50%;
+    background: #cacaca;
+    position: absolute;
+    left: 50.4%;
+    top: 20px;
+    margin: -5px 0 0 -15px;
+  }
+  .history .history-wrap .history-container .content:not(:first-child)::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border: 6px solid #fff;
+    border-radius: 50%;
+    background: #cacaca;
+    position: absolute;
+    left: 36.5%;
+    top: 20px;
+    margin: -5px 0 0 -15px;
+  }
+  .history .history-wrap .history-container .content:not(:first-child) .img-box {
+    padding: 40px 30px 0px 20px;
+    width: 36%;
+  }
+  .history .history-wrap .history-container .content:not(:first-child) .img-box .img {
+    max-width: 410px;
+    margin: 0 auto;
+  }
+  .history .history-wrap .history-container .content:not(:first-child) .img-box .img img {
+    width: 100%;
+  }
+  .history .history-wrap .history-container .content:not(:first-child) .img-box .img p {
+    text-align: left;
+    font: 0.7rem/1.5 "noto";
+    color: #780997;
+    padding-left: 15px;
+    margin-top: 5px;
+    position: relative;
+  }
+  .history .history-wrap .history-container .content:not(:first-child) .img-box .img p::before {
+    content: "▶";
+    font-size: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 15px;
+  }
+  .history .history-wrap .history-container .content:not(:first-child) .txt-box {
+    width: 64%;
+    float: left;
+    padding-left: 30px;
+    line-height: 1.4;
+  }
+  .history .history-wrap .history-container .content:not(:first-child) .txt-box h2 {
+    font: 2.25rem/2 "geometos";
+    color: #7b00a0;
+    margin-bottom: 10px;
+  }
+  .history .history-wrap .history-container .content:not(:first-child) .txt-box .inner-txt {
+    padding-right: 20px;
+    width: 100%;
+  }
+  .history .history-wrap .history-container .content:not(:first-child) .txt-box .inner-txt .month {
+    width: 100%;
+    display: flex;
+    gap: 15px;
+  }
+  .history .history-wrap .history-container .content:not(:first-child) .txt-box .inner-txt .month h3 {
+    font: 500 0.8rem/1 "noto";
+    color: #222;
+  }
+  .history .history-wrap .history-container .content:not(:first-child) .txt-box .inner-txt .month .inner-txt-detail {
+    font: 0.74rem/1 "noto";
+    color: #666;
+  }
+  .history .history-wrap .history-container .content:not(:first-child) .txt-box .inner-txt .month .inner-txt-detail p {
+    margin-bottom: 8px;
+  }
+}
 @media screen and (max-width: 576px) {
   aside {
     z-index: 200;
@@ -1150,5 +1516,184 @@ footer #footer-wrap #footer-container-wrap #footer-container-bottom .footer-icon
   .sub-nav ul .active {
     color: #780997;
     border-bottom: none;
+  }
+  .history {
+    padding: 50px 0px;
+    width: 100%;
+  }
+  .history .history-wrap {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .history .history-wrap .history-title {
+    text-align: center;
+    margin-bottom: 25px;
+  }
+  .history .history-wrap .history-title h3 {
+    font: 500 1.46rem/1 "geometos";
+    color: #780997;
+    letter-spacing: -2px;
+  }
+  .history .history-wrap .history-title p {
+    font: 0.95rem/1 "geometos";
+    color: #666;
+    margin-top: 20px;
+  }
+  .history .history-wrap .history-container::before {
+    content: "";
+    width: 1px;
+    border-left: 1px solid #ddd;
+    height: 100%;
+    display: block;
+    position: absolute;
+    left: 20px;
+    top: 10px;
+  }
+  .history .history-wrap .history-container .content {
+    position: relative;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  .history .history-wrap .history-container .content::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border: 6px solid #fff;
+    border-radius: 50%;
+    background: #780997;
+    position: absolute;
+    left: 26px;
+    top: 20px;
+    margin: -5px 0 0 -15px;
+  }
+  .history .history-wrap .history-container .content .img-box {
+    padding: 0 20px;
+    text-align: center;
+    width: 100%;
+  }
+  .history .history-wrap .history-container .content .img-box .img {
+    width: 330px;
+    margin: 5px auto;
+  }
+  .history .history-wrap .history-container .content .img-box .img p {
+    text-align: left;
+    font: 0.75rem/1.5 "noto";
+    color: #780997;
+    padding-left: 15px;
+    margin-top: 5px;
+    position: relative;
+  }
+  .history .history-wrap .history-container .content .img-box .img p::before {
+    content: "▶";
+    font-size: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 18px;
+  }
+  .history .history-wrap .history-container .content .txt-box {
+    width: 100%;
+    padding: 0 30px;
+    line-height: 1.4;
+  }
+  .history .history-wrap .history-container .content .txt-box h2 {
+    font: 2.1rem/2 "geometos";
+    color: #7b00a0;
+    margin-bottom: 10px;
+  }
+  .history .history-wrap .history-container .content .txt-box .inner-txt {
+    padding-right: 0;
+    width: 100%;
+  }
+  .history .history-wrap .history-container .content .txt-box .inner-txt .month {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+  }
+  .history .history-wrap .history-container .content .txt-box .inner-txt .month h3 {
+    width: 10%;
+    font: 500 0.8rem/1 "noto";
+    color: #222;
+  }
+  .history .history-wrap .history-container .content .txt-box .inner-txt .month .inner-txt-detail {
+    font: 0.74rem/1 "noto";
+    color: #666;
+  }
+  .history .history-wrap .history-container .content .txt-box .inner-txt .month .inner-txt-detail p {
+    margin-bottom: 6px;
+  }
+  .history .history-wrap .history-container .content:not(:first-child) {
+    margin-top: 30px;
+  }
+  .history .history-wrap .history-container .content:not(:first-child)::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border: 6px solid #fff;
+    border-radius: 50%;
+    background: #666;
+    position: absolute;
+    left: 26px;
+    top: 20px;
+    margin: -5px 0 0 -15px;
+  }
+  .history .history-wrap .history-container .content:not(:first-child) .img-box {
+    padding: 0 20px;
+    text-align: center;
+    width: 100%;
+  }
+  .history .history-wrap .history-container .content:not(:first-child) .img-box .img {
+    width: 330px;
+    margin: 5px auto;
+  }
+  .history .history-wrap .history-container .content:not(:first-child) .img-box .img p {
+    text-align: left;
+    font: 0.75rem/1.5 "noto";
+    color: #780997;
+    padding-left: 15px;
+    margin-top: 5px;
+    position: relative;
+  }
+  .history .history-wrap .history-container .content:not(:first-child) .img-box .img p::before {
+    content: "▶";
+    font-size: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 18px;
+  }
+  .history .history-wrap .history-container .content:not(:first-child) .txt-box {
+    width: 100%;
+    padding: 0 30px;
+    line-height: 1.4;
+  }
+  .history .history-wrap .history-container .content:not(:first-child) .txt-box h2 {
+    font: 2.1rem/2 "geometos";
+    color: #666;
+    margin-bottom: 10px;
+  }
+  .history .history-wrap .history-container .content:not(:first-child) .txt-box .inner-txt {
+    padding-right: 0;
+    width: 100%;
+  }
+  .history .history-wrap .history-container .content:not(:first-child) .txt-box .inner-txt .month {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+  }
+  .history .history-wrap .history-container .content:not(:first-child) .txt-box .inner-txt .month h3 {
+    width: 10%;
+    font: 500 0.8rem/1 "noto";
+    color: #222;
+  }
+  .history .history-wrap .history-container .content:not(:first-child) .txt-box .inner-txt .month .inner-txt-detail {
+    font: 0.74rem/1 "noto";
+    color: #666;
+  }
+  .history .history-wrap .history-container .content:not(:first-child) .txt-box .inner-txt .month .inner-txt-detail p {
+    margin-bottom: 6px;
   }
 }/*# sourceMappingURL=brand-style01.css.map */

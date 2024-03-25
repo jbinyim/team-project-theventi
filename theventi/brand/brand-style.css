@@ -1628,11 +1628,11 @@ footer #footer-wrap #footer-container-wrap #footer-container-bottom .footer-icon
     display: flex;
     gap: 10px;
     width: 100%;
-    padding: 0 10px;
+    padding: 0 0px;
   }
   .core-value .core-content .core-items .item1 {
-    width: 150px;
-    height: 150px;
+    width: 140px;
+    height: 140px;
     border: 2px solid #b7b7b7;
     border-radius: 100%;
     display: flex;
@@ -1662,8 +1662,8 @@ footer #footer-wrap #footer-container-wrap #footer-container-bottom .footer-icon
     border: none;
   }
   .core-value .core-content .core-items .item2 {
-    width: 150px;
-    height: 150px;
+    width: 140px;
+    height: 140px;
     border: 2px solid #b7b7b7;
     border-radius: 100%;
     display: flex;
@@ -1693,8 +1693,8 @@ footer #footer-wrap #footer-container-wrap #footer-container-bottom .footer-icon
     border: none;
   }
   .core-value .core-content .core-items .item3 {
-    width: 150px;
-    height: 150px;
+    width: 140px;
+    height: 140px;
     border: 2px solid #b7b7b7;
     border-radius: 100%;
     display: flex;
