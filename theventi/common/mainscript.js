@@ -21,12 +21,29 @@ const src = document.createAttribute("src");
 const slidePagers = document.querySelector(".slide_pagers");
 const pagers = document.querySelectorAll(".slide_pagers li");
 
-const imgs = [
+let imgs = [
   "res-banner01.jpg",
   "res-banner02.jpg",
   "res-banner03.jpg",
   "res-banner04.jpg",
 ];
+const originalImgs = [...imgs];
+
+function changeImageSource() {
+  if (window.innerWidth <= 768) {
+    imgs = imgs.map(img => img.replace('res-', ''));
+  }
+   else {
+    imgs = [...originalImgs];
+   }
+}
+
+// 화면 크기가 변경될 때마다 실행
+window.addEventListener('resize', changeImageSource);
+
+// // 페이지 로드 시 실행
+// changeImageSource();
+
 
 const imgSrc = `../img/01main/main/topsection/${imgs[0]}`;
 
@@ -108,6 +125,12 @@ pagers.forEach((pager) => {
   pager.addEventListener("click", pagerChange);
 });
 
+
+
+
+
+
+
 //=========================================================
 // section3 slide
 
@@ -115,7 +138,7 @@ const slides = document.querySelector(".slides");
 const slide = slides.querySelectorAll("li");
 const slideCount = slide.length;
 console.log(slideCount);
-const slideWidth = 200;
+const slideWidth = 300;
 const slideMargin = 30;
 const prevBtn = document.querySelector(".prev");
 const nextBtn = document.querySelector(".next");
