@@ -1,17 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- fontawesome -->
+    <link rel="stylesheet" href="./winner.css" />
     <script
       src="https://kit.fontawesome.com/cac4ca8f2a.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="./qna.css" />
-    <script defer src="./qna.js"></script>
+    <script defer src="./winner.js"></script>
     <script defer src="../../common/commonscript.js"></script>
-    <title>Document</title>
+    <title>더벤티</title>
   </head>
   <body>
     <div class="wrap">
@@ -499,13 +498,16 @@
           </div>
         </div>
       </aside>
-      <div class="msg-figuer">
+      <div class="winner-figuer">
         <div class="volun-title">
-          <h1>자주하는 질문</h1>
-          <p>궁금하신 내용을 입력해주세요.</p>
+          <h1>COMMUNITY</h1>
+          <p>
+            좋은 커피와 맛있는 음료를 합리적인 가격에 제공해드리는 우리는
+            "더벤티"입니다
+          </p>
         </div>
       </div>
-      <div class="msg-nav">
+      <div class="winner-nav">
         <div class="volun-bar">
           <ul>
             <li>
@@ -517,7 +519,9 @@
               <a class="volun-bar-link" href="../press/press.html">보도자료</a>
             </li>
             <li>
-              <a class="volun-bar-link" href="../evented/event.html">이벤트</a>
+              <a class="volun-bar-link active" href="../evented/event.html"
+                >이벤트</a
+              >
             </li>
             <li>
               <a class="volun-bar-link" href="../good/good.html">칭찬매장</a>
@@ -531,9 +535,7 @@
               <a class="volun-bar-link" href="../sns/sns.html">SNS</a>
             </li>
             <li>
-              <a class="volun-bar-link active" href="../qna/qna.html"
-                >자주하는 질문</a
-              >
+              <a class="volun-bar-link" href="../qna/qna.html">자주하는 질문</a>
             </li>
             <li>
               <a class="volun-bar-link" href="../message/message.html"
@@ -550,60 +552,78 @@
           </ul>
         </div>
       </div>
-      <div class="container">
-        <div class="qna-search">
-          <form action="https://localhost/3000">
-            <select name="catagory" id="catagory">
-              <option value="entire">전체</option>
+      <div class="winner-container">
+        <ul class="winner-gnb">
+          <li class="gnb">
+            <a href="../evented/event.html">진행중 이벤트</a>
+          </li>
+          <li class="gnb active"><a href="./winner.html">당첨자 발표</a></li>
+        </ul>
+        <table class="winner-table">
+          <colgroup>
+            <col width="8%" />
+            <col width="*%" />
+            <col width="12%" />
+            <col width="15%" />
+          </colgroup>
+          <thead>
+            <tr>
+              <th>번호</th>
+              <th>제목</th>
+              <th>이름</th>
+              <th>작성일</th>
+            </tr>
+            <tr class="winner-head-tr">
+              <td class="winner-head-td">
+                <i class="fa-solid fa-volume-high"></i>
+              </td>
+              <td class="winner-head-td">
+                <a class="winner-head-link" href="#">
+                  [더벤티 X BOF] 부산원아시아페스티벌 K-POP 콘서트 프리퀀시
+                  당첨자 발표
+                </a>
+              </td>
+              <td class="winner-head-td">더벤티</td>
+              <td class="winner-head-td">2023.10.03</td>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- <tr class="winner-tr">
+              <td class="winner-td-num">39</td>
+              <td class="winner-td-title">
+                <a class="winner-link" href="#">
+                  [디어에반핸슨]뮤지컬 티켓 이벤트 당첨자 발표
+                </a>
+              </td>
+              <td class="winner-td-made">더**</td>
+              <td class="winner-td-day">2024.03.25</td>
+            </tr> -->
+          </tbody>
+        </table>
+        <div class="winner-pages">
+          <div class="prevent-next prev">
+            <img
+              src="../../img/04community/06volunteer/prev-first.png"
+              alt="prev"
+            />
+          </div>
+          <div class="page"><span class="number-button">1</span></div>
+          <div class="prevent-next next">
+            <img
+              src="../../img/04community/06volunteer/next-last.png"
+              alt="next"
+            />
+          </div>
+        </div>
+        <div class="winner-search">
+          <form action="http://localhost:3000" method="post">
+            <select name="find" id="find">
               <option value="title">제목</option>
               <option value="content">내용</option>
             </select>
-            <input type="text" />
-            <input type="submit" value="검색" />
+            <input type="text" name="search" class="search" />
+            <input type="submit" value="검색" class="search-button" />
           </form>
-        </div>
-        <div class="qna-nav">
-          <ul class="nav">
-            <li class="active">전체</li>
-            <li>스탬프/쿠폰</li>
-            <li>회원</li>
-            <li>더벤티 오더</li>
-            <li>제품</li>
-            <li>기타</li>
-          </ul>
-        </div>
-        <div class="qna-content">
-          <ul class="qna-total">
-            <li class="qna active"></li>
-            <li class="stemp"></li>
-            <li class="member"></li>
-            <li class="order"></li>
-            <li class="product"></li>
-            <li class="guitar"></li>
-          </ul>
-        </div>
-        <div class="qna-pages">
-          <div class="prevent-next">
-            <a href="#">
-              <img
-                src="../../img/04community/06volunteer/prev-first.png"
-                alt=""
-              />
-            </a>
-          </div>
-          <div class="page">1</div>
-          <div class="page">2</div>
-          <div class="page">3</div>
-          <div class="page">4</div>
-          <div class="page">5</div>
-          <div class="prevent-next">
-            <a href="#">
-              <img
-                src="../../img/04community/06volunteer/next-last.png"
-                alt=""
-              />
-            </a>
-          </div>
         </div>
       </div>
       <div id="quick-menu">
