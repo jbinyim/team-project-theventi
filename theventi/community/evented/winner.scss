@@ -200,3 +200,110 @@ body {
     }
   }
 }
+
+@media screen and (max-width: 1024px) {
+  body {
+    .wrap {
+      width: 100%;
+      height: 100%;
+      header {
+        @include header-1024;
+      }
+      .winner-figuer {
+        .volun-title {
+          h1 {
+            font-size: 1.75rem;
+          }
+          p {
+            font-size: 1rem;
+          }
+        }
+      }
+      .winner-nav {
+        .volun-bar {
+          ul {
+            white-space: nowrap;
+            width: 100%;
+            overflow-x: scroll;
+            overflow-y: hidden;
+            -webkit-overflow-scrolling: touch;
+            &::-webkit-scrollbar-track {
+              background: auto;
+            }
+            &::-webkit-scrollbar-thumb {
+              background: auto;
+            }
+          }
+        }
+      }
+      .winner-container {
+        width: 100%;
+        height: 100%;
+        padding: 0 15px;
+        .winner-gnb {
+          width: 100%;
+          height: 100%;
+          margin-bottom: 30px;
+          .gnb {
+            width: 100%;
+            max-width: 600px;
+            height: 40px;
+            font: 0.9375rem/40px "noto";
+          }
+        }
+        .winner-table {
+          thead {
+            tr:nth-child(1) {
+              display: none;
+            }
+            .winner-head-tr {
+              .winner-head-td {
+                font: 0.75rem "noto";
+              }
+            }
+          }
+          tbody {
+            .winner-tr {
+              td {
+                font: 0.8125rem "noto";
+              }
+            }
+          }
+        }
+        .winner-search {
+          width: 100%;
+          height: 79px;
+          form {
+            width: 100%;
+            height: 100%;
+            #find {
+              width: 21.5%;
+            }
+            .search {
+              width: 50%;
+            }
+            .search-button {
+              width: 21.5%;
+            }
+          }
+        }
+      }
+      #quick-menu {
+        display: none;
+      }
+      footer {
+        @include footer-1024;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  body {
+    .wrap {
+      aside {
+        @include aside-576;
+      }
+    }
+  }
+}
