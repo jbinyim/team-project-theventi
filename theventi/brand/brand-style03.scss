@@ -10,6 +10,13 @@
 // mixin
 @import "../mixin.scss";
 
+// popup
+.popup2 {
+  @include popup2;
+}
+.popup3 {
+  @include popup3;
+}
 //======= 1920px=======
 header {
   @include header-1920;

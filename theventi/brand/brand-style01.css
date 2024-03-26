@@ -59,6 +59,196 @@ li {
   list-style: none;
 }
 
+.popup2 {
+  display: none;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  z-index: 10000;
+}
+.popup2 .popup2wrap {
+  margin: 0 auto;
+  background: #fff;
+  max-width: 500px;
+  display: flex;
+  height: 600px;
+  gap: 10px;
+  flex-direction: column;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2.5rem 1.25rem;
+  z-index: 999;
+}
+.popup2 .popup2wrap h1 {
+  color: #666;
+  font-size: 2.34375rem;
+  font-family: suit;
+  display: flex;
+  font-weight: normal;
+  align-items: center;
+  justify-content: center;
+}
+.popup2 .popup2wrap .popup2-btn {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  text-align: center;
+  color: #7a7a7a;
+  font-size: 0.9rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.popup2 .popup2wrap .popup2-btn #popup2-close {
+  font-family: xeicon;
+  display: inline-block;
+  font-style: normal;
+  font-weight: 600;
+  font-variant: normal;
+}
+.popup2 .popup2wrap .popup2-btn #popup2-close::before {
+  content: "\e921";
+}
+.popup2 .popup2wrap .popup2-p {
+  overflow: scroll;
+  overflow-x: hidden;
+  width: 100%;
+  height: 100%;
+  color: #666 !important;
+  font-weight: 400;
+  text-align: left;
+  line-height: 1.6;
+  font-size: 0.8125rem;
+  font-family: noto;
+}
+.popup2 .popup2wrap .popup2-p::-webkit-scrollbar {
+  margin: 0;
+  padding: 0;
+  width: 8px;
+}
+.popup2 .popup2wrap .popup2-p::-webkit-scrollbar-button {
+  height: 0;
+  -webkit-transition: 300ms all;
+  transition: 300ms all;
+}
+.popup2 .popup2wrap .popup2-p::-webkit-scrollbar-corner {
+  background-color: none;
+}
+.popup2 .popup2wrap .popup2-p::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 8px;
+  border: none;
+}
+.popup2 .popup2wrap .popup2-p::-webkit-scrollbar-thumb:hover {
+  background: #c1c1c1;
+}
+.popup2 .popup2wrap .popup2-p::-webkit-scrollbar-track {
+  background-color: #fff;
+  border-radius: 0;
+  border: 0;
+}
+.popup2 .popup2wrap .popup2-p::-webkit-scrollbar-track:hover, .popup2 .popup2wrap .popup2-p::-webkit-scrollbar-track:active {
+  background: none;
+}
+
+.popup3 {
+  display: none;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  z-index: 10000;
+}
+.popup3 .popup3wrap {
+  margin: 0 auto;
+  background: #fff;
+  max-width: 500px;
+  display: flex;
+  height: 600px;
+  gap: 10px;
+  flex-direction: column;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2.5rem 1.25rem;
+  z-index: 999;
+}
+.popup3 .popup3wrap h1 {
+  color: #666;
+  font-size: 2.34375rem;
+  font-family: suit;
+  display: flex;
+  font-weight: normal;
+  align-items: center;
+  justify-content: center;
+}
+.popup3 .popup3wrap .popup3-btn {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  text-align: center;
+  color: #7a7a7a;
+  font-size: 0.9rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.popup3 .popup3wrap .popup3-btn #popup3-close {
+  font-family: xeicon;
+  display: inline-block;
+  font-style: normal;
+  font-weight: 600;
+  font-variant: normal;
+}
+.popup3 .popup3wrap .popup3-btn #popup3-close::before {
+  content: "\e921";
+}
+.popup3 .popup3wrap .popup3-p {
+  overflow: scroll;
+  overflow-x: hidden;
+  width: 100%;
+  height: 100%;
+  color: #666 !important;
+  font-weight: 400;
+  text-align: left;
+  line-height: 1.6;
+  font-size: 0.8125rem;
+  font-family: noto;
+}
+.popup3 .popup3wrap .popup3-p::-webkit-scrollbar {
+  margin: 0;
+  padding: 0;
+  width: 8px;
+}
+.popup3 .popup3wrap .popup3-p::-webkit-scrollbar-button {
+  height: 0;
+  -webkit-transition: 300ms all;
+  transition: 300ms all;
+}
+.popup3 .popup3wrap .popup3-p::-webkit-scrollbar-corner {
+  background-color: none;
+}
+.popup3 .popup3wrap .popup3-p::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 8px;
+  border: none;
+}
+.popup3 .popup3wrap .popup3-p::-webkit-scrollbar-thumb:hover {
+  background: #c1c1c1;
+}
+.popup3 .popup3wrap .popup3-p::-webkit-scrollbar-track {
+  background-color: #fff;
+  border-radius: 0;
+  border: 0;
+}
+.popup3 .popup3wrap .popup3-p::-webkit-scrollbar-track:hover, .popup3 .popup3wrap .popup3-p::-webkit-scrollbar-track:active {
+  background: none;
+}
+
 header {
   z-index: 9999;
   position: relative;
