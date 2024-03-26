@@ -45,6 +45,10 @@ var imgSrc = "../img/01main/main/topsection/".concat(imgs[0]);
 src.value = imgSrc;
 img.setAttributeNode(src);
 imgContainer.appendChild(img);
+var imgwidth = window.innerWidth;
+img.style.width = imgwidth;
+img.style.height = imgContainer.innerHeight;
+console.log(img);
 var i = 0;
 
 var changeImg = function changeImg(direction) {
@@ -133,15 +137,26 @@ console.log(slideCount);
 var slideWidth = 300;
 var slideMargin = 30;
 var prevBtn = document.querySelector(".prev");
-var nextBtn = document.querySelector(".next"); // Initial Index Value
+var nextBtn = document.querySelector(".next"); // function changeslideSource() {
+//   if (window.innerWidth <= 1024) {
+//      slideWidth = 300;
+//      slideMargin = 30;
+//   } else {
+//     slideWidth = 300;
+//     slideMargin = 30;
+//   }
+//   console.log(slideWidth,slideMargin)
+// }
+// 화면 크기가 변경될 때마다 실행
+// Initial Index Value
 
 var currentIdx = 0; // li style setting
 
 var updateWidth = function updateWidth() {
   var currentSlides = document.querySelectorAll(".slides li");
   var newSlideCount = currentSlides.length;
-  console.log(newSlideCount);
   var newWidth = "".concat((slideWidth + slideMargin) * newSlideCount - slideMargin, "px");
+  console.log(newWidth);
   slides.style.width = newWidth;
 };
 
@@ -221,17 +236,16 @@ var stopSlide = function stopSlide() {
 };
 
 slides.addEventListener("mouseenter", stopSlide);
-slides.addEventListener("mouseleave", autoSlide); //===================================================
+slides.addEventListener("mouseleave", autoSlide); // window.addEventListener('resize', changeslideSource);
+//===================================================
 //section3 slide -content
 
-var secHeaderNav = document.querySelectorAll("#sectionthree-header-nav a p");
-console.log(secHeaderNav); // secHeaderNav.forEach((a) => {
+var secHeaderNav = document.querySelectorAll("#sectionthree-header-nav a p"); // secHeaderNav.forEach((a) => {
 //   a.addEventListener("click", (a) => {
 //     a.classList.toggle("active");
 //   });
 // });
-
-console.log(secHeaderNav); // function removeActiveClasses(p) {
+// function removeActiveClasses(p) {
 //   p.addEventListener("click", () => {
 //     p.classList.toggle("active");
 //   });
@@ -243,10 +257,64 @@ console.log(secHeaderNav); // function removeActiveClasses(p) {
 //   });
 // });
 
-secHeaderNav.forEach(function (p) {
+var hiddenH1 = slides.querySelectorAll("li .hiddenp h1");
+var hiddenH3 = slides.querySelectorAll("li .hiddenp h3");
+var slideImg = slides.querySelectorAll("li img");
+var originP = slides.querySelectorAll("li .originp"); // function changeH1() {
+//   hiddenH1[1].innerHTML = '13새로운 값'; // 인덱스 1의 값을 '새로운 값'으로 교체
+//   hiddenH1[2].innerHTML = '12새로운 값'; // 인덱스 1의 값을 '새로운 값'으로 교체
+//   hiddenH1[3].innerHTML = '11새로운 값'; // 인덱스 1의 값을 '새로운 값'으로 교체
+//   hiddenH1[4].innerHTML = '10새로운 값'; // 인덱스 1의 값을 '새로운 값'으로 교체
+//   hiddenH1[5].innerHTML = '9새로운 값'; // 인덱스 1의 값을 '새로운 값'으로 교체
+//   hiddenH1[6].innerHTML = '8새로운 값'; // 인덱스 1의 값을 '새로운 값'으로 교체
+//   hiddenH1[7].innerHTML = '7새로운 값'; // 인덱스 1의 값을 '새로운 값'으로 교체
+//   hiddenH1[8].innerHTML = '6새로운 값'; // 인덱스 1의 값을 '새로운 값'으로 교체
+//   hiddenH1[9].innerHTML = '5새로운 값'; // 인덱스 1의 값을 '새로운 값'으로 교체
+//   hiddenH1[10].innerHTML = '4새로운 값'; // 인덱스 1의 값을 '새로운 값'으로 교체
+//   hiddenH1[11].innerHTML = '3새로운 값'; // 인덱스 1의 값을 '새로운 값'으로 교체
+//   hiddenH1[12].innerHTML = '1새로운 값'; // 인덱스 1의 값을 '새로운 값'으로 교체
+// }
+
+console.log(hiddenH1); // [1, '새로운 값', 3, 4, 5]
+
+function changeImgSlide() {
+  hiddenH1.forEach(function (h1s, h1indexs) {// h1s[0].innerHTML = '13새로운 값';
+    // h1s[2].innerHTML = '12새로운 값'; 
+    // h1s[3].innerHTML = '11새로운 값'; 
+    // h1s[4].innerHTML = '10새로운 값'; 
+    // h1s[5].innerHTML = '9새로운 값'; 
+    // h1s[8].innerHTML = '6새로운 값'; 
+    // h1s[9].innerHTML = '5새로운 값'; 
+    // h1s[10].innerHTML = '4새로운 값'; 
+    // h1s[11].innerHTML = '3새로운 값'; 
+    // h1s[12].innerHTML = '1새로운 값'; 
+    // // h3의 innerHTML 변경
+    // const h3 = hiddenH3[h1indexs];
+    // h3.innerHTML = "새로운 내용 " + h1indexs; // 각 인덱스에 맞는 내용으로 변경
+    // // 이미지 소스 변경
+    // const img = slideImg[h1indexs];
+    // img.src = "새로운이미지" + h1indexs + ".jpg"; // 각 인덱스에 맞는 이미지 경로로 변경
+    // // 원본 내용 변경
+    // const p = originP[h1indexs];
+    // p.innerHTML = "디카페인카라멜마끼야또 " + h1indexs ; // 각 인덱스에 맞는 내용으로 변경
+  });
+}
+
+secHeaderNav.forEach(function (p, index) {
   p.addEventListener("click", function () {
     removeActiveClasses();
     this.classList.add("active");
+    changeImgSlide();
+    var h1Text = hiddenH1[index].textContent; // hiddenH1 배열의 해당 인덱스 요소의 텍스트
+
+    var h3Text = hiddenH3[index].textContent; // hiddenH3 배열의 해당 인덱스 요소의 텍스트
+
+    var imgSrc = slideImg[index].src; // slideImg 배열의 해당 인덱스 요소의 이미지 소스
+
+    var originText = originP[index].textContent; // originP 배열의 해당 인덱스 요소의 텍스트
+    // 예시로 콘솔에 출력
+
+    console.log("H1 Text: ".concat(h1Text, ", H3 Text: ").concat(h3Text, ", Image Source: ").concat(imgSrc, ", Original Text: ").concat(originText));
   });
 });
 

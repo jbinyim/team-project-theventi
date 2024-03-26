@@ -270,6 +270,344 @@
     width: 222px;
     height: 169px;
   }
+  body #sectionthree {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100% !important;
+    background: #fff;
+    padding: 60px 0px 0px 0px;
+    margin-top: -200px;
+  }
+  body #sectionthree #sectionthree-header {
+    width: 100vw;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    margin-left: 30px;
+  }
+  body #sectionthree #sectionthree-header #sectionthree-header-logo {
+    justify-content: center;
+    margin-bottom: -85px;
+  }
+  body #sectionthree #sectionthree-header #sectionthree-header-logo h1 {
+    font-size: 3rem;
+  }
+  body #sectionthree #sectionthree-header #sectionthree-header-logo img {
+    width: 34px;
+    height: 26px;
+  }
+  body #sectionthree #sectionthree-header #sectionthree-header-nav {
+    font-size: 0.9375rem;
+  }
+  body #sectionthree #sectionthree-slider {
+    height: 419px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    overflow-x: hidden;
+    margin-bottom: 60px;
+  }
+  body #sectionthree #sectionthree-slider .sectionthree-slide_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 970px;
+    height: 100%;
+    position: relative;
+    overflow-x: hidden;
+    margin: 0 auto;
+  }
+  body #sectionthree #sectionthree-slider .sectionthree-slide_wrapper .slides {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  body #sectionthree #sectionthree-slider .sectionthree-slide_wrapper .slides li {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  body #sectionthree #sectionthree-slider .sectionthree-slide_wrapper .slides li .hiddenp .hiddenpicon {
+    width: 100px;
+    height: 100px;
+  }
+  body #sectionthree #sectionthree-slider .sectionthree-slide_wrapper .slides li .hiddenp .hiddenpicon #xi-search::before {
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+  body #sectionthree #sectionthree-slider .sectionthree-slide_wrapper .slides li .hiddenp h1 {
+    white-space: nowrap;
+    font-size: 1.171875rem;
+    color: #7b00a0;
+    margin-bottom: 10px;
+  }
+  body #sectionthree #sectionthree-slider .sectionthree-slide_wrapper .slides li .hiddenp h3 {
+    display: none;
+  }
+  body #sectionthree #sectionthree-slider .sectionthree-slide_wrapper .slides li .originp {
+    font-size: 1.171875rem;
+  }
+  body #sectionthree #sectionthree-slider .sectionthree-slide_wrapper .slides li img {
+    width: 97.5px;
+    height: 180px;
+  }
+  body #sectionthree #sectionthree-slider .sectionthree-slide_wrapper .controls span {
+    position: absolute;
+    background: #ccc;
+    border-radius: 100%;
+    color: #fff;
+  }
+  body #sectionthree #sectionthree-slider .sectionthree-slide_wrapper .controls .prev {
+    z-index: 1;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    top: 50%;
+    left: -135px;
+    transform: translate(0, -50%);
+  }
+  body #sectionthree #sectionthree-slider .sectionthree-slide_wrapper .controls .next {
+    width: 30px;
+    height: 30px;
+    right: -135px;
+    transform: translate(0, -50%);
+  }
+  body #sectionthree #sectionthree-slider .sectionthree-slide_wrapper .controls .next .xi-next {
+    font-family: xeicon !important;
+    display: inline-block;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  }
+  body #sectionthree #sectionthree-slider .sectionthree-slide_wrapper .controls .next .xi-next::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+  }
+  body #sectionfour {
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    transition: all 1s;
+    display: inline-block;
+  }
+  body #sectionfour section {
+    width: 100%;
+    height: 100%;
+  }
+  body #sectionfour section .menu-story .taste-tit {
+    height: 131.25px !important;
+  }
+  body #sectionfour section .menu-story .taste-tit .taste-tit-text {
+    height: 131.25px !important;
+    justify-content: center;
+    padding-left: 0px !important;
+  }
+  body #sectionfour section .menu-story .taste-tit .taste-tit-text h2 {
+    font-size: 18.75px;
+    margin: 0px;
+  }
+  body #sectionfour section .menu-story .taste-tit .taste-tit-text h2 img {
+    margin-bottom: 10px;
+    width: 20px;
+    height: 15.28px;
+  }
+  body #sectionfour section .menu-story .taste-info {
+    display: block;
+    height: 100%;
+  }
+  body #sectionfour section .menu-story .taste-info-inner {
+    display: block;
+    width: 100%;
+    height: calc(100% / 3%);
+  }
+  body #sectionfour section .menu-story .taste-info-inner .whitelogo {
+    display: none;
+  }
+  body #sectionfive {
+    margin-top: 800px;
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 631px;
+    background: #fff;
+  }
+  body #sectionfive #sectionfive-header {
+    width: 100vw;
+    gap: 0px;
+  }
+  body #sectionfive #sectionfive-header #sectionfive-header-logo {
+    padding-left: 20px;
+  }
+  body #sectionfive #sectionfive-header #sectionfive-header-logo h1 {
+    font-size: 60px;
+  }
+  body #sectionfive #sectionfive-header #sectionfive-header-logo img {
+    width: 43.5px;
+    height: 33.25px;
+  }
+  body #sectionfive #sectionfive-slider {
+    height: 631px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    overflow: hidden;
+  }
+  body #sectionfive #sectionfive-slider .sectionfive-slide_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100%;
+    position: relative !important;
+    overflow: hidden;
+    margin: 0 auto;
+  }
+  body #sectionfive #sectionfive-slider .sectionfive-slide_wrapper .five-slides {
+    transition: all 0.2s;
+    cursor: pointer;
+    height: 100%;
+    width: 100vw;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  body #sectionfive #sectionfive-slider .sectionfive-slide_wrapper .five-slides .animated {
+    transition: all 0.5s ease-out;
+  }
+  body #sectionfive #sectionfive-slider .sectionfive-slide_wrapper .five-slides li {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  body #sectionfive #sectionfive-slider .sectionfive-slide_wrapper .five-slides li a {
+    position: absolute;
+    width: 54px;
+    height: 53px;
+    bottom: 30px;
+  }
+  body #sectionfive #sectionfive-slider .sectionfive-slide_wrapper .five-slides li a .fiveinsta {
+    width: 100%;
+    height: 100%;
+    filter: grayscale(100%);
+  }
+  body #sectionfive #sectionfive-slider .sectionfive-slide_wrapper .five-slides li a .fiveinsta:hover {
+    outline: none;
+  }
+  body #sectionfive #sectionfive-slider .sectionfive-slide_wrapper .five-slides li img {
+    width: 315px;
+    height: 315px;
+    object-fit: cover;
+    border-radius: 100% 0 100% 100%;
+    transition: all 0.1s;
+  }
+  body #sectionfive #sectionfive-slider .sectionfive-slide_wrapper .five-slides li img:hover {
+    outline: 4px solid #7b00a0;
+  }
+  body #sectionfive #sectionfive-slider .sectionfive-slide_wrapper .five-slides li:not(:last-child) {
+    margin-right: 35px;
+  }
+  body #sectionfive #sectionfive-slider .sectionfive-slide_wrapper .five-controls {
+    z-index: 0;
+    position: absolute;
+    top: 0%;
+    right: 0;
+    width: 154px;
+    height: 54px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  body #sectionfive #sectionfive-slider .sectionfive-slide_wrapper .five-controls span {
+    position: absolute;
+    color: #999;
+  }
+  body #sectionfive #sectionfive-slider .sectionfive-slide_wrapper .five-controls .five-num {
+    width: 46px;
+    height: 54px;
+    top: 50%;
+    right: 54px;
+    transform: translate(0, -10px);
+    font-size: 18px;
+    line-height: 18px;
+    color: #777;
+    font-weight: bold;
+  }
+  body #sectionfive #sectionfive-slider .sectionfive-slide_wrapper .five-controls .five-prev {
+    width: 54px;
+    height: 54px;
+    top: 0;
+    right: 100px;
+  }
+  body #sectionfive #sectionfive-slider .sectionfive-slide_wrapper .five-controls .five-prev .xi-prev {
+    font-family: xeicon !important;
+    display: inline-block;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  }
+  body #sectionfive #sectionfive-slider .sectionfive-slide_wrapper .five-controls .five-prev .xi-prev::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+  }
+  body #sectionfive #sectionfive-slider .sectionfive-slide_wrapper .five-controls .five-next {
+    width: 54px;
+    height: 54px;
+    top: 0%;
+    right: 0%;
+  }
+  body #sectionfive #sectionfive-slider .sectionfive-slide_wrapper .five-controls .five-next .xi-next {
+    font-family: xeicon !important;
+    display: inline-block;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  }
+  body #sectionfive #sectionfive-slider .sectionfive-slide_wrapper .five-controls .five-next .xi-next::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+  }
   body footer {
     display: block;
   }
@@ -1380,6 +1718,7 @@
   background: #000;
   align-items: center;
   position: relative;
+  object-fit: cover;
 }
 * section #imgbox #img-container .arrow {
   display: none;
@@ -1882,7 +2221,7 @@
   top: -25px;
   left: 25%;
 }
-* #sectionfour section .menu-story .taste-info-inner .info-tit p:first-child {
+* #sectionfour section .menu-story .taste-info-inner .info-tit p {
   font: 1.0625rem/1 "suit";
   position: relative;
 }
