@@ -30,12 +30,11 @@ const searchSubmit = (e) => {
       }
     });
     contents.innerHTML = output;
-    const posters = document.querySelectorAll(".search-title");
-    posters.forEach((poster) => {
-      poster.addEventListener("click", posterDetail);
-    });
-  } else if (find === "content") {
   }
+  const posters = document.querySelectorAll(".search-title");
+  posters.forEach((poster) => {
+    poster.addEventListener("click", posterDetail);
+  });
 };
 
 fetch("notice.json")
