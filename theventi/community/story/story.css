@@ -1271,7 +1271,10 @@ body .wrap footer #footer-wrap #footer-container-wrap #footer-container-bottom .
     height: 224px;
   }
   body .wrap .story-container .story-articles .story-article a .text .title {
-    width: 159px;
+    width: 100px;
+  }
+  body .wrap .story-container .story-articles .story-article a .text .des {
+    width: 100px;
   }
   body .wrap .story-container .story-table thead tr th {
     font-size: 0.8125rem;

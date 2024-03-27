@@ -18,6 +18,9 @@ body {
     }
     header {
       @include header-1920;
+      .active {
+        color: #780997;
+      }
     }
     aside {
       @include aside-1920;

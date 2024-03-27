@@ -682,7 +682,7 @@ body .wrap .container .qna-nav ul li.active {
 body .wrap .container .qna-content {
   width: 100%;
   height: 100%;
-  margin-bottom: 50px;
+  margin-bottom: 155px;
 }
 body .wrap .container .qna-content .qna-total li {
   display: none;
@@ -727,30 +727,6 @@ body .wrap .container .qna-content .qna-total .qna-back::before {
 }
 body .wrap .container .qna-content .qna-total .qna-back.active {
   display: block;
-}
-body .wrap .container .qna-pages {
-  width: 100%;
-  height: 34px;
-  margin-bottom: 155px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 4px;
-}
-body .wrap .container .qna-pages .prevent-next {
-  width: 34px;
-  height: 34px;
-}
-body .wrap .container .qna-pages .prevent-next img {
-  width: 100%;
-  height: 100%;
-}
-body .wrap .container .qna-pages .page {
-  width: 34px;
-  height: 34px;
-  text-align: center;
-  border: 1px solid #edeff1;
-  font: 1rem/31px "noto";
 }
 body .wrap #quick-menu {
   z-index: 1;

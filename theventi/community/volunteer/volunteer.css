@@ -418,6 +418,9 @@ body .wrap header #dropdown #dropdown-container #dropdown-list #community-list {
   display: flex;
   flex-direction: column;
 }
+body .wrap header .active {
+  color: #780997;
+}
 body .wrap aside {
   z-index: 200;
   transition: all 0.5s;

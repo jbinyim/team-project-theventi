@@ -393,7 +393,11 @@ body {
               }
               .text {
                 .title {
-                  width: 159px;
+                  width: 100px;
+                }
+                .des {
+                  width: 100px;
+                  // display: none;
                 }
               }
             }
