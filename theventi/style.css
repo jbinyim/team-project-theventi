@@ -1,0 +1,292 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+*::-moz-selection {
+  background: #d9d9d9;
+  color: #ff5b28;
+  text-shadow: none;
+}
+*::selection {
+  background: #d9d9d9;
+  color: #ff5b28;
+  text-shadow: none;
+}
+*::-webkit-scrollbar {
+  margin: 0;
+  padding: 0;
+  width: 8px;
+}
+*::-webkit-scrollbar-button {
+  height: 0;
+  -webkit-transition: 300ms all;
+  transition: 300ms all;
+}
+*::-webkit-scrollbar-corner {
+  background-color: #222;
+}
+*::-webkit-scrollbar-thumb {
+  /* background: rgba(123, 0, 160, 0.7); */
+  background: rgba(255, 91, 40, 0.7);
+  border-radius: 8px;
+  border: 1px solid #000;
+}
+*::-webkit-scrollbar-thumb:hover, *::-webkit-scrollbar-thumb:active {
+  /* background: rgba(123, 0, 160, 0.9); */
+  background: rgba(255, 91, 40, 0.9);
+}
+*::-webkit-scrollbar-track {
+  background-color: #222;
+  border-radius: 0;
+  border: 0;
+}
+*::-webkit-scrollbar-track:hover, *::-webkit-scrollbar-track:active {
+  background: #222;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+@font-face {
+  font-family: "geometos";
+  src: url("./font/Geometos-Rounded.ttf");
+}
+@font-face {
+  font-family: "nanum";
+  src: url("./font/NanumSquareB.ttf");
+}
+@font-face {
+  font-family: "noto";
+  src: url("./font/NotoSansKR-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: "noto500";
+  src: url("./font/noto-sans-kr-v13-latin_korean-500.ttf");
+}
+@font-face {
+  font-family: "suitB";
+  src: url("./font/SUIT-Bold.ttf");
+}
+@font-face {
+  font-family: "suitL";
+  src: url("./font/SUIT-Light.ttf");
+}
+@font-face {
+  font-family: "suitM";
+  src: url("./font/SUIT-Medium.ttf");
+}
+@font-face {
+  font-family: "suitSB";
+  src: url("./font/SUIT-SemiBold.ttf");
+}
+@font-face {
+  font-family: "xeicon";
+  src: url("./font/xeicon.ttf");
+}
+html {
+  font-size: 16px;
+}
+html .wrap {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+html .wrap .intro-brand {
+  background: url("./img/00intro/brandbg.jpg") center/cover no-repeat;
+  width: 50%;
+  height: 100%;
+  cursor: pointer;
+  position: relative;
+}
+html .wrap .intro-brand .intro-text {
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  transition: all 0.4s;
+}
+html .wrap .intro-brand .intro-text .intro-text-bx {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+html .wrap .intro-brand .intro-text .intro-text-bx h1 {
+  font: 4.5rem/1 "geometos";
+  position: relative;
+  margin-bottom: 70px;
+}
+html .wrap .intro-brand .intro-text .intro-text-bx h1::after {
+  content: "";
+  position: absolute;
+  bottom: -35px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 1px;
+  background: #fff;
+}
+html .wrap .intro-brand .intro-text .intro-text-bx p {
+  font: 1.5rem/1 "noto";
+  color: #ff5b28;
+  margin-bottom: 20px;
+  transition: all 0.3s;
+}
+html .wrap .intro-brand .intro-text .intro-text-bx h3 {
+  font: 100 1.875rem/1 "noto";
+}
+html .wrap .intro-brand::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  transition: all 0.4s;
+}
+html .wrap .intro-brand:hover::before {
+  display: none;
+}
+html .wrap .intro-brand:hover .intro-text {
+  transform: translate(-50%, -100%);
+}
+html .wrap .intro-brand:hover .intro-text p {
+  color: #fff;
+}
+html .wrap .intro-brand:hover p {
+  color: #fff;
+}
+html .wrap .intro-franchise {
+  width: 50%;
+  height: 100%;
+  background: url("./img/00intro/franchbg.jpg") center/cover no-repeat;
+  cursor: pointer;
+  position: relative;
+}
+html .wrap .intro-franchise .intro-text {
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  transition: all 0.4s;
+}
+html .wrap .intro-franchise .intro-text .intro-text-bx {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+html .wrap .intro-franchise .intro-text .intro-text-bx h1 {
+  font: 4.5rem/1 "geometos";
+  position: relative;
+  margin-bottom: 70px;
+}
+html .wrap .intro-franchise .intro-text .intro-text-bx h1::after {
+  content: "";
+  position: absolute;
+  bottom: -35px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 1px;
+  background: #fff;
+}
+html .wrap .intro-franchise .intro-text .intro-text-bx p {
+  font: 1.5rem/1 "noto";
+  color: #7b00a0;
+  margin-bottom: 20px;
+  transition: all 0.3s;
+}
+html .wrap .intro-franchise .intro-text .intro-text-bx h3 {
+  font: 100 1.875rem/1 "noto";
+}
+html .wrap .intro-franchise::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  transition: all 0.4s;
+}
+html .wrap .intro-franchise:hover::before {
+  display: none;
+}
+html .wrap .intro-franchise:hover .intro-text {
+  transform: translate(-50%, -100%);
+}
+html .wrap .intro-franchise:hover .intro-text p {
+  color: #fff;
+}
+html .wrap .intro-franchise:hover p {
+  color: #fff;
+}
+html .intro-center-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+html .intro-center-logo .intro-circle {
+  width: 239px;
+  height: 239px;
+  border-radius: 100%;
+  background-color: #7b00a0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s;
+}
+html .intro-center-logo .intro-circle.active {
+  background-color: #fff;
+}
+html .intro-center-logo .intro-circle.active.active .whitelogo {
+  display: none;
+}
+html .intro-center-logo .intro-circle.active.active .puplelogo {
+  display: block;
+}
+html .intro-center-logo .intro-circle .puplelogo {
+  display: none;
+}
+
+@media screen and (max-width: 1024px) {
+  html {
+    font-size: 13px;
+  }
+  html .wrap {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  html .wrap .intro-brand {
+    width: 100%;
+    height: 50%;
+  }
+  html .wrap .intro-franchise {
+    width: 100%;
+    height: 50%;
+  }
+  html .intro-center-logo .intro-circle {
+    width: 135px;
+    height: 135px;
+  }
+  html .intro-center-logo .intro-circle img {
+    width: 115px;
+  }
+}/*# sourceMappingURL=style.css.map */

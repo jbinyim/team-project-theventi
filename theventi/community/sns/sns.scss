@@ -1,0 +1,230 @@
+@import "../../reset.css";
+@import "../../font.css";
+@import "../../variables.scss";
+@import "../../mixin.scss";
+
+body {
+  font-size: 16px;
+  overflow-x: hidden;
+  .wrap {
+    width: 100%;
+    height: 100%;
+    .popup2 {
+      @include popup2;
+    }
+    .popup3 {
+      @include popup3;
+    }
+    header {
+      @include header-1920;
+    }
+    aside {
+      @include aside-1920;
+    }
+    .sns-figuer {
+      @include community-figuer;
+    }
+    .sns-nav {
+      @include community-nav;
+    }
+    .sns-container {
+      width: 1200px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 100px auto 155px;
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        overflow: hidden;
+        padding: 0 15px;
+        li {
+          flex: 1 0 25%;
+          max-width: 25%;
+          padding: 5px 10px;
+
+          .imgae {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            border: 3px solid transparent;
+            transition: all 0.3s;
+            position: relative;
+            img {
+              width: 100%;
+              height: 100%;
+              transition: all 0.3s;
+            }
+            .snsicon {
+              position: absolute;
+              top: 15px;
+              right: 15px;
+              width: 37px;
+              height: 37px;
+              background: url("../../img/04community/04sns/insta-icon.png")
+                center/cover no-repeat;
+            }
+          }
+          &:hover {
+            .imgae {
+              border: 3px solid map-get($main-color, puple);
+            }
+            img {
+              transform: scale(1.05);
+            }
+          }
+        }
+      }
+      .sns-pages {
+        // border: 1px solid #f00;
+        width: 100%;
+        height: 34px;
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 4px;
+        .prevent-next {
+          width: 34px;
+          height: 34px;
+          cursor: pointer;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        .page {
+          //border: 1px solid #f00;
+          cursor: pointer;
+          // width: 100%;
+          height: 34px;
+          text-align: center;
+          display: flex;
+          gap: 4px;
+          .number-button {
+            display: inline-block;
+            width: 34px;
+            height: 100%;
+            border: 1px solid #ddd;
+            font: 1rem/30px "noto";
+          }
+          .selected {
+            border: 1px solid #000;
+          }
+        }
+      }
+    }
+    #quick-menu {
+      @include quickmenu-1920;
+    }
+    footer {
+      @include footer-1920;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  body {
+    .wrap {
+      width: 100%;
+      height: 100%;
+      header {
+        @include header-1024;
+      }
+      .sns-figuer {
+        .volun-title {
+          h1 {
+            font-size: 1.75rem;
+          }
+          p {
+            font-size: 1rem;
+          }
+        }
+      }
+      .sns-nav {
+        .volun-bar {
+          ul {
+            white-space: nowrap;
+            width: 100%;
+            overflow-x: scroll;
+            overflow-y: hidden;
+            -webkit-overflow-scrolling: touch;
+            &::-webkit-scrollbar-track {
+              background: auto;
+            }
+            &::-webkit-scrollbar-thumb {
+              background: auto;
+            }
+          }
+        }
+      }
+      .sns-container {
+        width: 100%;
+        height: 100%;
+        padding: 0 15px;
+        ul {
+          width: 100%;
+          li {
+            flex: 1 0 50%;
+            max-width: 50%;
+          }
+        }
+        .sns-pages {
+          // border: 1px solid #f00;
+          width: 100%;
+          height: 28px;
+          margin: 50px 0 56px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 4px;
+          .prevent-next {
+            width: 28px;
+            height: 28px;
+            cursor: pointer;
+            img {
+              width: 100%;
+              height: 100%;
+            }
+          }
+          .page {
+            //border: 1px solid #f00;
+            cursor: pointer;
+            // width: 100%;
+            height: 28px;
+            text-align: center;
+            display: flex;
+            gap: 4px;
+            .number-button {
+              display: inline-block;
+              width: 28px;
+              height: 100%;
+              border: 1px solid #ddd;
+              font: 1rem/28px "noto";
+            }
+            .selected {
+              border: 1px solid #000;
+            }
+          }
+        }
+      }
+      #quick-menu {
+        display: none;
+      }
+      footer {
+        @include footer-1024;
+      }
+    }
+  }
+}
+@media screen and (max-width: 576px) {
+  body {
+    .wrap {
+      aside {
+        @include aside-576;
+      }
+    }
+  }
+}

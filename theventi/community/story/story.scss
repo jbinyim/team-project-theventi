@@ -1,0 +1,425 @@
+@import "../../reset.css";
+@import "../../font.css";
+@import "../../variables.scss";
+@import "../../mixin.scss";
+
+body {
+  font-size: 16px;
+  overflow-x: hidden;
+  .wrap {
+    width: 100%;
+    height: 100%;
+    .popup2 {
+      @include popup2;
+    }
+    .popup3 {
+      @include popup3;
+    }
+    header {
+      @include header-1920;
+    }
+    aside {
+      @include aside-1920;
+    }
+    .story-figuer {
+      @include community-figuer;
+    }
+    .story-nav {
+      @include community-nav;
+    }
+    .story-container {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-self: center;
+      align-items: center;
+      .story-articles {
+        width: 1220px;
+        margin: 100px 0 40px;
+        display: flex;
+        flex-wrap: wrap;
+        .story-article {
+          flex: 1 0 33.33%;
+          width: 33.33%;
+          height: 100%;
+          padding: 5px 10px;
+          a {
+            border: 1px solid #ddd;
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            transition: all 0.3s;
+            .image {
+              width: 100%;
+              height: 100%;
+              overflow: hidden;
+              &:nth-child(1) {
+                height: 394px;
+              }
+              img {
+                width: 100%;
+                height: 100%;
+                transition: all 0.3s;
+              }
+            }
+            .text {
+              background: #fff;
+              display: flex;
+              justify-content: space-around;
+              padding: 20px 15px;
+              .title {
+                width: 279px;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                font: 500 1rem "noto";
+              }
+              .des {
+                margin-top: 10px;
+                width: 279px;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                word-wrap: break-word;
+                font: 0.875rem/1.4 "noto";
+                color: #999;
+              }
+              .go {
+                text-align: center;
+                display: block;
+                width: 60px;
+                height: 60px;
+                border-radius: 100%;
+                font: 1rem/60px "noto";
+                color: #fff;
+                background: map-get($main-color, org);
+              }
+            }
+            &:hover {
+              outline: 3px solid map-get($main-color, puple);
+              .image {
+                img {
+                  transform: scale(1.05);
+                }
+              }
+              .title {
+                color: map-get($main-color, puple);
+              }
+            }
+          }
+        }
+      }
+      .story-table {
+        width: 1200px;
+        height: 100%;
+        border-bottom: 1px solid #ddd;
+        border-top: 1px solid map-get($main-color, puple);
+        border-collapse: collapse;
+        border-spacing: 0;
+        thead {
+          tr {
+            width: 100%;
+            height: 52px;
+            border-bottom: 1px solid #ddd;
+            th {
+              padding: 13px 2px;
+              font: 500 1rem "noto";
+            }
+          }
+        }
+        tbody {
+          .story-tr {
+            width: 100%;
+            height: 56px;
+            border-bottom: 1px solid #ddd;
+            text-align: center;
+            td {
+              padding: 15px 5px;
+              font: 1rem "noto";
+              color: #666;
+              &:nth-child(2) {
+                text-align: left;
+              }
+              a:hover {
+                color: map-get($main-color, puple);
+                text-decoration: underline;
+                cursor: pointer;
+              }
+            }
+          }
+        }
+      }
+      .story-pages {
+        // border: 1px solid #f00;
+        width: 100%;
+        height: 34px;
+        margin: 50px 0 56px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 4px;
+        .prevent-next {
+          width: 34px;
+          height: 34px;
+          cursor: pointer;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        .page {
+          //border: 1px solid #f00;
+          cursor: pointer;
+          // width: 100%;
+          height: 34px;
+          text-align: center;
+          display: flex;
+          gap: 4px;
+          .number-button {
+            display: inline-block;
+            width: 34px;
+            height: 100%;
+            border: 1px solid #ddd;
+            font: 1rem/30px "noto";
+          }
+          .selected {
+            border: 1px solid #000;
+          }
+        }
+      }
+      .story-search {
+        width: 1200px;
+        height: 82px;
+        border-top: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+        margin: 60px 0 150px;
+        form {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 4px;
+          #find {
+            width: 8.3%;
+            height: 40px;
+            padding: 5px;
+            border: 1px solid #ddd;
+            outline: none;
+            font: 1rem "noto";
+          }
+          .search {
+            width: 20%;
+            height: 40px;
+            border: 1px solid #ddd;
+            outline: none;
+            padding: 0 5px;
+            font: 1rem "noto";
+          }
+          .search-button {
+            width: 7.5%;
+            height: 40px;
+            border: 1px solid #ddd;
+            cursor: pointer;
+            font: 1rem "noto";
+          }
+        }
+      }
+    }
+    #quick-menu {
+      @include quickmenu-1920;
+    }
+    footer {
+      @include footer-1920;
+    }
+  }
+}
+@media screen and (max-width: 1024px) {
+  body {
+    .wrap {
+      width: 100%;
+      height: 100%;
+      header {
+        @include header-1024;
+      }
+      .story-figuer {
+        .volun-title {
+          h1 {
+            font-size: 1.75rem;
+          }
+          p {
+            font-size: 1rem;
+          }
+        }
+      }
+      .story-nav {
+        .volun-bar {
+          ul {
+            white-space: nowrap;
+            width: 100%;
+            overflow-x: scroll;
+            overflow-y: hidden;
+            -webkit-overflow-scrolling: touch;
+            &::-webkit-scrollbar-track {
+              background: auto;
+            }
+            &::-webkit-scrollbar-thumb {
+              background: auto;
+            }
+          }
+        }
+      }
+      .story-container {
+        width: 100%;
+        height: 100%;
+        .story-articles {
+          width: 100%;
+          .story-article {
+            flex: 1 0 50%;
+            max-width: 50%;
+            a {
+              width: 100%;
+              .image {
+                width: 100%;
+                height: 100%;
+                img {
+                  width: 100%;
+                  height: 100%;
+                }
+              }
+              .text {
+                padding: 10px 5px;
+                .title {
+                  width: 388px;
+                  font: 500 0.8125rem "noto";
+                }
+                .go {
+                  width: 40px;
+                  height: 40px;
+                  line-height: 40px;
+                }
+              }
+            }
+          }
+        }
+        .story-table {
+          width: 100%;
+        }
+        .story-pages {
+          // border: 1px solid #f00;
+          width: 100%;
+          height: 28px;
+          margin: 50px 0 56px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 4px;
+          .prevent-next {
+            width: 28px;
+            height: 28px;
+            cursor: pointer;
+            img {
+              width: 100%;
+              height: 100%;
+            }
+          }
+          .page {
+            //border: 1px solid #f00;
+            cursor: pointer;
+            // width: 100%;
+            height: 28px;
+            text-align: center;
+            display: flex;
+            gap: 4px;
+            .number-button {
+              display: inline-block;
+              width: 28px;
+              height: 100%;
+              border: 1px solid #ddd;
+              font: 1rem/28px "noto";
+            }
+            .selected {
+              border: 1px solid #000;
+            }
+          }
+        }
+        .story-search {
+          width: 100%;
+          height: 79px;
+          form {
+            width: 100%;
+            height: 100%;
+            #find {
+              width: 21.5%;
+            }
+            .search {
+              width: 50%;
+            }
+            .search-button {
+              width: 21.5%;
+            }
+          }
+        }
+      }
+      #quick-menu {
+        display: none;
+      }
+      footer {
+        @include footer-1024;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  body {
+    .wrap {
+      aside {
+        @include aside-576;
+      }
+      .story-container {
+        width: 100%;
+        .story-articles {
+          .story-article {
+            a {
+              .image {
+                &:nth-child(1) {
+                  height: 224px;
+                }
+              }
+              .text {
+                .title {
+                  width: 100px;
+                }
+                .des {
+                  width: 100px;
+                  // display: none;
+                }
+              }
+            }
+          }
+        }
+        .story-table {
+          thead {
+            tr {
+              th {
+                font-size: 0.8125rem;
+              }
+            }
+          }
+          tbody {
+            .story-tr {
+              td {
+                font-size: 0.8125rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
