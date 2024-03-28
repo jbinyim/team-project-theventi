@@ -10,8 +10,17 @@ body {
     width: 100%;
     height: 100%;
     overflow-x: hidden;
+    .popup2 {
+      @include popup2;
+    }
+    .popup3 {
+      @include popup3;
+    }
     header {
       @include header-1920;
+    }
+    aside {
+      @include aside-1920;
     }
     .message-figuer {
       width: 100%;
@@ -385,6 +394,7 @@ body {
       header {
         @include header-1024;
       }
+
       .message-figuer {
         width: 100%;
         height: 563px;
@@ -528,6 +538,9 @@ body {
 @media screen and (max-width: 576px) {
   body {
     .wrap {
+      aside {
+        @include aside-576;
+      }
       .message-figuer {
         height: 378px;
         .boun {

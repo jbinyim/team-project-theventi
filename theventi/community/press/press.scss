@@ -10,8 +10,17 @@ body {
   .wrap {
     width: 100%;
     height: 100%;
+    .popup2 {
+      @include popup2;
+    }
+    .popup3 {
+      @include popup3;
+    }
     header {
       @include header-1920;
+    }
+    aside {
+      @include aside-1920;
     }
     .press-figuer {
       @include community-figuer;
@@ -303,6 +312,9 @@ body {
 
 @media screen and (max-width: 576px) {
   body {
+    aside {
+      @include aside-576;
+    }
     .wrap {
       width: 100%;
       height: 100%;

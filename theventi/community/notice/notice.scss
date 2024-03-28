@@ -9,8 +9,17 @@ body {
   .wrap {
     width: 100%;
     height: 100%;
+    .popup2 {
+      @include popup2;
+    }
+    .popup3 {
+      @include popup3;
+    }
     header {
       @include header-1920;
+    }
+    aside {
+      @include aside-1920;
     }
     .notice-figuer {
       @include community-figuer;
@@ -311,6 +320,15 @@ body {
       }
       footer {
         @include footer-1024;
+      }
+    }
+  }
+}
+@media screen and (max-width: 576px) {
+  body {
+    .wrap {
+      aside {
+        @include aside-576;
       }
     }
   }
