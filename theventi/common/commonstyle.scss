@@ -1731,23 +1731,37 @@
       height: 100%;
       .menu-story {
         .taste-tit {
+          width: calc(100% / 3)!important;
           height: 131.25px !important;
+       
           .taste-tit-text {
-            width: calc(100% / 3) !important;
+          width: calc(100% + 21px) !important;
             height: 131.25px !important;
+        
             justify-content: center;
-
+            
+            
             padding-left: 0px !important;
 
             h2 {
+            width: 100% !important;
+              height: 131.25px;
+             display: flex;
+             flex-direction: column;
+             align-items: center;
+             justify-content: center;
               font-size: 18.75px;
               margin: 0px;
-
-              img {
-                margin-bottom: 10px;
-                width: 20px;
-                height: 15.28px;
+              span {
+               margin-bottom: -20px;
               }
+            }
+            img {
+              
+              margin-bottom: -15px;
+              margin-left: -5px;
+              width: 20px;
+              height: 15.28px;
             }
           }
         }
@@ -2845,7 +2859,7 @@
         position: relative;
         .taste-tit {
           // z-index: 1;
-          width: 1960px !important;
+          width: 1960px ;
           height: 275.19px !important;
 
           // background: #f00;
