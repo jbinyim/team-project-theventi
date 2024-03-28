@@ -1641,6 +1641,59 @@
     transform: translate(-50%, -50%);
     cursor: pointer;
   }
+  #sectionfour {
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    transition: all 1s;
+    display: inline-block;
+  }
+  #sectionfour section {
+    width: 100%;
+    height: 100%;
+  }
+  #sectionfour section .menu-story .taste-tit {
+    width: 33.3333333333% !important;
+    height: 131.25px !important;
+  }
+  #sectionfour section .menu-story .taste-tit .taste-tit-text {
+    width: calc(100% + 21px) !important;
+    height: 131.25px !important;
+    justify-content: center;
+    padding-left: 0px !important;
+  }
+  #sectionfour section .menu-story .taste-tit .taste-tit-text h2 {
+    width: 100% !important;
+    height: 131.25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 18.75px;
+    margin: 0px;
+  }
+  #sectionfour section .menu-story .taste-tit .taste-tit-text h2 span {
+    margin-bottom: -20px;
+  }
+  #sectionfour section .menu-story .taste-tit .taste-tit-text img {
+    margin-bottom: -15px;
+    margin-left: -5px;
+    width: 20px;
+    height: 15.28px;
+  }
+  #sectionfour section .menu-story .taste-info {
+    display: block;
+    height: 100%;
+  }
+  #sectionfour section .menu-story .taste-info-inner {
+    display: block;
+    width: 100%;
+    height: 33.3333333333;
+  }
+  #sectionfour section .menu-story .taste-info-inner .whitelogo {
+    display: none;
+  }
   #sectionfive {
     margin-top: 600px !important;
     margin-bottom: 100px;
@@ -3168,7 +3221,7 @@
   position: relative;
 }
 * #sectionfour section .menu-story .taste-tit {
-  width: 1960px !important;
+  width: 1960px;
   height: 275.19px !important;
   background: #322114;
   display: inline-block;
