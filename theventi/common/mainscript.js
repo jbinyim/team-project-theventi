@@ -9,7 +9,7 @@ function openPopup() {
   );
 }
 // openPopup();
-<<<<<<< HEAD:theventi/common/script.js
+
 //===============================================================
 // footer popup
 
@@ -101,8 +101,6 @@ depth3s.forEach((depth3) => {
     depth3.classList.toggle("depth3clicked");
   });
 });
-=======
->>>>>>> b248e7f3bebbf2d871c24d15dbf75f7a0970849b:theventi/common/mainscript.js
 
 //=================================
 //slider
