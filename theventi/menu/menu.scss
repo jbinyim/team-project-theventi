@@ -923,7 +923,7 @@ body {
   body {
     .menu-wrap {
       header {
-        @include header-1920;
+        @include header-1024;
       }
       .menu-main {
         width: 100%;

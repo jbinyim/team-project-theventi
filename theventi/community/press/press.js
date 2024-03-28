@@ -8,6 +8,12 @@ const form = document.querySelector("form");
 let pageNumberBtns;
 let currentPage = 1;
 
+const posterDetail = (e) => {
+  const { id } = e.target.parentElement;
+  const detailURL = `https://www.theventi.co.kr/new2022/news/notice-press.html?bmain=view&uid=${id}`;
+  window.open(detailURL, "_blank");
+};
+
 const newPage = (press, searchText) => {
   tbody.innerHTML = "";
   for (let i = 0; i < press.length; i++) {
@@ -32,6 +38,7 @@ const newPage = (press, searchText) => {
 
       pressNumber.innerHTML = press[i].id;
       pressLink.innerHTML = press[i].title;
+      pressTitle.id = press[i].id;
       pressVenti.innerText = "더벤티";
       pressDay.innerHTML = press[i].day;
 
@@ -41,6 +48,10 @@ const newPage = (press, searchText) => {
       document.querySelector(".press-pages").style.display = "none";
     }
   }
+  const posters = document.querySelectorAll(".press-link");
+  posters.forEach((poster) => {
+    poster.addEventListener("click", posterDetail);
+  });
 };
 
 const getTotalPages = (press) => {
@@ -102,6 +113,7 @@ fetch("press.json")
 
         pressNumber.innerHTML = 199 - i;
         pressLink.innerHTML = press[i - 1].title;
+        pressTitle.id = press[i - 1].id;
         pressVenti.innerText = "더벤티";
         pressDay.innerHTML = press[i - 1].day;
 
@@ -109,6 +121,10 @@ fetch("press.json")
         tr.append(pressNumber, pressTitle, pressVenti, pressDay);
         tbody.appendChild(tr);
       }
+      const posters = document.querySelectorAll(".press-link");
+      posters.forEach((poster) => {
+        poster.addEventListener("click", posterDetail);
+      });
     };
 
     setPageOf(currentPage);
@@ -151,4 +167,9 @@ fetch("press.json")
     };
 
     form.addEventListener("submit", searchBtn);
+
+    const posters = document.querySelectorAll(".press-link");
+    posters.forEach((poster) => {
+      poster.addEventListener("click", posterDetail);
+    });
   });
