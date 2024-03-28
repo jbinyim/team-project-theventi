@@ -696,7 +696,7 @@ body .wrap .notice-container .notice-title .notice-content li:nth-child(2) {
 }
 body .wrap .notice-container .notice-contents .notice-content li:nth-child(3),
 body .wrap .notice-container .notice-title .notice-content li:nth-child(3) {
-  width: 55%;
+  width: 49%;
 }
 body .wrap .notice-container .notice-contents .notice-content li:nth-child(3).action,
 body .wrap .notice-container .notice-title .notice-content li:nth-child(3).action {
