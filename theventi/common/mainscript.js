@@ -8,7 +8,7 @@ function openPopup() {
     "width=478,height=578,top=50%,left=50%,status=no,toolbar=no,scrollbars=no,menubar=no,resizable=no"
   );
 }
-// openPopup();
+openPopup();
 
 //=================================
 //slider
@@ -29,7 +29,7 @@ let imgs = [
 const originalImgs = [...imgs];
 
 function changeImageSource() {
-  if (window.innerWidth <= 768) {
+  if (window.innerWidth <= 850) {
     imgs = imgs.map((img) => img.replace("res-", ""));
   } else {
     imgs = [...originalImgs];
@@ -133,7 +133,7 @@ pagers.forEach((pager) => {
 const slides = document.querySelector(".slides");
 const slide = slides.querySelectorAll("li");
 const slideCount = slide.length;
-console.log(slideCount);
+
 let slideWidth = 300;
 let slideMargin = 30;
 const prevBtn = document.querySelector(".prev");
@@ -142,7 +142,7 @@ const nextBtn = document.querySelector(".next");
 // function changeSlideSource() {
 //   if (window.innerWidth <= 1024) {
 //     slideWidth = 10;
-//     slideMargin = 10;
+//     slideMargin = 30;
 //   } else {
 //     slideWidth = 300;
 //     slideMargin = 30;
@@ -152,13 +152,13 @@ const nextBtn = document.querySelector(".next");
 
 // function changeslideSource() {
 //   if (window.innerWidth <= 1024) {
-//      slideWidth = 300;
-//      slideMargin = 30;
+//     slideWidth = 300;
+//     slideMargin = 30;
 //   } else {
 //     slideWidth = 300;
 //     slideMargin = 30;
 //   }
-//   console.log(slideWidth,slideMargin)
+
 // }
 
 // 화면 크기가 변경될 때마다 실행
@@ -173,7 +173,7 @@ const updateWidth = () => {
   let newWidth = `${
     (slideWidth + slideMargin) * newSlideCount - slideMargin
   }px`;
-  console.log(newWidth);
+
   slides.style.width = newWidth;
 };
 
@@ -228,6 +228,7 @@ const scale = (i) => {
 // };
 nextBtn.addEventListener("click", () => {
   moveSlide(currentIdx + 1);
+
   // scale(scaleNum(i));
 });
 
@@ -259,54 +260,12 @@ slides.addEventListener("mouseleave", autoSlide);
 
 const secHeaderNav = document.querySelectorAll("#sectionthree-header-nav a p");
 
-// secHeaderNav.forEach((a) => {
-//   a.addEventListener("click", (a) => {
-//     a.classList.toggle("active");
-//   });
-// });
-
-// function removeActiveClasses(p) {
-//   p.addEventListener("click", () => {
-//     p.classList.toggle("active");
-//   });
-// }
-
-// secHeaderNav.forEach((p) => {
-//   p.addEventListener("click", () => {
-//     removeActiveClasses();
-//     p.classList.toggle("active");
-//   });
-// });
-
 const hiddenH1 = slides.querySelectorAll("li .hiddenp h1");
 const hiddenH3 = slides.querySelectorAll("li .hiddenp h3");
 const slideImg = slides.querySelectorAll("li img");
 const originP = slides.querySelectorAll("li .originp");
 
-console.log(hiddenH1); // [1, '새로운 값', 3, 4, 5]
-// function changeImgSlide() {
-//   hiddenH1.forEach((h1s, h1indexs) => {
-// hiddenH1[0].innerHTML = "13새로운 값";
-// hiddenH1[2].innerHTML = "12새로운 값";
-// hiddenH1[3].innerHTML = "11새로운 값";
-// hiddenH1[4].innerHTML = "10새로운 값";
-// hiddenH1[5].innerHTML = "9새로운 값";
-// hiddenH1[8].innerHTML = "6새로운 값";
-// hiddenH1[9].innerHTML = "5새로운 값";
-// hiddenH1[10].innerHTML = "4새로운 값";
-// hiddenH1[11].innerHTML = "3새로운 값";
-// hiddenH1[12].innerHTML = "1새로운 값";
-// // h3의 innerHTML 변경
-// const h3 = hiddenH3[h1indexs];
-// h3.innerHTML = "새로운 내용 " + h1indexs; // 각 인덱스에 맞는 내용으로 변경
-// // 이미지 소스 변경
-// const img = slideImg[h1indexs];
-// img.src = "새로운이미지" + h1indexs + ".jpg"; // 각 인덱스에 맞는 이미지 경로로 변경
-// // 원본 내용 변경
-
 const hiddenIcon = slides.querySelectorAll("li .hiddenpicon");
-
-const menus = "./bestmenu.json";
 
 const menumodal = document.querySelector(".menu-modal");
 const menuclose = menumodal.querySelector("button");
@@ -319,28 +278,44 @@ const menufat = menumodal.querySelector(".포화지방");
 const menusalt = menumodal.querySelector(".나트륨");
 const menucaffein = menumodal.querySelector(".카페인");
 const menualle = menumodal.querySelector(".알레르기정보");
+const menusugar = menumodal.querySelector(".당류");
+const menuinfo = menumodal.querySelector(".설명");
+const menus = "../bestmenu.json";
+let menudatas;
 
 hiddenIcon.forEach((search, index) => {
   search.addEventListener("click", () => {
+    console.log("오리진p값", originP[index].innerText);
     menumodal.style.display = "block";
-
-    fetch(menus)
-      .then((response) => response.json())
-      .then((menu) => {
-        menudatas = menu;
-        console.log(menudatas);
-        for (let menudata in menudatas) {
-          menuname.innerText = menudata;
-          console.log(menudata);
-        }
-      });
+    for (let menudata in menudatas) {
+      console.log(menudatas[menudata].이름);
+      if (menudatas[menudata].이름 === originP[index].innerText) {
+        menuname.innerHTML = menudatas[menudata].이름;
+        menupic.style.backgroundImage = `url(${menudatas[menudata].사진})`;
+        menuone.innerHTML = menudatas[menudata].영양정보.제공량;
+        menucal.innerHTML = menudatas[menudata].영양정보.열량;
+        menuprotein.innerHTML = menudatas[menudata].영양정보.단백질;
+        menufat.innerHTML = menudatas[menudata].영양정보.포화지방;
+        menusalt.innerHTML = menudatas[menudata].영양정보.나트륨;
+        menucaffein.innerHTML = menudatas[menudata].영양정보.카페인;
+        menualle.innerHTML = menudatas[menudata].영양정보.알레르기정보;
+        menusugar.innerHTML = menudatas[menudata].영양정보.당류;
+        menuinfo.innerHTML = menudatas[menudata].설명;
+      }
+    }
+    // if (originP[index].innerText === menudatas.음료[].이름 )
   });
 });
 menuclose.addEventListener("click", () => {
   menumodal.style.display = "none";
 });
 
-let menudatas;
+fetch(menus)
+  .then((response) => response.json())
+  .then((menu) => {
+    menudatas = menu;
+    console.log("이름", menudatas.음료[1].이름);
+  });
 
 console.log(menumodal, menuclose);
 
@@ -838,7 +813,7 @@ function removeActiveClasses() {
 // bottom-banner
 
 let bottomBanner = document.querySelector(".bottom-slider-wrap");
-console.log(bottomBanner);
+
 bottomBanner.id = "bottomBanner1";
 
 let clone = bottomBanner.cloneNode(true);
