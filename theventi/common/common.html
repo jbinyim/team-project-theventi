@@ -3,14 +3,70 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--favicon-->
+    <link
+      rel="shortcut icon"
+      href="../img/01main/common/favicon/favicon.ico220119v1.ico"
+    />
     <!--common-->
     <link rel="stylesheet" href="../reset.css" />
     <link rel="stylesheet" href="./commonstyle.css" />
     <script defer src="./mainscript.js"></script>
     <script defer src="./commonscript.js"></script>
-    <title>Document</title>
+    <title>브랜드 - 더벤티(theventi)</title>
   </head>
   <body>
+    <!--listmodal창 접기-->
+    <div class="list-item">
+      <div class="menu-modal cp">
+        <div class="menu-modal-inner">
+          <div class="modal-item">
+            <div class="modal-pic cp"></div>
+            <div class="modal-text">
+              <span class="title">
+                <i data-tit="BEST"></i>
+                <i data-tit="Half Venti"></i>
+                <p class="이름"></p>
+              </span>
+              <span class="info">
+                <p class="설명"></p>
+              </span>
+              <span class="detail">
+                <table>
+                  <tbody>
+                    <tr>
+                      <th>1회 제공량</th>
+                      <th>열량<span>(kcal)</span></th>
+                      <th>당류<br />(g)</th>
+                      <th>단백질<br />(g)</th>
+                      <th>포화지방<br />(g)</th>
+                      <th>나트륨<br />(mg)</th>
+                      <th>카페인<br />(mg)</th>
+                      <th>알레르기</th>
+                    </tr>
+                    <tr>
+                      <td class="제공량"></td>
+                      <td class="열량"></td>
+                      <td class="당류"></td>
+                      <td class="단백질"></td>
+                      <td class="포화지방"></td>
+                      <td class="나트륨"></td>
+                      <td class="카페인"></td>
+                      <td class="알레르기정보"></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </span>
+            </div>
+          </div>
+          <button class="close cp">
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!--popup 접기-->
     <div class="popup2">
       <div class="popup2wrap">
         <h1>개인정보 처리방침</h1>
@@ -130,12 +186,14 @@
         </p>
       </div>
     </div>
+    <!--popup 접기-->
     <div class="popup3">
       <div class="popup3wrap">
         <h1>이용약관</h1>
         <button class="popup3-btn">
           <i id="popup3-close"></i>
         </button>
+        <!--popup 접기-->
         <p class="popup3-p">
           [제1장 총칙] <br />
           제1조 목적 <br />
@@ -302,12 +360,12 @@
                 <a href="../menu/menu.html" class="nav-items">MENU</a>
                 <a href="#" class="nav-items">STORE</a>
                 <a href="#" class="nav-items">MEMBERSHIP</a>
-                <a href="../community/message/message.html" class="nav-items"
+                <a href="../community/notice\notice.html" class="nav-items"
                   >COMMUNITY</a
                 >
               </div>
               <div id="logo-back">
-                <a href="">
+                <a href="../index.html">
                   <p>프랜차이즈</p>
                 </a>
                 <div class="logo-back">
@@ -345,9 +403,11 @@
               >
             </div>
             <div id="menu-list">
-              <a href="#" class="menu-list">더벤티 커피이야기</a>
+              <a href="../menu/menuStory.html" class="menu-list"
+                >더벤티 커피이야기</a
+              >
               <a href="#" class="menu-list">신메뉴</a>
-              <a href="../menu/menu.html" class="menu-list">전체메뉴</a>
+              <a href="../menu/menuWhole.html" class="menu-list">전체메뉴</a>
             </div>
             <div id="store-list">
               <a href="#" class="store-list">매장찾기</a>
@@ -356,13 +416,25 @@
               <a href="#" class="membership-list">더벤티 APP소개</a>
             </div>
             <div id="community-list">
-              <a href="#" class="community-list">공지사항</a>
-              <a href="#" class="community-list">보도자료</a>
-              <a href="#" class="community-list">이벤트</a>
-              <a href="#" class="community-list">칭찬매장</a>
-              <a href="#" class="community-list">더벤티 이야기</a>
-              <a href="#" class="community-list">SNS</a>
-              <a href="#" class="community-list">자주하는 질문</a>
+              <a href="../community/notice/notice.html" class="community-list"
+                >공지사항</a
+              >
+              <a href="../community/press/press.html" class="community-list"
+                >보도자료</a
+              >
+              <a href="../community/evented/event.html" class="community-list"
+                >이벤트</a
+              >
+              <a href="../community/good/good.html" class="community-list"
+                >칭찬매장</a
+              >
+              <a href="../community/story/story.html" class="community-list"
+                >더벤티 이야기</a
+              >
+              <a href="../community/sns/sns.html" class="community-list">SNS</a>
+              <a href="../community/qna/qna.html" class="community-list"
+                >자주하는 질문</a
+              >
               <a href="../community/message/message.html" class="community-list"
                 >벤티럭 사연접수</a
               >
@@ -385,7 +457,7 @@
             /></a>
             <div id="mobile-menu-wrap">
               <div id="mobile-menu-head-logoback">
-                <a href="">
+                <a href="../index.html">
                   <p>프랜차이즈</p>
                 </a>
                 <div class="mobile-menu-head-logoback">
@@ -404,32 +476,44 @@
         <div class="mobile-menu-body">
           <ul class="mobile-menu-body-list">
             <li class="list-depth-1">
-              <a class="depth-1a" href=""> BRAND </a>
+              <a class="depth-1a" href="../brand/brand-index.html"> BRAND </a>
               <i class="xi-depth"></i>
             </li>
             <ul class="list-depth-2">
-              <li class="list-depth-3"><a href="">더벤티 소개</a></li>
-              <li class="list-depth-3"><a href="">더벤티 연혁</a></li>
-              <li class="list-depth-3"><a href="">BI 소개</a></li>
-              <li class="list-depth-3"><a href="">찾아오시는 길</a></li>
+              <li class="list-depth-3">
+                <a href="../brand/brand-index.html">더벤티 소개</a>
+              </li>
+              <li class="list-depth-3">
+                <a href="../brand/brand-index01.html">더벤티 연혁</a>
+              </li>
+              <li class="list-depth-3">
+                <a href="../brand/brand-index02.html">BI 소개</a>
+              </li>
+              <li class="list-depth-3">
+                <a href="../brand/brand-index03.html">찾아오시는 길</a>
+              </li>
             </ul>
 
             <li class="list-depth-1">
-              <a class="depth-1a" href=""> MENU </a>
+              <a class="depth-1a" href="../menu/menuStory.html"> MENU </a>
               <i class="xi-depth"></i>
             </li>
             <ul class="list-depth-2">
-              <li class="list-depth-3"><a href="">더벤티 커피이야기</a></li>
-              <li class="list-depth-3"><a href="">신메뉴</a></li>
-              <li class="list-depth-3"><a href="">전체메뉴</a></li>
+              <li class="list-depth-3">
+                <a href="../menu/menuStory.html">더벤티 커피이야기</a>
+              </li>
+              <li class="list-depth-3"><a href="#">신메뉴</a></li>
+              <li class="list-depth-3">
+                <a href="../menu/menuWhole.html">전체메뉴</a>
+              </li>
             </ul>
 
             <li class="list-depth-1">
-              <a class="depth-1a" href=""> STORE </a>
+              <a class="depth-1a" href="#"> STORE </a>
               <i class="xi-depth"></i>
             </li>
             <ul class="list-depth-2">
-              <li class="list-depth-3"><a href="">매장찾기</a></li>
+              <li class="list-depth-3"><a href="#">매장찾기</a></li>
             </ul>
 
             <li class="list-depth-1">
@@ -441,19 +525,41 @@
             </ul>
 
             <li class="list-depth-1">
-              <a class="depth-1a" href=""> COMMUNITY </a>
+              <a class="depth-1a" href="../community/notice/notice.html">
+                COMMUNITY
+              </a>
               <i class="xi-depth"></i>
             </li>
             <ul class="list-depth-2">
-              <li class="list-depth-3"><a href="">공지사항</a></li>
-              <li class="list-depth-3"><a href="">보도자료</a></li>
-              <li class="list-depth-3"><a href="">이벤트</a></li>
-              <li class="list-depth-3"><a href="">칭찬매장</a></li>
-              <li class="list-depth-3"><a href="">더벤티 이야기</a></li>
-              <li class="list-depth-3"><a href="">SNS</a></li>
-              <li class="list-depth-3"><a href="">자주하는 질문</a></li>
-              <li class="list-depth-3"><a href="">벤티럭 사연접수</a></li>
-              <li class="list-depth-3"><a href="">THEVENGERS 봉사활동</a></li>
+              <li class="list-depth-3">
+                <a href="../community/notice/notice.html">공지사항</a>
+              </li>
+              <li class="list-depth-3">
+                <a href="../community/press/press.html">보도자료</a>
+              </li>
+              <li class="list-depth-3">
+                <a href="../community/evented/event.html">이벤트</a>
+              </li>
+              <li class="list-depth-3">
+                <a href="../community/good/good.html">칭찬매장</a>
+              </li>
+              <li class="list-depth-3">
+                <a href="../community/story/story.html">더벤티 이야기</a>
+              </li>
+              <li class="list-depth-3">
+                <a href="../community/sns/sns.html">SNS</a>
+              </li>
+              <li class="list-depth-3">
+                <a href="../community/qna/qna.html">자주하는 질문</a>
+              </li>
+              <li class="list-depth-3">
+                <a href="../community/message/message.html">벤티럭 사연접수</a>
+              </li>
+              <li class="list-depth-3">
+                <a href="../community/volunteer/volunteer.html"
+                  >THEVENGERS 봉사활동</a
+                >
+              </li>
             </ul>
 
             <li class="list-depth-1">
@@ -541,24 +647,67 @@
                 src="../img/01main/main/BestMenu/coffee/caffeelatte.png"
                 alt=""
               />
+              <h1 class="originp">카페라떼</h1>
+              <div class="hiddenp">
+                <div class="hiddenpicon">
+                  <div id="xi-search"></div>
+                </div>
+                <h1>카페라떼</h1>
+                <h3>
+                  더벤티의 진한 에스프레소에 부드러운 우유가 어우러진 고소한
+                  카페라떼
+                </h3>
+              </div>
             </li>
             <li>
               <img
                 src="../img/01main/main/BestMenu/coffee/vanila-deeplatte.png"
                 alt=""
               />
+              <h1 class="originp">바닐라딥라떼</h1>
+              <div class="hiddenp">
+                <div class="hiddenpicon">
+                  <div id="xi-search"></div>
+                </div>
+                <h1>바닐라딥라떼</h1>
+                <h3>
+                  더벤티의 진한 에스프레소에 고급스러운 바닐라 풍미가 부드럽게
+                  어우러진 바닐라딥라떼
+                </h3>
+              </div>
             </li>
             <li>
               <img
                 src="../img/01main/main/BestMenu/coffee/einspanner.png"
                 alt=""
               />
+              <h1 class="originp">아인슈페너</h1>
+              <div class="hiddenp">
+                <div class="hiddenpicon">
+                  <div id="xi-search"></div>
+                </div>
+                <h1>아인슈페너</h1>
+                <h3>
+                  더벤티만의 특별한 레시피로 만든 크림을 얹어 부드럽고 달콤하게
+                  마실 수 있는 아인슈페너(하프벤티사이즈)
+                </h3>
+              </div>
             </li>
             <li>
               <img
                 src="../img/01main/main/BestMenu/coffee/iceamericano.png"
                 alt=""
               />
+              <h1 class="originp">아이스 아메리카노</h1>
+              <div class="hiddenp">
+                <div class="hiddenpicon">
+                  <div id="xi-search"></div>
+                </div>
+                <h1>아이스 아메리카노</h1>
+                <h3>
+                  더벤티의 깊고 진한 커피풍미를 느낄 수 있는 아이스 아메리카노
+                </h3>
+              </div>
             </li>
             <!-- <li>
               5
@@ -612,27 +761,39 @@
                 <ul>
                   <li>
                     <p>향미 <br />(Aroma)</p>
-                    <div class="per"></div>
+                    <div class="per">
+                      <div class="realper on70"></div>
+                    </div>
                   </li>
                   <li>
                     <p>바디 <br />(Body)</p>
-                    <div class="per"></div>
+                    <div class="per">
+                      <div class="realper on70"></div>
+                    </div>
                   </li>
                   <li>
                     <p>단맛 <br />(Sweetness)</p>
-                    <div class="per"></div>
+                    <div class="per">
+                      <div class="realper on70"></div>
+                    </div>
                   </li>
                   <li>
                     <p>산미 <br />(Acidity)</p>
-                    <div class="per"></div>
+                    <div class="per">
+                      <div class="realper on60"></div>
+                    </div>
                   </li>
                   <li>
                     <p>균형 <br />(Balance)</p>
-                    <div class="per"></div>
+                    <div class="per">
+                      <div class="realper on80"></div>
+                    </div>
                   </li>
                   <li>
                     <p>뒷맛 <br />(Aftertaste)</p>
-                    <div class="per"></div>
+                    <div class="per">
+                      <div class="realper on40"></div>
+                    </div>
                   </li>
                 </ul>
               </div>
@@ -657,27 +818,39 @@
                 <ul>
                   <li>
                     <p>향미 <br />(Aroma)</p>
-                    <div class="per"></div>
+                    <div class="per">
+                      <div class="realper on60"></div>
+                    </div>
                   </li>
                   <li>
                     <p>바디 <br />(Body)</p>
-                    <div class="per"></div>
+                    <div class="per">
+                      <div class="realper on90"></div>
+                    </div>
                   </li>
                   <li>
                     <p>단맛 <br />(Sweetness)</p>
-                    <div class="per"></div>
+                    <div class="per">
+                      <div class="realper on70"></div>
+                    </div>
                   </li>
                   <li>
                     <p>산미 <br />(Acidity)</p>
-                    <div class="per"></div>
+                    <div class="per">
+                      <div class="realper on20"></div>
+                    </div>
                   </li>
                   <li>
                     <p>균형 <br />(Balance)</p>
-                    <div class="per"></div>
+                    <div class="per">
+                      <div class="realper on60"></div>
+                    </div>
                   </li>
                   <li>
                     <p>뒷맛 <br />(Aftertaste)</p>
-                    <div class="per"></div>
+                    <div class="per">
+                      <div class="realper on60"></div>
+                    </div>
                   </li>
                 </ul>
               </div>
@@ -696,27 +869,39 @@
                 <ul>
                   <li>
                     <p>향미 <br />(Aroma)</p>
-                    <div class="per"></div>
+                    <div class="per">
+                      <div class="realper on60"></div>
+                    </div>
                   </li>
                   <li>
                     <p>바디 <br />(Body)</p>
-                    <div class="per"></div>
+                    <div class="per">
+                      <div class="realper on60"></div>
+                    </div>
                   </li>
                   <li>
                     <p>단맛 <br />(Sweetness)</p>
-                    <div class="per"></div>
+                    <div class="per">
+                      <div class="realper on60"></div>
+                    </div>
                   </li>
                   <li>
                     <p>산미 <br />(Acidity)</p>
-                    <div class="per"></div>
+                    <div class="per">
+                      <div class="realper on50"></div>
+                    </div>
                   </li>
                   <li>
                     <p>균형 <br />(Balance)</p>
-                    <div class="per"></div>
+                    <div class="per">
+                      <div class="realper on70"></div>
+                    </div>
                   </li>
                   <li>
                     <p>뒷맛 <br />(Aftertaste)</p>
-                    <div class="per"></div>
+                    <div class="per">
+                      <div class="realper on60"></div>
+                    </div>
                   </li>
                 </ul>
               </div>
@@ -743,15 +928,39 @@
           <ul class="five-slides">
             <li>
               <img src="../img/01main/main/theventisns/thum1.jpg" alt="" />
+              <a href="https://www.instagram.com/theventi_official/"
+                ><img
+                  class="fiveinsta"
+                  src="../img/01main/common/footer/instagram.png"
+                  alt=""
+              /></a>
             </li>
             <li>
               <img src="../img/01main/main/theventisns/thum2.jpg" alt="" />
+              <a href="https://www.instagram.com/theventi_official/"
+                ><img
+                  class="fiveinsta"
+                  src="../img/01main/common/footer/instagram.png"
+                  alt=""
+              /></a>
             </li>
             <li>
               <img src="../img/01main/main/theventisns/thum3.jpg" alt="" />
+              <a href="https://www.instagram.com/theventi_official/"
+                ><img
+                  class="fiveinsta"
+                  src="../img/01main/common/footer/instagram.png"
+                  alt=""
+              /></a>
             </li>
             <li>
               <img src="../img/01main/main/theventisns/thum4.jpg" alt="" />
+              <a href="https://www.instagram.com/theventi_official/"
+                ><img
+                  class="fiveinsta"
+                  src="../img/01main/common/footer/instagram.png"
+                  alt=""
+              /></a>
             </li>
             <!-- <li>
               5
@@ -895,28 +1104,30 @@
               ></a>
             </div>
             <div class="footer-sns">
-              <a href="#">
+              <a
+                href="https://www.youtube.com/channel/UCOOsAnrpEx4rWHEBg7xa8qQ"
+              >
                 <img
                   class="youtube"
                   src="../img/01main/common/footer/youtube.png"
                   alt="youtube"
                 />
               </a>
-              <a href="#">
+              <a href="https://www.instagram.com/theventi_official/">
                 <img
                   class="insta"
                   src="../img/01main/common/footer/instagram.png"
                   alt="insta"
                 />
               </a>
-              <a href="#">
+              <a href="https://www.facebook.com/theventikr">
                 <img
                   class="facebook"
                   src="../img/01main/common/footer/facebook.png"
                   alt="facebook"
                 />
               </a>
-              <a href="#">
+              <a href="https://blog.naver.com/theventilove">
                 <img
                   class="blog"
                   src="../img/01main/common/footer/blog.png"

@@ -9,6 +9,100 @@ function openPopup() {
   );
 }
 // openPopup();
+<<<<<<< HEAD:theventi/common/script.js
+//===============================================================
+// footer popup
+
+const popup3 = document.querySelector("#popup3");
+const popup3Pop = document.querySelector(".popup3");
+// const popup3Close = document.querySelector("#popup3-close");
+
+popup3.addEventListener("click", () => {
+  popup3Pop.style.display = "inline-block";
+});
+// popup3Close.addEventListener("click", () => {
+//   popup3Pop.style.display = "none";
+// });
+
+const popup2 = document.querySelector("#popup2");
+const popup2Pop = document.querySelector(".popup2");
+const popup2Close = document.querySelector("#popup2-close");
+
+popup2.addEventListener("click", () => {
+  popup2Pop.style.display = "inline-block";
+});
+popup2Close.addEventListener("click", () => {
+  popup2Pop.style.display = "none";
+});
+// const popup2 = document.querySelector("#popup2");
+
+// const popupWidth2 = 600;
+// const popupheight2 = 500;
+
+// // popup2.addEventListener("click", () => {
+// //   const left = (window.screen.availWidth - popupWidth2) / 2;
+// //   const top = (window.screen.availHeight - popupheight2) / 2;
+// //   window.open(
+// //     "popup2.html",
+// //     "event",
+// //     `width=${popupWidth2} height =${popupheight2} left =${left} top=${top}`
+// //   );
+// // });
+// const popup3 = document.querySelector("#popup3");
+
+// const popupWidth3 = 600;
+// const popupheight3 = 500;
+
+// // popup3.addEventListener("click", () => {
+// //   const left = (window.screen.availWidth - popupWidth3) / 2;
+// //   const top = (window.screen.availHeight - popupheight3) / 2;
+// //   window.open(
+// //     "popup3.html",
+// //     "event",
+// //     `width=${popupWidth3} height =${popupheight3} left =${left} top=${top}`
+// //   );
+// // });
+
+//===============================================================
+// aside
+
+const body = document.querySelector("body");
+const toggleBtn = document.querySelector(".toggle-button");
+const mobileMenu = document.querySelector("#bgmobile");
+const close = document.querySelector(".xi-close");
+const aside = document.querySelector("aside");
+const depthIcons = document.querySelectorAll(".xi-depth");
+const depthIconsFnc = depthIcons.forEach((depthicon, index1) => {
+  depthicon.addEventListener("click", () => {
+    depthicon.classList.toggle("clicked");
+    const depth2 = document.querySelectorAll(".list-depth-2");
+    depth2.forEach((d, index2) => {
+      if (index1 === index2) {
+        d.classList.toggle("dropdown");
+      }
+    });
+  });
+});
+toggleBtn.addEventListener("click", () => {
+  console.log("click");
+  mobileMenu.style.right = "0px";
+  aside.classList.toggle("active");
+});
+close.addEventListener("click", () => {
+  console.log("click");
+  mobileMenu.style.right = "-999px";
+  aside.classList.toggle("active");
+});
+
+const depth3s = document.querySelectorAll(".list-depth-3");
+
+depth3s.forEach((depth3) => {
+  depth3.addEventListener("click", () => {
+    depth3.classList.toggle("depth3clicked");
+  });
+});
+=======
+>>>>>>> b248e7f3bebbf2d871c24d15dbf75f7a0970849b:theventi/common/mainscript.js
 
 //=================================
 //slider
@@ -20,18 +114,38 @@ const src = document.createAttribute("src");
 const slidePagers = document.querySelector(".slide_pagers");
 const pagers = document.querySelectorAll(".slide_pagers li");
 
-const imgs = [
+let imgs = [
   "res-banner01.jpg",
   "res-banner02.jpg",
   "res-banner03.jpg",
   "res-banner04.jpg",
 ];
+const originalImgs = [...imgs];
+
+function changeImageSource() {
+  if (window.innerWidth <= 850) {
+    imgs = imgs.map((img) => img.replace("res-", ""));
+  } else {
+    imgs = [...originalImgs];
+  }
+}
+
+// 화면 크기가 변경될 때마다 실행
+window.addEventListener("resize", changeImageSource);
+
+// // 페이지 로드 시 실행
+// changeImageSource();
 
 const imgSrc = `../img/01main/main/topsection/${imgs[0]}`;
 
 src.value = imgSrc;
 img.setAttributeNode(src);
 imgContainer.appendChild(img);
+
+const imgwidth = window.innerWidth;
+
+img.style.width = imgwidth;
+img.style.height = imgContainer.innerHeight;
 
 let i = 0;
 const changeImg = (direction) => {
@@ -113,11 +227,35 @@ pagers.forEach((pager) => {
 const slides = document.querySelector(".slides");
 const slide = slides.querySelectorAll("li");
 const slideCount = slide.length;
-console.log(slideCount);
-const slideWidth = 200;
-const slideMargin = 30;
+
+let slideWidth = 300;
+let slideMargin = 30;
 const prevBtn = document.querySelector(".prev");
 const nextBtn = document.querySelector(".next");
+
+// function changeSlideSource() {
+//   if (window.innerWidth <= 1024) {
+//     slideWidth = 10;
+//     slideMargin = 30;
+//   } else {
+//     slideWidth = 300;
+//     slideMargin = 30;
+//   }
+// }
+// window.addEventListener("resize", changeSlideSource);
+
+// function changeslideSource() {
+//   if (window.innerWidth <= 1024) {
+//     slideWidth = 300;
+//     slideMargin = 30;
+//   } else {
+//     slideWidth = 300;
+//     slideMargin = 30;
+//   }
+
+// }
+
+// 화면 크기가 변경될 때마다 실행
 
 // Initial Index Value
 let currentIdx = 0;
@@ -126,10 +264,10 @@ let currentIdx = 0;
 const updateWidth = () => {
   const currentSlides = document.querySelectorAll(".slides li");
   const newSlideCount = currentSlides.length;
-  console.log(newSlideCount);
-  const newWidth = `${
+  let newWidth = `${
     (slideWidth + slideMargin) * newSlideCount - slideMargin
   }px`;
+
   slides.style.width = newWidth;
 };
 
@@ -184,6 +322,7 @@ const scale = (i) => {
 // };
 nextBtn.addEventListener("click", () => {
   moveSlide(currentIdx + 1);
+
   // scale(scaleNum(i));
 });
 
@@ -208,37 +347,553 @@ const stopSlide = () => {
 slides.addEventListener("mouseenter", stopSlide);
 
 slides.addEventListener("mouseleave", autoSlide);
+// window.addEventListener('resize', changeslideSource);
 
 //===================================================
 //section3 slide -content
 
 const secHeaderNav = document.querySelectorAll("#sectionthree-header-nav a p");
 
-console.log(secHeaderNav);
+const hiddenH1 = slides.querySelectorAll("li .hiddenp h1");
+const hiddenH3 = slides.querySelectorAll("li .hiddenp h3");
+const slideImg = slides.querySelectorAll("li img");
+const originP = slides.querySelectorAll("li .originp");
 
-// secHeaderNav.forEach((a) => {
-//   a.addEventListener("click", (a) => {
-//     a.classList.toggle("active");
-//   });
-// });
-console.log(secHeaderNav);
+const hiddenIcon = slides.querySelectorAll("li .hiddenpicon");
 
-// function removeActiveClasses(p) {
-//   p.addEventListener("click", () => {
-//     p.classList.toggle("active");
-//   });
-// }
+const menumodal = document.querySelector(".menu-modal");
+const menuclose = menumodal.querySelector("button");
+const menuname = menumodal.querySelector(".이름");
+const menupic = menumodal.querySelector(".modal-pic");
+const menuone = menumodal.querySelector(".제공량");
+const menucal = menumodal.querySelector(".열량");
+const menuprotein = menumodal.querySelector(".단백질");
+const menufat = menumodal.querySelector(".포화지방");
+const menusalt = menumodal.querySelector(".나트륨");
+const menucaffein = menumodal.querySelector(".카페인");
+const menualle = menumodal.querySelector(".알레르기정보");
+const menusugar = menumodal.querySelector(".당류");
+const menuinfo = menumodal.querySelector(".설명");
+const menus = "../bestmenu.json";
+let menudatas;
 
-// secHeaderNav.forEach((p) => {
-//   p.addEventListener("click", () => {
-//     removeActiveClasses();
-//     p.classList.toggle("active");
-//   });
-// });
-secHeaderNav.forEach((p) => {
+hiddenIcon.forEach((search, index) => {
+  search.addEventListener("click", () => {
+    console.log("오리진p값", originP[index].innerText);
+    menumodal.style.display = "block";
+    for (let menudata in menudatas) {
+      console.log(menudatas[menudata].이름);
+      if (menudatas[menudata].이름 === originP[index].innerText) {
+        menuname.innerHTML = menudatas[menudata].이름;
+        menupic.style.backgroundImage = `url(${menudatas[menudata].사진})`;
+        menuone.innerHTML = menudatas[menudata].영양정보.제공량;
+        menucal.innerHTML = menudatas[menudata].영양정보.열량;
+        menuprotein.innerHTML = menudatas[menudata].영양정보.단백질;
+        menufat.innerHTML = menudatas[menudata].영양정보.포화지방;
+        menusalt.innerHTML = menudatas[menudata].영양정보.나트륨;
+        menucaffein.innerHTML = menudatas[menudata].영양정보.카페인;
+        menualle.innerHTML = menudatas[menudata].영양정보.알레르기정보;
+        menusugar.innerHTML = menudatas[menudata].영양정보.당류;
+        menuinfo.innerHTML = menudatas[menudata].설명;
+      }
+    }
+    // if (originP[index].innerText === menudatas.음료[].이름 )
+  });
+});
+menuclose.addEventListener("click", () => {
+  menumodal.style.display = "none";
+});
+
+fetch(menus)
+  .then((response) => response.json())
+  .then((menu) => {
+    menudatas = menu;
+    console.log("이름", menudatas.음료[1].이름);
+  });
+
+console.log(menumodal, menuclose);
+
+secHeaderNav.forEach((p, navIndex) => {
   p.addEventListener("click", function () {
     removeActiveClasses();
     this.classList.add("active");
+    if (navIndex === 0) {
+      originP[1].innerHTML = "바닐라딥라떼";
+      originP[2].innerHTML = "아인슈페너";
+      originP[3].innerHTML = "아이스 아메리카노";
+      originP[4].innerHTML = "카페라떼";
+      originP[5].innerHTML = "바닐라딥라떼";
+      originP[6].innerHTML = "아인슈페너";
+      originP[7].innerHTML = "아이스 아메리카노";
+      originP[8].innerHTML = "카페라떼";
+      originP[9].innerHTML = "바닐라딥라떼";
+      originP[10].innerHTML = "아인슈페너";
+      originP[11].innerHTML = "아이스아메리카노";
+      hiddenH1[1].innerHTML = "바닐라딥라떼";
+      hiddenH1[2].innerHTML = "아인슈페너";
+      hiddenH1[3].innerHTML = "아이스 아메리카노";
+      hiddenH1[4].innerHTML = "카페라떼";
+      hiddenH1[5].innerHTML = "바닐라딥라떼";
+      hiddenH1[6].innerHTML = "아인슈페너";
+      hiddenH1[7].innerHTML = "아이스 아메리카노";
+      hiddenH1[8].innerHTML = "카페라떼";
+      hiddenH1[9].innerHTML = "바닐라딥라떼";
+      hiddenH1[10].innerHTML = "아인슈페너";
+      hiddenH1[11].innerHTML = "아이스아메리카노";
+      hiddenH3[1].innerHTML =
+        "더벤티의 진한 에스프레소에 고급스러운 바닐라 풍미가 부드럽게어우러진 바닐라딥라떼";
+      hiddenH3[2].innerHTML =
+        "더벤티만의 특별한 레시피로 만든 크림을 얹어 부드럽고 달콤하게 마실 수 있는 아인슈페너(하프벤티사이즈)";
+      hiddenH3[3].innerHTML =
+        "더벤티의 깊고 진한 커피풍미를 느낄 수 있는 아이스 아메리카노";
+      hiddenH3[4].innerHTML =
+        "더벤티의 진한 에스프레소에 부드러운 우유가 어우러진 고소한 카페라떼";
+      hiddenH3[5].innerHTML =
+        "더벤티의 진한 에스프레소에 고급스러운 바닐라 풍미가 부드럽게어우러진 바닐라딥라떼";
+      hiddenH3[6].innerHTML =
+        "더벤티만의 특별한 레시피로 만든 크림을 얹어 부드럽고 달콤하게 마실 수 있는 아인슈페너(하프벤티사이즈)";
+      hiddenH3[7].innerHTML =
+        "더벤티의 깊고 진한 커피풍미를 느낄 수 있는 아이스 아메리카노";
+      hiddenH3[8].innerHTML =
+        "더벤티의 진한 에스프레소에 부드러운 우유가 어우러진 고소한 카페라떼";
+      hiddenH3[9].innerHTML =
+        "더벤티의 진한 에스프레소에 고급스러운 바닐라 풍미가 부드럽게어우러진 바닐라딥라떼";
+      hiddenH3[10].innerHTML =
+        "더벤티만의 특별한 레시피로 만든 크림을 얹어 부드럽고 달콤하게 마실 수 있는 아인슈페너(하프벤티사이즈)";
+      hiddenH3[11].innerHTML =
+        "더벤티의 깊고 진한 커피풍미를 느낄 수 있는 아이스 아메리카노";
+      slideImg[1].src =
+        "../img/01main/main/BestMenu/coffee/vanila-deeplatte.png";
+      slideImg[2].src = "../img/01main/main/BestMenu/coffee/einspanner.png";
+      slideImg[3].src = "../img/01main/main/BestMenu/coffee/iceamericano.png";
+      slideImg[4].src = "../img/01main/main/BestMenu/coffee/caffeelatte.png";
+      slideImg[5].src =
+        "../img/01main/main/BestMenu/coffee/vanila-deeplatte.png";
+      slideImg[6].src = "../img/01main/main/BestMenu/coffee/einspanner.png";
+      slideImg[7].src = "../img/01main/main/BestMenu/coffee/iceamericano.png";
+      slideImg[8].src = "../img/01main/main/BestMenu/coffee/caffeelatte.png";
+      slideImg[9].src =
+        "../img/01main/main/BestMenu/coffee/vanila-deeplatte.png";
+      slideImg[10].src = "../img/01main/main/BestMenu/coffee/einspanner.png";
+      slideImg[11].src = "../img/01main/main/BestMenu/coffee/iceamericano.png";
+    } else if (navIndex === 1) {
+      for (let i = 1; i <= 11; i++) {
+        originP[1].innerHTML = "디카페인 바닐라딥라떼";
+        originP[2].innerHTML = "디카페인 헤이즐넛딥라떼";
+        originP[3].innerHTML = "디카페인 연유라떼";
+        originP[4].innerHTML = "디카페인 카라멜 마끼야또";
+        originP[5].innerHTML = "디카페인 카페모카";
+        originP[6].innerHTML = "디카페인 아메리카노";
+        originP[7].innerHTML = "디카페인 아이스 아메리카노";
+        originP[8].innerHTML = "디카페인 카페라떼";
+        originP[9].innerHTML = "디카페인 오트카페 라떼";
+        originP[10].innerHTML = "디카페인 바닐라딥라떼";
+        originP[11].innerHTML = "디카페인 연유라떼";
+        hiddenH1[1].innerHTML = "디카페인 바닐라딥라떼";
+        hiddenH1[2].innerHTML = "디카페인 헤이즐넛딥라떼";
+        hiddenH1[3].innerHTML = "디카페인 연유라떼";
+        hiddenH1[4].innerHTML = "디카페인 카라멜 마끼야또";
+        hiddenH1[5].innerHTML = "디카페인 카페모카";
+        hiddenH1[6].innerHTML = "디카페인 아메리카노";
+        hiddenH1[7].innerHTML = "디카페인 아이스 아메리카노";
+        hiddenH1[8].innerHTML = "디카페인 카페라떼";
+        hiddenH1[9].innerHTML = "디카페인 오트카페 라떼";
+        hiddenH1[10].innerHTML = "디카페인 바닐라딥라떼";
+        hiddenH1[11].innerHTML = "디카페인 연유라떼";
+        hiddenH3[1].innerHTML =
+          "더벤티의 진한 에스프레소에 고급스러운 바닐라 풍미가 부드럽게어우러진 디카페인 바닐라딥라떼";
+        hiddenH3[2].innerHTML =
+          "더벤티의 디카페인 원두에 고소한 헤이즐넛 풍미가 감미롭게 어우러진 헤이즐넛딥라떼";
+        hiddenH3[3].innerHTML =
+          "더벤티의 디카페인 원두에 달콤한 연유가 어우러진 부드러운 연유라떼";
+        hiddenH3[4].innerHTML =
+          "더벤티 디카페인 원두에 카라멜 풍미가 어우러진 달콤한 카라멜 마끼야또";
+        hiddenH3[5].innerHTML =
+          "더벤티 디카페인 원두에 달콤 쌉싸름한 초콜릿이 더해진 부드럽고 달콤한 카페모카";
+        hiddenH3[6].innerHTML =
+          "더벤티의 깊고 진한 풍미를 느낄 수 있는 디카페인 핫 아메리카노";
+        hiddenH3[7].innerHTML =
+          "더벤티의 깊고 진한 커피풍미를 느낄 수 있는 디카페인 아이스 아메리카노";
+        hiddenH3[8].innerHTML =
+          "더벤티 디카페인 원두에 부드러운 우유가 어우러진 고소한 디카페인 카페라떼";
+        hiddenH3[9].innerHTML =
+          "리치한 풍미의 오트밀크에 디카페인 원두가 어우러지는 디카페인 오트카페라떼";
+        hiddenH3[10].innerHTML =
+          "더벤티의 디카페인 원두에 고급스러운 바닐라 풍미가 부드럽게 어우러진 바닐라딥라떼";
+        hiddenH3[11].innerHTML =
+          "더벤티의 디카페인 원두에 달콤한 연유가 어우러진 부드러운 연유라떼";
+        slideImg[1].src =
+          "../img/01main/main/BestMenu/decaffeine/decaffeine-deeplatte.png";
+        slideImg[2].src =
+          "../img/01main/main/BestMenu/decaffeine/decaffeine-hazelnutsdeeplatte.png";
+        slideImg[3].src =
+          "../img/01main/main/BestMenu/decaffeine/decaffeine-condensed-milklatte.png";
+        slideImg[4].src =
+          "../img/01main/main/BestMenu/decaffeine/decaffeine-caramelmacchiato.png";
+        slideImg[5].src =
+          "../img/01main/main/BestMenu/decaffeine/decaffeine-caffemocha.png";
+        slideImg[6].src =
+          "../img/01main/main/BestMenu/decaffeine/decaffeine-americano.png";
+        slideImg[7].src =
+          "../img/01main/main/BestMenu/decaffeine/decaffeine-iceamericano.png";
+        slideImg[8].src =
+          "../img/01main/main/BestMenu/decaffeine/decaffeine-caffelatte.png";
+        slideImg[9].src =
+          "../img/01main/main/BestMenu/decaffeine/decaffeine-oatcaffelatte.png";
+
+        slideImg[10].src =
+          "../img/01main/main/BestMenu/decaffeine/decaffeine-deeplatte.png";
+        slideImg[11].src =
+          "../img/01main/main/BestMenu/decaffeine/decaffeine-condensed-milklatte.png";
+      }
+    } else if (navIndex === 2) {
+      for (let i = 1; i <= 11; i++) {
+        originP[1].innerHTML = "말차초코칩프라페";
+        originP[2].innerHTML = "딸기초코칩프라페";
+        originP[3].innerHTML = "민트초코칩프라페";
+        originP[4].innerHTML = "토피넛초코칩프라페";
+        originP[5].innerHTML = "코코밀크 프라페";
+        originP[6].innerHTML = "말차초코칩프라페";
+        originP[7].innerHTML = "딸기초코칩프라페";
+        originP[8].innerHTML = "민트초코칩프라페";
+        originP[9].innerHTML = "토피넛초코칩프라페";
+        originP[10].innerHTML = "코코밀크 프라페";
+        originP[11].innerHTML = "말차초코칩프라페";
+        hiddenH1[1].innerHTML = "말차초코칩프라페";
+        hiddenH1[2].innerHTML = "딸기초코칩프라페";
+        hiddenH1[3].innerHTML = "민트초코칩프라페";
+        hiddenH1[4].innerHTML = "토피넛초코칩프라페";
+        hiddenH1[5].innerHTML = "코코밀크 프라페";
+        hiddenH1[6].innerHTML = "말차초코칩프라페";
+        hiddenH1[7].innerHTML = "딸기초코칩프라페";
+        hiddenH1[8].innerHTML = "민트초코칩프라페";
+        hiddenH1[9].innerHTML = "토피넛초코칩프라페";
+        hiddenH1[10].innerHTML = "코코밀크 프라페";
+        hiddenH1[11].innerHTML = "말차초코칩프라페";
+        hiddenH3[1].innerHTML =
+          "초코칩을 넣은 녹차프라페에 진한 초콜릿을 듬뿍 발라, 보는 즐거움까지 더한 프라페";
+        hiddenH3[2].innerHTML =
+          "딸기와 초코칩을 넣은 바닐라 프라페에 진한 초콜릿을 듬뿍 발라, 보는 즐거움까지 더한 프라페";
+        hiddenH3[3].innerHTML =
+          "시원하고 청량한 민트와 초코칩을 넣은 프라페에 진한 초콜릿을 듬뿍발라, 보는 즐거움까지 더한 프라페";
+        hiddenH3[4].innerHTML =
+          "고소한 토피넛을 넣은 프라페에 진한 초콜릿을 듬뿍발라, 보는 즐거움까지 더한 프라페";
+        hiddenH3[5].innerHTML =
+          "카라멜과 초콜릿이 어우러진 부드러운 밀크프라페에 코코볼을 가득담아 달콤함을 두배로 즐기는 프라페";
+        hiddenH3[6].innerHTML =
+          "초코칩을 넣은 녹차프라페에 진한 초콜릿을 듬뿍 발라, 보는 즐거움까지 더한 프라페";
+        hiddenH3[7].innerHTML =
+          "딸기와 초코칩을 넣은 바닐라 프라페에 진한 초콜릿을 듬뿍 발라, 보는 즐거움까지 더한 프라페";
+        hiddenH3[8].innerHTML =
+          "시원하고 청량한 민트와 초코칩을 넣은 프라페에 진한 초콜릿을 듬뿍발라, 보는 즐거움까지 더한 프라페";
+        hiddenH3[9].innerHTML =
+          "고소한 토피넛을 넣은 프라페에 진한 초콜릿을 듬뿍발라, 보는 즐거움까지 더한 프라페";
+        hiddenH3[10].innerHTML =
+          "카라멜과 초콜릿이 어우러진 부드러운 밀크프라페에 코코볼을 가득담아 달콤함을 두배로 즐기는 프라페";
+        hiddenH3[11].innerHTML =
+          "초코칩을 넣은 녹차프라페에 진한 초콜릿을 듬뿍 발라, 보는 즐거움까지 더한 프라페";
+
+        slideImg[1].src =
+          "../img/01main/main/BestMenu/iceblended/greenteachocochip-frappe.png";
+        slideImg[2].src =
+          "../img/01main/main/BestMenu/iceblended/strawchocochip-frappe.png";
+        slideImg[3].src =
+          "../img/01main/main/BestMenu/iceblended/mintchocochip-frappe.png";
+        slideImg[4].src =
+          "../img/01main/main/BestMenu/iceblended/topinutchoco-frappe.png";
+        slideImg[5].src =
+          "../img/01main/main/BestMenu/iceblended/cocomilk-frappe.png";
+        slideImg[6].src =
+          "../img/01main/main/BestMenu/iceblended/greenteachocochip-frappe.png";
+        slideImg[7].src =
+          "../img/01main/main/BestMenu/iceblended/strawchocochip-frappe.png";
+        slideImg[8].src =
+          "../img/01main/main/BestMenu/iceblended/mintchocochip-frappe.png";
+        slideImg[9].src =
+          "../img/01main/main/BestMenu/iceblended/topinutchoco-frappe.png";
+        slideImg[10].src =
+          "../img/01main/main/BestMenu/iceblended/cocomilk-frappe.png";
+        slideImg[11].src =
+          "../img/01main/main/BestMenu/iceblended/greenteachocochip-frappe.png";
+      }
+    } else if (navIndex === 3) {
+      for (let i = 1; i <= 11; i++) {
+        originP[1].innerHTML = "오사당(오렌지/사과/당근)";
+        originP[2].innerHTML = "사딸비(사과/딸기/비트)";
+        originP[3].innerHTML = "블루레몬에이드";
+        originP[4].innerHTML = "크림소다";
+        originP[5].innerHTML = "메론소다";
+        originP[6].innerHTML = "망플단(망고/파인애플/단호박)";
+        originP[7].innerHTML = "오사당(오렌지/사과/당근)";
+        originP[8].innerHTML = "사딸비(사과/딸기/비트)";
+        originP[9].innerHTML = "블루레몬에이드";
+        originP[10].innerHTML = "크림소다";
+        originP[11].innerHTML = "메론소다";
+        hiddenH1[1].innerHTML = "오사당(오렌지/사과/당근)";
+        hiddenH1[2].innerHTML = "사딸비(사과/딸기/비트)";
+        hiddenH1[3].innerHTML = "블루레몬에이드";
+        hiddenH1[4].innerHTML = "크림소다";
+        hiddenH1[5].innerHTML = "메론소다";
+        hiddenH1[6].innerHTML = "망플단(망고/파인애플/단호박)";
+        hiddenH1[7].innerHTML = "오사당(오렌지/사과/당근)";
+        hiddenH1[8].innerHTML = "사딸비(사과/딸기/비트)";
+        hiddenH1[9].innerHTML = "블루레몬에이드";
+        hiddenH1[10].innerHTML = "크림소다";
+        hiddenH1[11].innerHTML = "메론소다";
+        hiddenH3[1].innerHTML =
+          "오렌지, 사과, 당근, 감귤을 듬뿍담아 상큼하고 건강하게 즐기는 과채주스";
+        hiddenH3[2].innerHTML =
+          "사과, 딸기, 비트, 레몬 당근을 듬뿍담아 상큼하고 건강하게 즐기는 과채주스";
+        hiddenH3[3].innerHTML =
+          "새콤달콤한 레몬청과 탄산수가 만나 청량하고 풍부한 맛의 블루레몬에이드";
+        hiddenH3[4].innerHTML =
+          "소다맛에이드에 바닐라아이스크림을 올려 청량함과 부드러움을 동시에 즐길 수 있는 에이드[배달시 아이스크림은 음료안에 넣어 제공됩니다]";
+        hiddenH3[5].innerHTML =
+          "메론맛에이드에 바닐라아이스크림을 올려 청량함과 부드러움을 동시에 즐길 수 있는 에이드[배달시 아이스크림은 음료안에 넣어 제공됩니다]";
+        hiddenH3[6].innerHTML =
+          "망고, 파인애플, 패션후르츠, 단호박을 듬뿍담아 상큼하고 건강하게 즐기는 과채주스";
+        hiddenH3[7].innerHTML =
+          "오렌지, 사과, 당근, 감귤을 듬뿍담아 상큼하고 건강하게 즐기는 과채주스";
+        hiddenH3[8].innerHTML =
+          "사과, 딸기, 비트, 레몬 당근을 듬뿍담아 상큼하고 건강하게 즐기는 과채주스";
+        hiddenH3[9].innerHTML =
+          "새콤달콤한 레몬청과 탄산수가 만나 청량하고 풍부한 맛의 블루레몬에이드";
+        hiddenH3[10].innerHTML =
+          "소다맛에이드에 바닐라아이스크림을 올려 청량함과 부드러움을 동시에 즐길 수 있는 에이드[배달시 아이스크림은 음료안에 넣어 제공됩니다]";
+        hiddenH3[11].innerHTML =
+          "메론맛에이드에 바닐라아이스크림을 올려 청량함과 부드러움을 동시에 즐길 수 있는 에이드[배달시 아이스크림은 음료안에 넣어 제공됩니다]";
+
+        slideImg[1].src =
+          "../img/01main/main/BestMenu/juiceade/orangeappcarrot.png";
+        slideImg[2].src =
+          "../img/01main/main/BestMenu/juiceade/appstrawbit.png";
+        slideImg[3].src =
+          "../img/01main/main/BestMenu/juiceade/bluelemonade.png";
+        slideImg[4].src = "../img/01main/main/BestMenu/juiceade/creamsoda.png";
+        slideImg[5].src = "../img/01main/main/BestMenu/juiceade/melonsoda.png";
+        slideImg[6].src = "../img/01main/main/BestMenu/juiceade/mangpledan.png";
+        slideImg[7].src =
+          "../img/01main/main/BestMenu/juiceade/orangeappcarrot.png";
+        slideImg[8].src =
+          "../img/01main/main/BestMenu/juiceade/appstrawbit.png";
+        slideImg[9].src =
+          "../img/01main/main/BestMenu/juiceade/bluelemonade.png";
+        slideImg[10].src = "../img/01main/main/BestMenu/juiceade/creamsoda.png";
+        slideImg[11].src = "../img/01main/main/BestMenu/juiceade/melonsoda.png";
+      }
+    } else if (navIndex === 4) {
+      for (let i = 1; i <= 11; i++) {
+        originP[1].innerHTML = "흑설탕 버블티";
+        originP[2].innerHTML = "애플망고 요구르탱";
+        originP[3].innerHTML = "복숭아 아이스티";
+        originP[4].innerHTML = "더벤티사이즈 복숭아아이스티";
+        originP[5].innerHTML = "애플유자티";
+        originP[6].innerHTML = "흑설탕 버블티";
+        originP[7].innerHTML = "애플망고 요구르탱";
+        originP[8].innerHTML = "복숭아 아이스티";
+        originP[9].innerHTML = "더벤티사이즈 복숭아아이스티";
+        originP[10].innerHTML = "애플유자티";
+        originP[11].innerHTML = "흑설탕 버블티";
+
+        hiddenH1[1].innerHTML = "흑설탕 버블티";
+        hiddenH1[2].innerHTML = "애플망고 요구르탱";
+        hiddenH1[3].innerHTML = "복숭아 아이스티";
+        hiddenH1[4].innerHTML = "더벤티사이즈 복숭아아이스티";
+        hiddenH1[5].innerHTML = "애플유자티";
+        hiddenH1[6].innerHTML = "흑설탕 버블티";
+        hiddenH1[7].innerHTML = "애플망고 요구르탱";
+        hiddenH1[8].innerHTML = "복숭아 아이스티";
+        hiddenH1[9].innerHTML = "더벤티 사이즈 복숭아아이스티";
+        hiddenH1[10].innerHTML = "애플유자티";
+        hiddenH1[11].innerHTML = "흑설탕 버블티";
+
+        hiddenH3[1].innerHTML =
+          "최상급 비정제사탕수수당 모리셔스 흑당에 쫄깃쫄깃한 타피오카 펄을 가득 담은 흑설탕버블티";
+        hiddenH3[2].innerHTML =
+          "달콤한 애플망고 요구르트에 탱글탱글한 화이트펄을 더한 애플망고요구르탱";
+        hiddenH3[3].innerHTML =
+          "진한 블랙퍼스트 홍차에 달콤한 복숭아가 어우러진 복숭아아이스티";
+        hiddenH3[4].innerHTML =
+          "더벤티만의 대용량 사이즈로 더 크게 즐기는 시원하고 달콤한 복숭아아이스티";
+        hiddenH3[5].innerHTML =
+          "은은한 사과향 블렌딩티와 유자가 조화롭게 어우러진 블랜딩 티";
+        hiddenH3[6].innerHTML =
+          "최상급 비정제사탕수수당 모리셔스 흑당에 쫄깃쫄깃한 타피오카 펄을 가득 담은 흑설탕버블티";
+        hiddenH3[7].innerHTML =
+          "달콤한 애플망고 요구르트에 탱글탱글한 화이트펄을 더한 애플망고요구르탱";
+        hiddenH3[8].innerHTML =
+          "진한 블랙퍼스트 홍차에 달콤한 복숭아가 어우러진 복숭아아이스티";
+        hiddenH3[9].innerHTML =
+          "더벤티만의 대용량 사이즈로 더 크게 즐기는 시원하고 달콤한 복숭아아이스티";
+        hiddenH3[10].innerHTML =
+          "은은한 사과향 블렌딩티와 유자가 조화롭게 어우러진 블랜딩 티";
+        hiddenH3[11].innerHTML =
+          "최상급 비정제사탕수수당 모리셔스 흑당에 쫄깃쫄깃한 타피오카 펄을 가득 담은 흑설탕버블티";
+
+        slideImg[1].src =
+          "../img/01main/main/BestMenu/bubbleteatea/brownsugar-bubbletea.png";
+        slideImg[2].src =
+          "../img/01main/main/BestMenu/bubbleteatea/applemangoyogure.png";
+        slideImg[3].src =
+          "../img/01main/main/BestMenu/bubbleteatea/peach-icetea.png";
+        slideImg[4].src =
+          "../img/01main/main/BestMenu/bubbleteatea/theventisize-peach-icetea(32oz).png";
+        slideImg[5].src =
+          "../img/01main/main/BestMenu/bubbleteatea/applecitron-tea.png";
+        slideImg[6].src =
+          "../img/01main/main/BestMenu/bubbleteatea/brownsugar-bubbletea.png";
+        slideImg[7].src =
+          "../img/01main/main/BestMenu/bubbleteatea/applemangoyogure.png";
+        slideImg[8].src =
+          "../img/01main/main/BestMenu/bubbleteatea/peach-icetea.png";
+        slideImg[9].src =
+          "../img/01main/main/BestMenu/bubbleteatea/theventisize-peach-icetea(32oz).png";
+        slideImg[10].src =
+          "../img/01main/main/BestMenu/bubbleteatea/applecitron-tea.png";
+        slideImg[11].src =
+          "../img/01main/main/BestMenu/bubbleteatea/brownsugar-bubbletea.png";
+      }
+    } else if (navIndex === 5) {
+      for (let i = 1; i <= 11; i++) {
+        originP[1].innerHTML = "딸기라떼";
+        originP[2].innerHTML = "초코라떼";
+        originP[3].innerHTML = "딸기라떼";
+        originP[4].innerHTML = "초코라떼";
+        originP[5].innerHTML = "딸기라떼";
+        originP[6].innerHTML = "초코라떼";
+        originP[7].innerHTML = "딸기라떼";
+        originP[8].innerHTML = "초코라떼";
+        originP[9].innerHTML = "딸기라떼";
+        originP[10].innerHTML = "초코라떼";
+        originP[11].innerHTML = "딸기라떼";
+
+        hiddenH1[1].innerHTML = "딸기라떼";
+        hiddenH1[2].innerHTML = "초코라떼";
+        hiddenH1[3].innerHTML = "딸기라떼";
+        hiddenH1[4].innerHTML = "초코라떼";
+        hiddenH1[5].innerHTML = "딸기라떼";
+        hiddenH1[6].innerHTML = "초코라떼";
+        hiddenH1[7].innerHTML = "딸기라떼";
+        hiddenH1[8].innerHTML = "초코라떼";
+        hiddenH1[9].innerHTML = "딸기라떼";
+        hiddenH1[10].innerHTML = "초코라떼";
+        hiddenH1[11].innerHTML = "딸기라떼";
+
+        hiddenH3[1].innerHTML =
+          "딸기과육이 듬뿍 들어간 딸기청에 부드러운 우유가 어우러진 새콤달콤 딸기라떼";
+        hiddenH3[2].innerHTML =
+          "진하고 풍부한 초콜릿과 부드러운 우유가 어우러진 달콤한 초코라떼";
+        hiddenH3[3].innerHTML =
+          "딸기과육이 듬뿍 들어간 딸기청에 부드러운 우유가 어우러진 새콤달콤 딸기라떼";
+        hiddenH3[4].innerHTML =
+          "진하고 풍부한 초콜릿과 부드러운 우유가 어우러진 달콤한 초코라떼";
+        hiddenH3[5].innerHTML =
+          "딸기과육이 듬뿍 들어간 딸기청에 부드러운 우유가 어우러진 새콤달콤 딸기라떼";
+        hiddenH3[6].innerHTML =
+          "진하고 풍부한 초콜릿과 부드러운 우유가 어우러진 달콤한 초코라떼";
+        hiddenH3[7].innerHTML =
+          "딸기과육이 듬뿍 들어간 딸기청에 부드러운 우유가 어우러진 새콤달콤 딸기라떼";
+        hiddenH3[8].innerHTML =
+          "진하고 풍부한 초콜릿과 부드러운 우유가 어우러진 달콤한 초코라떼";
+        hiddenH3[9].innerHTML =
+          "딸기과육이 듬뿍 들어간 딸기청에 부드러운 우유가 어우러진 새콤달콤 딸기라떼";
+        hiddenH3[10].innerHTML =
+          "진하고 풍부한 초콜릿과 부드러운 우유가 어우러진 달콤한 초코라떼";
+        hiddenH3[11].innerHTML =
+          "딸기과육이 듬뿍 들어간 딸기청에 부드러운 우유가 어우러진 새콤달콤 딸기라떼";
+
+        slideImg[1].src =
+          "../img/01main/main/BestMenu/beverage/strawberrylatte.png";
+        slideImg[2].src = "../img/01main/main/BestMenu/beverage/chocolatte.png";
+        slideImg[3].src =
+          "../img/01main/main/BestMenu/beverage/strawberrylatte.png";
+        slideImg[4].src = "../img/01main/main/BestMenu/beverage/chocolatte.png";
+        slideImg[5].src =
+          "../img/01main/main/BestMenu/beverage/strawberrylatte.png";
+        slideImg[6].src = "../img/01main/main/BestMenu/beverage/chocolatte.png";
+        slideImg[7].src =
+          "../img/01main/main/BestMenu/beverage/strawberrylatte.png";
+        slideImg[8].src = "../img/01main/main/BestMenu/beverage/chocolatte.png";
+        slideImg[9].src =
+          "../img/01main/main/BestMenu/beverage/strawberrylatte.png";
+        slideImg[10].src =
+          "../img/01main/main/BestMenu/beverage/chocolatte.png";
+        slideImg[11].src =
+          "../img/01main/main/BestMenu/beverage/strawberrylatte.png";
+      }
+    } else if (navIndex === 6) {
+      for (let i = 1; i <= 13; i++) {
+        originP[1].innerHTML = "디카페인 콜드브루 500ml";
+        originP[2].innerHTML = "콜드브루 500ml";
+        originP[3].innerHTML = "디카페인 콜드브루 500ml";
+        originP[4].innerHTML = "콜드브루 500ml";
+        originP[5].innerHTML = "디카페인 콜드브루 500ml";
+        originP[6].innerHTML = "콜드브루 500ml";
+        originP[7].innerHTML = "디카페인 콜드브루 500ml";
+        originP[8].innerHTML = "콜드브루 500ml";
+        originP[9].innerHTML = "디카페인 콜드브루 500ml";
+        originP[10].innerHTML = "콜드브루 500ml";
+        originP[11].innerHTML = "디카페인 콜드브루 500ml";
+
+        hiddenH1[1].innerHTML = "디카페인 콜드브루 500ml";
+        hiddenH1[2].innerHTML = "콜드브루 500ml";
+        hiddenH1[3].innerHTML = "디카페인 콜드브루 500ml";
+        hiddenH1[4].innerHTML = "콜드브루 500ml";
+        hiddenH1[5].innerHTML = "디카페인 콜드브루 500ml";
+        hiddenH1[6].innerHTML = "콜드브루 500ml";
+        hiddenH1[7].innerHTML = "디카페인 콜드브루 500ml";
+        hiddenH1[8].innerHTML = "콜드브루 500ml";
+        hiddenH1[9].innerHTML = "디카페인 콜드브루 500ml";
+        hiddenH1[10].innerHTML = "콜드브루 500ml";
+        hiddenH1[11].innerHTML = "디카페인 콜드브루 500ml";
+
+        hiddenH3[1].innerHTML =
+          "더빈티만의 저온 고농도 추출로 더 진하고 깔끔한 맛의 디카페인 콜드브루 원액";
+        hiddenH3[2].innerHTML =
+          "더벤티만의 저온 고농도 추출로 더 진하고 깔끔한 맛의 콜드브루 원액";
+        hiddenH3[3].innerHTML =
+          "더빈티만의 저온 고농도 추출로 더 진하고 깔끔한 맛의 디카페인 콜드브루 원액";
+        hiddenH3[4].innerHTML =
+          "더벤티만의 저온 고농도 추출로 더 진하고 깔끔한 맛의 콜드브루 원액";
+        hiddenH3[5].innerHTML =
+          "더빈티만의 저온 고농도 추출로 더 진하고 깔끔한 맛의 디카페인 콜드브루 원액";
+        hiddenH3[6].innerHTML =
+          "더벤티만의 저온 고농도 추출로 더 진하고 깔끔한 맛의 콜드브루 원액";
+        hiddenH3[7].innerHTML =
+          "더빈티만의 저온 고농도 추출로 더 진하고 깔끔한 맛의 디카페인 콜드브루 원액";
+        hiddenH3[8].innerHTML =
+          "더벤티만의 저온 고농도 추출로 더 진하고 깔끔한 맛의 콜드브루 원액";
+        hiddenH3[9].innerHTML =
+          "더빈티만의 저온 고농도 추출로 더 진하고 깔끔한 맛의 디카페인 콜드브루 원액";
+        hiddenH3[10].innerHTML =
+          "더벤티만의 저온 고농도 추출로 더 진하고 깔끔한 맛의 콜드브루 원액";
+        hiddenH3[11].innerHTML =
+          "더빈티만의 저온 고농도 추출로 더 진하고 깔끔한 맛의 디카페인 콜드브루 원액";
+
+        slideImg[1].src =
+          "../img/01main/main/BestMenu/sidemenu/decaffeine-coldbrew500ml.png";
+        slideImg[2].src =
+          "../img/01main/main/BestMenu/sidemenu/coldbrew500ml.png";
+        slideImg[3].src =
+          "../img/01main/main/BestMenu/sidemenu/decaffeine-coldbrew500ml.png";
+        slideImg[4].src =
+          "../img/01main/main/BestMenu/sidemenu/coldbrew500ml.png";
+        slideImg[5].src =
+          "../img/01main/main/BestMenu/sidemenu/decaffeine-coldbrew500ml.png";
+        slideImg[6].src =
+          "../img/01main/main/BestMenu/sidemenu/coldbrew500ml.png";
+        slideImg[7].src =
+          "../img/01main/main/BestMenu/sidemenu/decaffeine-coldbrew500ml.png";
+        slideImg[8].src =
+          "../img/01main/main/BestMenu/sidemenu/coldbrew500ml.png";
+        slideImg[9].src =
+          "../img/01main/main/BestMenu/sidemenu/decaffeine-coldbrew500ml.png";
+        slideImg[10].src =
+          "../img/01main/main/BestMenu/sidemenu/coldbrew500ml.png";
+        slideImg[11].src =
+          "../img/01main/main/BestMenu/sidemenu/decaffeine-coldbrew500ml.png";
+      }
+    }
   });
 });
 
@@ -252,7 +907,7 @@ function removeActiveClasses() {
 // bottom-banner
 
 let bottomBanner = document.querySelector(".bottom-slider-wrap");
-console.log(bottomBanner);
+
 bottomBanner.id = "bottomBanner1";
 
 let clone = bottomBanner.cloneNode(true);
@@ -277,7 +932,7 @@ const fiveslide = fiveslides.querySelectorAll("li");
 const fiveslideCount = fiveslide.length;
 
 const fiveslideWidth = 315;
-const fiveslideMargin = 43;
+const fiveslideMargin = 39;
 const fiveprevBtn = document.querySelector(".five-prev");
 const fivenextBtn = document.querySelector(".five-next");
 
@@ -286,19 +941,18 @@ let fivecurrentIdx = 0;
 
 // li style setting
 const fiveupdateWidth = () => {
-  const fivecurrentSlides = document.querySelectorAll(".five-slides li");
-  const fivenewSlideCount = fivecurrentSlides.length;
-  console.log(fivenewSlideCount);
+  const currentSlides = document.querySelectorAll(".five-slides li");
+  const newSlideCount = currentSlides.length;
   const fivenewWidth = `${
-    (fiveslideWidth + fiveslideMargin) * fivenewSlideCount - fiveslideMargin
+    (fiveslideWidth + fiveslideMargin) * newSlideCount - slideMargin
   }px`;
   fiveslides.style.width = fivenewWidth;
 };
 
 const fivesetInitialPos = () => {
-  const fiveinitialTranslateValue =
+  const initialTranslateValue =
     -(fiveslideWidth + fiveslideMargin) * fiveslideCount;
-  fiveslides.style.transform = `translateX(${fiveinitialTranslateValue} px)`;
+  fiveslides.style.transform = `translateX(${initialTranslateValue}px)`;
 };
 
 const fivemakeClone = () => {
@@ -336,77 +990,27 @@ const fivemoveSlide = (num) => {
     }, 600);
   }
 };
-//???
-// 03.14 scale 넣는거 작업하다 일단 정지함*****
-// const scale = (i) => {
-//   slide[i].classList.add("scale");
-// };
-// const scaleNum = () => {
-//   for (let i = 0; i < 5; i++) {
-//     const num = i;
-//   }
-// };
+
+const fiveNum = document.querySelector(".five-num");
+
+let tetxfiveNum = 2;
+
 fivenextBtn.addEventListener("click", () => {
   fivemoveSlide(fivecurrentIdx + 1);
+  fiveNum.innerText = `${tetxfiveNum} / 4`;
+  tetxfiveNum++;
+  if (tetxfiveNum > 4) {
+    tetxfiveNum = 1;
+  }
 });
+
+let tetxfiveNum2 = 4;
 
 fiveprevBtn.addEventListener("click", () => {
   fivemoveSlide(fivecurrentIdx - 1);
+  fiveNum.innerText = `${tetxfiveNum2} / 4`;
+  tetxfiveNum2--;
+  if (tetxfiveNum2 < 1) {
+    tetxfiveNum2 = 4;
+  }
 });
-
-// auto slide
-
-// const fivethautoSlide = () => {
-//   timer = setInterval(() => {
-//     moveSlide(currentIdx + 1);
-//   }, 3000);
-// };
-
-// thautoSlide();
-
-// const stopSlide = () => {
-//   clearInterval(timer);
-// };
-
-// slides.addEventListener("mouseenter", stopSlide);
-
-// slides.addEventListener("mouseleave", autoSlide);
-
-//===================================================
-//section3 slide -content
-
-// const secHeaderNav = document.querySelectorAll("#sectionthree-header-nav a p");
-
-// console.log(secHeaderNav);
-
-// // secHeaderNav.forEach((a) => {
-// //   a.addEventListener("click", (a) => {
-// //     a.classList.toggle("active");
-// //   });
-// // });
-// console.log(secHeaderNav);
-
-// // function removeActiveClasses(p) {
-// //   p.addEventListener("click", () => {
-// //     p.classList.toggle("active");
-// //   });
-// // }
-
-// // secHeaderNav.forEach((p) => {
-// //   p.addEventListener("click", () => {
-// //     removeActiveClasses();
-// //     p.classList.toggle("active");
-// //   });
-// // });
-// secHeaderNav.forEach((p) => {
-//   p.addEventListener("click", function () {
-//     removeActiveClasses();
-//     this.classList.add("active");
-//   });
-// });
-
-// function removeActiveClasses() {
-//   secHeaderNav.forEach((p) => {
-//     p.classList.remove("active");
-//   });
-// }
