@@ -1088,7 +1088,7 @@ aside #bgmobile .mobile-menu-body .mobile-menu-body-list .dropdown {
 footer {
   position: relative;
   width: 100%;
-  height: 426px;
+  height: 100vh !important;
   background: #2c0039;
   display: flex;
   justify-content: center;
@@ -1566,6 +1566,7 @@ footer #footer-wrap #footer-container-wrap #footer-container-bottom .footer-icon
   }
   footer {
     display: block;
+    height: 100vh !important;
   }
   footer::after {
     display: none;
@@ -1589,7 +1590,7 @@ footer #footer-wrap #footer-container-wrap #footer-container-bottom .footer-icon
     left: 0;
     top: 116%;
     transform: translate(0%, -100%);
-    font-size: 0.9375rem;
+    font-size: 0.3375rem !important;
   }
   footer #footer-wrap #footer-container-wrap #footer-container-top .footer-sns {
     margin-right: 10px;
@@ -1937,6 +1938,7 @@ footer #footer-wrap #footer-container-wrap #footer-container-bottom .footer-icon
   }
   footer {
     display: block;
+    height: 100vh !important;
   }
   footer::after {
     display: none;
@@ -1960,7 +1962,7 @@ footer #footer-wrap #footer-container-wrap #footer-container-bottom .footer-icon
     left: 0;
     top: 116%;
     transform: translate(0%, -100%);
-    font-size: 0.9375rem;
+    font-size: 0.3375rem !important;
   }
   footer #footer-wrap #footer-container-wrap #footer-container-top .footer-sns {
     margin-right: 10px;

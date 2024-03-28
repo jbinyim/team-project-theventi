@@ -1,6 +1,6 @@
 //===============================================================
 // main popup
-
+// delete
 function openPopup() {
   window.open(
     "./popup.html",
@@ -8,7 +8,7 @@ function openPopup() {
     "width=478,height=578,top=50%,left=50%,status=no,toolbar=no,scrollbars=no,menubar=no,resizable=no"
   );
 }
-openPopup();
+// openPopup();
 
 //=================================
 //slider
