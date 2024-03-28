@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("../font.css");
 @import url("../reset.css");
 @import "./reset.css";
@@ -323,10 +324,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 970px;
+    width: 80%;
+    border: 1px solid #f00;
     height: 100%;
     position: relative;
-    overflow-x: hidden;
     margin: 0 auto;
   }
   body #sectionthree #sectionthree-slider .sectionthree-slide_wrapper .slides {
@@ -337,10 +338,10 @@
   }
   body #sectionthree #sectionthree-slider .sectionthree-slide_wrapper .slides li {
     position: relative;
-    width: 100%;
+    width: 300px !important;
+    border: 1px solid #f00;
     height: 100%;
-    float: left;
-    display: flex;
+    float: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -380,15 +381,16 @@
     cursor: pointer;
     width: 30px;
     height: 30px;
-    top: 50%;
-    left: -135px;
-    transform: translate(0, -50%);
+    top: 0;
+    right: 0;
+    transform: translate(-550%, 490%);
   }
   body #sectionthree #sectionthree-slider .sectionthree-slide_wrapper .controls .next {
     width: 30px;
     height: 30px;
-    right: -135px;
-    transform: translate(0, -50%);
+    top: 0;
+    right: 0;
+    transform: translate(1000%, 500%);
   }
   body #sectionthree #sectionthree-slider .sectionthree-slide_wrapper .controls .next .xi-next {
     font-family: xeicon !important;
@@ -2805,4 +2807,164 @@ footer #footer-wrap #footer-container-wrap #footer-container-bottom .footer-icon
   50% {
     transform: scale(0.9);
   }
+}
+.menu-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 3;
+}
+.menu-modal-inner {
+  width: 1200px;
+  height: auto;
+  background: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.menu-modal-inner .modal-item {
+  width: 100%;
+  height: 100%;
+  padding: 25px;
+  display: flex;
+}
+.menu-modal-inner .modal-item .modal-pic {
+  width: 460px;
+  width: 40%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+}
+.menu-modal-inner .modal-item .modal-pic img {
+  display: block;
+  width: 119px;
+  height: 219px;
+}
+.menu-modal-inner .modal-item .modal-text {
+  width: 690px;
+  width: 60%;
+  height: 100%;
+  overflow: hidden;
+}
+.menu-modal-inner .modal-item .modal-text .title {
+  width: auto;
+  padding: 8px 0 10px;
+  border-bottom: 3px solid #ff5b28;
+  display: flex;
+}
+.menu-modal-inner .modal-item .modal-text .title i {
+  width: 52px;
+  height: 52px;
+  border-radius: 100%;
+  background: #e98004;
+  color: #fff;
+  position: relative;
+  margin: 0 5px;
+  text-align: center;
+  flex-shrink: 0;
+}
+.menu-modal-inner .modal-item .modal-text .title i::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  content: attr(data-tit);
+  font: 0.875rem/1.1 "noto";
+}
+.menu-modal-inner .modal-item .modal-text .title p {
+  vertical-align: middle;
+  font: 2.35294rem/1.44768 "noto";
+  color: #222;
+}
+.menu-modal-inner .modal-item .modal-text .info {
+  width: 100%;
+  height: auto;
+}
+.menu-modal-inner .modal-item .modal-text .info p {
+  font: 0.875rem/1.6714 "noto";
+  height: auto;
+  width: auto;
+  margin: 30px 7px 30px 0;
+  color: #666;
+  overflow: hidden;
+  max-height: 240px;
+}
+.menu-modal-inner .modal-item .modal-text .info p.diary {
+  padding: 0;
+  overflow-y: scroll;
+}
+.menu-modal-inner .modal-item .modal-text .info p.diary::-webkit-scrollbar {
+  width: 2px;
+  height: 237px;
+}
+.menu-modal-inner .modal-item .modal-text .info p.diary::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.7490196078);
+  border-radius: 10px;
+  height: 167px;
+  border: none;
+}
+.menu-modal-inner .modal-item .modal-text .info p.diary::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.4);
+}
+.menu-modal-inner .modal-item .modal-text .detail {
+  width: 100%;
+  width: 690px;
+  font: 0.875rem/1.1 "noto";
+  text-align: center;
+  overflow: auto;
+}
+.menu-modal-inner .modal-item .modal-text .detail table {
+  min-width: 600px;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #ddd;
+  border-collapse: collapse;
+}
+.menu-modal-inner .modal-item .modal-text .detail table tbody th {
+  font: 0.875rem/1.1 "noto";
+  background: #7b009b;
+  color: #fff;
+  padding: 10px 2px;
+}
+.menu-modal-inner .modal-item .modal-text .detail table tbody td {
+  font: 0.875rem/1.1 "noto";
+  color: #222;
+  padding: 13px 2px;
+}
+.menu-modal-inner button {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 48px;
+  height: 64px;
+  padding: 10px;
+  border: none;
+  background: none;
+  text-align: center;
+}
+.menu-modal-inner button:hover span {
+  background: #333;
+}
+.menu-modal-inner button span {
+  width: 28px; /*임의지정*/
+  height: 2px; /*임의지정*/
+  background: #666;
+  position: absolute;
+  right: 10px;
+}
+.menu-modal-inner button span:nth-child(1) {
+  top: 50%;
+  transform: rotate(45deg);
+}
+.menu-modal-inner button span:nth-child(2) {
+  top: 50%;
+  transform: rotate(-45deg);
 }/*# sourceMappingURL=commonstyle.css.map */
