@@ -40,6 +40,7 @@
 }
 @media (max-width: 1024px) {
   body {
+    overflow-x: hidden !important;
     header {
       @include header-1024;
     }
@@ -1329,7 +1330,8 @@
       }
       .slide_pagers {
         position: absolute;
-        bottom: 150px !important;
+        bottom: 130px !important;
+       
         display: flex;
         gap: 10px;
         li {
@@ -1362,6 +1364,10 @@
     overflow: hidden;
     transition: all 0.5s;
     padding: 0px 15px 0px 15px !important;
+    margin-left: 0px !important;
+    margin-right: 15px !important;
+    margin-bottom: 50px !important;
+ 
     #sectiontwo-wrap {
       justify-content: center;
       align-items: center;
@@ -1374,7 +1380,7 @@
         border-radius: 60px;
         border-top-right-radius: 0;
         width: 100%;
-        height: 300px;
+        height: 250px  !important;
         background: #ff5b28;
         font-size: 0.875rem !important;
         padding: 10px 15px 5px !important;
@@ -1389,7 +1395,7 @@
           flex-direction: column;
           margin-right: -100px;
           h1 {
-            font-size: 1.3rem !important;
+            font-size: 1.1rem !important;
             font-family: suit;
             color: #fff;
           }
@@ -1418,11 +1424,11 @@
           display: flex;
           justify-content: center;
           align-items: center;
-          width: 150px;
-          height: 195px;
+          width: 100px !important;
+          height: 135px;
           img {
             width: 100%;
-            height: 195px;
+            height: 135px;
           }
         }
       }
@@ -1430,22 +1436,24 @@
         border-radius: 60px;
         border-top-left-radius: 0;
         width: 100%;
-        height: 300px;
+        height: 250px !important;
         background: #7b00a0;
         display: flex;
-        padding: 30px 35px 25px;
+        padding: 0px !important;
+        padding-left: 10px !important;
         justify-content: space-between;
         align-items: center;
+        z-index: 5 !important;
         #right-left {
-          white-space: nowrap;
+          white-space: wrap;
 
-          width: 50%;
+          width: 30% !important;
           gap: 10px;
           display: flex;
           flex-direction: column;
 
           h1 {
-            font-size: 1.3rem !important;
+            font-size: 1.1rem !important;
             font-family: suit;
             color: #fff;
           }
@@ -1454,6 +1462,7 @@
             position: relative;
             input {
               font-size: 0.875rem !important;
+              width: 180px !important;
               font-family: suit;
               border: none;
               border-radius: 35px;
@@ -1485,7 +1494,7 @@
           .right-bottom-txt {
             width: 100%;
             height: 100%;
-            font-size: 1rem !important;
+            font-size: 0.8rem !important;
             color: #fff;
             font-family: noto;
             font-weight: 300;
@@ -1499,12 +1508,12 @@
           display: flex;
           justify-content: center;
           align-items: center;
-          width: 222px;
-          height: 169px;
+          width: 172px !important;
+          height: 119px !important;
 
           img {
-            width: 222px;
-            height: 169px;
+            width: 172px !important;
+            height: 119px !important;
           }
         }
       }
@@ -1516,12 +1525,12 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 100% !important;
+    
     background: #fff;
-    padding: 60px 0px 0px 0px;
+    padding: -30px -30px 0px 0px !important;
     //     display: block;
     // border: 1px solid #f00;
-    margin-top: -200px;
+    margin-top: -0px !important;
     #sectionthree-header {
       width: 100vw;
 
@@ -1533,8 +1542,11 @@
       #sectionthree-header-logo {
         justify-content: center;
         margin-bottom: -85px;
+       
         h1 {
-          font-size: 3rem;
+          font-size: 35px !important;
+         
+       
         }
         img {
           width: 34px;
@@ -1542,15 +1554,24 @@
         }
       }
       #sectionthree-header-nav {
-        font-size: 0.73rem !important;
-        display: inline-block;
-        gap: 8px !important;
+        font-size: 0.68rem !important;
+        display: block !important;
+        gap: 6px !important;
+        display: flex !important;
+        flex-direction: row;
+        margin-top: 10px;
+        width: 100% !important;
+        gap: 0.6rem;
+        margin: 0 auto !important;
+       
         a {
+         
           p {
-            white-space: nowrap;
+            white-space: wrap !important;
             // width: fit-content !important;
             // height: auto !important;
-            font-weight: bold;
+            font-weight: normal;
+            display: block !important;
           }
         }
       }
@@ -1698,7 +1719,7 @@
     }
   }
   #sectionfive {
-    margin-top: 800px;
+    margin-top: 600px !important;
     margin-bottom: 100px;
     display: flex;
     flex-direction: column;
@@ -1719,7 +1740,7 @@
       #sectionfive-header-logo {
         padding-left: 20px;
         h1 {
-          font-size: 50px !important;
+          font-size: 35px !important;
         }
         img {
           width: 43.5px;
@@ -1904,18 +1925,74 @@
     }
   }
   .list-item {
+   
     .menu-modal {
       padding: 0 6px;
       &-inner {
-        width: calc(100% - 12px);
+        width: calc(100% - 12px) !important;
         .modal-item {
-          width: 100%;
+          width: 100% !important;
           height: 100%;
+          .modal-pic {
+            width: 80px !important;
+          }
+          .modal-text {
+            font-size: 1rem !important;
+            .title {
+              font-size: 0.3rem !important;
+              .이름 {
+                font-size:  13px;
+                display: flex;
+                align-items: center;
+              }
+              
+              i{
+                width: 30px !important;
+                height: 30px !important;
+                &::before {
+                  font: 0.35rem/1.1 "noto" !important;
+                }
+              }
+            }
+           
+          }
+          .detail {
+            display: block;
+            width: 500px !important;
+            overflow: auto;
+            table {
+            
+             
+              tbody {
+               
+              white-space: nowrap;
+                tr {
+                 
+                  th {
+                    font-size: 0.5rem !important;
+                    // white-space: nowrap !important;
+                    // overflow: auto !important;
+                  }
+                  td {
+                    // white-space: nowrap !important;
+                    // overflow: auto !important;
+                      font-size: 10px  !important;
+                    }
+                  }
+                }
+              }
+              
+            }
+          }
+          .설명 {
+            font-size: 7px !important;
+            white-space: wrap;
+          }
         }
       }
     }
   }
-}
+
 
 @media (max-width: 375px) {
   #sectiontwo {
@@ -2197,7 +2274,7 @@
   body {
     width: 100%;
     height: 100vh;
-    overflow-x: hidden;
+    overflow-x: hidden !important;
     position: relative;
     .popup2 {
       @include popup2;
