@@ -1072,7 +1072,8 @@ body .wrap footer #footer-wrap #footer-container-wrap #footer-container-bottom .
     height: 21px;
     display: flex;
     flex-direction: column;
-    font-size: 0.8125rem;
+    font-size: 0.75rem;
+    letter-spacing: -2;
     text-align: left;
   }
   body .wrap .notice-container .notice-contents .notice-content li a {
